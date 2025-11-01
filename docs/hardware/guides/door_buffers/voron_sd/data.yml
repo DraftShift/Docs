@@ -1,0 +1,238 @@
+title: Door Buffer (Voron Standard Door)
+model: "Door_Buffer_DSD.gltf"
+
+summary: >
+    A door buffer for Voron 2.4 Standard Doors.
+
+    !!! info "Short/Standard?"
+        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../hardware/tools/tools.md) for compatibility.
+
+printed_bom:
+  TODO:
+    qty: 69420
+    urls: 
+      TODO: "#TODO"
+
+hardware_bom:
+  M3 T-Nut:
+    qty: 22
+  M3x8 SHCS Screws:
+    qty: 20
+  M3x20 SHCS Screws:
+    qty: 2
+  M3 Heat Inserts:
+    qty: 8
+
+primary_parts:
+- "Top Mid"
+- "Bottom Mid"
+- "Left Mid"
+- "Right Mid"
+
+accent_parts:
+- "Bottom Left"
+- "Bottom right"
+- "Top Left"
+- "Top Right"
+
+steps:
+  - title: "Heat Inserts"
+    description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
+    camera:
+      azimuth: 114
+      polar: 40
+      distance: 85
+      pan_x: 0
+      pan_y: 0
+      pan_z: 0
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+    focus: 
+      - "Heat insert"
+
+  - title: "Insert Fasteners"
+    description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
+    camera:
+      azimuth: 249
+      polar: 76
+      distance: 85
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+    focus: 
+      - "M3x8 SHCS & Nuts"
+
+  - title: "Attach to Frame"
+    description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
+    camera:
+      azimuth: 145
+      polar: 60
+      distance: 85
+      pan_x: 0.00
+      pan_y: -0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+    focus: 
+      - "Frame"
+
+  - title: "Insert T-nuts"
+    description: "Insert the M3 T-nuts into the designated slots on both sides in the middle side pieces. Ensure the threads align in the middle for the dockbar."
+    camera:
+      azimuth: 104
+      polar: 90
+      distance: 26
+      pan_x: 21.35
+      pan_y: 3.76
+      pan_z: -4.50
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "M3 T Nuts"
+    focus: 
+      - "M3 T Nuts"
+
+  - title: "Prepare the dockbar"
+    description: "Attach the dockbar with 3mm hole 5mm from the edge of the extrusion, make sure the T-nuts align with the holes in the dockbar."
+    camera:
+      azimuth: 88
+      polar: 85
+      distance: 85
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+    focus: 
+      - "Dock Bar"
+
+  - title: "Bolt on the dock bar"
+    description: "Secure the dock bar to the frame using the M3x20 SHCS screws and M3 shim washers. Tighten the screws on both sides to ensure a firm attachment."
+    camera:
+      azimuth: 125
+      polar: 94
+      distance: 14
+      pan_x: 21.75
+      pan_y: 2.87
+      pan_z: 0.71
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+      - "M3 Shim Washer"
+      - "M3x20 SHCS"
+    focus: 
+      - "M3x20 SHCS"
+      - "M3 Shim Washer"
+
+  - title: "Attach Stock Voron Doorlatch"
+    description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
+    camera:
+      azimuth: 106
+      polar: 82
+      distance: 33
+      pan_x: 1.55
+      pan_y: 21.35
+      pan_z: -9.01
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+      - "M3 Shim Washer"
+      - "M3x20 SHCS"
+
+  - title: "Attach Doors"
+    description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape."
+    camera:
+      azimuth: 91
+      polar: 86
+      distance: 89
+      pan_x: 0.98
+      pan_y: 0.12
+      pan_z: -18.79
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat insert"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+      - "M3 Shim Washer"
+      - "M3x20 SHCS"

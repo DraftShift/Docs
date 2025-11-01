@@ -1,0 +1,37 @@
+title: Door Buffer (LDO Version)
+model: "Door_Buffer_DSD.gltf"
+
+summary: >
+    The LDO version of Door Buffer for Voron 2.4.
+  
+    !!! tip "Where can I get one?"
+        The hardware components for this guide are all included as a part of LDO's `StealthChanger Tophat and Door Buffer Kit`.
+
+    !!! info "Short/Standard?"
+        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../hardware/tools/tools.md) for compatibility.
+
+printed_bom:
+  TODO:
+    qty: 69420
+    urls: 
+      TODO: "#TODO"
+
+hardware_bom:
+  TODO:
+    qty: 69420
+
+
+primary_parts:
+accent_parts:
+
+steps:
+  - title: "TODO"
+    description: "TODO"
+    camera:
+      azimuth: 114
+      polar: 40
+      distance: 85
+      pan_x: 0
+      pan_y: 0
+      pan_z: 0
+    visible: []

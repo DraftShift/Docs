@@ -1,0 +1,32 @@
+title: Door Buffer (Micron Colony-Clacker Door)
+model: "Door_Buffer_DSD.gltf"
+
+summary: >
+    The Colony Clacker version of Door Buffer for Micron.
+
+    !!! info "Short/Standard?"
+        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../hardware/tools/tools.md) for compatibility.
+
+printed_bom:
+  TODO:
+    qty: 69420
+    urls: 
+      TODO: "#TODO"
+
+hardware_bom:
+  TODO:
+    qty: 69420
+primary_parts:
+accent_parts:
+
+steps:
+  - title: "Introduction"
+    description: "In this guide we will be assembling and installing the Colony Clacker version of the Micron Door Buffer."
+    camera:
+      azimuth: 114
+      polar: 40
+      distance: 85
+      pan_x: 0
+      pan_y: 0
+      pan_z: 0
+    visible: []

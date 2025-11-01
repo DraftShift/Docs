@@ -1,0 +1,34 @@
+title: CNC Shuttle Installation (LDO)
+model: "Shuttle_MGN12.gltf"
+
+# primary_parts:
+# accent_parts:
+# frame_parts: 
+
+summary: >
+    The Clicky-Clack version of Door Buffer for Voron 2.4.
+
+    !!! info "Short/Standard?"
+        There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../hardware/tools/tools.md) for compatibility.
+
+printed_bom:
+  TODO:
+    qty: 69420
+    urls: 
+      TODO: "#TODO"
+
+hardware_bom:
+  TODO:
+    qty: 69420
+
+steps:
+  - title: "TODO"
+    description: "TODO"
+    camera:
+      azimuth: 114
+      polar: 40
+      distance: 85
+      pan_x: 0
+      pan_y: 0
+      pan_z: 0
+    visible: []

@@ -1,0 +1,54 @@
+title: Anthead
+model: "anthead.gltf"
+
+primary_parts:
+  - "Main Body"
+
+accent_parts:
+  - "Duct Right"
+  - "Duct Left"
+  - "NH Cover Shell" 
+  - "Nozzle LED Carrier"
+  - "Nozzle LED Restraint"
+  - "HE Mount"
+  - "Grill"
+
+overview: |
+  !!! tip "Making the best better?"
+      The stock Anthead works really well with StealthChanger, however with some small tweaks we can make it even better. 
+      This guide introduces some community usermods to make a complete and robust solution for reliable tool changes with StealthChanger.
+
+  **Estimated Assembly Time:** 2-3 hours
+
+  {{ voron_printed() }}
+  some text
+
+  {{ hardware_bom() }}
+
+  * M3x6 BHCS Screws x6
+  * M3x8 BHCS Screws x10
+  * M3x12 BHCS Screws x4
+  * M3x14 BHCS Screws x2
+  * M3x8 SHCS Screws x4
+  * M3x12 BHCS Screw x1
+  * M3x28 SHCS Screws x2
+  * M3 Heat Insert x19
+  * 6x3mm N52 Magnets x2
+  * Voron Revo Hotend x1
+  * Orbitor 2.x Extruder x1
+  * Nitehawk36 Toolhead Board x1
+  * 25x10mm Radial Fan x1
+  * 40x10mm Centrifugal/Blower Fan x2
+  * 4x2mm PTFE ~40mm Long x1
+
+steps:
+  - title: "TODO"
+    description: "TODO"
+    camera:
+      azimuth: 114
+      polar: 40
+      distance: 85
+      pan_x: 0
+      pan_y: 0
+      pan_z: 0
+    visible: []

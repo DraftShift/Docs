@@ -1,0 +1,144 @@
+site_name: StealthChanger
+site_url: https://stealthchanger.com
+copyright: Copyright &copy; 2025 DraftShift Design
+repo_url: https://github.com/DraftShift/
+repo_name: DraftShift
+
+theme:
+  logo: assets/Stealthchanger_logo.svg
+  favicon: assets/Stealthchanger_logo.svg
+  custom_dir: overrides
+  name: material
+
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.footer
+    - content.tabs.link
+    - content.tooltips
+  
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light blue 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+nav:
+  - Introduction: index.md
+  - Getting Started: getting_started.md
+
+  - Hardware:
+    - hardware/index.md
+    - Toolheads: hardware/tools/tools.md
+    - Build Guides:
+      - hardware/guides/index.md
+        
+      - StealthChanger Shuttles: 
+        - hardware/guides/shuttles/index.md
+        - Printed Shuttle: hardware/guides/shuttles/printed/index.md
+        - Installation - Printed: hardware/guides/shuttles/install_printed/index.md
+        - Installation - Fysetc CNC: hardware/guides/shuttles/install_fysetc/index.md
+        - Installation - LDO CNC: hardware/guides/shuttles/install_ldo/index.md
+
+      - StealthChanger Backplates: 
+        - hardware/guides/backplates/index.md
+        - Anthead SF: hardware/guides/backplates/anthead_sf/index.md
+
+      - Toolheads: 
+        - hardware/guides/toolheads/index.md
+        - Anthead: hardware/guides/toolheads/anthead/index.md
+
+      - Cable Management: 
+        - hardware/guides/cable_management/index.md
+
+      - Door Buffers: 
+        - hardware/guides/door_buffers/index.md
+        - Voron Standard: hardware/guides/door_buffers/voron_sd/index.md
+        - Voron LDO: hardware/guides/door_buffers/voron_ldo/index.md
+        - Voron Clicky-Clack: hardware/guides/door_buffers/voron_ccd/index.md
+        - Micron Standard: hardware/guides/door_buffers/micron_sd/index.md
+        - Micron Colony Clacker: hardware/guides/door_buffers/micron_ccd/index.md
+
+      - Modular Docks:
+        - hardware/guides/modular_docks/index.md
+
+      - Tophats: 
+        - hardware/guides/tophats/index.md
+        - Printed Tophat: hardware/guides/tophats/printed/index.md
+        - Extrusion Tophat: hardware/guides/tophats/extrusion/index.md
+
+      - Calibration Tools: 
+        - hardware/guides/calibration_tools/index.md
+        - Sexball Probe: hardware/guides/calibration_tools/sexball/index.md
+        - Axiscope Camera: hardware/guides/calibration_tools/axiscope/index.md
+
+  - Software:
+    - software/index.md
+    - Installation: software/installation.md
+    - Upgrading: software/upgrading.md
+    - Troubleshooting: software/troubleshooting.md
+
+  - Calibration:
+    - Overview: calibration.md
+    - Nozzle Offsets: calibration/nozzle_offsets.md
+    - Dock Locations: calibration/dock_locations.md
+
+plugins:
+  - search
+  - macros
+  - section-index
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+
+
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/assembly-viewer.css
+
+extra:
+  
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DraftShift
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/draftshift
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/groups/449879874593718/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@DraftShiftDesign

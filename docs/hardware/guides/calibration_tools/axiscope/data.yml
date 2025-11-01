@@ -1,0 +1,115 @@
+title: Axiscope Camera
+model: "Axiscope_Camera.gltf"
+image: "/assets/camera.png"
+
+summary: >
+    A camera which complements the [Axiscope](https://github.com/nic335/Axiscope) software to get precise XY alignment between the tool's nozzles.
+
+    !!! danger "Requires Soldering"
+        This guide requires soldering LEDs on to a PCB. If you are uncomfortable with soldering, there are cameras available for purchase, notably the [CXC Camera by Ember Prototypes](https://www.emberprototypes.com/products/cxc){:target="_blank"}.
+
+printed_bom:
+  OV9726 Case:
+    qty: 1
+    urls: 
+      Printables: https://www.printables.com/model/1099576-xy-nozzle-alignment-camera/files
+
+hardware_bom:
+  OV9726 Camera Module:
+    qty: 1
+    urls: 
+      Aliexpress: https://vi.aliexpress.com/item/1005003808666298.html
+
+  5v 3mm Round White 6000-6500l LEDs:
+    qty: 4
+    urls:
+      Aliexpress: https://vi.aliexpress.com/item/1005004771217994.html
+
+  6x3mm Magnets:
+    qty: 4
+
+primary_parts:
+  - "Case Upper"
+  - "Case Lower"
+
+steps:
+  - title: "Install Magnets"
+    description: "Install the 4 6x3mm magnets in the Case Lower using glue to keep them in place."
+    camera:
+      azimuth: 270
+      polar: 180
+      distance: 68
+      pan_x: 0.19
+      pan_y: -1.72
+      pan_z: 0.00
+    visible:
+      - "Case Lower"
+      - "6x3 Magnets"
+    focus:
+      - "6x3 Magnets"
+
+  - title: "LED Alignment"
+    description: "On the PCB there will be silkscreen of the diode symbol (A triangle pointing towards a line) in 6 places. The LEDs will be installed in the holes where the 4 corner symbols are. The LEDs have a flat side and a shorter leg, this is the cathode (negative) leg. Place the led through the holes from the lens side ensuring the cathode is through the hole where the line and point of the triangle are."
+    camera:
+      azimuth: 180
+      polar: 148
+      distance: 61
+      pan_x: -0.17
+      pan_y: 1.02
+      pan_z: 0.00
+    visible: 
+      - "OV9726 Camera"
+      - "Diode Silkscreen"
+      - "LED Bulbs"
+      - "LED Legs"
+    focus:
+      - "LED Bulbs"
+      - "LED Legs"
+      - "Diode Silkscreen"
+
+  - title: "Solder LEDs"
+    description: "Place the Case Upper over the lens and LEDs to keep them in place. Solder the LED legs and trim the legs with flush cutters."
+    camera:
+      azimuth: 90
+      polar: 180
+      distance: 73
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Case Upper"
+      - "OV9726 Camera"
+      - "Diode Silkscreen"
+      - "LED Bulbs"
+      - "LED Legs"
+    focus:
+      - "LED Legs"
+
+  - title: "Testing"
+    description: "Before completing the assembly, its a good idea to test the electronics to make sure everything works. Check polarity with a multimeter if you have one. Plugging the module in to a PC should turn the LEDs on and the camera should be available as a webcam."
+    camera:
+      azimuth: 245
+      polar: 51
+      distance: 75
+      pan_x: -0.83
+      pan_y: -5.52
+      pan_z: -4.54
+    visible: 
+      - "Case Upper"
+      - "OV9726 Camera"
+      - "Diode Silkscreen"
+      - "LED Bulbs"
+      - "LED Legs"
+
+  - title: "Final assembly"
+    description: "The Upper and Lower case printed pieces have snap fit tabs. Enclose the pcb between the pieces ensuring cable connector is in the correct place and the 4 tabs snap together."
+    camera:
+      azimuth: 307
+      polar: 121
+      distance: 69
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: []
+    focus: 
+      - "Case Lower"
