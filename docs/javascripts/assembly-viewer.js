@@ -33,22 +33,15 @@ let modelViewerInitialized = false;
 
 // Light positions
 const lightValues = {
-    top:    {position: [0, 1, 0],    intensity: 0.5},
-    bottom: {position: [0, -1, 0],   intensity: 0.5},
-    left:   {position: [-1, 0, 0],   intensity: 0.5},
-    right:  {position: [1, 0, 0],    intensity: 0.5},
-    front:  {position: [0, 0, 1],    intensity: 0.5},
-    back:   {position: [0, 0, -1],   intensity: 0.5},
-    frontTopLeft:     {position: [-1, 1, 1],   intensity: 0.7},
-    frontTopRight:    {position: [1, 1, 1],    intensity: 0.7},
-    frontBottomLeft:  {position: [-1, -1, 1],  intensity: 0.7},
-    frontBottomRight: {position: [1, -1, 1],   intensity: 0.7},
-    backTopLeft:      {position: [-1, 1, -1],  intensity: 0.7},
-    backTopRight:     {position: [1, 1, -1],   intensity: 0.7},
-    backBottomLeft:   {position: [-1, -1, -1], intensity: 0.7},
-    backBottomRight:  {position: [1, -1, -1],  intensity: 0.7}
+    // Key light: Strong from upper front-right (primary light source)
+    keyLight: {position: [1.5, 2, 1.5], intensity: 2, color: 0xffffff},
+    // Fill light: Softer from upper front-left (reduces harsh shadows)
+    fillLight: {position: [-1, 1.5, 1], intensity: 1, color: 0xffffff},
+    // Rim light: Subtle from back-top (edge definition)
+    rimLight: {position: [0, 1.5, -2], intensity: 0.8, color: 0xffffff},
+    // Bottom bounce: Very subtle upward light (simulates ground reflection)
+    bounceLight: {position: [0, -1, 0.5], intensity: 0.3, color: 0xffffff}
 };
-
 
 // Helper function to create SVG icon from template
 function createIcon(iconId) {
@@ -281,14 +274,14 @@ function initModelViewer(modelPath, onModelLoaded) {
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     // Add ambient light for base illumination
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
     scene.add(ambientLight);
     
     // Lights
     Object.keys(lightValues).forEach(function(key) {
         const config = lightValues[key];
         console.log(config);
-        const light = new THREE.DirectionalLight(0xffffff, config.intensity);
+        const light = new THREE.DirectionalLight(config.color || 0xffffff, config.intensity);
         
         // Store the normalized direction for later use
         const direction = new THREE.Vector3(config.position[0], config.position[1], config.position[2]).normalize();
@@ -461,6 +454,26 @@ function initModelViewer(modelPath, onModelLoaded) {
     function animate() {
         requestAnimationFrame(animate);
         controls.update();
+        
+        // Update light positions to follow camera (camera-relative lighting)
+        scene.children.forEach(function(child) {
+            if (child.isDirectionalLight && child.userData.lightKey) {
+                const lightKey = child.userData.lightKey;
+                const direction = window.lightDirections[lightKey];
+                if (direction) {
+                    // Transform light direction from world space to camera space
+                    const cameraRelativeDir = direction.clone();
+                    cameraRelativeDir.applyQuaternion(camera.quaternion);
+                    
+                    // Position light relative to camera
+                    const lightDistance = 100;
+                    child.position.copy(camera.position).add(
+                        cameraRelativeDir.multiplyScalar(lightDistance)
+                    );
+                }
+            }
+        });
+        
         renderer.render(scene, camera);
         updateCameraOverlay();
     }
