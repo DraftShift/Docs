@@ -24,14 +24,6 @@ toolheads:
       thesin_backplates: []
       author: Armchair Heavy Industries
       url: https://github.com/Armchair-Heavy-Industries/A4T
-      model:
-      overview:
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     Anthead:
       name: Anthead
@@ -51,166 +43,6 @@ toolheads:
         uhf: https://github.com/DraftShift/StealthChanger/blob/main/UserMods/TheSin-/PCB36_Mount/Anthead_UHF.stl?raw=true
       author: Printers For Ants
       url: https://github.com/PrintersForAnts/AntHead
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-
-      steps:
-        - title: "M3 Heat Inserts"
-          description: "Install the 2 heat inserts into the backplate."
-          camera:
-            azimuth: 107
-            polar: 65
-            distance: 73
-            pan_x: -0.18
-            pan_y: -1.29
-            pan_z: 0.58
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-          focus:
-            - "M3 Heat Inserts"
-
-        - title: "6x3mm Magnet"
-          description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use super glue."
-          camera:
-            azimuth: 244
-            polar: 129
-            distance: 54
-            pan_x: 0
-            pan_y: 0
-            pan_z: 0
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-          focus:
-            - "6x3mm Magnet"
-
-        - title: "M3x6 FHCS Screws" 
-          description: "Install the 2 M3x6 FHCS screws. These screws should not be tightened. They are preload adjustment screws and will be backed out in a later step."
-          camera:
-            azimuth: 289
-            polar: 147
-            distance: 54
-            pan_x: -1.03
-            pan_y: -5.01
-            pan_z: 7.81
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-          focus:
-            - "M3x6 FHCS Screws"
-        
-        - title: "Bottom Pin" 
-          description: "Install the bottom 4x12mm pin and secure it with a M3x8 BHCS screw using a ball end allen wrench."
-          camera:
-            azimuth: 303
-            polar: 73
-            distance: 31
-            pan_x: 1.20
-            pan_y: -4.95
-            pan_z: 1.54
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-            - "Bottom Pin With Screw"
-          focus:
-            - "Bottom Pin With Screw"
-
-        - title: "Top Pins Part #1" 
-          description: "Install the top 2 pins just enough for the plastic to hold them in place."
-          camera:
-            azimuth: 288
-            polar: 94
-            distance: 42
-            pan_x: 3.58
-            pan_y: 11.82
-            pan_z: 2.60
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-            - "Top Pins Step1"
-            - "Bottom Pin With Screw"
-          focus:
-            - "Top Pins Step1"
-
-        - title: "Top Pins Part #2" 
-          description: "* Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x8 BHCS screws. If using StealthBurner, these top 2 screws need to be glued in place rather than screwed. Do not glue them just yet."
-          camera:
-            azimuth: 280
-            polar: 18
-            distance: 51
-            pan_x: -0.05
-            pan_y: 2.51
-            pan_z: 7.83
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-            - "Bottom Pin With Screw"
-            - "Top Pins With Screws"
-            - "Shuttle"
-          focus:
-            - "Top Pins With Screws"
-            # - "Shuttle"
-        
-        - title: "Testing" 
-          description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. If using StealthBurner, once you have smooth operation, glue the top 2 pins in place. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the Hardware Troubleshooting."
-          camera:
-            azimuth: 318
-            polar: 77
-            distance: 73
-            pan_x: 1.48
-            pan_y: -0.00
-            pan_z: 1.65
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-            - "Bottom Pin With Screw"
-            - "Top Pins With Screws"
-            - "Shuttle"
-
-          focus:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-            - "Bottom Pin With Screw"
-            - "Top Pins With Screws"
-        
-        - title: "Setting Preload" 
-          description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a slither of paper between the screw and magnet similar setting z offset."
-          camera:
-            azimuth: 359
-            polar: 85
-            distance: 42
-            pan_x: -1.10
-            pan_y: -14.90
-            pan_z: 4.16
-          visible:
-            - "Backplate"
-            - "M3 Heat Inserts"
-            - "6x3mm Magnet"
-            - "M3x6 FHCS Screws"
-            - "Pins"
-            - "M3x8 BHCS Screws"
-            - "Shuttle"
-          focus:
-            - "M3x6 FHCS Screws"
 
     Archetype BlackBird:
       name: Archetype BlackBird
@@ -226,14 +58,6 @@ toolheads:
         medium: https://github.com/DraftShift/StealthChanger/blob/main/UserMods/TheSin-/PCB36_Mount/BlackBird_Medium.stl?raw=true
       author: Armchair Heavy Industries
       url: https://github.com/Armchair-Heavy-Industries/Archetype
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     DragonBurner:
       name: DragonBurner
@@ -248,14 +72,6 @@ toolheads:
         sf: https://github.com/DraftShift/StealthChanger/blob/main/UserMods/TheSin-/PCB36_Mount/DragonBurner.stl?raw=true
       author: chirpy2605
       url: https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     Mini StealthBurner:
       name: Mini StealthBurner
@@ -268,14 +84,6 @@ toolheads:
       thesin_backplates: []
       author: Voron Design
       url: https://github.com/VoronDesign/Voron-0
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     RapidBurner:
       name: RapidBurner
@@ -290,14 +98,6 @@ toolheads:
         hf: https://github.com/DraftShift/StealthChanger/blob/main/UserMods/TheSin-/PCB36_Mount/RapidBurner_HF.stl?raw=true
       author: chirpy2605
       url: https://github.com/chirpy2605/voron/tree/main/V0/Rapid_Burner
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     StealthBurner:
       name: StealthBurner
@@ -310,14 +110,6 @@ toolheads:
       thesin_backplates: []
       author: Voron Design
       url: https://github.com/VoronDesign/Voron-Stealthburner
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x1
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     XOL:
       name: XOL
@@ -331,14 +123,6 @@ toolheads:
       thesin_backplates: []
       author: Armchair Heavy Industries
       url: https://github.com/Armchair-Heavy-Industries/Xol-Toolhead
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:
 
     Yavoth:
       name: Yavoth
@@ -356,11 +140,3 @@ toolheads:
         uhf: https://github.com/DraftShift/StealthChanger/blob/main/UserMods/TheSin-/PCB36_Mount/Yavoth_UHF.stl?raw=true
       author: chirpy2605
       url: https://github.com/chirpy2605/voron/tree/main/V0/Yavoth
-      model:
-      overview:  
-        4mmx12mm Rounded pins with M3 internal thread x3
-        M3 Heat inserts x2
-        M3x6 FHCS screws x2 (Must be ferrous)
-        M3x8 BHCS screws x3
-        6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued)
-      steps:

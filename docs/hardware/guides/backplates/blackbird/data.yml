@@ -118,7 +118,7 @@ steps:
       - "Top Pins Step"
 
   - title: "Top Pins Part #2" 
-    description: "* Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 BHCS screws."
+    description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 BHCS screws."
     camera:
       azimuth: 307
       polar: 36
