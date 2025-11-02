@@ -1,28 +1,28 @@
-title: Backplate - Anthead
-model: "Anthead_SF.gltf"
-image: "/assets/backplate_anthead_SF.png"
+title: Backplate - Yavoth
+model: "Yavoth_HF.gltf"
+image: "/assets/backplate_yavoth_HF.png"
 
 summary: >
-    StealthChanger Backplate for the Anthead.
+    StealthChanger Backplate for the Yavoth.
     <br>
-    Standard flow version is used for the purpose of this guide.
+    High flow version is used for the purpose of this guide.
     <br>
     The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
 
 printed_bom:
-  Anthead Backplate:
+  Yavoth Backplate:
     qty: 1
     urls:
-        SF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_SF.stl?raw=true
-        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_HF.stl?raw=true
-        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_UHF.stl?raw=true
+        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_HF.stl?raw=true
+        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_UHF.stl?raw=true
 
-  Anthead Spacer:
+  Yavoth Spacer:
     qty: 1
     urls:
-        Spacer: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer.stl?raw=true
-        Spacer Full: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer_Full.stl?raw=true
+        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_HF_Spacer.stl?raw=true
+        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_UHF_Spacer.stl?raw=true
 
+  
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3

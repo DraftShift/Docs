@@ -1,6 +1,6 @@
-# Anthead Backplate
+# RapidBurner Backplate
 
-{% set assembly = get_hardware("backplates")["Backplate - Anthead"] %}
+{% set assembly = get_hardware("backplates")["Backplate - RapidBurner"] %}
 
 {% include "_templates/overview.md" %}
 

@@ -1,33 +1,21 @@
-title: Backplate - Anthead
-model: "Anthead_SF.gltf"
-image: "/assets/backplate_anthead_SF.png"
+title: Backplate - A4T
+model: "A4T.gltf"
+image: "/assets/backplate_a4t.png"
 
 summary: >
-    StealthChanger Backplate for the Anthead.
-    <br>
-    Standard flow version is used for the purpose of this guide.
-    <br>
-    The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
+    StealthChanger Backplate for the A4T.
 
 printed_bom:
-  Anthead Backplate:
+  A4T Backplate:
     qty: 1
     urls:
-        SF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_SF.stl?raw=true
-        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_HF.stl?raw=true
-        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_UHF.stl?raw=true
-
-  Anthead Spacer:
-    qty: 1
-    urls:
-        Spacer: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer.stl?raw=true
-        Spacer Full: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer_Full.stl?raw=true
+        Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/A4T.stl?raw=true
 
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3
   M3 Heat Inserts:
-    qty: 2
+    qty: 4-5
   M3x6 FHCS screws (Must be ferrous):
     qty: 2
   M3x10 SHCS screws:
@@ -44,14 +32,14 @@ accent_parts:
 
 steps:
   - title: "M3 Heat Inserts"
-    description: "Install the 2 heat inserts into the backplate."
+    description: "Install the 4 heat inserts into the backplate. Optionally, you can install a fifth heat insert in the rear of the backplate for a PCB mount."
     camera:
-      azimuth: 107
-      polar: 65
+      azimuth: 91
+      polar: 79
       distance: 73
-      pan_x: -0.18
-      pan_y: -1.29
-      pan_z: 0.58
+      pan_x: -0.02
+      pan_y: -1.26
+      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -64,9 +52,9 @@ steps:
       azimuth: 244
       polar: 129
       distance: 54
-      pan_x: 0
-      pan_y: 0
-      pan_z: 0
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -131,11 +119,11 @@ steps:
   - title: "Top Pins Part #2" 
     description: "* Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 BHCS screws."
     camera:
-      azimuth: 280
-      polar: 18
+      azimuth: 314
+      polar: 75
       distance: 66
-      pan_x: 1.58
-      pan_y: 10.56
+      pan_x: 6.89
+      pan_y: 5.13
       pan_z: 0.00
     visible:
       - "Backplate"

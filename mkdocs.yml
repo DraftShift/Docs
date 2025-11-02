@@ -56,7 +56,16 @@ nav:
 
       - StealthChanger Backplates: 
         - hardware/guides/backplates/index.md
-        - Anthead SF: hardware/guides/backplates/anthead_sf/index.md
+        - A4T: hardware/guides/backplates/a4t/index.md
+        - Anthead: hardware/guides/backplates/anthead/index.md
+        - BlackBird: hardware/guides/backplates/blackbird/index.md
+        - DragonBurner: hardware/guides/backplates/dragonburner/index.md
+        - JabberWocky: hardware/guides/backplates/jabberwocky/index.md
+        - RapidBurner: hardware/guides/backplates/rapidburner/index.md
+        - StealthBurner: hardware/guides/backplates/stealthburner/index.md
+        - XOL: hardware/guides/backplates/xol/index.md
+        - Yavoth: hardware/guides/backplates/yavoth/index.md
+
 
       - Toolheads: 
         - hardware/guides/toolheads/index.md

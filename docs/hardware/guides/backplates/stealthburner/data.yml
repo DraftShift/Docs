@@ -1,40 +1,26 @@
-title: Backplate - Anthead
-model: "Anthead_SF.gltf"
-image: "/assets/backplate_anthead_SF.png"
+title: Backplate - StealthBurner
+model: "StealthBurner.gltf"
+image: "/assets/backplate_stealthburner.png"
 
 summary: >
-    StealthChanger Backplate for the Anthead.
-    <br>
-    Standard flow version is used for the purpose of this guide.
-    <br>
-    The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
+    StealthChanger Backplate for the StealthBurner.
 
 printed_bom:
-  Anthead Backplate:
+  StealthBurner Backplate:
     qty: 1
     urls:
-        SF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_SF.stl?raw=true
-        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_HF.stl?raw=true
-        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_UHF.stl?raw=true
-
-  Anthead Spacer:
-    qty: 1
-    urls:
-        Spacer: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer.stl?raw=true
-        Spacer Full: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer_Full.stl?raw=true
+        Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/StealthBurner.stl?raw=true
 
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3
   M3 Heat Inserts:
-    qty: 2
+    qty: 4
   M3x6 FHCS screws (Must be ferrous):
-    qty: 2
-  M3x10 SHCS screws:
     qty: 2
   M3x8 BHCS screws:
     qty: 1
-  6x3mm tapered magnet with M2x8 FHCS screw (Alternatively 6x3mm magnet to be glued):
+  6x3mm tapered magnet:
     qty: 1
 
 primary_parts:
@@ -44,14 +30,14 @@ accent_parts:
 
 steps:
   - title: "M3 Heat Inserts"
-    description: "Install the 2 heat inserts into the backplate."
+    description: "Install the 4 heat inserts into the backplate."
     camera:
-      azimuth: 107
-      polar: 65
+      azimuth: 275
+      polar: 80
       distance: 73
-      pan_x: -0.18
-      pan_y: -1.29
-      pan_z: 0.58
+      pan_x: 1.22
+      pan_y: 3.70
+      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -59,7 +45,7 @@ steps:
       - "M3 Heat Inserts"
 
   - title: "6x3mm Magnet"
-    description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use super glue."
+    description: "Install the 6x3mm magnet using super glue making sure the polarity attracts the Backplate to the Shuttle."
     camera:
       azimuth: 244
       polar: 129
@@ -129,13 +115,13 @@ steps:
       - "Top Pins Step"
 
   - title: "Top Pins Part #2" 
-    description: "* Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 BHCS screws."
+    description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with super glue."
     camera:
-      azimuth: 280
-      polar: 18
-      distance: 66
-      pan_x: 1.58
-      pan_y: 10.56
+      azimuth: 318
+      polar: 77
+      distance: 73
+      pan_x: 1.48
+      pan_y: -0.00
       pan_z: 0.00
     visible:
       - "Backplate"
@@ -147,7 +133,6 @@ steps:
       - "Shuttle"
     focus:
       - "Top Pins With Screws"
-      # - "Shuttle"
   
   - title: "Testing" 
     description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the Hardware Troubleshooting."
@@ -157,7 +142,7 @@ steps:
       distance: 73
       pan_x: 1.48
       pan_y: -0.00
-      pan_z: 1.65
+      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"
@@ -181,9 +166,9 @@ steps:
       azimuth: 359
       polar: 85
       distance: 42
-      pan_x: -1.10
-      pan_y: -14.90
-      pan_z: 4.16
+      pan_x: 3.72
+      pan_y: -13.45
+      pan_z: 0.00
     visible:
       - "Backplate"
       - "M3 Heat Inserts"

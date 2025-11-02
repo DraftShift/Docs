@@ -1,28 +1,24 @@
-title: Backplate - Anthead
-model: "Anthead_SF.gltf"
-image: "/assets/backplate_anthead_SF.png"
+title: Backplate - JabberWocky
+model: "JabberWocky.gltf"
+image: "/assets/backplate_jabberwocky.png"
 
 summary: >
-    StealthChanger Backplate for the Anthead.
-    <br>
-    Standard flow version is used for the purpose of this guide.
+    StealthChanger Backplate for the JabberWocky.
     <br>
     The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
 
 printed_bom:
-  Anthead Backplate:
+  JabberWocky Backplate:
     qty: 1
     urls:
-        SF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_SF.stl?raw=true
-        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_HF.stl?raw=true
-        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_UHF.stl?raw=true
+        Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/JabberWocky.stl?raw=true
 
-  Anthead Spacer:
+  JabberWocky Spacer:
     qty: 1
     urls:
-        Spacer: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer.stl?raw=true
-        Spacer Full: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer_Full.stl?raw=true
+        Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/JabberWocky_Spacer.stl?raw=true
 
+  
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3
@@ -43,6 +39,21 @@ accent_parts:
   - "Backplate"
 
 steps:
+  - title: "Remove Supports"
+    description: "Remove the built-in supports from the backplate."
+    camera:
+      azimuth: 107
+      polar: 65
+      distance: 73
+      pan_x: -0.18
+      pan_y: -1.29
+      pan_z: 0.58
+    visible:
+      - "Backplate"
+      - "Supports"
+    focus:
+      - "Supports"
+
   - title: "M3 Heat Inserts"
     description: "Install the 2 heat inserts into the backplate."
     camera:

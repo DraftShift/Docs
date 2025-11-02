@@ -1,28 +1,24 @@
-title: Backplate - Anthead
-model: "Anthead_SF.gltf"
-image: "/assets/backplate_anthead_SF.png"
+title: Backplate - DragonBurner
+model: "DragonBurner.gltf"
+image: "/assets/backplate_dragonburner.png"
 
 summary: >
-    StealthChanger Backplate for the Anthead.
-    <br>
-    Standard flow version is used for the purpose of this guide.
+    StealthChanger Backplate for the DragonBurner.
     <br>
     The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
 
 printed_bom:
-  Anthead Backplate:
+  DragonBurner Backplate:
     qty: 1
     urls:
-        SF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_SF.stl?raw=true
-        HF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_HF.stl?raw=true
-        UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_UHF.stl?raw=true
+        Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner.stl?raw=true
 
-  Anthead Spacer:
+  DragonBurner Spacer:
     qty: 1
     urls:
-        Spacer: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer.stl?raw=true
-        Spacer Full: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer_Full.stl?raw=true
+        Link: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner_Spacer.stl?raw=true
 
+  
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3

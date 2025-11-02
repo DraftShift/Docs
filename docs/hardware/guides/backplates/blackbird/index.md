@@ -1,6 +1,6 @@
-# Anthead Backplate
+# BlackBird Backplate
 
-{% set assembly = get_hardware("backplates")["Backplate - Anthead"] %}
+{% set assembly = get_hardware("backplates")["Backplate - BlackBird"] %}
 
 {% include "_templates/overview.md" %}
 
