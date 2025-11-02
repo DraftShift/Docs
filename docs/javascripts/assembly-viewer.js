@@ -34,13 +34,13 @@ let modelViewerInitialized = false;
 // Light positions
 const lightValues = {
     // Key light: Strong from upper front-right (primary light source)
-    keyLight: {position: [1.5, 2, 1.5], intensity: 2, color: 0xffffff},
+    keyLight: {position: [1.5, 2, 1.5], intensity: 2.5, color: 0xffffff},
     // Fill light: Softer from upper front-left (reduces harsh shadows)
-    fillLight: {position: [-1, 1.5, 1], intensity: 1, color: 0xffffff},
+    fillLight: {position: [-1, 1.5, 1], intensity: 2, color: 0xffffff},
     // Rim light: Subtle from back-top (edge definition)
-    rimLight: {position: [0, 1.5, -2], intensity: 0.8, color: 0xffffff},
+    rimLight: {position: [0, 1.5, -2], intensity: 1.0, color: 0xffffff},
     // Bottom bounce: Very subtle upward light (simulates ground reflection)
-    bounceLight: {position: [0, -1, 0.5], intensity: 0.3, color: 0xffffff}
+    bounceLight: {position: [0, -1, 0.5], intensity: 0.5, color: 0xffffff}
 };
 
 // Helper function to create SVG icon from template
@@ -248,13 +248,6 @@ function initModelViewer(modelPath, onModelLoaded) {
     const scene = new THREE.Scene();
     window.scene = scene; // Make scene globally accessible
 
-    // Use background color from template if available, otherwise default
-    if (typeof bgColor !== 'undefined') {
-        scene.background = new THREE.Color(bgColor[0] / 255, bgColor[1] / 255, bgColor[2] / 255);
-    } else {
-        scene.background = new THREE.Color(0x1a1a1a);
-    }
-
     // Camera setup
     const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 2000);
     camera.position.set(0, 50, 100);
@@ -265,6 +258,34 @@ function initModelViewer(modelPath, onModelLoaded) {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.domElement.style.borderRadius = '8px'; // Match container border-radius
     container.appendChild(renderer.domElement);
+
+    // Create gradient background (lighter at top, darker at bottom)
+    const gradientCanvas = document.createElement('canvas');
+    gradientCanvas.width = 2;
+    gradientCanvas.height = 256;
+    const gradientContext = gradientCanvas.getContext('2d');
+    const gradient = gradientContext.createLinearGradient(0, 0, 0, 256);
+    
+    // Use background color from template if available, otherwise default
+    let baseColor;
+    if (typeof bgColor !== 'undefined') {
+        baseColor = new THREE.Color(bgColor[0] / 255, bgColor[1] / 255, bgColor[2] / 255);
+    } else {
+        baseColor = new THREE.Color(0x7f7f7f);
+    }
+    
+    // Create lighter top color (1.3x brightness) and darker bottom color (0.6x brightness)
+    const topColor = baseColor.clone().multiplyScalar(1.3);
+    const bottomColor = baseColor.clone().multiplyScalar(0.6);
+    
+    gradient.addColorStop(0, `rgb(${Math.min(255, topColor.r * 255)}, ${Math.min(255, topColor.g * 255)}, ${Math.min(255, topColor.b * 255)})`);
+    gradient.addColorStop(1, `rgb(${bottomColor.r * 255}, ${bottomColor.g * 255}, ${bottomColor.b * 255})`);
+    
+    gradientContext.fillStyle = gradient;
+    gradientContext.fillRect(0, 0, 2, 256);
+    
+    const gradientTexture = new THREE.CanvasTexture(gradientCanvas);
+    scene.background = gradientTexture;
 
     renderer.physicallyCorrectLights = true;
     renderer.outputEncoding = THREE.sRGBEncoding;
@@ -317,7 +338,7 @@ function initModelViewer(modelPath, onModelLoaded) {
             // Track children of direct children (two levels deep from root)
             let partIndex = 1;
             
-            // Store original colors for all meshes
+            // Store original colors for all meshes and add edge lines
             root.traverse(function(child) {
                 if (child.isMesh && child.material) {
                     if (Array.isArray(child.material)) {
@@ -326,6 +347,13 @@ function initModelViewer(modelPath, onModelLoaded) {
                     } else {
                         window.originalPartColors[child.uuid] = child.material.color.clone();
                     }
+                    
+                    // Add black edge lines to the mesh
+                    const edges = new THREE.EdgesGeometry(child.geometry, 15); // 15 degree threshold for edge detection
+                    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 1 });
+                    const edgeLines = new THREE.LineSegments(edges, lineMaterial);
+                    edgeLines.renderOrder = 1; // Render edges after the mesh
+                    child.add(edgeLines);
                 }
             });
             
