@@ -16,6 +16,8 @@ theme:
     - navigation.footer
     - content.tabs.link
     - content.tooltips
+    - navigation.instant
+    - navigation.instant.progress
   
   palette:
     # AUTO
