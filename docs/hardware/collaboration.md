@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2 
+---
 
 We have collaborated with the following vendors to bring CNC StealthChanger components and kits to the community.
 

@@ -18,10 +18,13 @@ theme:
     - content.tooltips
   
   palette:
+    # AUTO
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
+  
+    # LIGHT MODE
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue
@@ -29,6 +32,8 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+
+    # DARK MODE
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
@@ -106,9 +111,9 @@ nav:
 
   - Software:
     - software/index.md
-    - Installation: software/installation.md
-    - Upgrading: software/upgrading.md
-    - Troubleshooting: software/troubleshooting.md
+    - Klipper: software/klipper.md
+    - Klipper-toolchanger: software/klipper-toolchanger.md
+    - Slicers: software/slicers.md
 
   - Calibration:
     - Overview: calibration.md

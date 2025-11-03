@@ -1,3 +1,8 @@
+---
+search:
+  boost: 2 
+---
+
 ## Dock Terminology
 * `stubby` - Refers to the depth of the dock (Y axis) being less than `standard` and is only for machines not running Door Buffer. `stubby` is not available for all toolheads.
 
