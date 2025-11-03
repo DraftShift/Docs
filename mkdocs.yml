@@ -43,7 +43,16 @@ nav:
 
   - Hardware:
     - hardware/index.md
+    - StealthChanger: hardware/stealthchanger.md
+    - Modular Docks: hardware/modular_dock.md
+    - Door Buffer: hardware/door_buffer.md
+    - Tophat: hardware/tophat.md
+    - Cable Management: hardware/cable_management.md
+    - Calibration Tools: hardware/calibration_tools.md
     - Toolheads: hardware/tools/tools.md
+    - Calibration Tools: hardware/calibration_tools.md
+    - Collaborations: hardware/collaborations.md
+
     - Build Guides:
       - hardware/guides/index.md
         
@@ -115,11 +124,13 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.blocks.caption
   - attr_list
   - md_in_html
   - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -130,7 +141,7 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
+
 
 
   - toc:
