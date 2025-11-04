@@ -44,7 +44,7 @@ For the purposes of StealthChanger the toolhead selection is rather important. I
     | 350mm Voron  | {{ v350 }} |
     | 180mm Micron | {{ m180 }} |
 
-    [:fontawesome-brands-github: View on GitHub]({{ tool_data.url }}){.md-button}
+    [:fontawesome-brands-github: View on GitHub]({{ tool_data.url }}){:target="_blank" .md-button}
 
 {% endfor %}
 

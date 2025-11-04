@@ -73,6 +73,19 @@ toolheads:
       author: chirpy2605
       url: https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner
 
+    JabberWocky:
+      name: JabberWocky
+      dock_width: wide
+      short_dock: true
+      stubby_dock: true
+      user_mod_backplates: false
+      dsd_backplates: 
+        JabberWocky: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/JabberWocky.stl?raw=true
+        spacer: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/JabberWocky_Spacer.stl?raw=true
+      thesin_backplates: []
+      author: kinematicdigit
+      url: https://github.com/kinematicdigit/Jabberwocky
+
     Mini StealthBurner:
       name: Mini StealthBurner
       dock_width: standard

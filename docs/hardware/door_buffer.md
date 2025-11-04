@@ -3,6 +3,9 @@ search:
   boost: 2 
 ---
 
+## Crossbar
+
+
 | Idler Interference | Door Buffer Solution |
 | :-: | :-: |
 | ![Idler interference](/assets/idler_interference.png) | ![Door buffer solution](/assets/door_buffer_solution.png) |
