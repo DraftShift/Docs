@@ -54,7 +54,7 @@ nav:
     - Door Buffer: hardware/door_buffer.md
     - Tophat: hardware/tophat.md
     - Cable Management: hardware/cable_management.md
-    - Toolheads: hardware/tools/tools.md
+    - Toolheads: hardware/tools.md
     - Calibration Tools: hardware/calibration_tools.md
     - Collaborations: hardware/collaborations.md
 
