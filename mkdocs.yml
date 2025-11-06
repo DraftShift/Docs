@@ -47,6 +47,7 @@ theme:
 nav:
   - Introduction: index.md
   - Getting Started: getting_started.md
+  - Electrical: electrical.md
 
   - Hardware:
     - StealthChanger: hardware/stealthchanger.md
