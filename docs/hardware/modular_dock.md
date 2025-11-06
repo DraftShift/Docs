@@ -3,7 +3,7 @@ search:
   boost: 2 
 ---
 
-The Mofular Dock gives you a place to rest the tools while they are not in use. Its modular design allows for flexible configurations to match any printer and toolhead combination.
+The Modular Dock gives you a place to rest the tools while they are not in use. Its modular design allows for flexible configurations to match any printer and toolhead combination.
 
 ## Application
 The modular dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](../../hardware/door_buffer/#crossbar). The [crossbar](../../hardware/door_buffer/#crossbar) is a part of the [Door Buffer](../../hardware/door_buffer) and offers a stirdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](../../hardware/door_buffer/#crossbar).

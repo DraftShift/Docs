@@ -1,4 +1,6 @@
 
+{{ guides}}
+
 For the purposes of StealthChanger the toolhead selection is rather important. It is often the deciding factor in how the rest of the build is configured. It determines which docks you can use, the maximum number of tools you can use, and the can also have a large impact on power requirements.
 
 ???+ info "Printing"
@@ -18,11 +20,11 @@ For the purposes of StealthChanger the toolhead selection is rather important. I
 
 <div class="grid cards" style="text-align: center;" markdown>
 
-{% for tool, tool_data in toolheads.items() %}
-    {% set v250 = max_tools[tool_data.dock_width][250]|string if max_tools[tool_data.dock_width][250] > 0  else '-' %}
-    {% set v300 = max_tools[tool_data.dock_width][300]|string if max_tools[tool_data.dock_width][300] > 0  else '-' %}
-    {% set v350 = max_tools[tool_data.dock_width][350]|string if max_tools[tool_data.dock_width][350] > 0  else '-' %}
-    {% set m180 = max_tools[tool_data.dock_width][180]|string if max_tools[tool_data.dock_width][180] > 0  else '-' %}
+{% for tool, tool_data in tools.toolheads.items() %}
+    {% set v250 = tools.max_tools[tool_data.dock_width][250]|string if tools.max_tools[tool_data.dock_width][250] > 0  else '-' %}
+    {% set v300 = tools.max_tools[tool_data.dock_width][300]|string if tools.max_tools[tool_data.dock_width][300] > 0  else '-' %}
+    {% set v350 = tools.max_tools[tool_data.dock_width][350]|string if tools.max_tools[tool_data.dock_width][350] > 0  else '-' %}
+    {% set m180 = tools.max_tools[tool_data.dock_width][180]|string if tools.max_tools[tool_data.dock_width][180] > 0  else '-' %}
 -   <span id="{{ tool.replace(' ', '_').lower() }}"></span>
 
     ### {{ tool }}

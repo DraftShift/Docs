@@ -1,130 +1,59 @@
 def define_env(env):
-    """Load assembly YAML files and make them available as Jinja variables"""
     import os
     import yaml
-    env.variables.assembly = None
-    env.variables.toolheads = {}
-    env.variables.max_tools = {}
+
+    yaml_folder   = os.path.join(env.project_dir, 'data')
+    guides_folder = os.path.join(env.project_dir, 'docs', 'hardware', 'guides')
+
+    def open_yaml_file(filepath):
+        """Helper function to open and parse a YAML file"""
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return yaml.safe_load(f)
+
+        except Exception as e:
+            print(f"Error loading {filepath}: \n{e}")
+            return None
+
+    # Go through the YAML files in the YAML folder and create an env variable based on the file name
+    for filename in os.listdir(yaml_folder):
+        if filename.endswith('.yml') or filename.endswith('.yaml'):
+            yaml_path = os.path.join(yaml_folder, filename)
+            yaml_name = filename.strip('.yml').strip('.yaml')
+
+            if os.path.exists(yaml_path):
+                yaml_data = open_yaml_file(yaml_path)
+
+                if yaml_data:
+                    env.variables[yaml_name] = yaml_data
+
     env.variables.guides = {}
 
-    # Load tools.yml
-    tools_file = os.path.join(env.project_dir, 'docs', 'hardware', 'tools', 'tools.yml')
+    # Go through the guides folder and look for folders with YAML files and create an env variable based on the folder name
+    for folder in os.listdir(guides_folder):
+        guide_parent = os.path.join(guides_folder, folder)
+        if os.path.isdir(guide_parent):
+            for guide_folder in os.listdir(guide_parent):
+                guide_path = os.path.join(guide_parent, guide_folder)
 
-    if os.path.exists(tools_file):
-        try:
-            with open(tools_file, 'r', encoding='utf-8') as f:
-                tools_data = yaml.safe_load(f)
-                if tools_data:
-                    if 'toolheads' in tools_data:
-                        env.variables.toolheads = tools_data['toolheads']
-                    if 'max_tools' in tools_data:
-                        env.variables.max_tools = tools_data['max_tools']
-        except Exception as e:
-            print(f"Error loading tools.yml: {e}")
-
-    # Load all guides at startup
-    def load_all_guides():
-        """Load all hardware guides and organize them by category in nav order"""
-        guides_base = os.path.join(env.project_dir, 'docs', 'hardware', 'guides')
-        
-        if not os.path.exists(guides_base):
-            return {}
-        
-        # Load mkdocs.yml to get nav order for all categories
-        nav_orders = {}
-        mkdocs_path = os.path.join(env.project_dir, 'mkdocs.yml')
-        try:
-            with open(mkdocs_path, 'r', encoding='utf-8') as f:
-                mkdocs_data = yaml.load(f, Loader=yaml.FullLoader)
-                if mkdocs_data and 'nav' in mkdocs_data:
-                    # Find the category in the nav structure
-                    for item in mkdocs_data['nav']:
-                        if isinstance(item, dict) and 'Hardware' in item:
-                            hardware_nav = item['Hardware']
-                            for hw_item in hardware_nav:
-                                if isinstance(hw_item, dict) and 'Build Guides' in hw_item:
-                                    build_guides = hw_item['Build Guides']
-                                    for guide_item in build_guides:
-                                        if isinstance(guide_item, dict):
-                                            for key, value in guide_item.items():
-                                                if isinstance(value, list):
-                                                    # Extract folder names from paths
-                                                    for sub_item in value:
-                                                        if isinstance(sub_item, str):
-                                                            # Extract category and folder from path
-                                                            parts = sub_item.split('/')
-                                                            if len(parts) >= 5 and parts[0] == 'hardware' and parts[1] == 'guides':
-                                                                category = parts[2]
-                                                                folder = parts[3]
-                                                                if category not in nav_orders:
-                                                                    nav_orders[category] = []
-                                                                nav_orders[category].append(folder)
-                                                        elif isinstance(sub_item, dict):
-                                                            # Handle nested items like "Sexball Probe: hardware/guides/calibration_tools/sexball/index.md"
-                                                            for sub_key, sub_value in sub_item.items():
-                                                                if isinstance(sub_value, str):
-                                                                    parts = sub_value.split('/')
-                                                                    if len(parts) >= 5 and parts[0] == 'hardware' and parts[1] == 'guides':
-                                                                        category = parts[2]
-                                                                        folder = parts[3]
-                                                                        if category not in nav_orders:
-                                                                            nav_orders[category] = []
-                                                                        nav_orders[category].append(folder)
-        except Exception as e:
-            print(f"Error loading nav order from mkdocs.yml: {e}")
-        
-        # Load all guides from all categories
-        all_guides = {}
-        for category in os.listdir(guides_base):
-            category_path = os.path.join(guides_base, category)
-            if not os.path.isdir(category_path):
-                continue
-            
-            guide_data = {}
-            for guide_folder in os.listdir(category_path):
-                guide_path = os.path.join(category_path, guide_folder)
-                
                 if os.path.isdir(guide_path):
-                    data_file = os.path.join(guide_path, 'data.yml')
+                    guide_folder = guide_folder.replace(" ", "_").lower()
                     
-                    try:
-                        with open(data_file, 'r', encoding='utf-8') as f:
-                            data = yaml.safe_load(f)
-                            
+                    # Look for YAML files in the guide folder
+                    for filename in os.listdir(guide_path):
+                        if filename.endswith('.yml') or filename.endswith('.yaml'):
+                            filepath = os.path.join(guide_path, filename)
+                            data = open_yaml_file(filepath)
+
                             if data:
-                                if 'model' in data:
-                                    data["model"] = f"/hardware/guides/{category}/{guide_folder}/{data['model']}"
-                                
-                                # Add the folder name for URL generation
-                                data["folder"] = guide_folder
-                                
-                                guide_data[guide_folder] = data
-                    
-                    except Exception as e:
-                        print(f"Error loading {data_file}: {e}")
-            
-            # Sort guides based on nav order
-            hardware = {}
-            if category in nav_orders:
-                for folder_name in nav_orders[category]:
-                    if folder_name in guide_data:
-                        data = guide_data[folder_name]
-                        hardware[data["title"]] = data
-                # Add any remaining guides not in nav order
-                for folder_name, data in guide_data.items():
-                    if data["title"] not in hardware:
-                        hardware[data["title"]] = data
-            else:
-                # No nav order found, just add all guides
-                for folder_name, data in guide_data.items():
-                    hardware[data["title"]] = data
-            
-            all_guides[category] = hardware
-        
-        return all_guides
-    
-    # Load all guides at startup
-    env.variables.guides = load_all_guides()
+
+                                data['folder'] = guide_folder
+                                try:
+                                    env.variables.guides[folder][data['title']] = data
+
+                                except KeyError:
+                                    env.variables.guides[folder] = {}
+                                    env.variables.guides[folder][data['title']] = data
 
 
     @env.macro

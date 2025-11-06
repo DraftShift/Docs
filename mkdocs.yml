@@ -108,7 +108,7 @@ nav:
         - Axiscope Camera: hardware/guides/calibration_tools/axiscope/index.md
 
   - Software:
-    - software/index.md
+    - Overview: software/index.md
     - Klipper: software/klipper.md
     - Klipper-toolchanger: software/klipper-toolchanger.md
     - Slicers: software/slicers.md
