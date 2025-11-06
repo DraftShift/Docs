@@ -1,7 +1,7 @@
 
-{{ guides}}
 
-For the purposes of StealthChanger the toolhead selection is rather important. It is often the deciding factor in how the rest of the build is configured. It determines which docks you can use, the maximum number of tools you can use, and the can also have a large impact on power requirements.
+For the purposes of StealthChanger the toolhead selection is rather important. It is often the deciding factor in how the rest of the build is configured. It determines which docks you can use, the maximum number of tools you can use, and can also have a large impact on power requirements.
+
 
 ???+ info "Printing"
     Officially supported toolheads do not require modification to work with StealthChanger, only the addition of the Stealthchanger backplate and possibly a spacer. Each toolhead can be sourced from their respective repositories. Toolheads that are not officially supported will require modification to work with StealthChanger and will be marked as a usermod.

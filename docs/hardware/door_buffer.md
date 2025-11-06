@@ -3,7 +3,6 @@ search:
   boost: 2 
 ---
 
-
 ## Context
 
 ### The Problem
@@ -43,4 +42,3 @@ The crossbar should be made from extrusion that matches your printer, 2020 for V
 ### Hardware
 
 ## Assembly
-

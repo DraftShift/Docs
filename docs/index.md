@@ -7,7 +7,7 @@ Welcome to the official documentation for StealthChanger and the DraftShift Desi
 
 ![StealthChanger](/assets/sc_anim.gif){ width=180 align=right }
 ### StealthChanger
-[StealthChanger](hardware/stealthchanger) consists of 2 major components, the [Shuttle](hardware/stealthchanger/#shuttle) and [Backplate](hardware/stealthchanger/#backplate). The shuttle gets attached the the printers gantry, while the backplate gets attached to the back of each tool. This enables any front mounted printer with an MGN rail to become a toolchanger.
+[StealthChanger](hardware/stealthchanger) consists of 2 major components, the [Shuttle](hardware/stealthchanger/#shuttle) and [Backplate](hardware/stealthchanger/#backplate). The shuttle gets attached the printers gantry, while the backplate gets attached to the back of each tool. This enables any flying gantry with front mounted MGN rail printer to become a toolchanger.
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Modular Dock](/assets/dock_cropped.png){ width=160 align=left } 
@@ -17,7 +17,7 @@ The [Modular Dock](hardware/modular_dock) gives you a place to rest the tools wh
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Door Buffer](/assets/door_buffer_solution.png){ width=250 align=right } 
 ### Door Buffer
-The [Door Buffer](hardware/door_buffer) moves the mounting point of the [Modular Dock](hardware/modular_dock) forward, adding a crossbar for greater stability. This also has the added benifit of regaining more of the lost printable area.
+The [Door Buffer](hardware/door_buffer) moves the mounting point of the [Modular Dock](hardware/modular_dock) forward, adding a crossbar for greater stability. This also has the added benefit of regaining more of the lost printable area.
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Tophat](/assets/tophat_extrusion.png){ width=300 align=left } 
@@ -33,3 +33,4 @@ Proper [Cable Management](hardware/cable_management) plays a critical role in th
 ![Cable Management](/assets/sexball.png){ width=250 align=left } 
 ### Calibration Tools
 For [StealthChanger](hardware/stealthchanger) to operate accurately, the printer must compensate for any positional offsets between tool nozzles. The [Calibration Tools](hardware/calibration_tools) section details the available options for achieving this calibration.
+are 

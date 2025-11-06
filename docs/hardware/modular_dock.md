@@ -26,7 +26,7 @@ Because of its modularity, the Modular Dock has many differing pieces that can b
 
 ## Componants
 ### Base
-The base is a large section that is toolhead specific and has been shapped to match the bottom of the toolhead. It defines the width of the dock and helps define the position the tool sits in on the Y Axis. The base can be availiable in 2 variants, `standard` and `stubby`. Every toolhead has a `standard` base, but not all toolheads have the smaller `stubby` base.
+The base is a large section that is toolhead specific and has been shaped to match the bottom of the toolhead. It defines the width of the dock and helps define the position the tool sits in on the Y Axis. The base can be availiable in 2 variants, `standard` and `stubby`. Every toolhead has a `standard` base, but not all toolheads have the smaller `stubby` base.
 
 !!! warning "Smaller is better right?"
     The `stubby` base is **NOT** compatible when using a [Door Buffer](../../hardware/door_buffer). If you are using a [Door Buffer](../../hardware/door_buffer), you MUST use the `standard` base. 
@@ -36,7 +36,7 @@ The base is a large section that is toolhead specific and has been shapped to ma
 | ![Standard](/assets/dock-base_standard.png) | ![Stubby](/assets/dock-base_stubby.png) |
 
 ### Blocker
-The blocker is a section that is toolhead agnostic and mounts inside the [base](#base). It serves as a barrier to prevent ooze while the tool is docked. It is availiable in 2 variants, `cup` and `spring steel`. There is really no advantage to using one over the other, its more about what you have available to you. The `cup` version uses a pen spring, screw and heatset insert, while the `spring steel` version strip of the spring steel. Both versions use high temperature RTV silicone to block the nozzle.
+The blocker is a section that is toolhead agnostic and mounts inside the [base](#base). It serves as a barrier to prevent ooze while the tool is docked. It is availiable in 2 variants, `cup` and `spring steel`. There is no real advantage using one over the other, its more about what you have available to you. The `cup` version uses a pen spring, screw and heatset insert, while the `spring steel` version strip of the spring steel. Both versions use high temperature RTV silicone to block the nozzle.
 
 !!! tip "LDO Toolhead and Dock Kit"
     The LDO Toolhead and Dock Kit includes pre moulded `spring steel` blockers. If you are using the LDO kit, you will need to print the `spring steel` variant.
