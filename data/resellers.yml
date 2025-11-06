@@ -1,0 +1,36 @@
+regions:
+  us:
+    fabreeko:
+      name: Fabreeko
+      logo_url: https://www.fabreeko.com/cdn/shop/files/Fabreeko_Logo_ecf1536e-3074-4a0e-9306-87ca89f1abbd_320x.png
+      description: ""
+      url: https://www.fabreeko.com
+      product_url: https://www.fabreeko.com/search?q=stealthChanger
+    west3d: 
+      name: West3D
+      logo_url: https://west3d.com/cdn/shop/files/Real_People_Real_Knowledge_Shared_Passion_68c68b0e-dc78-4ba8-8f45-e7fedd886c9b_140x@2x.png
+      description: ""
+      url: https://west3d.com
+      product_url: https://west3d.com/search?type=product&q=stealthchanger
+    kb3d:
+      name: KB-3D
+      logo_url: https://kb-3d.com/store/img/cms/KB3DLogoWEB.svg
+      description: ""
+      url: https://kb-3d.com
+      product_url: https://kb-3d.com/store/#c112/fullscreen/m=and&q=StealthChanger
+  eu:
+    myrigs3d: 
+      name: MyRigs3D
+      region: "EU"
+      description: ""
+      logo_url: https://myrigs3d.com/cdn/shop/files/Photoroom_20250114_152158.png
+      url: https://myrigs3d.com
+      product_url: https://myrigs3d.com/search?type=product&q=stealth+changer
+  au:
+    dremc:
+      name: Dremc
+      logo_url: https://store.dremc.com.au/cdn/shop/files/Webitse_Logo_Image_400x120_bdcaa875-31ef-42ed-81e8-900c13268d02_300x@2x.jpg
+      description: ""
+      region: "AU"
+      url: https://store.dremc.com.au
+      product_url: https://store.dremc.com.au/search?type=product&q=stealthchanger
