@@ -47,7 +47,7 @@ theme:
 nav:
   - Introduction: index.md
   - Getting Started: getting_started.md
-  - Electrical: electrical.md
+  - Power & Electronics: electronics.md
 
   - Hardware:
     - StealthChanger: hardware/stealthchanger.md
@@ -55,9 +55,8 @@ nav:
     - Door Buffer: hardware/door_buffer.md
     - Tophat: hardware/tophat.md
     - Cable Management: hardware/cable_management.md
-    - Toolheads: hardware/tools.md
+    - Toolheads: hardware/toolheads.md
     - Calibration Tools: hardware/calibration_tools.md
-    - Collaborations: hardware/collaborations.md
 
     - Build Guides:
       - StealthChanger Shuttles: 
@@ -119,6 +118,7 @@ nav:
     - Nozzle Offsets: calibration/nozzle_offsets.md
     - Dock Locations: calibration/dock_locations.md
 
+  - Collaborations: collaborations.md
   - Resellers: resellers.md
 
 plugins:
@@ -146,8 +146,6 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-
-
 
   - toc:
       permalink: true

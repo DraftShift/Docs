@@ -6,7 +6,7 @@ search:
 {% set board_data = {} %}
 
 ## Power Requirements
-Adding more tools increases you power draw. The required wattage for your build will need to be calculated depending on the chosen hardware for each tool by the end user. 
+Adding more tools increases the power draw. The required wattage for your build will need to be calculated depending on the chosen hardware for each tool by the end user. 
 
 !!! info "Wattage Calculation"
     See the following example of how one could calculate the wattage required for 6 tool heads.
