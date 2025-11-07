@@ -441,3 +441,21 @@
 #open-color-picker {
     background: #6e3fa3;
 }
+
+/* Reset colors button */
+.reset-button {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.reset-button svg {
+    width: 18px;
+    height: 18px;
+    fill: rgba(255, 255, 255, 0.9);
+}

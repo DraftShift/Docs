@@ -33,6 +33,9 @@
                     <input type="color" class="color-input" data-color-type="bg" value="{{ '#%02x%02x%02x' | format(bg_color[0], bg_color[1], bg_color[2]) }}">
                 </div>
             </div>
+            <div class="color-box-wrapper" data-tooltip="Reset Colors">
+                <button id="reset-colors" class="color-box reset-button icon-button"></button>
+            </div>
         </div>
     </div>
 {% endmacro %}

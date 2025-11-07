@@ -78,19 +78,25 @@ function applyColorToMaterial(material, color) {
     }
 }
 
-// Helper function to clone and color material
-function cloneAndColorMaterial(material, color) {
-    if (Array.isArray(material)) {
-        return material.map(function(mat) {
-            const cloned = mat.clone();
-            cloned.color.copy(color);
-            return cloned;
-        });
-    } else {
-        const cloned = material.clone();
-        cloned.color.copy(color);
-        return cloned;
-    }
+// Helper function to create gradient background texture
+function createGradientBackground(rgbColor) {
+    const gradientCanvas = document.createElement('canvas');
+    gradientCanvas.width = 2;
+    gradientCanvas.height = 256;
+    const gradientContext = gradientCanvas.getContext('2d');
+    const gradient = gradientContext.createLinearGradient(0, 0, 0, 256);
+    
+    const baseColor = new THREE.Color(rgbColor[0] / 255, rgbColor[1] / 255, rgbColor[2] / 255);
+    const topColor = baseColor.clone().multiplyScalar(1.3);
+    const bottomColor = baseColor.clone().multiplyScalar(0.6);
+    
+    gradient.addColorStop(0, `rgb(${Math.min(255, topColor.r * 255)}, ${Math.min(255, topColor.g * 255)}, ${Math.min(255, topColor.b * 255)})`);
+    gradient.addColorStop(1, `rgb(${bottomColor.r * 255}, ${bottomColor.g * 255}, ${bottomColor.b * 255})`);
+    
+    gradientContext.fillStyle = gradient;
+    gradientContext.fillRect(0, 0, 2, 256);
+    
+    return new THREE.CanvasTexture(gradientCanvas);
 }
 
 // Function to update camera overlay display
@@ -230,7 +236,8 @@ function setFocusParts(focusArray) {
         toArray(window.modelViewerParts[partName]).forEach(function(mesh) {
             mesh.traverse(function(child) {
                 if (child.isMesh && child.material) {
-                    child.material = cloneAndColorMaterial(child.material, threeColor);
+                    // Directly modify material color instead of cloning (much faster)
+                    applyColorToMaterial(child.material, threeColor);
                 }
             });
         });
@@ -260,32 +267,8 @@ function initModelViewer(modelPath, onModelLoaded) {
     container.appendChild(renderer.domElement);
 
     // Create gradient background (lighter at top, darker at bottom)
-    const gradientCanvas = document.createElement('canvas');
-    gradientCanvas.width = 2;
-    gradientCanvas.height = 256;
-    const gradientContext = gradientCanvas.getContext('2d');
-    const gradient = gradientContext.createLinearGradient(0, 0, 0, 256);
-    
-    // Use background color from template if available, otherwise default
-    let baseColor;
-    if (typeof bgColor !== 'undefined') {
-        baseColor = new THREE.Color(bgColor[0] / 255, bgColor[1] / 255, bgColor[2] / 255);
-    } else {
-        baseColor = new THREE.Color(0x7f7f7f);
-    }
-    
-    // Create lighter top color (1.3x brightness) and darker bottom color (0.6x brightness)
-    const topColor = baseColor.clone().multiplyScalar(1.3);
-    const bottomColor = baseColor.clone().multiplyScalar(0.6);
-    
-    gradient.addColorStop(0, `rgb(${Math.min(255, topColor.r * 255)}, ${Math.min(255, topColor.g * 255)}, ${Math.min(255, topColor.b * 255)})`);
-    gradient.addColorStop(1, `rgb(${bottomColor.r * 255}, ${bottomColor.g * 255}, ${bottomColor.b * 255})`);
-    
-    gradientContext.fillStyle = gradient;
-    gradientContext.fillRect(0, 0, 2, 256);
-    
-    const gradientTexture = new THREE.CanvasTexture(gradientCanvas);
-    scene.background = gradientTexture;
+    const bgColorArray = ColorManager.getColor('bg');
+    scene.background = createGradientBackground(bgColorArray);
 
     renderer.physicallyCorrectLights = true;
     renderer.outputEncoding = THREE.sRGBEncoding;
@@ -575,8 +558,12 @@ function createVisibilityControls(controlsId, modelParts) {
         
         // Toggle visibility on click
         item.addEventListener('click', function() {
+            // Look up meshes from global reference to avoid stale closures
+            const currentMeshes = window.modelViewerParts ? window.modelViewerParts[partName] : null;
+            if (!currentMeshes) return;
+            
             const isVisible = icon.classList.contains('visible');
-            setMeshVisibility(meshes, !isVisible);
+            setMeshVisibility(currentMeshes, !isVisible);
             
             if (isVisible) {
                 setIcon(icon, 'icon-eye-off');
@@ -604,13 +591,71 @@ const ColorManager = {
         bg: bgColor
     },
     
+    // localStorage key for global colors
+    storageKey: 'assemblyViewerColors',
+    
+    // Load colors from localStorage
+    loadFromStorage: function() {
+        try {
+            const stored = localStorage.getItem(this.storageKey);
+            if (stored) {
+                const savedColors = JSON.parse(stored);
+                // Merge saved colors with current colors
+                Object.keys(savedColors).forEach(function(key) {
+                    if (ColorManager.colors[key]) {
+                        ColorManager.colors[key] = savedColors[key];
+                    }
+                });
+                return true;
+            }
+        } catch (e) {
+            console.warn('Failed to load colors from localStorage:', e);
+        }
+        return false;
+    },
+    
+    // Save colors to localStorage
+    saveToStorage: function() {
+        try {
+            localStorage.setItem(this.storageKey, JSON.stringify(this.colors));
+        } catch (e) {
+            console.warn('Failed to save colors to localStorage:', e);
+        }
+    },
+    
+    // Reset colors to template defaults
+    resetToDefaults: function() {
+        // Clear localStorage
+        try {
+            localStorage.removeItem(this.storageKey);
+        } catch (e) {
+            console.warn('Failed to clear colors from localStorage:', e);
+        }
+        
+        // Reset to template defaults (from global variables)
+        this.colors.primary = primaryColor;
+        this.colors.accent = accentColor;
+        this.colors.frame = frameColor;
+        this.colors.focus = focusColor;
+        this.colors.bg = bgColor;
+        
+        return this.colors;
+    },
+    
     // Get color by type
     getColor: function(type) {
         return this.colors[type] || [127, 127, 127];
     },
     
-    // Set color by type
+    // Set color by type (with save)
     setColor: function(type, r, g, b) {
+        this.colors[type] = [r, g, b];
+        this.updateDisplay(type, r, g, b);
+        this.saveToStorage();
+    },
+    
+    // Set color without saving (for live preview)
+    setColorWithoutSave: function(type, r, g, b) {
         this.colors[type] = [r, g, b];
         this.updateDisplay(type, r, g, b);
     },
@@ -777,24 +822,26 @@ const PartsManager = {
     }
 };
 
-// DOM Helper - utility functions for DOM operations
-const DOMHelper = {
-    setElementDisplay: function(elementId, display) {
-        const el = document.getElementById(elementId);
-        if (el) el.style.display = display;
-    }
-};
-
 // Color Picker Manager - handles color picker interactions
 const ColorPickerManager = {
+    colorPickerHandler: null,
+    resetButtonHandler: null,
+    pendingColorUpdate: false,
+    colorInputHandlers: new Map(),
+    
     setupColorPicker: function() {
         const overlay = document.getElementById('color-picker-overlay');
         const openBtn = document.getElementById('open-color-picker');
         
         if (!overlay || !openBtn) return;
         
-        // Toggle color picker visibility
-        openBtn.addEventListener('click', function() {
+        // Remove old handler if exists
+        if (this.colorPickerHandler) {
+            openBtn.removeEventListener('click', this.colorPickerHandler);
+        }
+        
+        // Create and store new handler
+        this.colorPickerHandler = function() {
             this.blur();
             
             // Check if the overlay is collapsed
@@ -808,36 +855,139 @@ const ColorPickerManager = {
                     collapseBtn.click();
                 }
                 // Show the color picker
-                if (!overlay.classList.contains('visible')) {
+                const overlay = document.getElementById('color-picker-overlay');
+                if (overlay && !overlay.classList.contains('visible')) {
                     overlay.classList.add('visible');
                 }
             } else {
                 // Normal toggle behavior when expanded
-                overlay.classList.toggle('visible');
+                const overlay = document.getElementById('color-picker-overlay');
+                if (overlay) {
+                    overlay.classList.toggle('visible');
+                }
             }
+        };
+        
+        // Add the handler
+        openBtn.addEventListener('click', this.colorPickerHandler);
+        
+        // Remove old color input handlers
+        this.colorInputHandlers.forEach(function(handlers, input) {
+            input.removeEventListener('input', handlers.input);
+            input.removeEventListener('change', handlers.change);
         });
+        this.colorInputHandlers.clear();
         
         // Handle color input changes
+        const self = this;
         document.querySelectorAll('.color-input').forEach(function(input) {
-            input.addEventListener('input', function() {
+            // Create handlers
+            const inputHandler = function() {
                 const colorType = this.dataset.colorType;
                 const rgb = ColorManager.hexToRgb(this.value);
                 
                 if (rgb) {
-                    ColorManager.setColor(colorType, rgb[0], rgb[1], rgb[2]);
+                    // Always update the color value immediately
+                    ColorManager.setColorWithoutSave(colorType, rgb[0], rgb[1], rgb[2]);
                     
-                    // Apply colors to model
-                    if (modelViewerInitialized && typeof setFocusParts === 'function') {
-                        setFocusParts(ColorManager.buildColorArray(true));
+                    // Only update model if color picker is visible
+                    const overlay = document.getElementById('color-picker-overlay');
+                    if (!overlay || !overlay.classList.contains('visible')) {
+                        return; // Don't update model if picker isn't visible
                     }
                     
-                    // Update background color if bg type is selected
-                    if (colorType === 'bg' && window.scene) {
-                        window.scene.background = new THREE.Color(rgb[0] / 255, rgb[1] / 255, rgb[2] / 255);
+                    // Throttle expensive operations with requestAnimationFrame
+                    if (!ColorPickerManager.pendingColorUpdate) {
+                        ColorPickerManager.pendingColorUpdate = true;
+                        
+                        requestAnimationFrame(function() {
+                            ColorPickerManager.pendingColorUpdate = false;
+                            
+                            // Apply colors to model
+                            if (modelViewerInitialized && typeof setFocusParts === 'function') {
+                                setFocusParts(ColorManager.buildColorArray(true));
+                            }
+                            
+                            // Update background color if bg type is selected
+                            if (colorType === 'bg' && window.scene) {
+                                const currentRgb = ColorManager.getColor('bg');
+                                window.scene.background = createGradientBackground(currentRgb);
+                            }
+                        });
                     }
                 }
+            };
+            
+            const changeHandler = function() {
+                // Apply colors when done (in case picker was closed)
+                if (modelViewerInitialized && typeof setFocusParts === 'function') {
+                    setFocusParts(ColorManager.buildColorArray(true));
+                }
+                ColorManager.saveToStorage();
+            };
+            
+            // Store handlers
+            self.colorInputHandlers.set(input, {
+                input: inputHandler,
+                change: changeHandler
             });
+            
+            // Add event listeners
+            input.addEventListener('input', inputHandler);
+            input.addEventListener('change', changeHandler);
         });
+        
+        // Handle reset button
+        const resetBtn = document.getElementById('reset-colors');
+        if (resetBtn) {
+            // Remove old handler if exists
+            if (this.resetButtonHandler) {
+                resetBtn.removeEventListener('click', this.resetButtonHandler);
+            }
+            
+            // Create and store new handler
+            this.resetButtonHandler = function() {
+                this.blur();
+                
+                // Reset colors to template defaults
+                ColorManager.resetToDefaults();
+                
+                // Update all color picker inputs and displays
+                ['primary', 'accent', 'frame', 'focus', 'bg'].forEach(function(type) {
+                    const color = ColorManager.getColor(type);
+                    const colorInput = document.querySelector(`.color-input[data-color-type="${type}"]`);
+                    const colorBox = document.getElementById(`${type}-color-box`);
+                    
+                    if (colorInput) {
+                        colorInput.value = ColorManager.rgbToHex(color[0], color[1], color[2]);
+                    }
+                    if (colorBox) {
+                        colorBox.style.background = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+                    }
+                });
+                
+                // Update accent color on color picker button
+                const colorPickerBtn = document.getElementById('open-color-picker');
+                if (colorPickerBtn) {
+                    const accentColor = ColorManager.getColor('accent');
+                    colorPickerBtn.style.background = `rgb(${accentColor[0]}, ${accentColor[1]}, ${accentColor[2]})`;
+                }
+                
+                // Apply colors to model
+                if (modelViewerInitialized && typeof setFocusParts === 'function') {
+                    setFocusParts(ColorManager.buildColorArray(true));
+                }
+                
+                // Update background
+                if (window.scene) {
+                    const bgColorArray = ColorManager.getColor('bg');
+                    window.scene.background = createGradientBackground(bgColorArray);
+                }
+            };
+            
+            // Add the handler
+            resetBtn.addEventListener('click', this.resetButtonHandler);
+        }
     }
 };
 
@@ -881,6 +1031,8 @@ const UIManager = {
         });
     },
     
+    collapseButtonHandler: null,
+    
     setupCollapseButton: function() {
         const collapseBtn = document.getElementById('collapse-parts');
         const overlayContent = document.querySelector('.model-overlay-content');
@@ -895,9 +1047,20 @@ const UIManager = {
         setIcon(collapseBtn, 'icon-chevron-right');
         collapseBtn.setAttribute('data-tooltip', 'Expand Panel');
         
-        collapseBtn.addEventListener('click', function(e) {
+        // Remove old handler if exists
+        if (this.collapseButtonHandler) {
+            collapseBtn.removeEventListener('click', this.collapseButtonHandler);
+        }
+        
+        // Create and store new handler
+        this.collapseButtonHandler = function(e) {
             e.stopPropagation();
             this.blur();
+            
+            // Query for overlayContent inside handler to avoid stale references
+            const overlayContent = document.querySelector('.model-overlay-content');
+            if (!overlayContent) return;
+            
             const isCollapsed = overlayContent.classList.toggle('collapsed');
             
             // Hide color picker when collapsing
@@ -909,18 +1072,35 @@ const UIManager = {
             }
             
             // Update icon and tooltip
-            if (isCollapsed) {
-                setIcon(collapseBtn, 'icon-chevron-right');
-                collapseBtn.setAttribute('data-tooltip', 'Expand Panel');
-            } else {
-                setIcon(collapseBtn, 'icon-chevron-left');
-                collapseBtn.setAttribute('data-tooltip', 'Collapse Panel');
+            const collapseBtn = document.getElementById('collapse-parts');
+            if (collapseBtn) {
+                if (isCollapsed) {
+                    setIcon(collapseBtn, 'icon-chevron-right');
+                    collapseBtn.setAttribute('data-tooltip', 'Expand Panel');
+                } else {
+                    setIcon(collapseBtn, 'icon-chevron-left');
+                    collapseBtn.setAttribute('data-tooltip', 'Collapse Panel');
+                }
             }
-        });
+        };
+        
+        // Add the handler
+        collapseBtn.addEventListener('click', this.collapseButtonHandler);
     },
     
+    keyboardHandler: null,
+    
     setupKeyboardShortcuts: function() {
-        document.addEventListener('keydown', function(event) {
+        // Remove existing handler if present
+        if (this.keyboardHandler) {
+            document.removeEventListener('keydown', this.keyboardHandler);
+        }
+        
+        // Create new handler
+        this.keyboardHandler = function(event) {
+            // Only handle if we're on an assembly viewer page
+            if (!document.getElementById('model-viewer')) return;
+            
             // Toggle overlay with 'o' key
             if (event.key === 'o' || event.key === 'O') {
                 event.preventDefault();
@@ -972,7 +1152,10 @@ const UIManager = {
                     console.error('Failed to copy parts list:', err);
                 });
             }
-        });
+        };
+        
+        // Add the handler
+        document.addEventListener('keydown', this.keyboardHandler);
     }
 }
 
@@ -995,14 +1178,7 @@ function initializeModelViewer() {
             // Populate the parts list in the overlay
             createVisibilityControls('visibility-controls', window.modelViewerParts);
             
-            // Apply primary and accent colors to specified parts
-            if (typeof setFocusParts === 'function') {
-                const coloredParts = ColorManager.buildColorArray(false);
-                if (coloredParts.length > 0) {
-                    setFocusParts(coloredParts);
-                }
-            }
-            
+            // Don't call updateStep here - it will be called and will handle colors
             updateStep();
         }
     );
@@ -1067,7 +1243,10 @@ function updateStep() {
                 blinkInterval = null;
             });
         } else {
-            setFocusParts(baseColors);
+            // Apply base colors (primary, accent, frame)
+            if (baseColors.length > 0) {
+                setFocusParts(baseColors);
+            }
         }
     }
     
@@ -1225,6 +1404,16 @@ function setupAssemblyViewer() {
         frameColor = window.assemblyViewerData.frameColor || [127, 127, 127];
         focusColor = window.assemblyViewerData.focusColor || [110, 255, 0];
         subCategories = window.assemblyViewerData.subCategories || null;
+        
+        // Update ColorManager with template colors (as defaults)
+        ColorManager.colors.primary = primaryColor;
+        ColorManager.colors.accent = accentColor;
+        ColorManager.colors.frame = frameColor;
+        ColorManager.colors.focus = focusColor;
+        ColorManager.colors.bg = bgColor;
+        
+        // Load saved colors from localStorage (overrides template defaults)
+        ColorManager.loadFromStorage();
     }
     
     // Reset state for new page
@@ -1255,6 +1444,7 @@ function setupAssemblyViewer() {
     const deselectAllBtn = document.getElementById('deselect-all-parts');
     const toggleBtn = document.getElementById('toggle-focus');
     const colorPickerBtn = document.getElementById('open-color-picker');
+    const resetColorsBtn = document.getElementById('reset-colors');
     
     if (selectAllBtn) {
         selectAllBtn.innerHTML = '';
@@ -1275,9 +1465,27 @@ function setupAssemblyViewer() {
         const accentColor = ColorManager.getColor('accent');
         colorPickerBtn.style.background = `rgb(${accentColor[0]}, ${accentColor[1]}, ${accentColor[2]})`;
     }
+    if (resetColorsBtn) {
+        resetColorsBtn.innerHTML = '';
+        setIcon(resetColorsBtn, 'icon-refresh');
+    }
     
     // Setup color picker
     ColorPickerManager.setupColorPicker();
+    
+    // Update color picker inputs to reflect loaded colors
+    ['primary', 'accent', 'frame', 'focus', 'bg'].forEach(function(type) {
+        const color = ColorManager.getColor(type);
+        const colorInput = document.querySelector(`.color-input[data-color-type="${type}"]`);
+        const colorBox = document.getElementById(`${type}-color-box`);
+        
+        if (colorInput) {
+            colorInput.value = ColorManager.rgbToHex(color[0], color[1], color[2]);
+        }
+        if (colorBox) {
+            colorBox.style.background = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+        }
+    });
     
     // Setup UI controls
     UIManager.setupNavigationButtons();
@@ -1342,10 +1550,10 @@ function setupAssemblyViewer() {
             // Copy to clipboard
             navigator.clipboard.writeText(yamlText).then(function() {
                 // Visual feedback
-                const originalBg = cameraOverlay.style.background;
                 cameraOverlay.style.background = 'rgba(0, 150, 0, 0.85)';
                 setTimeout(function() {
-                    cameraOverlay.style.background = originalBg;
+                    // Clear inline style to restore CSS default
+                    cameraOverlay.style.background = '';
                 }, 200);
             }).catch(function(err) {
                 console.error('Failed to copy to clipboard:', err);
