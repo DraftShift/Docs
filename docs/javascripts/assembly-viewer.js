@@ -32,6 +32,8 @@ var blinkInterval = null;
 var modelViewerInitialized = false;
 var cameraOverlayHandler = null;
 var resizeHandler = null;
+var needsRenderGlobal = false; // Global flag for triggering renders from outside animate loop
+var renderFramesRemaining = 0; // Counter for forcing multiple renders during animations
 
 // Light positions
 const lightValues = {
@@ -89,8 +91,8 @@ function createGradientBackground(rgbColor) {
     const gradient = gradientContext.createLinearGradient(0, 0, 0, 256);
     
     const baseColor = new THREE.Color(rgbColor[0] / 255, rgbColor[1] / 255, rgbColor[2] / 255);
-    const topColor = baseColor.clone().multiplyScalar(1.3);
-    const bottomColor = baseColor.clone().multiplyScalar(0.6);
+    const topColor = baseColor.clone().multiplyScalar(1.2);  // 20% brighter at top
+    const bottomColor = baseColor.clone().multiplyScalar(0.2);  // 80% darker at bottom
     
     gradient.addColorStop(0, `rgb(${Math.min(255, topColor.r * 255)}, ${Math.min(255, topColor.g * 255)}, ${Math.min(255, topColor.b * 255)})`);
     gradient.addColorStop(1, `rgb(${bottomColor.r * 255}, ${bottomColor.g * 255}, ${bottomColor.b * 255})`);
@@ -190,12 +192,9 @@ function setCameraPosition(azimuth, polar, distance, pan_x = 0, pan_y = 0, pan_z
 }
 
 // Function to set which parts are visible
-function setVisibleParts(visiblePartNames) {
+function setVisibleParts(visiblePartNames, showAll) {
     if (!window.modelViewerParts) return;
     
-    const showAll = !visiblePartNames || visiblePartNames.length === 0;
-    
-    // Set visibility for each part
     Object.keys(window.modelViewerParts).forEach(function(partName) {
         const meshes = window.modelViewerParts[partName];
         const shouldBeVisible = showAll || visiblePartNames.includes(partName);
@@ -204,6 +203,10 @@ function setVisibleParts(visiblePartNames) {
     
     // Update visibility icons to match visibility
     PartsManager.updateAllIcons(visiblePartNames, showAll);
+    
+    // Trigger multiple renders to ensure visual update
+    needsRenderGlobal = true;
+    renderFramesRemaining = 5;
 }
 
 // Function to set focus color on specific parts
@@ -224,6 +227,10 @@ function setFocusParts(focusArray) {
         });
     });
     
+    // Trigger multiple renders to ensure visual update during animations
+    needsRenderGlobal = true;
+    renderFramesRemaining = 5; // Render for 5 frames to ensure visibility
+    
     // Apply colors from the array
     if (!focusArray || focusArray.length === 0) return;
     
@@ -238,17 +245,8 @@ function setFocusParts(focusArray) {
         toArray(window.modelViewerParts[partName]).forEach(function(mesh) {
             mesh.traverse(function(child) {
                 if (child.isMesh && child.material) {
-                    // Clone material to prevent shared materials from affecting other parts
-                    if (Array.isArray(child.material)) {
-                        child.material = child.material.map(function(mat) {
-                            const cloned = mat.clone();
-                            cloned.color.copy(threeColor);
-                            return cloned;
-                        });
-                    } else {
-                        child.material = child.material.clone();
-                        child.material.color.copy(threeColor);
-                    }
+                    // Just modify the color directly - no cloning needed
+                    applyColorToMaterial(child.material, threeColor);
                 }
             });
         });
@@ -273,7 +271,8 @@ function initModelViewer(modelPath, onModelLoaded) {
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    // Limit pixel ratio to 2 for better performance on high-DPI displays
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.domElement.style.borderRadius = '8px'; // Match container border-radius
     container.appendChild(renderer.domElement);
 
@@ -283,10 +282,12 @@ function initModelViewer(modelPath, onModelLoaded) {
 
     renderer.physicallyCorrectLights = true;
     renderer.outputEncoding = THREE.sRGBEncoding;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMapping = THREE.NoToneMapping;  // Disable tone mapping for accurate colors
     renderer.toneMappingExposure = 1.0;
+    
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    
 
     // Add ambient light for base illumination
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
@@ -295,7 +296,6 @@ function initModelViewer(modelPath, onModelLoaded) {
     // Lights
     Object.keys(lightValues).forEach(function(key) {
         const config = lightValues[key];
-        console.log(config);
         const light = new THREE.DirectionalLight(config.color || 0xffffff, config.intensity);
         
         // Store the normalized direction for later use
@@ -332,21 +332,28 @@ function initModelViewer(modelPath, onModelLoaded) {
             // Track children of direct children (two levels deep from root)
             let partIndex = 1;
             
-            // Store original colors for all meshes and add edge lines
+            // Store original colors for all meshes, clone materials to prevent sharing, and add edge lines
             root.traverse(function(child) {
                 if (child.isMesh && child.material) {
+                    // Enable frustum culling for better performance
+                    child.frustumCulled = true;
+                    
+                    // Clone materials to prevent shared materials between parts
                     if (Array.isArray(child.material)) {
+                        child.material = child.material.map(function(mat) { return mat.clone(); });
                         // Store first material's color as representative
                         window.originalPartColors[child.uuid] = child.material[0].color.clone();
                     } else {
+                        child.material = child.material.clone();
                         window.originalPartColors[child.uuid] = child.material.color.clone();
                     }
                     
-                    // Add black edge lines to the mesh
-                    const edges = new THREE.EdgesGeometry(child.geometry, 15); // 15 degree threshold for edge detection
+                    // Add black edge lines to the mesh with higher threshold for fewer edges
+                    const edges = new THREE.EdgesGeometry(child.geometry, 30); // 30 degree threshold - fewer edges for better performance
                     const lineMaterial = new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 1 });
                     const edgeLines = new THREE.LineSegments(edges, lineMaterial);
                     edgeLines.renderOrder = 1; // Render edges after the mesh
+                    edgeLines.frustumCulled = true; // Enable culling for edges too
                     child.add(edgeLines);
                 }
             });
@@ -458,6 +465,9 @@ function initModelViewer(modelPath, onModelLoaded) {
                 console.error('Error applying transparency:', error);
             }
             
+            // Trigger initial render now that model is loaded and positioned
+            needsRenderGlobal = true;
+            
             // Call callback when model is loaded
             if (typeof onModelLoaded === 'function') {
                 onModelLoaded();
@@ -472,12 +482,18 @@ function initModelViewer(modelPath, onModelLoaded) {
         }
     );
 
-    // Animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-        controls.update();
-        
-        // Update light positions to follow camera (camera-relative lighting)
+    // Track camera position to detect changes
+    let lastCameraPosition = camera.position.clone();
+    let lastCameraQuaternion = camera.quaternion.clone();
+    let needsRender = true; // Flag to track if we need to render
+    
+    // Request render on control changes
+    controls.addEventListener('change', function() {
+        needsRender = true;
+    });
+    
+    // Function to update light positions (only called when camera moves)
+    function updateLightPositions() {
         scene.children.forEach(function(child) {
             if (child.isDirectionalLight && child.userData.lightKey) {
                 const lightKey = child.userData.lightKey;
@@ -495,9 +511,43 @@ function initModelViewer(modelPath, onModelLoaded) {
                 }
             }
         });
+    }
+    
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
         
-        renderer.render(scene, camera);
-        updateCameraOverlay();
+        // Update controls (this sets needsRender via the change event if camera moved)
+        if (controls.enableDamping) {
+            controls.update();
+        }
+        
+        // Only update lights and overlay if camera has moved
+        if (!camera.position.equals(lastCameraPosition) || !camera.quaternion.equals(lastCameraQuaternion)) {
+            updateLightPositions();
+            updateCameraOverlay();
+            lastCameraPosition.copy(camera.position);
+            lastCameraQuaternion.copy(camera.quaternion);
+            needsRender = true;
+        }
+        
+        // Check global render flag (set by animations, visibility changes, etc.)
+        if (needsRenderGlobal) {
+            needsRender = true;
+            needsRenderGlobal = false;
+        }
+        
+        // Check if we need to keep rendering for animation visibility
+        if (renderFramesRemaining > 0) {
+            needsRender = true;
+            renderFramesRemaining--;
+        }
+        
+        // Only render if something changed
+        if (needsRender) {
+            renderer.render(scene, camera);
+            needsRender = false;
+        }
     }
     animate();
 
@@ -510,6 +560,9 @@ function initModelViewer(modelPath, onModelLoaded) {
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
+        // Trigger render after resize
+        needsRenderGlobal = true;
+        renderFramesRemaining = 2;
     };
     window.addEventListener('resize', resizeHandler);
 }
@@ -537,6 +590,9 @@ function createVisibilityControls(controlsId, modelParts) {
                     icon.classList.add('visible');
                 }
             });
+            // Trigger renders to show the change
+            needsRenderGlobal = true;
+            renderFramesRemaining = 5;
         };
     }
     
@@ -551,6 +607,9 @@ function createVisibilityControls(controlsId, modelParts) {
                     icon.classList.remove('visible');
                 }
             });
+            // Trigger renders to show the change
+            needsRenderGlobal = true;
+            renderFramesRemaining = 5;
         };
     }
     
@@ -590,6 +649,10 @@ function createVisibilityControls(controlsId, modelParts) {
                 setIcon(icon, 'icon-eye');
                 icon.classList.add('visible');
             }
+            
+            // Trigger renders to show the change
+            needsRenderGlobal = true;
+            renderFramesRemaining = 5;
         });
         
         item.appendChild(icon);
@@ -1282,7 +1345,10 @@ function updateStep() {
     
     // Update visible parts if specified
     if (typeof setVisibleParts === 'function') {
-        setVisibleParts(step.visible || []);
+        const visibleParts = step.visible || [];
+        // Empty array means show all parts
+        const showAll = visibleParts.length === 0;
+        setVisibleParts(visibleParts, showAll);
     }
     
     // Update focus colors with blinking animation if specified
@@ -1375,6 +1441,9 @@ function updateStep() {
             }
             
             controls.update();
+            
+            // Trigger render since camera was moved programmatically
+            needsRenderGlobal = true;
         }
     }
     

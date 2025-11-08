@@ -1,0 +1,114 @@
+title: Blocker - Spring Steel
+model: "Blocker - Spring Steel.gltf"
+# image: "/assets/dock-base_a4t.png"
+
+summary: >
+    This guide will prepare the Spring Steel Blocker for the [Modular Dock](/hardware/modular_docks).
+
+    !!! tip "Silicone Blocker"
+        If you have the LDO Tool and Dock kit, it comes with pre moulded silicone blockers and step 1 can be skipped.
+
+printed_bom:
+  Blocker - Spring Steel:
+    qty: 1
+    urls:
+      Standard: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Spring_Steel_Body.stl?raw=true
+      Stubby: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Spring_Steel_Stubby_Body.stl?raw=true
+  Clamp:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Spring_Steel_Clamp.stl?raw=true
+  Silicone Mould A:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Spring%20Steel%20Pad%20Mold/Nozzle%20Pad%20Mold%20A.stl?raw=true
+  Silicone Mould B:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Spring%20Steel%20Pad%20Mold/Nozzle%20Pad%20Mold%20B.stl?raw=true
+
+
+hardware_bom:
+    M3 Heat Inserts:
+      qty: 6
+    RTV Silicone:
+      qty: 1
+    Spring Steel 7x0.1x36mm:
+      qty: 1
+
+primary_parts:
+  - "Spring Steel Body"
+  - "Clamp"
+
+accent_parts:
+  - "Silicone Jig"
+
+steps:
+  - title: "Silicone Blocker"
+    description: "Put a small amount of RTV silicone in the jig and place a small piece of spring steel in the jig. Clamp the 2 pieces together making sure the spring steel doesnt slide out and leave  to dry for a minimum of 24 hours. Carefully remove the jig from the Silcone and trim the edges."
+    camera:
+      azimuth: 39
+      polar: 64
+      distance: 71
+      pan_x: 1.70
+      pan_y: -1.65
+      pan_z: 0.00
+    visible: 
+    - "Silicone Jig"
+    - "Spring Steel"
+    - "Silicone"
+    focus:
+    - "Spring Steel"
+    - "Silicone"
+
+  - title: "Install Heat Inserts"
+    description: "Install the heat inserts in to the Spring Steel Body."
+    camera:
+      azimuth: 39
+      polar: 64
+      distance: 71
+      pan_x: 1.70
+      pan_y: -1.65
+      pan_z: 0.00
+    visible: 
+    - "Spring Steel Body"
+    - "Heat Inserts"
+    focus:
+    - "Heat Inserts"
+
+  - title: "Fit Clamp"
+    description: "Fit the clamp by loosly install 2 M3x8 BHCS screws."
+    camera:
+      azimuth: 39
+      polar: 64
+      distance: 71
+      pan_x: 1.70
+      pan_y: -1.65
+      pan_z: 0.00
+    visible: 
+    - "Spring Steel Body"
+    - "Heat Inserts"
+    - "Clamp"
+    - "M3x8 BHCS Screws"
+    focus:
+    - "M3x8 BHCS Screws"
+
+  - title: "Install Spring Steel"
+    description: "Insert the spring steel in to the clamp and tighten it down. Note: You may need to adjust the position of the clamp later so that it sits directly under the nozzle."
+    camera:
+      azimuth: 39
+      polar: 64
+      distance: 71
+      pan_x: 1.70
+      pan_y: -1.65
+      pan_z: 0.00
+    visible: 
+    - "Spring Steel Body"
+    - "Heat Inserts"
+    - "Clamp"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    focus:
+    - "Silicone"
+    - "Spring Steel"

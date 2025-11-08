@@ -95,6 +95,8 @@ nav:
 
       - Modular Docks:
         - Overview: hardware/guides/modular_docks/index.md
+        - Blocker - Spring Steel: hardware/guides/modular_docks/blocker_spring_steel/index.md
+        - Blocker - Cup: hardware/guides/modular_docks/blocker_cup/index.md
         - Base - A4T: hardware/guides/modular_docks/base_a4t/index.md
         - Base - Anthead: hardware/guides/modular_docks/base_anthead/index.md
         - Base - Blackbird: hardware/guides/modular_docks/base_blackbird/index.md
@@ -104,7 +106,10 @@ nav:
         - Base - StealthBurner: hardware/guides/modular_docks/base_stealthburner/index.md
         - Base - XOL: hardware/guides/modular_docks/base_xol/index.md
         - Base - Yavoth: hardware/guides/modular_docks/base_yavoth/index.md
-
+        - Frame - Short: hardware/guides/modular_docks/frame_short/index.md
+        - Frame - Standard: hardware/guides/modular_docks/frame_standard/index.md
+        - Frame - Short CrossBar: hardware/guides/modular_docks/frame_short_crossbar/index.md
+        - Frame - Standard CrossBar: hardware/guides/modular_docks/frame_standard_crossbar/index.md
       - Tophats: 
         - Overview: hardware/guides/tophats/index.md
         - Printed Tophat: hardware/guides/tophats/printed/index.md

@@ -1,0 +1,122 @@
+title: Frame - Standard
+model: "Frame - Standard.gltf"
+# image: "/assets/dock-frame_standard.png"
+
+summary: >
+    This guide will prepare the Standard Frame for the [Modular Dock](/hardware/modular_docks). 
+    
+    !!! warning "Door Buffer"
+        If you are using a [Door Buffer](/hardware/door_buffer), this is the wrong guide.
+
+printed_bom:
+  Left:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Frame/Left.stl?raw=true
+  Right:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Frame/Right.stl?raw=true
+  Top:
+    qty: 1
+    urls:
+      2020: https://github.com/DraftShift/ModularDock/blob/main/STLs/Frame/2020/Top.stl?raw=true
+      1515: https://github.com/DraftShift/ModularDock/blob/main/STLs/Frame/1515/Top.stl?raw=true
+  Bottom:
+    qty: 1
+    urls:
+      2020: https://github.com/DraftShift/ModularDock/blob/main/STLs/Frame/2020/Bottom.stl?raw=true
+      1515: https://github.com/DraftShift/ModularDock/blob/main/STLs/Frame/1515/Bottom.stl?raw=true
+
+hardware_bom:
+    M3x16 SHCS Screws:
+      qty: 4
+    M3 Heat Inserts:
+      qty: 6
+
+primary_parts:
+  - "2020 Top"
+  - "2020 Bottom"
+  - "Frame Left"
+  - "Frame Right"
+
+steps:
+  - title: "Bottom Heat Insert"
+    description: "Install 2 heat inserts in to the Bottom piece."
+    camera:
+      azimuth: 274
+      polar: 73
+      distance: 31
+      pan_x: -0.20
+      pan_y: 0.10
+      pan_z: 0.00
+    visible: 
+      - "2020 Bottom"
+      - "Bottom Heat Inserts"
+    focus:
+      - "Bottom Heat Inserts"
+
+  - title: "Side Heat Inserts"
+    description: "Install 4 heat inserts in to left and right pieces, 2 in each."
+    camera:
+      azimuth: 270
+      polar: 174
+      distance: 40
+      pan_x: -0.20
+      pan_y: -0.01
+      pan_z: 0.00
+    visible: 
+      - "Frame Left"
+      - "Frame Right"
+      - "Frame Heat Inserts"
+    focus:
+      - "Frame Heat Inserts"
+
+  - title: "Attach Top"
+    description: "Attach the Top piece to the Left and Right pieces of the frame using 2 M3x16 SHCS screws."
+    camera:
+      azimuth: 90
+      polar: 9
+      distance: 40
+      pan_x: -0.07
+      pan_y: 3.96
+      pan_z: 0.00
+    visible: 
+      - "2020 Top"
+      - "Frame Left"
+      - "Frame Right"
+      - "Frame Heat Inserts"
+      - "Top M3x16 SHCS"
+    focus:
+      - "Top M3x16 SHCS"
+
+  - title: "Attach Bottom"
+    description: "Attach the Bottom piece to the Left and Right pieces of the frame using 2 M3x16 SHCS screws."
+    camera:
+      azimuth: 90
+      polar: 165
+      distance: 43
+      pan_x: -0.09
+      pan_y: -5.88
+      pan_z: 0.00
+    visible: 
+      - "2020 Top"
+      - "Frame Left"
+      - "Frame Right"
+      - "Frame Heat Inserts"
+      - "Top M3x16 SHCS"
+      - "Bottom M3x16 SHCS"
+      - "2020 Bottom"
+    focus:
+      - "Bottom M3x16 SHCS"
+
+  - title: "Complete"
+    description: "Put the Frame aside for now. It will be used in the Final assembly."
+    camera:
+      azimuth: 100
+      polar: 93
+      distance: 75
+      pan_x: 0.55
+      pan_y: -0.51
+      pan_z: 0.00
+    visible: []
