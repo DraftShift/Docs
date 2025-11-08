@@ -78,7 +78,6 @@ nav:
         - XOL: hardware/guides/backplates/xol/index.md
         - Yavoth: hardware/guides/backplates/yavoth/index.md
 
-
       - Toolheads: 
         - Overview: hardware/guides/toolheads/index.md
         - Anthead: hardware/guides/toolheads/anthead/index.md
@@ -96,6 +95,15 @@ nav:
 
       - Modular Docks:
         - Overview: hardware/guides/modular_docks/index.md
+        - Base - A4T: hardware/guides/modular_docks/base_a4t/index.md
+        - Base - Anthead: hardware/guides/modular_docks/base_anthead/index.md
+        - Base - Blackbird: hardware/guides/modular_docks/base_blackbird/index.md
+        - Base - Dragon/RapidBurner: hardware/guides/modular_docks/base_dragonburner/index.md
+        - Base - JabberWocky: hardware/guides/modular_docks/base_jabberwocky/index.md
+        - Base - Mini StealthBurner: hardware/guides/modular_docks/base_mini_stealthburner/index.md
+        - Base - StealthBurner: hardware/guides/modular_docks/base_stealthburner/index.md
+        - Base - XOL: hardware/guides/modular_docks/base_xol/index.md
+        - Base - Yavoth: hardware/guides/modular_docks/base_yavoth/index.md
 
       - Tophats: 
         - Overview: hardware/guides/tophats/index.md

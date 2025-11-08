@@ -22,3 +22,6 @@ Originally by [ManCheetah](https://www.printables.com/@EddieSha_454383){:target=
 The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your printers underside. Under its cover is an EMS compatible panel for you to mount any extra pieces you might need. 
 
 ![Wire Duct](/assets/wire_duct.png){:width="540"}
+
+## Assembly
+See the [Umbilical Build Guide](../guides/umbilical/), [Fanny Pack Build Guide](../guides/fanny_pack/) and [Wire Duct Build Guide](../guides/wire_duct/) sections for assembly instructions.

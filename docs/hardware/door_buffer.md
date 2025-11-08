@@ -25,6 +25,8 @@ Adding a Door Buffer provides a means to install the [crossbar](#crossbar) and r
     * **Mini/Micro BFI** - [Mini/Micro BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI){:target="_blank"} takes a different approach and shortens the BFI idlers. This means the [crossbar](#crossbar) can be kept within the printers frame at the cost of less printable area and reduces how much you can adjust the AB belts.
 
 ## Crossbar
+The crossbar is a piece of extrusion mounted to the front of the printer’s frame, providing a rigid and stable attachment point for the [Modular Dock](/hardware/modular_dock).
+
 The crossbar should be made from extrusion that matches your printer, 2020 for Voron or 1515 for Micron. The length of the crossbar changes depending on the size of your frame and which version of Door Buffer you are using.
 
 | Printer | DraftShift Crossbar | LDO Crossbar |

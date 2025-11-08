@@ -30,6 +30,8 @@ window.initialTarget = null; // Store initial orbit target after recenter
 var currentStep = 0;
 var blinkInterval = null;
 var modelViewerInitialized = false;
+var cameraOverlayHandler = null;
+var resizeHandler = null;
 
 // Light positions
 const lightValues = {
@@ -222,7 +224,7 @@ function setFocusParts(focusArray) {
         });
     });
     
-    // Apply focus colors if specified
+    // Apply colors from the array
     if (!focusArray || focusArray.length === 0) return;
     
     focusArray.forEach(function(focusItem) {
@@ -236,8 +238,17 @@ function setFocusParts(focusArray) {
         toArray(window.modelViewerParts[partName]).forEach(function(mesh) {
             mesh.traverse(function(child) {
                 if (child.isMesh && child.material) {
-                    // Directly modify material color instead of cloning (much faster)
-                    applyColorToMaterial(child.material, threeColor);
+                    // Clone material to prevent shared materials from affecting other parts
+                    if (Array.isArray(child.material)) {
+                        child.material = child.material.map(function(mat) {
+                            const cloned = mat.clone();
+                            cloned.color.copy(threeColor);
+                            return cloned;
+                        });
+                    } else {
+                        child.material = child.material.clone();
+                        child.material.color.copy(threeColor);
+                    }
                 }
             });
         });
@@ -490,21 +501,28 @@ function initModelViewer(modelPath, onModelLoaded) {
     }
     animate();
 
-    // Handle window resize
-    window.addEventListener('resize', function () {
+    // Handle window resize - remove old handler first
+    if (resizeHandler) {
+        window.removeEventListener('resize', resizeHandler);
+    }
+    resizeHandler = function () {
         if (!container.clientWidth || !container.clientHeight) return;
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
-    });
+    };
+    window.addEventListener('resize', resizeHandler);
 }
 
 // Populate visibility controls
 function createVisibilityControls(controlsId, modelParts) {
     const partsList = document.getElementById('parts-list');
     if (!partsList) return;
+    
+    // Clear existing parts list to prevent duplicates
+    partsList.innerHTML = '';
 
-    // Wire up All/None buttons
+    // Wire up All/None buttons - using onclick to automatically replace old handlers
     const selectAllBtn = document.getElementById('select-all-parts');
     const deselectAllBtn = document.getElementById('deselect-all-parts');
     
@@ -1003,32 +1021,64 @@ const UIManager = {
         if (overlay) overlay.classList.add('hidden');
     },
     
+    prevButtonHandler: null,
+    nextButtonHandler: null,
+    
     setupNavigationButtons: function() {
-        document.getElementById('prev-step').addEventListener('click', function() {
+        const prevBtn = document.getElementById('prev-step');
+        const nextBtn = document.getElementById('next-step');
+        
+        if (!prevBtn || !nextBtn) return;
+        
+        // Remove old handlers if they exist
+        if (this.prevButtonHandler) {
+            prevBtn.removeEventListener('click', this.prevButtonHandler);
+        }
+        if (this.nextButtonHandler) {
+            nextBtn.removeEventListener('click', this.nextButtonHandler);
+        }
+        
+        // Create and store new handlers
+        this.prevButtonHandler = function() {
             if (currentStep > 0) {
                 currentStep--;
                 updateStep();
             }
-        });
+        };
         
-        document.getElementById('next-step').addEventListener('click', function() {
-            const maxStep = assemblySteps.length - 1
+        this.nextButtonHandler = function() {
+            const maxStep = assemblySteps.length - 1;
             if (currentStep < maxStep) {
                 currentStep++;
                 updateStep();
             }
-        });
+        };
+        
+        // Add the handlers
+        prevBtn.addEventListener('click', this.prevButtonHandler);
+        nextBtn.addEventListener('click', this.nextButtonHandler);
     },
+    
+    toggleButtonHandler: null,
     
     setupToggleButton: function() {
         const toggleBtn = document.getElementById('toggle-focus');
         if (!toggleBtn) return;
         
-        toggleBtn.addEventListener('click', function() {
+        // Remove old handler if exists
+        if (this.toggleButtonHandler) {
+            toggleBtn.removeEventListener('click', this.toggleButtonHandler);
+        }
+        
+        // Create and store new handler
+        this.toggleButtonHandler = function() {
             this.blur(); // Remove focus to hide tooltip
             // Reload the current step (same as next/prev but without changing currentStep)
             updateStep();
-        });
+        };
+        
+        // Add the handler
+        toggleBtn.addEventListener('click', this.toggleButtonHandler);
     },
     
     collapseButtonHandler: null,
@@ -1202,7 +1252,9 @@ function updateStep() {
         stepTitle.textContent = step.title;
     }
     if (stepDescription && step.description) {
-        stepDescription.textContent = step.description;
+        // Convert markdown links [text](url) to HTML links
+        const htmlDescription = step.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+        stepDescription.innerHTML = htmlDescription;
     }
 
     if (!modelViewerInitialized) {
@@ -1239,6 +1291,7 @@ function updateStep() {
         
         if (step.focus && step.focus.length > 0) {
             const allColors = ColorManager.buildColorArray(true);
+            
             blinkInterval = AnimationManager.runBlinkAnimation(baseColors, allColors, function() {
                 blinkInterval = null;
             });
@@ -1496,7 +1549,12 @@ function setupAssemblyViewer() {
     // Setup camera overlay click to copy
     const cameraOverlay = document.getElementById('camera-overlay');
     if (cameraOverlay) {
-        cameraOverlay.addEventListener('click', function() {
+        // Remove old handler if exists
+        if (cameraOverlayHandler) {
+            cameraOverlay.removeEventListener('click', cameraOverlayHandler);
+        }
+        
+        cameraOverlayHandler = function() {
             if (!window.modelViewerCamera || !window.modelViewerControls) return;
             
             const pos = window.modelViewerCamera.position;
@@ -1558,7 +1616,10 @@ function setupAssemblyViewer() {
             }).catch(function(err) {
                 console.error('Failed to copy to clipboard:', err);
             });
-        });
+        };
+        
+        // Add the handler
+        cameraOverlay.addEventListener('click', cameraOverlayHandler);
     }
 }
 
