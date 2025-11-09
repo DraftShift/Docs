@@ -482,9 +482,9 @@ function initModelViewer(modelPath, onModelLoaded) {
         }
     );
 
-    // Track camera position to detect changes
-    let lastCameraPosition = camera.position.clone();
-    let lastCameraQuaternion = camera.quaternion.clone();
+    // Track camera position to detect changes (make global so updateStep can access)
+    window.lastCameraPosition = camera.position.clone();
+    window.lastCameraQuaternion = camera.quaternion.clone();
     let needsRender = true; // Flag to track if we need to render
     
     // Request render on control changes
@@ -523,11 +523,11 @@ function initModelViewer(modelPath, onModelLoaded) {
         }
         
         // Only update lights and overlay if camera has moved
-        if (!camera.position.equals(lastCameraPosition) || !camera.quaternion.equals(lastCameraQuaternion)) {
+        if (!camera.position.equals(window.lastCameraPosition) || !camera.quaternion.equals(window.lastCameraQuaternion)) {
             updateLightPositions();
             updateCameraOverlay();
-            lastCameraPosition.copy(camera.position);
-            lastCameraQuaternion.copy(camera.quaternion);
+            window.lastCameraPosition.copy(camera.position);
+            window.lastCameraQuaternion.copy(camera.quaternion);
             needsRender = true;
         }
         
@@ -1442,8 +1442,16 @@ function updateStep() {
             
             controls.update();
             
+            // Force camera change detection by clearing last position
+            // This ensures lights update on next animate loop iteration
+            if (window.lastCameraPosition && window.lastCameraQuaternion) {
+                window.lastCameraPosition.set(-999, -999, -999);
+                window.lastCameraQuaternion.set(-999, -999, -999, -999);
+            }
+            
             // Trigger render since camera was moved programmatically
             needsRenderGlobal = true;
+            renderFramesRemaining = 5;
         }
     }
     
