@@ -3,6 +3,18 @@ search:
   boost: 2 
 ---
 
+{%- macro set_io_display(io) -%}
+<span style="text-align: left;">
+{%- if io is mapping -%}
+{%- for key, value in io.items() -%}
+<div>{{ key }}: {{ value }}</div>
+{%- endfor -%}
+{%- else -%}
+No
+{%- endif -%}
+</span>
+{%- endmacro -%}
+
 {% set board_data = {} %}
 
 ## Power Requirements
@@ -26,16 +38,16 @@ Adding more tools increases the power draw. The required wattage for your build 
 ## Toolhead Boards
 Each tool requires a toolhead board to go with it. With multiple tools, the wiring would become a nightmare to manage without them. See the below table for a list of boards and their features.
 
-| Board | Protocol | Fan Outputs | Fan Voltage | Thermistor | Max Heater | MAX31865 | RGB | Endstops | Passthrough |
+| Board | Image | Manufacturer | Protocol | Fan Outputs | Fan Voltage | Thermistor | RGB | Probe | Filament Sensor |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-{% for board, data in board_data.items() %}
-{% set fans    = "-" if data.fans < 0 else data.fans|string %}
-{% set thermistor = "-" if data.fans < 0 else data.fans|string %}
-{% set rgb    = "-" if data.rgb < 0 else data.rgb|string %}
-{% set probe    = "-" if data.probe < 0 else data.probe|string %}
-
-| [{ board }]({ data.url }){: target="_blank} | { data.protocol } | { fans } | { data.fan_voltage } | { thermistor } | { data.heater_max } | { data.max31865 } | { rgb } | { probe } | { data.endstops } | { data.passthrough } | 
-{% endfor %}
+{% for manufacturer, boards in tool_boards.manufacturers.items() -%}
+{% for board_key, data in boards.items() -%}
+{% if data.features is defined -%}
+{%- set target_attr = '' if data.external_link else '{: target="_blank"}' -%}
+| [{{data.name}}]({{data.product_url}}){{target_attr}} | <span style="width: 100px; display: block;">![{{data.name}}]({{data.image}})</span> | {{ manufacturer }} | {{ data.features.protocol }} | {{ data.features.fans|string }} | {{ data.features.fan_voltage }} | {{ data.features.thermistor|string }} | {{ data.features.rgb|string }} | {{ data.features.probe|string }} | {{ data.features.filament_sensor|string }} | 
+{% endif -%}
+{%- endfor -%}
+{%- endfor %}
 
 ## Distribution Boards
 Distribution boards extend the amount of connections available that can be used to attach tool heads. They will be either extend your CAN network or will behave as a USB hub. Some boards also have an additional MCU that gan give you access to additional runout switches, thermistors, RGB, etc.
@@ -44,12 +56,13 @@ See below table of known boards for their protocol and capability:
 !!! danger "TODO"
     Add images
 
-| Board | Protocol | Outputs | GPIO | Thermistor | RGB |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-{% for board, data in board_data.items() %}
-{% set outputs    = "-" if data.outputs < 0 else data.outputs|string %}
-{% set gpio       = "-" if data.gpio < 0 else data.gpio|string %}
-{% set thermistor = "-" if data.thermistor < 0 else data.thermistor|string %}
-{% set rgb        = "-" if data.rgb < 0 else data.rgb|string %}
-| [{ board }]({ data.url }){: target="_blank} | { data.protocol } | { outputs } | { gpio } | { thermistor } | { rgb } | 
-{% endfor %}
+| Board |  | Protocol | Outputs | IO |
+| :-: | :-: | :-: | :-: | :-: |
+{% for manufacturer, boards in distribution_boards.manufacturers.items() -%}
+{%- for board_key, data in boards.items() -%}
+{%- if data.features is defined -%}
+{%- set target_attr = '' if data.external_link else '{: target="_blank"}' -%}
+| [{{data.name}}]({{data.product_url}}){{target_attr}} | <span style="width: 100px; display: block;">![{{data.name}}]({{data.image}})</span> | {{data.features.protocol}} | {{data.features.outputs}} | {{set_io_display(data.features.IO)}} | 
+{% endif -%}
+{%- endfor -%}
+{%- endfor %}

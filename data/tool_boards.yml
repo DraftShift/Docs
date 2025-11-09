@@ -1,0 +1,120 @@
+manufacturers:
+  ldo:
+    nitehawk36:
+      name: Nitehawk-36
+      manufacturer: LDO
+      image: /assets/tool_boards/nitehawk-36.jpg
+      description: "USB toolboard with RP2040 MCU, TMC2209 driver, and ADXL345 accelerometer"
+      external_link: false
+      url: https://docs.ldomotors.com
+      product_url: /resellers/
+      features:
+        connector: XT30+2
+        protocol: USB
+        fans: 3
+        fan_voltage: "5V/24V"
+        thermistor: 1
+        rgb: 1
+        endstops: 1
+        probe: 1
+        filament_sensor: 1
+  
+  btt:
+    ebb36:
+      name: EBB36 V1.2
+      manufacturer: biqu
+      image: /assets/tool_boards/ebb36.webp
+      description: "CAN bus toolboard with TMC2209 driver"
+      external_link: true
+      url: https://biqu.equipment
+      product_url: https://biqu.equipment/products/bigtreetech-ebb-36-42-can-bus-for-connecting-klipper-expansion-device
+      features:
+        connector: microfit
+        protocol: CAN
+        fans: 2
+        fan_voltage: "24V"
+        thermistor: 1
+        rgb: 1
+        endstops: 1
+        probe: 1
+        filament_sensor: 0
+        
+    
+    ebb36_gen2:
+      name: EBB36 Gen2
+      manufacturer: biqu
+      image: /assets/tool_boards/ebb36_gen2.webp
+      description: "CAN/USB toolboard with enhanced protection circuits"
+      external_link: true
+      url: https://biqu.equipment
+      product_url: https://biqu.equipment/products/bigtreetech-ebb-36-42-can-bus-for-connecting-klipper-expansion-device
+      features:
+        connector: XT30+2
+        protocol: CAN/USB
+        fans: 3
+        fan_voltage: "5V/24V"
+        thermistor: 1
+        rgb: 1
+        endstops: 1
+        probe: 1
+        filament_sensor: 1
+    
+    sb2209:
+      name: SB2209
+      manufacturer: biqu
+      image: /assets/tool_boards/sb2209.webp
+      description: "USB toolboard for Voron StealthBurner with RP2040 MCU"
+      external_link: true
+      url: https://biqu.equipment
+      product_url: https://biqu.equipment/products/bigtreetech-ebb-sb2209-can-v1-0
+      features:
+        connector: XT30+2
+        protocol: USB
+        fans: 2
+        fan_voltage: "5V/12V/24V"
+        thermistor: 1
+        rgb: 1
+        endstops: 1
+        probe: 1
+        filament_sensor: 1
+  
+  mellow:
+    sht36_v2:
+      name: SHT36 V2
+      manufacturer: Mellow
+      image: /assets/tool_boards/sht36_v2.png
+      description: "CAN bus toolboard with TMC2209 driver and AS5047D encoder"
+      external_link: true
+      url: https://mellow-3d.github.io
+      product_url: https://www.aliexpress.com/item/1005004687165673.html
+      features:
+        connector: XT30+2
+        protocol: CAN
+        fans: 2
+        fan_voltage: "5V/12V/24V"
+        thermistor: 1
+        rgb: 1
+        endstops: 1
+        probe: 1
+        filament_sensor: 1
+  
+  fysetc:
+    h36_combo:
+      name: H36 Combo
+      manufacturer: Fysetc
+      image: /assets/tool_boards/h36_combo.png
+      description: "High temperature CAN/USB toolboard with STMG0B1T3 MCU (125°C capable)"
+      external_link: true
+      url: https://github.com/FYSETC/H36_Combo
+      product_url: https://www.aliexpress.com/item/1005006859866352.html
+      features:
+        connector: XT30+2
+        protocol: CAN/USB
+        fans: 2
+        fan_voltage: "24V"
+        thermistor: 1
+        rgb: 1
+        endstops: 2
+        probe: 1
+        filament_sensor: 1
+        
