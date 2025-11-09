@@ -211,7 +211,7 @@ steps:
     - "Wiper M3x8 BHCS"
   
     - title: "Complete"
-    description: "Modular Dock Assembly is complete and ready to be installed in to the printer."
+    description: "Modular Dock Assembly is complete. Now is the time to check that the blocker operates correctly.Sit a tool on the dock and check that the silicone square of the blocker is central to the nozzle. Adjust it if required."
     camera:
       azimuth: 48
       polar: 63

@@ -111,6 +111,7 @@ nav:
         - Frame - Short CrossBar: hardware/guides/modular_docks/frame_short_crossbar/index.md
         - Frame - Standard CrossBar: hardware/guides/modular_docks/frame_standard_crossbar/index.md
         - Dock Assembly: hardware/guides/modular_docks/dock_assembly/index.md
+        - Installation - Crossbar: hardware/guides/modular_docks/install_crossbar/index.md
       - Tophats: 
         - Overview: hardware/guides/tophats/index.md
         - Printed Tophat: hardware/guides/tophats/printed/index.md

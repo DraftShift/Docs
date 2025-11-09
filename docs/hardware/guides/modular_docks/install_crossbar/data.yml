@@ -1,0 +1,295 @@
+title: Modular Dock Install - Crossbar
+model: "Install - Crossbar.gltf"
+# image: "/assets/dock-base_a4t.png"
+
+summary: >
+    This guide will guide you through the installation of the Modular Dock for printers with a Crossbar.
+  
+    !!! note "Variations"
+        [Spring Steel Blocker](/hardware/guides/modular_docks/blocker_spring_steel/), [Anthead Base](/hardware/guides/modular_docks/base_anthead/) and [Standard Crossbar Frame](/hardware/guides/modular_docks/frame_standard_crossbar/) are used for the purpose of this guide. You may be using different parts, but the installation process is the same.
+
+printed_bom: {}
+
+hardware_bom:
+    M5x10 BHCS:
+      qty: 4
+    
+    M5 T Nuts:
+      qty: 4
+
+primary_parts:
+  - "Back"
+  - "Base"
+  - "Frame Left"
+  - "Frame Right"
+  - "Crossbar Top"
+  - "Crossbar Bottom"
+  - "Clamp"
+  - "Spring Steel Body"
+  - "PTFE Wiper"
+  - "DB Primary"
+
+accent_parts:
+  - "DB Accent"
+
+frame_parts:
+  - "Frame"
+  - "Crossbar"
+
+steps:
+  - title: "Preload Lower T Nuts"
+    description: "Add 2 M5 T Nuts to the [Crossbar](/hardware/door_buffer/#crossbar)."
+    camera:
+      azimuth: 80
+      polar: 57
+      distance: 28
+      pan_x: 2.06
+      pan_y: -5.89
+      pan_z: 0.00
+    visible: 
+    - "DB Primary"
+    - "DB Accent"
+    - "Frame"
+    - "DB Hardware"
+    - "Frame Hardware"
+    - "Bottom T Nuts"
+    - "Crossbar"
+    focus:
+    - "Bottom T Nuts"
+
+  - title: "Preload Upper T Nuts"
+    description: "Add 2 M5 T Nuts to the lower side of the top of the printer's frame."
+    camera:
+      azimuth: 78
+      polar: 156
+      distance: 14
+      pan_x: 3.12
+      pan_y: 8.13
+      pan_z: 0.00
+    visible: 
+    - "DB Primary"
+    - "DB Accent"
+    - "Frame"
+    - "DB Hardware"
+    - "Frame Hardware"
+    - "Top T Nuts"
+    - "Crossbar"
+    focus:
+    - "Top T Nuts"
+
+
+  - title: "Place Dock"
+    description: "Place the dock between the crossbar and the frame. Its easier to do this in the center of the printer and then slide the dock into its position. Make sure the tool will be able to reach the dock. The outer docks need to be a minimum of ~30mm from the inside of the printers frame for a Voron 2.4 or ~19mm for Micron."
+    camera:
+      azimuth: 91
+      polar: 74
+      distance: 57
+      pan_x: 0.08
+      pan_y: 4.59
+      pan_z: 0.00
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+    - "DB Primary"
+    - "DB Accent"
+    - "Frame"
+    - "DB Hardware"
+    - "Frame Hardware"
+    - "Bottom T Nuts"
+    - "Top T Nuts"
+    - "Crossbar"
+    focus:
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+
+  - title: "Secure Bottom"
+    description: "Secure the bottom of the dock using 2 M5x10 BHCS screws."
+    camera:
+      azimuth: 90
+      polar: 20
+      distance: 15
+      pan_x: 0.09
+      pan_y: -5.64
+      pan_z: 0.00
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+    - "DB Primary"
+    - "DB Accent"
+    - "Frame"
+    - "DB Hardware"
+    - "Frame Hardware"
+    - "Bottom M5x10 BHCS"
+    - "Bottom T Nuts"
+    - "Top T Nuts"
+    - "Crossbar"
+    focus:
+    - "Bottom M5x10 BHCS"
+
+  - title: "Secure Top"
+    description: "Secure the top of the dock using 2 M5x10 BHCS screws."
+    camera:
+      azimuth: 90
+      polar: 166
+      distance: 7
+      pan_x: 1.01
+      pan_y: 9.47
+      pan_z: 0.00
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+    - "DB Primary"
+    - "DB Accent"
+    - "Frame"
+    - "DB Hardware"
+    - "Frame Hardware"
+    - "Bottom M5x10 BHCS"
+    - "Top M5x10 BHCS"
+    - "Bottom T Nuts"
+    - "Top T Nuts"
+    - "Crossbar"
+    focus:
+    - "Top M5x10 BHCS"
+
+  - title: "Complete"
+    description: "You have completed the installation of the Modular Dock. The Back plate still needs adjustment, but it will be adjusted in to its final position during calibration."
+    camera:
+      azimuth: 98
+      polar: 69
+      distance: 57
+      pan_x: 0.10
+      pan_y: 4.34
+      pan_z: 0.00
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+    - "DB Primary"
+    - "DB Accent"
+    - "Frame"
+    - "DB Hardware"
+    - "Frame Hardware"
+    - "Bottom M5x10 BHCS"
+    - "Bottom T Nuts"
+    - "Top M5x10 BHCS"
+    - "Top T Nuts"
+    - "Crossbar"
