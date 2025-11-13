@@ -130,9 +130,15 @@ nav:
     - Klipper-toolchanger-easy: 
       - Overview: software/ktc-easy/index.md
       - Installation: software/ktc-easy/install.md
-      - Configuration: software/ktc-easy/configuration.md
+      - Configuration:
+        - Overview: software/ktc-easy/configuration/index.md
+        - Existing Config: software/ktc-easy/configuration/existing.md
+        - Toolchanger Config: software/ktc-easy/configuration/toolchanger.md
+        - Tool Config: software/ktc-easy/configuration/tool.md
+        - Examples: software/ktc-easy/examples.md
+        - Validation: software/ktc-easy/configuration/validation.md
+        - Adding Tools: software/ktc-easy/configuration/add_tools.md
       - Updating: software/ktc-easy/updating.md
-      - Examples: software/ktc-easy/examples.md
       - Troubleshooting: software/ktc-easy/troubleshooting.md
     - Slicers: 
       - Cura: software/slicers/cura.md

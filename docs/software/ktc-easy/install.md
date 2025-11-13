@@ -18,7 +18,7 @@ You will be prompted to decide a Z probe solution. A typical StealthChanger uses
 ```
 
 !!! example "Eddy Current"
-    Eddy current sensors On StealthChanger have additional requirements and some limitations, they are considered experimental. 
+    Eddy current sensors on StealthChanger have additional requirements and some limitations, they are considered experimental. 
 
 After installation, your configuration will be organized as follows:
 
