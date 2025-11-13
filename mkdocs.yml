@@ -127,16 +127,22 @@ nav:
 
   - Software:
     - Overview: software/index.md
-    - Klipper: software/klipper.md
-    - Klipper-toolchanger: software/klipper-toolchanger.md
-    - Examples: software/examples.md
-    - Slicers: software/slicers.md
+    - Klipper-toolchanger-easy: 
+      - Overview: software/ktc-easy/index.md
+      - Installation: software/ktc-easy/install.md
+      - Configuration: software/ktc-easy/configuration.md
+      - Updating: software/ktc-easy/updating.md
+      - Examples: software/ktc-easy/examples.md
+      - Troubleshooting: software/ktc-easy/troubleshooting.md
+    - Slicers: 
+      - Cura: software/slicers/cura.md
+      - OrcaSlicer: software/slicers/orcaslicer.md
+      - PrusaSlicer: software/slicers/prusaslicer.md
 
   - Calibration:
     - Overview: calibration/calibration.md
     - Nozzle Offsets: calibration/nozzle_offsets.md
     - Dock Locations: calibration/dock_locations.md
-
   - Collaborations: collaborations.md
   - Resellers: resellers.md
 

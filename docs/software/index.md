@@ -1,10 +1,14 @@
 # Software Overview
 
 ## Klipper
-[StealthChanger](../hardware/stealthchanger) has been tested and run on [Klipper](https://github.com/Klipper3d/klipper){:target="_blank"} based 3d printers. Other software and firmwares have not been tested and are not supported.
+StealthChanger has been tested and verified to work with [Klipper](#){:target="_blank"}-based 3D printers. Other firmware platforms are not currently supported.
 
 ## Klipper-toolchanger
-An assortment of extensions that enable [Klipper](https://github.com/Klipper3d/klipper){:target="_blank"} to have toolchanging functionality. Originally developed by [viesturz](https://github.com/viesturz){:target="_blank"}, [StealthChanger](../hardware/stealthchanger) utilizes a fork of [klipper-toolchanger](#){:target="_blank"} tailored for our community.
+Often referred to as KTC, [klipper-toolchanger](#){:target="_blank"} is a collection of extensions developed by [viesturz](#){:target="_blank"} that add tool-changing functionality to [Klipper](#){:target="_blank"}. StealthChanger uses a fork of this project called [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} — also known as KTC-easy — which has been streamlined and optimized specifically for the StealthChanger community.
 
 ## Slicer Support
-StealthChanger works with many of the popular slicers, including [Cura](#), [OrcaSlicer](#), and [PrusaSlicer](#).
+StealthChanger is compatible with most modern slicers that offer multi-tool or tool-changing functionality. This includes popular open-source options such as:
+
+* [Cura](#){:target="_blank"}
+* [OrcaSlicer](#){:target="_blank"}
+* [PrusaSlicer](#){:target="_blank"}
