@@ -118,6 +118,12 @@ function createGradientBackground(rgbColor) {
     return new THREE.CanvasTexture(gradientCanvas);
 }
 
+// Reusable vectors for updateCameraOverlay to avoid object creation
+const overlayTempDir = new THREE.Vector3();
+const overlayTempRight = new THREE.Vector3();
+const overlayTempUp = new THREE.Vector3();
+const overlayTempPan = new THREE.Vector3();
+
 // Function to update camera overlay display
 function updateCameraOverlay() {
     const azimuthEl = document.getElementById('overlay-azimuth');
@@ -155,21 +161,17 @@ function updateCameraOverlay() {
         const worldPanZ = target.z - window.initialTarget.z;
         
         // Transform to camera space for display
-        // Get camera's right and up vectors
+        // Get camera's right and up vectors (reuse vectors)
         const camera = window.modelViewerCamera;
-        const cameraDirection = new THREE.Vector3();
-        camera.getWorldDirection(cameraDirection);
+        camera.getWorldDirection(overlayTempDir);
         
-        const cameraRight = new THREE.Vector3();
-        cameraRight.crossVectors(camera.up, cameraDirection).normalize();
+        overlayTempRight.crossVectors(camera.up, overlayTempDir).normalize();
+        overlayTempUp.crossVectors(overlayTempDir, overlayTempRight).normalize();
         
-        const cameraUp = new THREE.Vector3();
-        cameraUp.crossVectors(cameraDirection, cameraRight).normalize();
-        
-        // Project world pan onto camera axes
-        const worldPan = new THREE.Vector3(worldPanX, worldPanY, worldPanZ);
-        const screenPanX = worldPan.dot(cameraRight);
-        const screenPanY = worldPan.dot(cameraUp);
+        // Project world pan onto camera axes (reuse vector)
+        overlayTempPan.set(worldPanX, worldPanY, worldPanZ);
+        const screenPanX = overlayTempPan.dot(overlayTempRight);
+        const screenPanY = overlayTempPan.dot(overlayTempUp);
         
         panXEl.textContent = screenPanX.toFixed(2);
         panYEl.textContent = screenPanY.toFixed(2);
@@ -283,11 +285,14 @@ function initModelViewer(modelPath, onModelLoaded) {
     const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 2000);
     camera.position.set(0, 50, 100);
 
-    // Renderer setup
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    // Renderer setup - prioritize performance over quality
+    const renderer = new THREE.WebGLRenderer({ 
+        antialias: true,
+        powerPreference: 'low-power' // Prefer integrated GPU for better battery/performance
+    });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    // Limit pixel ratio to 2 for better performance on high-DPI displays
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // Limit pixel ratio to 1.5 for better performance (lower = faster)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.domElement.style.borderRadius = '8px'; // Match container border-radius
     container.appendChild(renderer.domElement);
 
@@ -502,6 +507,11 @@ function initModelViewer(modelPath, onModelLoaded) {
     window.lastCameraQuaternion = camera.quaternion.clone();
     let needsRender = true; // Flag to track if we need to render
     
+    // Reusable vectors to avoid object creation in loops/animate
+    const tempVector = new THREE.Vector3();
+    const tempVector2 = new THREE.Vector3();
+    const tempVector3 = new THREE.Vector3();
+    
     // Request render on control changes
     controls.addEventListener('change', function() {
         needsRender = true;
@@ -515,14 +525,14 @@ function initModelViewer(modelPath, onModelLoaded) {
                 const direction = window.lightDirections[lightKey];
                 if (direction) {
                     // Transform light direction from world space to camera space
-                    const cameraRelativeDir = direction.clone();
-                    cameraRelativeDir.applyQuaternion(camera.quaternion);
+                    // Reuse tempVector to avoid creating new objects
+                    tempVector.copy(direction);
+                    tempVector.applyQuaternion(camera.quaternion);
                     
                     // Position light relative to camera
                     const lightDistance = 100;
-                    child.position.copy(camera.position).add(
-                        cameraRelativeDir.multiplyScalar(lightDistance)
-                    );
+                    tempVector.multiplyScalar(lightDistance);
+                    child.position.copy(camera.position).add(tempVector);
                 }
             }
         });
@@ -1341,7 +1351,9 @@ function initializeModelViewer() {
     // Show loading overlay
     UIManager.showLoading();
     
-    initModelViewer(
+    // Defer model loading until browser is idle to avoid blocking the main thread
+    const loadModel = function() {
+        initModelViewer(
         modelFile, 
         function() {
             // This callback runs after the model is fully loaded
@@ -1356,6 +1368,14 @@ function initializeModelViewer() {
             updateStep();
         }
     );
+    };
+    
+    // Use requestIdleCallback if available, otherwise setTimeout
+    if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(loadModel, { timeout: 1000 });
+    } else {
+        setTimeout(loadModel, 100);
+    }
 }
 
 // Helper function to update URL hash
