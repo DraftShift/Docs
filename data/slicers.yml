@@ -5,7 +5,7 @@ Cura:
     Pre Tool Change: M104 S{material_print_temperature} T{extruder_nr}
   features:
     Ooze Prevention:
-      Parked Tool Retract: false
+      Parked Tool Retract: true
       Parked Tool Cool Down: false
       Parked Tool Preheat: false
     Painting:
@@ -13,18 +13,17 @@ Cura:
       Color Remapping: false
       Interface Shells: false
     Supports:
-      Define Tool (Interface): false
-      Define Tool (Tower): false
+      Define Tool (Interface): true
+      Define Tool (Structure): true
     Priming:
       Adjust Prime Line Location: false
       Adjust Prime Line Volume: false
-      Movable Tower: false
       Define Outer Perimeter Tool: false
-      Define Minimum Volume: false
+      Define Minimum Volume: true
     Other:
       Define Oject Print Sequence: false
-      Define Tool for Feature: false
-      Interlocking: false
+      Define Tool for Feature: true
+      Interlocking: true
 
 OrcaSlicer:
   github: https://github.com/SoftFever/OrcaSlicer
@@ -41,11 +40,10 @@ OrcaSlicer:
       Interface Shells: true
     Supports:
       Define Tool (Interface): true
-      Define Tool (Tower): true
+      Define Tool (Structure): true
     Priming:
       Adjust Prime Line Location: false
       Adjust Prime Line Volume: kinda
-      Movable Tower: true
       Define Outer Perimeter Tool: kinda
       Define Minimum Volume: true
     Other:
@@ -69,11 +67,10 @@ PrusaSlicer:
       Interface Shells: false
     Supports:
       Define Tool (Interface): true
-      Define Tool (Tower): true
+      Define Tool (Structure): true
     Priming:
       Adjust Prime Line Location: false
       Adjust Prime Line Volume: true
-      Movable Tower: true
       Define Outer Perimeter Tool: true
       Define Minimum Volume: true
     Other:
@@ -101,7 +98,6 @@ SuperSlicer:
     Priming:
       Adjust Prime Line Location: true
       Adjust Prime Line Volume: true
-      Movable Tower: true
       Define Outer Perimeter Tool: false
       Define Minimum Volume: true
     Other:
