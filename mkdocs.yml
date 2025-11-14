@@ -139,11 +139,9 @@ nav:
         - Validation: software/ktc-easy/configuration/validation.md
         - Adding Tools: software/ktc-easy/configuration/add_tools.md
       - Updating: software/ktc-easy/updating.md
-      - Troubleshooting: software/ktc-easy/troubleshooting.md
-    - Slicers: 
-      - Cura: software/slicers/cura.md
-      - OrcaSlicer: software/slicers/orcaslicer.md
-      - PrusaSlicer: software/slicers/prusaslicer.md
+
+    - Slicers: software/slicers.md
+    - Troubleshooting: software/troubleshooting.md
 
   - Calibration:
     - Overview: calibration/calibration.md

@@ -1,0 +1,110 @@
+Cura:
+  github: https://github.com/Ultimaker/Cura
+  gcodes:
+    Start: PRINT_START TOOL_TEMP={material_print_temperature_layer_0} T{initial_extruder_nr}_TEMP={material_print_temperature_layer_0} BED_TEMP={material_bed_temperature_layer_0} TOOL={initial_extruder_nr}
+    Pre Tool Change: M104 S{material_print_temperature} T{extruder_nr}
+  features:
+    Ooze Prevention:
+      Parked Tool Retract: false
+      Parked Tool Cool Down: false
+      Parked Tool Preheat: false
+    Painting:
+      Object Painting: false
+      Color Remapping: false
+      Interface Shells: false
+    Supports:
+      Define Tool (Interface): false
+      Define Tool (Tower): false
+    Priming:
+      Adjust Prime Line Location: false
+      Adjust Prime Line Volume: false
+      Movable Tower: false
+      Define Outer Perimeter Tool: false
+      Define Minimum Volume: false
+    Other:
+      Define Oject Ordering: false
+      Define Tool for Feature: false
+      Interlocking: false
+
+OrcaSlicer:
+  github: https://github.com/SoftFever/OrcaSlicer
+  gcodes:
+    Start: PRINT_START TOOL_TEMP={first_layer_temperature[initial_tool]} {if is_extruder_used[0]}T0_TEMP={first_layer_temperature[0]}{endif} {if is_extruder_used[1]}T1_TEMP={first_layer_temperature[1]}{endif} {if is_extruder_used[2]}T2_TEMP={first_layer_temperature[2]}{endif} {if is_extruder_used[3]}T3_TEMP={first_layer_temperature[3]}{endif} {if is_extruder_used[4]}T4_TEMP={first_layer_temperature[4]}{endif} {if is_extruder_used[5]}T5_TEMP={first_layer_temperature[5]}{endif} BED_TEMP=[first_layer_bed_temperature] TOOL=[initial_tool]
+  features:
+    Ooze Prevention:
+      Parked Tool Retract: true
+      Parked Tool Cool Down: true
+      Parked Tool Preheat: true
+    Painting:
+      Object Painting: true
+      Color Remapping: true
+      Interface Shells: true
+    Supports:
+      Define Tool (Interface): true
+      Define Tool (Tower): true
+    Priming:
+      Adjust Prime Line Location: false
+      Adjust Prime Line Volume: kinda
+      Movable Tower: true
+      Define Outer Perimeter Tool: kinda
+      Define Minimum Volume: true
+    Other:
+      Define Oject Ordering: true
+      Define Tool for Feature: kinda
+      Interlocking: true
+
+PrusaSlicer:
+  github: https://github.com/prusa3d/PrusaSlicer
+  gcodes:
+    Start: PRINT_START TOOL_TEMP={first_layer_temperature[initial_tool]} {if is_extruder_used[0]}T0_TEMP={first_layer_temperature[0]}{endif} {if is_extruder_used[1]}T1_TEMP={first_layer_temperature[1]}{endif} {if is_extruder_used[2]}T2_TEMP={first_layer_temperature[2]}{endif} {if is_extruder_used[3]}T3_TEMP={first_layer_temperature[3]}{endif} {if is_extruder_used[4]}T4_TEMP={first_layer_temperature[4]}{endif} {if is_extruder_used[5]}T5_TEMP={first_layer_temperature[5]}{endif} BED_TEMP=[first_layer_bed_temperature] TOOL=[initial_tool]
+    Tool Change: M104 S{temperature[next_extruder]} T[next_extruder]
+  features:
+    Ooze Prevention:
+      Parked Tool Retract: true
+      Parked Tool Cool Down: true
+      Parked Tool Preheat: false
+    Painting:
+      Object Painting: true
+      Color Remapping: false
+      Interface Shells: false
+    Supports:
+      Define Tool (Interface): true
+      Define Tool (Tower): true
+    Priming:
+      Adjust Prime Line Location: false
+      Adjust Prime Line Volume: true
+      Movable Tower: true
+      Define Outer Perimeter Tool: true
+      Define Minimum Volume: true
+    Other:
+      Define Oject Ordering: true
+      Define Tool for Feature: true
+      Interlocking: true
+
+SuperSlicer:
+  github: https://github.com/supermerill/SuperSlicer
+  gcodes:
+    Start: PRINT_START TOOL_TEMP={first_layer_temperature[initial_tool]} {if is_extruder_used[0]}T0_TEMP={first_layer_temperature[0]}{endif} {if is_extruder_used[1]}T1_TEMP={first_layer_temperature[1]}{endif} {if is_extruder_used[2]}T2_TEMP={first_layer_temperature[2]}{endif} {if is_extruder_used[3]}T3_TEMP={first_layer_temperature[3]}{endif} {if is_extruder_used[4]}T4_TEMP={first_layer_temperature[4]}{endif} {if is_extruder_used[5]}T5_TEMP={first_layer_temperature[5]}{endif} BED_TEMP=[first_layer_bed_temperature] TOOL=[initial_tool]
+    Tool Change: M104 S{temperature[next_extruder]} T[next_extruder]
+  features:
+    Ooze Prevention:
+      Parked Tool Retract: false
+      Parked Tool Cool Down: false
+      Parked Tool Preheat: false
+    Painting:
+      Object Painting: false
+      Color Remapping: false
+      Interface Shells: false
+    Supports:
+      Define Tool (Interface): false
+      Define Tool (Tower): false
+    Priming:
+      Adjust Prime Line Location: false
+      Adjust Prime Line Volume: false
+      Movable Tower: true
+      Define Outer Perimeter Tool: false
+      Define Minimum Volume: false
+    Other:
+      Define Oject Ordering: false
+      Define Tool for Feature: false
+      Interlocking: false

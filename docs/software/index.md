@@ -9,6 +9,6 @@ Often referred to as KTC, [klipper-toolchanger](https://github.com/viesturz/klip
 ## Slicer Support
 StealthChanger is compatible with most modern slicers that offer multi-tool or tool-changing functionality. This includes popular open-source options such as:
 
-* [Cura](#){:target="_blank"}
-* [OrcaSlicer](#){:target="_blank"}
-* [PrusaSlicer](#){:target="_blank"}
+{% for slicer in slicers %}
+* [{{ slicer }}](/software/slicers#{{ slicer|lower }}){:target="_blank"}
+{% endfor %}
