@@ -22,7 +22,7 @@ Cura:
       Define Outer Perimeter Tool: false
       Define Minimum Volume: false
     Other:
-      Define Oject Ordering: false
+      Define Oject Print Sequence: false
       Define Tool for Feature: false
       Interlocking: false
 
@@ -49,7 +49,7 @@ OrcaSlicer:
       Define Outer Perimeter Tool: kinda
       Define Minimum Volume: true
     Other:
-      Define Oject Ordering: true
+      Define Oject Print Sequence: true
       Define Tool for Feature: kinda
       Interlocking: true
 
@@ -77,7 +77,7 @@ PrusaSlicer:
       Define Outer Perimeter Tool: true
       Define Minimum Volume: true
     Other:
-      Define Oject Ordering: true
+      Define Oject Print Sequence: true
       Define Tool for Feature: true
       Interlocking: true
 
@@ -88,23 +88,23 @@ SuperSlicer:
     Tool Change: M104 S{temperature[next_extruder]} T[next_extruder]
   features:
     Ooze Prevention:
-      Parked Tool Retract: false
-      Parked Tool Cool Down: false
+      Parked Tool Retract: true
+      Parked Tool Cool Down: true
       Parked Tool Preheat: false
     Painting:
-      Object Painting: false
+      Object Painting: true
       Color Remapping: false
-      Interface Shells: false
+      Interface Shells: true
     Supports:
-      Define Tool (Interface): false
-      Define Tool (Tower): false
+      Define Tool (Interface): true
+      Define Tool (Structure): false
     Priming:
-      Adjust Prime Line Location: false
-      Adjust Prime Line Volume: false
+      Adjust Prime Line Location: true
+      Adjust Prime Line Volume: true
       Movable Tower: true
       Define Outer Perimeter Tool: false
-      Define Minimum Volume: false
+      Define Minimum Volume: true
     Other:
-      Define Oject Ordering: false
-      Define Tool for Feature: false
-      Interlocking: false
+      Define Oject Print Sequence: true
+      Define Tool for Feature: true
+      Interlocking: true
