@@ -2,18 +2,23 @@ regions:
   us:
     fabreeko:
       name: Fabreeko
+      is_sponsor: RMRRF 2025 Sponsor - Giveaway Printer
       logo_url: https://www.fabreeko.com/cdn/shop/files/Fabreeko_Logo_ecf1536e-3074-4a0e-9306-87ca89f1abbd_320x.png
       description: ""
       url: https://www.fabreeko.com
       product_url: https://www.fabreeko.com/search?q=stealth+Changer&filter.p.product_type=tool+changer
+      configurator_url: https://www.fabreeko.com/products/stealth-changer-kit-bundle
     west3d: 
       name: West3D
+      is_sponsor: false
       logo_url: https://west3d.com/cdn/shop/files/Real_People_Real_Knowledge_Shared_Passion_68c68b0e-dc78-4ba8-8f45-e7fedd886c9b_140x@2x.png
       description: ""
       url: https://west3d.com
       product_url: https://west3d.com/search?type=product&q=stealthchanger
+      configurator_url: https://west3d.com/products/stealthchanger-kit-for-multiple-toolheads-by-ldo-motors-and-draftshift-ldo-sc-stealth-changer-tool-changer-bundle
     kb3d:
       name: KB-3D
+      is_sponsor: false
       logo_url: https://kb-3d.com/store/img/cms/KB3DLogoWEB.svg
       description: ""
       url: https://kb-3d.com
@@ -21,12 +26,14 @@ regions:
   uk:
     onetwoenterprisesltd:
       name: One Two Enterprises Ltd
+      is_sponsor: false
       logo_url: https://www.onetwo3d.co.uk/wp-content/uploads/2024/03/cropped-LogoGrey-with-border-Small.png.avif
       description: ""
       url: https://www.onetwo3d.co.uk/
       product_url: https://www.onetwo3d.co.uk/?s=stealthChanger&post_type=product&dgwt_wcas=1
     1233d:
       name: 123-3D
+      is_sponsor: false
       logo_url: https://www.123-3d.co.uk/images/123-3d_uk_homepage_logo.png
       description: ""
       url: https://www.123-3d.co.uk
@@ -34,6 +41,7 @@ regions:
   eu:
     zen3d:
       name: Zen3D Laboratories Ltd
+      is_sponsor: false
       region: "EU"
       description: ""
       logo_url: https://shop.zen3d.eu/!common_design/custom/zen3d.unas.hu/element/layout_hu_header_logo-200x50_1_default.png
@@ -41,6 +49,7 @@ regions:
       product_url: https://shop.zen3d.eu/toolchanger-parts
     levendigs:
       name: Levendigs
+      is_sponsor: false
       region: "EU"
       description: ""
       logo_url: https://cdn.shopify.com/s/files/1/0483/5393/5524/files/Logo_A.svg
@@ -48,6 +57,7 @@ regions:
       product_url: https://levendigs.com/collections/stealthchanger-kits-and-parts
     myrigs3d: 
       name: MyRigs3D
+      is_sponsor: false
       region: "EU"
       description: ""
       logo_url: https://myrigs3d.com/cdn/shop/files/Photoroom_20250114_152158.png
@@ -56,6 +66,7 @@ regions:
   au:
     dremc:
       name: Dremc
+      is_sponsor: false
       logo_url: https://store.dremc.com.au/cdn/shop/files/Webitse_Logo_Image_400x120_bdcaa875-31ef-42ed-81e8-900c13268d02_300x@2x.jpg
       description: ""
       region: "AU"
