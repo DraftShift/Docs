@@ -8,6 +8,9 @@ summary: >
     !!! note "Distribution Board" 
         The guide shows LDO's Nitehawk Hexa board, all supported boards mount in a similar way.
 
+    !!! danger "TODO"
+        This guide is currently a work in progress.
+
 printed_bom:
   Base:
     qty: 1

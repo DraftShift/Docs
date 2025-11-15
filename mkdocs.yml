@@ -85,6 +85,10 @@ nav:
       - Cable Management: 
         - Overview: hardware/guides/cable_management/index.md
         - Fanny Pack: hardware/guides/cable_management/fanny_pack/index.md
+        - Umbilical Plate: hardware/guides/cable_management/umbilical_plate/index.md
+        - Fanny Pack Install: hardware/guides/cable_management/fanny_pack_install/index.md
+        - Wire Duct: hardware/guides/cable_management/wire_duct/index.md
+        - Umbilical: hardware/guides/cable_management/umbilical/index.md
 
       - Door Buffers: 
         - Overview: hardware/guides/door_buffers/index.md

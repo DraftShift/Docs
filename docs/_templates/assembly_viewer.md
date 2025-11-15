@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/stylesheets/assembly-viewer.css">
-{% set primary_color = (25, 25, 25) %}
-{% set accent_color = (200, 30, 20) %}
+{% set primary_color = (12, 12, 12) %}
+{% set accent_color = (200, 8, 8) %}
 {% set frame_color = (18, 18, 18) %}
-{% set focus_color = (36, 168, 0) %}
-{% set bg_color = (45,45,48) %}
+{% set focus_color = (55, 255, 0) %}
+{% set bg_color = (30,30,30) %}
 
 {% macro color_picker_overlay() %}
     <div id="color-picker-overlay" class="color-picker-overlay">

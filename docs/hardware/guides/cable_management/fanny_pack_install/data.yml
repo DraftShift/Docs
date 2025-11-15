@@ -1,0 +1,53 @@
+title: Fanny Pack Install
+model: "Fanny_Pack_Install.glb"
+image: "assets/fanny_pack_install.png"
+
+summary: >
+    This guide will walk you through the Installation of the Fanny Pack, Ramp and Umbilical Cover. 
+
+    !!! danger "TODO"
+        This guide is currently a work in progress.
+    
+printed_bom:
+  Base:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/FannyPack/STLs/base.stl?raw=true
+
+hardware_bom:
+  M3x10 SHCS Screws:
+    qty: 4
+
+primary_parts:
+  - "Fanny Pack Base"
+  - "ECAS Panel Top"
+  - "ECAS Panel Bottom"
+  - "Umbilical Outer Plate"
+
+accent_parts:
+  - "ECAS Bridge Single"
+  - "ECAS Bridge Other"
+  - "Fanny Pack Cover"
+  - "Hexa Bracket"
+  - "Ramp"
+  - "Umbilical Cover"
+  - "Hexes"
+  - "Umbilical Face Plate"
+
+frame_parts:
+  - "Frame"
+
+steps:
+  - title: "Heat Inserts Part 1"
+    description: "Install 4 heat inserts into the rear of the base."
+    camera:
+      azimuth: 89
+      polar: 81
+      distance: 67
+      pan_x: 1.44
+      pan_y: 1.03
+      pan_z: 0.00
+    visible: 
+
+    focus: 
+      - "Base Heat Inserts"
