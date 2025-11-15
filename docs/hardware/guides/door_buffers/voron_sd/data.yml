@@ -35,6 +35,10 @@ accent_parts:
 - "Top Left"
 - "Top Right"
 
+frame_parts:
+  - "Frame"
+  - "Dock Bar"
+
 steps:
   - title: "Heat Inserts"
     description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."

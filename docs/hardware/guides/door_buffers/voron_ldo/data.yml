@@ -1,5 +1,5 @@
 title: Door Buffer (LDO Version)
-model: "Door_Buffer_DSD.glb"
+model: "Door_Buffer_LDO.glb"
 
 summary: >
     The LDO version of Door Buffer for Voron 2.4.
@@ -9,6 +9,9 @@ summary: >
 
     !!! info "Short/Standard?"
         There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../../toolheads.md) for compatibility.
+
+    !!! danger "TODO"
+        This guide is currently a work in progress.
 
 printed_bom:
   TODO:
@@ -22,7 +25,20 @@ hardware_bom:
 
 
 primary_parts:
+- "Top Mid"
+- "Bottom Mid"
+- "Left Mid"
+- "Right Mid"
+
 accent_parts:
+- "Bottom Left"
+- "Bottom right"
+- "Top Left"
+- "Top Right"
+
+frame_parts:
+  - "Frame"
+  - "Crossbar"
 
 steps:
   - title: "TODO"
