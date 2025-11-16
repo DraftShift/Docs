@@ -74,9 +74,27 @@ def define_env(env):
     
     @env.macro
     def github_contributors(repo="DraftShift/StealthChanger"):
-        """Fetch and display GitHub contributors for a repository"""
+        """Fetch and display GitHub contributors for a repository (cached during build)"""
         import urllib.request
         import json
+        import os
+        import time
+        
+        # Create cache directory
+        cache_dir = os.path.join(os.path.dirname(__file__), '.cache')
+        os.makedirs(cache_dir, exist_ok=True)
+        cache_file = os.path.join(cache_dir, f'contributors_{repo.replace("/", "_")}.json')
+        
+        # Check if cache exists and is less than 24 hours old
+        if os.path.exists(cache_file):
+            cache_age = time.time() - os.path.getmtime(cache_file)
+            if cache_age < 86400:  # 24 hours
+                try:
+                    with open(cache_file, 'r', encoding='utf-8') as f:
+                        cache_data = json.load(f)
+                        return cache_data.get('html', '')
+                except:
+                    pass
         
         try:
             # Fetch contributors from GitHub API
@@ -107,7 +125,29 @@ def define_env(env):
                 ''')
             
             output.append('</div>')
-            return '\n'.join(output)
+            result = '\n'.join(output)
+            
+            # Save to cache as JSON
+            try:
+                cache_data = {
+                    'html': result,
+                    'timestamp': time.time(),
+                    'contributors': contributors
+                }
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(cache_data, f, indent=2)
+            except:
+                pass
+            
+            return result
             
         except Exception as e:
+            # If we have an old cache, use it even if expired
+            if os.path.exists(cache_file):
+                try:
+                    with open(cache_file, 'r', encoding='utf-8') as f:
+                        cache_data = json.load(f)
+                        return cache_data.get('html', '')
+                except:
+                    pass
             return f'<p>Unable to load contributors: {str(e)}</p>'

@@ -1,6 +1,6 @@
 
 Include the configuration by adding the following to the start of your `printer.cfg`
-``` cfg
+``` cfg { .copy }
 [include toolchanger/readonly-configs/toolchanger-include.cfg]
 ```
 
