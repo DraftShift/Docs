@@ -59,14 +59,14 @@ nav:
     - Calibration Tools: hardware/calibration_tools.md
 
     - Build Guides:
-      - StealthChanger Shuttles: 
+      - Shuttles:
         - Overview: hardware/guides/shuttles/index.md
         - Printed Shuttle: hardware/guides/shuttles/printed/index.md
         - Installation - Printed: hardware/guides/shuttles/install_printed/index.md
         - Installation - Fysetc CNC: hardware/guides/shuttles/install_fysetc/index.md
         - Installation - LDO CNC: hardware/guides/shuttles/install_ldo/index.md
 
-      - StealthChanger Backplates: 
+      - Backplates:
         - Overview: hardware/guides/backplates/index.md
         - A4T: hardware/guides/backplates/a4t/index.md
         - Anthead: hardware/guides/backplates/anthead/index.md

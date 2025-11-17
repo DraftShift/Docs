@@ -46,7 +46,9 @@ def define_env(env):
                             data = open_yaml_file(filepath)
 
                             if data:
-
+                                # Debug: print what's being loaded
+                                print(f"Loading guide: {folder} -> {data.get('title', 'NO TITLE')}")
+                                
                                 data['folder'] = guide_folder
                                 try:
                                     env.variables.guides[folder][data['title']] = data

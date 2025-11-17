@@ -1,10 +1,17 @@
 title: "Shuttle Installation - Fysetc"
-model: "Shuttle_MGN12.glb"
+model: "Fysetc_Shuttle_Install.glb"
 image: "shuttle_Fysetc_install.png"
 
-# primary_parts:
-# accent_parts:
-# frame_parts: 
+accent_parts:
+  - "Block Left"
+  - "Block Right"
+  - "Block Right Open"
+  - "Clip Left"
+  - "Clip Right"
+  - "Clip Right Open"
+
+frame_parts: 
+  - "Extrusion"
 
 summary: >
     This guide covers the installation of the [Fysetc CNC Shuttle](https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board){: target="_blank"} for StealthChanger. 
@@ -19,23 +26,420 @@ printed_bom:
       Link: https://download-directory.github.io/?url=https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper&filename=SC-Belt-Helper
 
 hardware_bom:
+  Fysetc CNC Shuttle:
+    qty: 1
   M3x10 SHCS Screws:
     qty: 4
-  M3x25-50 Screws:
+  M3x40-50 Screws:
     qty: 2
   M3 Heat Inserts:
     qty: 6
-  M3x4 SHCS Screws - Included:
-    qty: 4
 
 steps:
-  - title: "TODO"
-    description: "TODO"
+  - title: "Belt Helper Heat Inserts Part 1"
+    description: "Install 2 heat inserts in to each block."
     camera:
-      azimuth: 114
-      polar: 40
-      distance: 85
-      pan_x: 0
-      pan_y: 0
-      pan_z: 0
-    visible: []
+      azimuth: 273
+      polar: 81
+      distance: 34
+      pan_x: 0.02
+      pan_y: 0.74
+      pan_z: 0.00
+    visible: 
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Block Right"
+      - "Block Left"
+    focus:
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+  
+  - title: "Belt Helper Heat Inserts Part 2"
+    description: "Install another 2 heat inserts in to the right block."
+    camera:
+      azimuth: 33
+      polar: 94
+      distance: 32
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Heat Inserts Right"
+      - "Heat Inserts Right2"
+      - "Block Right"
+    focus:
+      - "Heat Inserts Right2"
+
+  - title: "Shuttle Preperation Part 1"
+    description: "Remove the Flag by unscrewing the 2 M2.5x10 flat screws."
+    camera:
+      azimuth: 97
+      polar: 31
+      distance: 30
+      pan_x: -0.02
+      pan_y: 2.12
+      pan_z: 0.00
+    visible: 
+      - "Frame"
+      - "Flag"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Top Bracket"
+      - "Top Bracket Hardware"
+      - "M3x12 BHCS Screws"
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
+      - "Flag Hardware"
+    focus:
+      - "Flag Hardware"
+      - "Flag"
+
+  - title: "Shuttle Preperation Part 2"
+    description: "Remove the Top Bracket by unscrewing the 2 M3x12 BHCS screws."
+    camera:
+      azimuth: 100
+      polar: 52
+      distance: 30
+      pan_x: -0.22
+      pan_y: -0.05
+      pan_z: 0.00
+    visible: 
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Top Bracket"
+      - "Top Bracket Hardware"
+      - "M3x12 BHCS Screws"
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
+    focus:
+      - "Top Bracket"
+      - "Top Bracket Hardware"
+      - "M3x12 BHCS Screws"
+
+  - title: "Shuttle Preperation Part 3"
+    description: "Remove the Belt Clamps by unscrewing the 2 M3x6 SHCS screws."
+    camera:
+      azimuth: 90
+      polar: 87
+      distance: 30
+      pan_x: -0.35
+      pan_y: -0.68
+      pan_z: 0.00
+    visible: 
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
+    focus:
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
+
+  - title: "Attach Left Belts"
+    description: "Attach the left portion of the belts to the shuttle by feeding them from the back and through the belt holes. Finally, clamp them using a belt clamp and M3x6 SHCS screw."
+    camera:
+      azimuth: 121
+      polar: 60
+      distance: 30
+      pan_x: -6.15
+      pan_y: 2.40
+      pan_z: 0.00
+    visible: 
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+    focus:
+      - "Belt Clamp Left"
+      - "Left M3x6 SHCS"
+
+  - title: "Attach Belts to Left Block"
+    description: "Make sure your idlers are fully extended and clamp the left upper and lower belts between the left clip and block. Tighten the 2 M3x10 SHCS screws."
+    camera:
+      azimuth: 104
+      polar: 74
+      distance: 29
+      pan_x: -3.63
+      pan_y: 1.22
+      pan_z: 0.00
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Block Left"
+      - "Heat Inserts Left"
+      - "Clip Left"
+      - "Belts Left"
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+    focus:
+      - "Left M3x10 SHCS"
+
+  - title: "Attach Right Block"
+    description: "Attach the right block using the 2 M3x40-50 SHCS screws."
+    camera:
+      azimuth: 91
+      polar: 83
+      distance: 40
+      pan_x: -4.61
+      pan_y: 0.79
+      pan_z: 0.00
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right Open"
+      - "Block Right Open"
+      - "Block Left"
+      - "Clip Left"
+      - "Belts Left"
+      - "M3x40 SHCS"
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+    focus:
+      - "M3x40 SHCS"
+
+  - title: "Attach Belts to Right Block"
+    description: "Pull as much of the upper and lower belts as you can through the right block keeping an even amount between the two and tighten the clip screws."
+    camera:
+      azimuth: 91
+      polar: 83
+      distance: 36
+      pan_x: -1.16
+      pan_y: -0.05
+      pan_z: 0.00
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS Open"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right Open"
+      - "Block Right Open"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right Open"
+      - "Belts Left"
+      - "Belts Right Open"
+      - "M3x40 SHCS"
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+    focus:
+      - "Belts Right Open"
+      - "Right M3x10 SHCS Open"
+  
+  - title: "Pre-Tension Belts"
+    description: "Adjust the upper and lower M3x40-50 screws until you are happy with the pre-tension of the belts. Clamp the belts with the Belt Clamp and a M3x6 SHCS screw ensuring you have the same amount of belt on top and below and cut to length."
+    camera:
+      azimuth: 101
+      polar: 81
+      distance: 40
+      pan_x: 0.12
+      pan_y: 0.06
+      pan_z: 0.00
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Block Right"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right"
+      - "Belts Left"
+      - "Belts Right"
+      - "M3x40 SHCS"
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+      - "Right M3x6 SHCS"
+      - "Belt Clamp Right"
+    focus:
+      - "M3x40 SHCS"
+      - "Right M3x6 SHCS"
+      - "Belt Clamp Right"
+
+  - title: "Attach Shuttle"
+    description: "Secure the shuttle to the MGN rail using the 4 M3x4 SHCS screws."
+    camera:
+      azimuth: 106
+      polar: 83
+      distance: 37
+      pan_x: -0.62
+      pan_y: 0.02
+      pan_z: 0.00
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS"
+      - "M3x40 SHCS"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Heat Inserts Right2"
+      - "Block Right"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right"
+      - "Belts Right"
+      - "Belts Left"
+
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+      - "Right M3x6 SHCS"
+      - "Belt Clamp Right"
+      - "MGN12 Screws"
+    focus:
+      - "MGN12 Screws"
+
+  - title: "Remove Belt Helper"
+    description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x40-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them."
+    camera:
+      azimuth: 93
+      polar: 71
+      distance: 51
+      pan_x: 1.28
+      pan_y: -1.02
+      pan_z: 0.00
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Right"
+      - "Belts Left"
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+      - "Right M3x6 SHCS"
+      - "Belt Clamp Right"
+      - "MGN12 Screws"
+
+  - title: "Reattach Top Bracket"
+    description: "Reattach the Top Bracket by screwing in the 2 M3x12 BHCS screws."
+    camera:
+      azimuth: 106
+      polar: 51
+      distance: 37
+      pan_x: -0.62
+      pan_y: 0.02
+      pan_z: 0.00
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Right"
+      - "Belts Left"
+
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+      - "Right M3x6 SHCS"
+      - "Belt Clamp Right"
+      - "MGN12 Screws"
+      - "M3x12 BHCS Screws"
+      - "Top Bracket"
+      - "Top Bracket Hardware"
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
+    focus:
+      - "M3x12 BHCS Screws"
+
+  - title: "Reattach Flag"
+    description: "Reattach the Flag by screwing in the 2 M2.5x10 flat screws."
+    camera:
+      azimuth: 109
+      polar: 36
+      distance: 37
+      pan_x: -0.62
+      pan_y: 0.04
+      pan_z: 0.00
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Right"
+      - "Belts Left"
+
+      - "Frame"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M3x6 SHCS"
+      - "Belt Clamp Left"
+      - "Right M3x6 SHCS"
+      - "Belt Clamp Right"
+      - "MGN12 Screws"
+      - "M3x12 BHCS Screws"
+      - "Top Bracket"
+      - "Top Bracket Hardware"
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
+      - "Flag"
+      - "Flag Hardware"
+    focus:
+      - "Flag Hardware"
+
+  - title: "Shuttle Installed"
+    description: "The Shuttle is fully installed. You can now tension your belts as you usually would."
+    camera:
+      azimuth: 91
+      polar: 75
+      distance: 46
+      pan_x: -0.44
+      pan_y: -0.05
+      pan_z: 0.00
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Right"
+      - "Belts Left"
+      - "Frame"
+      - "Flag"
+      - "Flag Hardware"
+      - "Shuttle Hardware"
+      - "Frame Hardware"
+      - "Belts Left"
+      - "Left M25x4 BHCS"
+      - "Belt Clamp Left"
+      - "Right M25x4 BHCS"
+      - "Belt Clamp Right"
+      - "MGN12 Screws"
+      - "M3x12 BHCS Screws"
+      - "Top Bracket"
+      - "Top Bracket Hardware"
+      - "Belt Clamp Left"
+      - "Belt Clamp Right"
+      - "Left M3x6 SHCS"
+      - "Right M3x6 SHCS"
