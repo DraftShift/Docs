@@ -36,7 +36,7 @@ Nitehawk36 V1.4:
     # To use this config, the firmware should be compiled for the 
     # Raspberry Pi RP2040".
   accelerometer: "adxl345"
-  axis_map: "x, z, y"
+  axis_map: "x,z,y"
   pullup_resistor: "2200"
   sense_resistor: "0.100"
   pin_map:
@@ -66,7 +66,7 @@ NitehawkSB V1.5:
     # To use this config, the firmware should be compiled for the 
     # Raspberry Pi RP2040".
   accelerometer: "adxl345"
-  axis_map: ""
+  axis_map: "-z,-y,-x"
   pullup_resistor: "2200"
   sense_resistor: "0.100"
   pin_map:
