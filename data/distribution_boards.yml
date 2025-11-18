@@ -98,3 +98,17 @@ manufacturers:
         protocol: USB
         outputs: 5
         IO: No
+
+  Mellow:
+    can expansion board:
+      name: CanBus expand board
+      manufacturer: Mellow
+      image: assets/distribution_boards/Mellowceb.avif
+      description: "Pasive CAN Distribution Board"
+      external_link: false
+      url: 
+      product_url: https://www.aliexpress.com/i/3256805705529626.html?gatewayAdapt=4itemAdapt
+      features:
+        protocol: can
+        outputs: 4
+        IO: No
