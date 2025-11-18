@@ -1,0 +1,89 @@
+EBB36 V1.2:
+  mcu_name: "EBB"
+  protocol: "CAN"
+  preface: |
+    # This file contains common pin mappings for the BIGTREETECH EBB36 V1.2.
+    # To use this config, the firmware should be compiled for the 
+    # STM32G0B1 with "8 MHz crystal" and "CAN bus (on PB0/PB1)".
+  accelerometer: "adxl345"
+  axis_map: "x,z,-y"
+  pullup_resistor: ""
+  sense_resistor: ""
+  pin_map:
+    acc_cs_pin: "PB12"
+    acc_sclk_pin: "PB10"
+    acc_mosi_pin: "PB11"
+    acc_miso_pin: "PB2"
+    step_pin: "PD0"
+    dir_pin: "PD1"
+    enable_pin: "!PD2"
+    heater_pin: "PB13"
+    sensor_pin: "PA3"
+    uart_pin: "PA15"
+    tx_pin: ""
+    hotend_fan_pin: "PA0"
+    he_tach_pin: ""
+    part_fan_pin: "PA1"
+    part_tach_pin: ""
+    detection_pin: "^PC13"
+    rgb_pin: "PD3"
+
+Nitehawk36 V1.4:
+  mcu_name: "NHK"
+  protocol: "USB"
+  preface: |
+    # This file contains common pin mappings for the Nitehawk36 V1.4.
+    # To use this config, the firmware should be compiled for the 
+    # Raspberry Pi RP2040".
+  accelerometer: "adxl345"
+  axis_map: "x, z, y"
+  pullup_resistor: "2200"
+  sense_resistor: "0.100"
+  pin_map:
+    acc_cs_pin: "gpio27"
+    acc_sclk_pin: "gpio18"
+    acc_mosi_pin: "gpio20"
+    acc_miso_pin: "gpio19"
+    step_pin: "gpio23"
+    dir_pin: "gpio24"
+    enable_pin: "!gpio25"
+    heater_pin: "gpio9"
+    sensor_pin: "gpio29"
+    uart_pin: "gpio0"
+    tx_pin: "gpio1"
+    hotend_fan_pin: "gpio5"
+    he_tach_pin: ""
+    part_fan_pin: "gpio6"
+    part_tach_pin: ""
+    detection_pin: "gpio10"
+    rgb_pin: "gpio7"
+
+NitehawkSB V1.5:
+  mcu_name: "NHK"
+  protocol: "USB"
+  preface: |
+    # This file contains common pin mappings for the NitehawkSB V1.5.
+    # To use this config, the firmware should be compiled for the 
+    # Raspberry Pi RP2040".
+  accelerometer: "adxl345"
+  axis_map: ""
+  pullup_resistor: "2200"
+  sense_resistor: "0.100"
+  pin_map:
+    acc_cs_pin: "gpio21"
+    acc_sclk_pin: "gpio18"
+    acc_mosi_pin: "gpio20"
+    acc_miso_pin: "gpio19"
+    step_pin: "gpio23"
+    dir_pin: "gpio24"
+    enable_pin: "!gpio25"
+    heater_pin: "gpio9"
+    sensor_pin: "gpio29"
+    uart_pin: "gpio0"
+    tx_pin: "gpio1"
+    hotend_fan_pin: "gpio5"
+    he_tach_pin: "gpio16"
+    part_fan_pin: "gpio6"
+    part_tach_pin: "gpio17"
+    detection_pin: "gpio10"
+    rgb_pin: "gpio7"

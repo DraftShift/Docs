@@ -1,7 +1,6 @@
 
 [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} splits it's configuration in to 2 main segments, the [Toolchanger Config](#) which contains the configurations for toolchanger specific settings and [Tool Configs](#) which contain the configuration for each toolhead. 
 
-
 Before running [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"}, you’ll need to make a few changes to your existing Klipper configuration. This involves removing or commenting out certain sections that may conflict with [Klipper-toolchanger-easy's](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} framework, and introducing new configurations for toolchanger specific functions.
 
 These changes ensure that [Klipper](#) and [klipper-toolchanger-easy](#) work together correctly. Detailed instructions are provided in the setup steps below — it’s important to follow them carefully to avoid duplicate or conflicting settings.

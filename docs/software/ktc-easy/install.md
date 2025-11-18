@@ -3,6 +3,7 @@
 ## Klipper-toolchanger-easy
 Connect to the printer via SSH and enter the following commands:
 
+### Clone and Install
 ``` bash { .copy }
 cd ~/
 git clone https://github.com/jwellman80/klipper-toolchanger-easy.git
@@ -20,21 +21,32 @@ You will be prompted to decide a Z probe solution. A typical StealthChanger uses
 !!! example "Eddy Current"
     Eddy current sensors on StealthChanger have additional requirements and some limitations, they are considered experimental. 
 
+### File Structure
 After installation, your configuration will be organized as follows:
 
 ```
 ~/printer_data/config/toolchanger/
-├── readonly-configs/          # DO NOT EDIT - Symlinked macros
+├── readonly-configs/           # DO NOT EDIT - Symlinked macros
+│   ├── homing.cfg
+│   ├── tool_detection.cfg      # TAP install only
+│   ├── toolchanger.cfg
+│   ├── toolchanger-macros.cfg
+│   ├── calibrate-offsets.cfg
+│   ├── crash-detection.cfg
 │   └── toolchanger-include.cfg
-├── tools/                     # Tool-specific configurations
-│   ├── T0.cfg
-│   ├── T1.cfg
-│   └── ...
-├── toolchanger-config.cfg     # User-editable overrides
-└── example_T0.cfg             # Example configurations
-    example_T1.cfg
+├── tools/                      # Tool-specific configurations
+│   ├── example_T0.cfg          # Example configurations
+│   └── example_T1.cfg
+└── toolchanger-config.cfg      # User-editable overrides
 ```
 
+### Include Configs
+Include the configuration by adding the following to the start of your `printer.cfg`
+``` cfg { .copy }
+[include toolchanger/readonly-configs/toolchanger-include.cfg]
+```
+
+### Moonraker Config
 Optional, but recommended, add the following to your `moonraker.conf` to enable automatic updates:
 
 ``` cfg { .copy }

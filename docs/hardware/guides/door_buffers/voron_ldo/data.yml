@@ -10,18 +10,63 @@ summary: >
     !!! info "Short/Standard?"
         There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../../toolheads.md) for compatibility.
 
-    !!! danger "TODO"
-        This guide is currently a work in progress.
 
 printed_bom:
-  TODO:
-    qty: 69420
-    urls: 
-      TODO: "#"
+ Top Left:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+
+ Top Right:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+
+
+ Top Mid:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+
+ Right:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+
+ Left:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+
+ Bottom Right:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+
+ Bottom Left:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer 
+
+ Bottom Mid:
+    qty: 1
+    urls:
+      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
 
 hardware_bom:
-  TODO:
-    qty: 69420
+  M3 heat Set Insert:
+    qty: 8
+
+  M3x8 SHCS Screws:
+    qty: 24
+  
+  M3 Hammer Nut:
+    qty: 24
+  
+  M5x16 BHCS:
+    qty: 2
+
+
 
 
 primary_parts:
@@ -41,13 +86,182 @@ frame_parts:
   - "Crossbar"
 
 steps:
-  - title: "TODO"
-    description: "TODO"
+  - title: "Heat Inserts"
+    description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
     camera:
-      azimuth: 114
-      polar: 40
+      azimuth: 92
+      polar: 87
+      distance: 66
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "M3 Heat Inserts"
+    focus: 
+      - "M3 Heat Inserts"
+
+  - title: "Insert Fasteners"
+    description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
+    camera:
+      azimuth: 249
+      polar: 76
       distance: 85
-      pan_x: 0
-      pan_y: 0
-      pan_z: 0
-    visible: []
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "M3 Heat Inserts"
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+    focus: 
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+
+  - title: "Attach to Frame"
+    description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
+    camera:
+      azimuth: 145
+      polar: 60
+      distance: 85
+      pan_x: 0.00
+      pan_y: -0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "M3 Heat Inserts"
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+      - "Frame"
+    focus: 
+      - "Frame"
+
+
+  - title: "Prepare the dockbar"
+    description: "Attach the dockbar."
+    camera:
+      azimuth: 88
+      polar: 85
+      distance: 85
+      pan_x: 0.00
+      pan_y: 0.00
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "M3 Heat Inserts"
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+      - "Frame"
+      - "Crossbar"
+    focus: 
+      - "Crossbar"
+
+  - title: "Bolt on the Cross bar"
+    description: "Secure the dock bar to the doorbuffer using the M5x16 BHCS screw. Tighten the screws on both sides to ensure a firm attachment."
+    camera:
+      azimuth: 125
+      polar: 94
+      distance: 80
+      pan_x: 5.24
+      pan_y: 0.35
+      pan_z: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "M3 Heat Inserts"
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+      - "Frame"
+      - "Crossbar"
+      - "Crossbar Screws"
+    focus: 
+      - "Crossbar Screws"
+      
+  - title: "Attach Ldo Voron Doorlatch"
+    description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
+    camera:
+      azimuth: 106
+      polar: 82
+      distance: 33
+      pan_x: 1.55
+      pan_y: 21.35
+      pan_z: -9.01
+    visible: 
+     - "Bottom Left"
+     - "Bottom Right"
+     - "Top Left"
+     - "Top Right"
+     - "Top Mid"
+     - "Bottom Mid"
+     - "Left Mid"
+     - "Right Mid"
+     - "M3 Heat Inserts"
+     - "M3x8 SHCS Screws"
+     - "M3 Hammer Nuts"
+     - "Frame"
+     - "Crossbar"
+     - "Crossbar Screws"
+    focus: 
+      - "M3 Heat Inserts"
+
+  - title: "Attach LDO Doors"
+    description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape,  LDO door buffer is assuming you are using LDO door hindges."
+    camera:
+      azimuth: 91
+      polar: 86
+      distance: 89
+      pan_x: 0.98
+      pan_y: 0.12
+      pan_z: -18.79
+    visible: 
+     - "Bottom Left"
+     - "Bottom Right"
+     - "Top Left"
+     - "Top Right"
+     - "Top Mid"
+     - "Bottom Mid"
+     - "Left Mid"
+     - "Right Mid"
+     - "M3 Heat Inserts"
+     - "M3x8 SHCS Screws"
+     - "M3 Hammer Nuts"
+     - "Frame"
+     - "Crossbar"
+     - "Crossbar Screws"
+    focus: 
+      - "M3 Heat Inserts"

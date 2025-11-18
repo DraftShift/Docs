@@ -1,5 +1,4 @@
 
-
 In order for [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} to operate, some of your existing config will either be made redundant or need to be transferred in to a tool config file.
 
 ## Toolhead Sections
