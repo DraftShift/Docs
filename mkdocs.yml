@@ -20,29 +20,17 @@ theme:
     - navigation.instant.progress
   
   palette:
-    # AUTO
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-  
-    # LIGHT MODE
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue
-      accent: indigo 
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # DARK MODE
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: indigo
       accent: light blue 
       toggle:
         icon: material/brightness-4
-        name: Switch to system preference
+        name: Switch to light mode
+
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
 
 nav:
   - Introduction: index.md
