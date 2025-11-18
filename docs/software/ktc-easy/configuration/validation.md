@@ -1,11 +1,6 @@
 
-Include the configuration by adding the following to the start of your `printer.cfg`
-``` cfg { .copy }
-[include toolchanger/readonly-configs/toolchanger-include.cfg]
-```
-
 !!! failure "Klipper Error"
-    If you are experiencing Klipper errors after including the configuration, please consult [Software Troubleshooting](#).
+    If you are experiencing Klipper errors after setting up your toolchanger-config and T0 config, please consult [Software Troubleshooting](#).
 
 ## Pre Launch
 Before configuring and calibrating the other tools, it is advised to get the printer printing with tool 0 before continuing configuration of everything else. Before homing and starting a print, there are some checks we should do to make sure everything behaves as intended.
