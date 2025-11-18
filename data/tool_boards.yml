@@ -86,7 +86,7 @@ manufacturers:
       description: "CAN bus toolboard with TMC2209 driver and AS5047D encoder"
       external_link: true
       url: https://mellow-3d.github.io
-      product_url: https://www.aliexpress.com/item/1005004687165673.html
+      product_url: https://3dmellow.com/products/mellow-fly-sht36-v3-klipper-compatible-3d-printer-klipper-rrf-canbus-rs232-board-max-plus-ldc1612-eddy-for-nema14-17-motor
       features:
         connector: XT30+2
         protocol: CAN
@@ -106,7 +106,7 @@ manufacturers:
       description: "High temperature CAN/USB toolboard with STMG0B1T3 MCU (125°C capable)"
       external_link: true
       url: https://github.com/FYSETC/H36_Combo
-      product_url: https://www.aliexpress.com/item/1005006859866352.html
+      product_url: https://www.fysetc.com/products/fysetc-h36-v1-3-combo-high-temperature-resistance-klipper-canbus-tool-board-compatible-nema14-36mm-motor-onboard-tmc2209?_pos=8&_sid=55c08f5b8&_ss=r
       features:
         connector: XT30+2
         protocol: CAN/USB
