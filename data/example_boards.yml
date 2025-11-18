@@ -87,3 +87,92 @@ NitehawkSB V1.5:
     part_tach_pin: "gpio17"
     detection_pin: "gpio10"
     rgb_pin: "gpio7"
+
+Mellow sht v2:
+  mcu_name: "sht"
+  protocol: "CAN"
+  preface: |
+    # This file contains common pin mappings for the mellow fly sht36 v2.
+    # To use this config, the firmware should be compiled for the 
+    # stm32f072".
+  accelerometer: "adxl345"
+  axis_map: ""
+  pullup_resistor: "4700"  # No jumper=4700 ohms for NTC thermistor. Add jumper to set to 1100 ohms for PT1000 thermistor.
+  sense_resistor: "0.100"
+  pin_map:
+    acc_cs_pin: "PA9"
+    acc_sclk_pin: "PB13"
+    acc_mosi_pin: "PB15"
+    acc_miso_pin: "PB14"
+    step_pin: "PB4"
+    dir_pin: "PB3"
+    enable_pin: "!PA15"
+    heater_pin: "PA8"
+    sensor_pin: "PA3"
+    uart_pin: "PB5"
+    tx_pin:  ""
+    hotend_fan_pin: "PB10"
+    he_tach_pin: "PB10"  
+    part_fan_pin: "PB11"
+    detection_pin: "PA1"
+    rgb_pin: "PB0"
+
+EBB36 Gen2 CAN:
+  mcu_name: "EBB"
+  protocol: "CAN"
+  preface: |
+    # This file contains common pin mappings for the BIGTREETECH EBB36 V1.2.
+    # To use this config, the firmware should be compiled for the 
+    # STM32G0B1 with "8 MHz crystal" and "CAN bus (on PB12/PB13)".
+  accelerometer: "adxl345"
+  axis_map: "x,Y,Z"
+  pullup_resistor: "2200"
+  sense_resistor: ""
+  pin_map:
+    acc_cs_pin: "PB1"
+    acc_sclk_pin: "PB10"
+    acc_mosi_pin: "PB11"
+    acc_miso_pin: "PB2"
+    step_pin: "PB14"
+    dir_pin: "PA8"
+    enable_pin: "!PB6"
+    heater_pin: "PB4"
+    sensor_pin: "PA3"
+    uart_pin: "PA15"
+    tx_pin: ""
+    hotend_fan_pin: "PD2"
+    he_tach_pin: "PA4"
+    part_fan_pin: "PD3"
+    part_tach_pin: ""
+    detection_pin: "^PB8"
+    rgb_pin: "PC7"
+
+EBB36 Gen2 USB:
+  mcu_name: "EBB"
+  protocol: "USB"
+  preface: |
+    # This file contains common pin mappings for the BIGTREETECH EBB36 V1.2.
+    # To use this config, the firmware should be compiled for the 
+    # STM32G0B1 with "8 MHz crystal" and "USB (on PA11/PA12)".
+  accelerometer: "adxl345"
+  axis_map: "x,Y,Z"
+  pullup_resistor: "2200"
+  sense_resistor: ""
+  pin_map:
+    acc_cs_pin: "PB1"
+    acc_sclk_pin: "PB10"
+    acc_mosi_pin: "PB11"
+    acc_miso_pin: "PB2"
+    step_pin: "PB14"
+    dir_pin: "PA8"
+    enable_pin: "!PB6"
+    heater_pin: "PB4"
+    sensor_pin: "PA3"
+    uart_pin: "PA15"
+    tx_pin: ""
+    hotend_fan_pin: "PD2"
+    he_tach_pin: "PA4"
+    part_fan_pin: "PD3"
+    part_tach_pin: ""
+    detection_pin: "^PB8"
+    rgb_pin: "PC7"
