@@ -41,14 +41,14 @@ For StealthChanger we use standard gcode to change and operate the tools. Many m
 ## Slicer Gcodes
 Depending on the slicer's provenance, the internal macro variables can differ. It is important to translate the internal variables in to universal variables Klipper's `PRINT_START` macro can use. 
 
-The [example PRINT_START macro](#) accepts the following parameters:
+The [example PRINT_START macro](../software/ktc-easy/examples.md#__tabbed_9_1) accepts the following parameters:
 
 - `TOOL_TEMP` — Temperature for the initially selected tool.
 - `T0_TEMP`, `T1_TEMP`, etc. — Individual temperatures for each tool (only passed if tool is used).
 - `BED_TEMP` — Bed temperature for the first layer.
 - `TOOL` — Initial tool number to start with.
 
-See below for custom gcode macros that will send the correct syntax to the [example PRINT_START macro](#) for each of the supported slicers.
+See below for custom gcode macros that will send the correct syntax to the [example PRINT_START macro](../software/ktc-easy/examples.md#__tabbed_9_1) for each of the supported slicers.
 
 {% for slicer, data in slicers.items() %}
 

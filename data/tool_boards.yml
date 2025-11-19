@@ -17,6 +17,23 @@ manufacturers:
         probe: 1
         filament_sensor: 1
   
+    NitehawkSB: 
+      image: nitehawk_sb.webp
+      description: "USB toolboard with RP2040 MCU, TMC2209 driver, and ADXL345 accelerometer"
+      external_link: false
+      url: https://docs.ldomotors.com
+      product_url: ../resellers.md
+      features:
+        connector: XT30+2
+        protocol: USB
+        fans: 2
+        fan_voltage: "5V/24V" # Solder Jumper
+        thermistor: 2
+        rgb: 1
+        endstops: 2
+        probe: 1
+        filament_sensor: 0
+
   BigTreeTech:
     EBB36 V1.2:
       image: ebb36.webp
@@ -25,7 +42,7 @@ manufacturers:
       url: https://biqu.equipment
       product_url: https://biqu.equipment/products/bigtreetech-ebb-36-42-can-bus-for-connecting-klipper-expansion-device
       features:
-        connector: microfit
+        connector: Microfit3
         protocol: CAN
         fans: 2
         fan_voltage: "24V"

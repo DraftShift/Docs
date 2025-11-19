@@ -1,5 +1,11 @@
 
-Each tool requires a toolhead board to go with it. With multiple tools, the wiring would become a nightmare to manage without them.
+Each tool requires a toolhead board to go with it. With multiple tools, the wiring would become a nightmare to manage without them. 
+
+??? tip "CANBUS"
+    For canbus communication, it is highly recommended to use [Esoterical's CANBUS Guide](https://canbus.esoterical.online/){target="_blank"} to guide you through flashing the boards.
+
+??? tip "USB"
+    For USB communication it is recommended to use the manufacturer's documentation to guide you through flashing the boards.
 
 <div class="grid cards" style="text-align: center;" markdown>
 {% for manufacturer, boards in tool_boards.manufacturers.items() %}

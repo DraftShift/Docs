@@ -8,6 +8,12 @@
 
 Distribution boards extend the amount of connections available that can be used to attach tool heads. They will be either extend your CAN network or will behave as a USB hub. Some boards also have an additional MCU that gan give you access to additional runout switches, thermistors, RGB, etc.
 
+??? tip "CANBUS"
+    For canbus communication, it is highly recommended to use [Esoterical's CANBUS Guide](https://canbus.esoterical.online/){target="_blank"} to guide you through flashing the boards.
+
+??? tip "USB"
+    For USB communication it is recommended to use the manufacturer's documentation to guide you through flashing the boards.
+
 <div class="grid cards" style="text-align: center;" markdown>
 {% for manufacturer, boards in distribution_boards.manufacturers.items() %}
     {% for board, data in boards.items() %}

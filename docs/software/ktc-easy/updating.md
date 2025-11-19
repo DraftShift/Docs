@@ -1,6 +1,6 @@
 
 ## Semi-Automatic Update
-If you are using the [Moonraker config](#), updating [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} can be as easy as pressing the update button in Mainsail/Fluidd. 
+If you are using the [Moonraker config](../ktc-easy/install.md#moonraker-config), updating [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} can be as easy as pressing the update button in Mainsail/Fluidd. 
 
 !!! note "Major Updates"
     Major updates that include python modifications will require you to rerun the install script. If you have updated via the Moonraker config and are experiencing issues, log in to the printer via SSH and run the following commands:

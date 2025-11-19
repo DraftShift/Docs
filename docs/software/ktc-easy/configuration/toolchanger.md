@@ -11,10 +11,7 @@ replace_g0: False
 ```
 
 ### [force_move]
-!!! warning "TODO"
-    check if this is actually needed on easy
-
-[Force move](#){:target="_blank"} is built-in to [Klipper](#){:target="_blank"} and is required to be enabled for [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"}.
+[Force move](https://www.klipper3d.org/Config_Reference.html?h=force_move#force_move){:target="_blank"} is built-in to [Klipper](https://www.klipper3d.org/){:target="_blank"} and is required to be enabled for [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"}.
 
 ``` cfg
 [force_move]

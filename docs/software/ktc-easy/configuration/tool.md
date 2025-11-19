@@ -31,7 +31,7 @@ Each toolhead board requires a unique MCU name. Typically you would give them a 
     ```
 
 ## [extruder]
-The extruder section is much the same as your typical Klipper [extruder](#){:target="_blank} section with the exception of tools that are not T0 requiring a tool number attached to them.
+The extruder section is much the same as your typical Klipper [extruder](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#extruder){:target="_blank} section with the exception of tools that are not T0 requiring a tool number attached to them.
 
 === "T0"
     ``` cfg title="Tool 0 Config"
@@ -58,7 +58,7 @@ The extruder section is much the same as your typical Klipper [extruder](#){:tar
     ```
 
 ## [tmc2209]
-Behaves exactly like a typical [[tmc2209]](#){:target="_blank} section.
+Behaves exactly like a typical [[tmc2209]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#tmc2209){:target="_blank} section.
 
 === "T0"
     ``` cfg title="Tool 0 Config"
@@ -81,7 +81,7 @@ Behaves exactly like a typical [[tmc2209]](#){:target="_blank} section.
     ```
 
 ## [heater_fan]
-Behaves exactly like a typical Klipper [[heater_fan]](#){:target="_blank} section.
+Behaves exactly like a typical Klipper [[heater_fan]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#heater_fan){:target="_blank} section.
 
 === "T0"
     ``` cfg title="Tool 0 Config"
@@ -102,10 +102,10 @@ Behaves exactly like a typical Klipper [[heater_fan]](#){:target="_blank} sectio
     ```
 
 ## [fan_generic]
-To be able to control a tool's part cooling fans while it is not in use, klipper-toolchanger uses [[fan_generic]](#) rather than [[fan]](#){:target="_blank"}.
+To be able to control a tool's part cooling fans while it is not in use, klipper-toolchanger uses [[fan_generic]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#fan_generic) rather than [[fan]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#fan){:target="_blank"}.
 
 !!! warning "[fan]"
-    Using [[fan_generic]](#){:target="_blank"} replaces the need for a [[fan]](#){:target="_blank"} section in your config. If you have an existing [[fan]](#){:target="_blank"} section, it must be removed.
+    Using [[fan_generic]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#fan_generic){:target="_blank"} replaces the need for a [[fan]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#fan){:target="_blank"} section in your config. If you have an existing [[fan]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#fan){:target="_blank"} section, it must be removed.
 
 === "T0"
     ``` cfg title="Tool 0 Config"
@@ -122,7 +122,7 @@ To be able to control a tool's part cooling fans while it is not in use, klipper
     ```
 
 ## [tool]
-The [[tool]](#) section is a klipper-toolchanger-easy(#){:target="_blank"} extension that is used to attach all the preceding sections and calibration values to a tool object that klipper-toolchanger-easy(#){:target="_blank"} references.
+The [[tool]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool) section is a klipper-toolchanger-easy([#](https://github.com/jwellman80/klipper-toolchanger-easy/)){:target="_blank"} extension that is used to attach all the preceding sections and calibration values to a tool object that klipper-toolchanger-easy(https://github.com/jwellman80/klipper-toolchanger-easy/){:target="_blank"} references.
 
 !!! note "Offset and Park Values"
     The `gcode_[xyz]_offset` and `params_park_[xyz]` values should all default to zero. They are values that need to be calibrated. 
@@ -161,13 +161,13 @@ The [[tool]](#) section is a klipper-toolchanger-easy(#){:target="_blank"} exten
     If you are using a probing method other than TAP, the `detection_pin` variable must also be set with the pin for the tool's tap sensor.
 
 !!! info "Info"
-    Further information on the [tool](#){:target="_blank"} section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
+    Further information on the [tool](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool){:target="_blank"} section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
 
 ## [tool_probe]
-The [[tool_probe]](#){:target="_blank"} section is a klipper-toolchanger extension that attaches a probe to the [tool object](#){:target="_blank"}. This gives each tool the ability to be used as a tap probe and is also used to detect which tool is on the [Shuttle](#).
+The [[tool_probe]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/tool_probe.md#tool-probe){:target="_blank"} section is a klipper-toolchanger extension that attaches a probe to the [tool object](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool){:target="_blank"}. This gives each tool the ability to be used as a tap probe and is also used to detect which tool is on the [Shuttle](../../../hardware/stealthchanger.md#shuttle).
 
 !!! warning "[probe]"
-    Using [[tool_probe]](#){:target="_blank"} replaces the need for a [[probe]](#){:target="_blank"} section in your config. If you have an existing [[probe]](#){:target="_blank"} section, it must be removed.
+    Using [[tool_probe]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/tool_probe.md#tool-probe){:target="_blank"} replaces the need for a [[probe]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#probe){:target="_blank"} section in your config. If you have an existing [[probe]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#probe){:target="_blank"} section, it must be removed.
 
 === "T0"
     ``` cfg title="Tool 0 Config"
@@ -205,10 +205,10 @@ The [[tool_probe]](#){:target="_blank"} section is a klipper-toolchanger extensi
     `[tool_probe]` should be disabled if using alternative probes, such as Eddy current sensors.
 
 !!! info "Info"
-    Further information on the [tool_probe](#){:target="_blank"} section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
+    Further information on the [tool_probe](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/tool_probe.md#tool-probe){:target="_blank"} section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
 
 ## [gcode_macro Tn]
-Each tool gets assigned a [gcode_macro](#){:target="_blank"} which is used to call a change to that tool.
+Each tool gets assigned a [gcode_macro](https://www.klipper3d.org/Config_Reference.html#gcode_macro){:target="_blank"} which is used to call a change to that tool.
 
 === "T0"
     ``` cfg title="Tool 0 Config"
@@ -225,4 +225,4 @@ Each tool gets assigned a [gcode_macro](#){:target="_blank"} which is used to ca
     ```
 
 ## Examples
-You can see how the options described in the documentation come together in practice, take a look at the [Examples](#){:target="_blank"} page.
+You can see how the options described in the documentation come together in practice, take a look at the [Examples](../examples.md){:target="_blank"} page.

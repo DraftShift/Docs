@@ -36,4 +36,4 @@ The addition of more tools and docks inside the printer typically means you end 
 StealthChanger has an active and helpful community on both discord and facebook, if you get stuck at any point, don't hesitate to reach out and ask for help. 
 
 !!! info "User Mods"
-    There are many user mods that can modify or enhance the many aspects the StealthChanger ecosystem. If you can't find what your after in the main repository, it's likely one of our talented community members has created a user mod for it.
+    There are many [usermods](https://github.com/DraftShift/StealthChanger/tree/main/UserMods){target="_blank"} that can modify or enhance the many aspects the StealthChanger ecosystem. If you can't find what your after in the main repository, it's likely that one of our talented community members has created a user mod for it.

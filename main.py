@@ -19,12 +19,13 @@ def define_env(env):
     for filename in os.listdir(yaml_folder):
         if filename.endswith('.yml') or filename.endswith('.yaml'):
             yaml_path = os.path.join(yaml_folder, filename)
-            yaml_name = filename.strip('.yml').strip('.yaml')
+            yaml_name = filename[:filename.index(".")]
 
             if os.path.exists(yaml_path):
                 yaml_data = open_yaml_file(yaml_path)
 
                 if yaml_data:
+                    print(f"Loading data: {yaml_name}")
                     env.variables[yaml_name] = yaml_data
 
     env.variables.guides = {}
@@ -114,14 +115,13 @@ def define_env(env):
                 login = contributor.get('login', '')
                 avatar_url = contributor.get('avatar_url', '')
                 profile_url = contributor.get('html_url', '')
-                contributions = contributor.get('contributions', 0)
+                # contributions = contributor.get('contributions', 0)
                 
                 output.append(f'''
                 <a href="{profile_url}" class="contributor-card" target="_blank" rel="noopener">
                     <img src="{avatar_url}" alt="{login}" class="contributor-avatar">
                     <div class="contributor-info">
                         <div class="contributor-name">{login}</div>
-                        <div class="contributor-contributions">{contributions} contributions</div>
                     </div>
                 </a>
                 ''')

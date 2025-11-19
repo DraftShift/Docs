@@ -1,6 +1,6 @@
 
 !!! failure "Klipper Error"
-    If you are experiencing Klipper errors after setting up your toolchanger-config and T0 config, please consult [Software Troubleshooting](#).
+    If you are experiencing Klipper errors after setting up your toolchanger-config and T0 config, please consult [Software Troubleshooting](../../troubleshooting.md).
 
 ## Pre Launch
 Before configuring and calibrating the other tools, it is advised to get the printer printing with tool 0 before continuing configuration of everything else. Before homing and starting a print, there are some checks we should do to make sure everything behaves as intended.
@@ -14,10 +14,7 @@ Make sure your toolhead passes all of the following checks before continuing.
 4. Once at temperature, the extruder motor moves with `G1 E100 F100`.
 5. finally, Turn the hotend off with `M104 S0`
 
-If any of these steps fails, the issue could be either hardware or software related. Consult the [Hardware Troubleshooting](#) and [Software Troubleshooting].
-
-!!! danger "TODO"
-    We should make sure that each of these tests are representing in the troubleshooting guides for both hardware and software.
+If any of these steps fails, the issue could be either hardware or software related. Consult the [Hardware Troubleshooting](../../../hardware/troubleshooting.md) and [Software Troubleshooting](../../troubleshooting.md).
 
 ### Tool detection and homing
 1. Check that the tool detection is working by running `INITIALIZE_TOOLCHANGER` with and without the tool on the shuttle. You should get confirmation that the tool was/wasn't detected.
@@ -28,13 +25,13 @@ If any of these steps fails, the issue could be either hardware or software rela
 !!! success
     At this point the printer should be homed and everything is running as intended. 
     
-    If you have any issues initializing or homing, please consult [Software Troubleshooting](#).
+    If you have any issues initializing or homing, please consult [Software Troubleshooting](../../troubleshooting.md).
 
 ### Backplate Break In
 Because the Stealthchanger’s action relies on precisely fitted pins and bushings, it’s a good idea to operate the mechanism repeatedly to allow the components to seat properly. This break-in process should be performed for every tool.
 
-!!! danger "TODO"
-    Figure out a method that also supports eddy current sensors.
+!!! note "TAP Only"
+    This method only works for TAP probing.
 
 1. Heatsoak your printer.
 2. Run `G28`
@@ -43,9 +40,9 @@ Because the Stealthchanger’s action relies on precisely fitted pins and bushin
 2. Run `PROBE_ACCURACY SAMPLES=100`
 
 !!! failure "Failure"
-    If you experience failure during this step or you feel the accuracy is not as good as it should be, consult the [troubleshooting](#) section.
+    If you experience failure during this step or you feel the accuracy is not as good as it should be, consult the [Hardware Troubleshooting](../../../hardware/troubleshooting.md) section.
 
-Please reference the [Tool Calibration](#).
+Please reference the [Tool Calibration](../../../calibration/index.md).
 
 ### Probe offset
 The last step before being able to print again is to calibrate your probe offsets. This procedure is different depending on whether you are using TAP or an Eddy current sensor for probing.
@@ -55,7 +52,7 @@ The last step before being able to print again is to calibrate your probe offset
     2. Run `QUAD_GANTRY_LEVEL`.
     3. Run `G28 Z`.
     4. Run `PROBE_CALIBRATE`.
-    5. Change the `z_offset` variable in the tool's [[tool_probe]](#) section.
+    5. Change the `z_offset` variable in the tool's [[tool_probe]](../configuration/tool.md#tool_probe) section.
 
     !!! caution "SAVE_CONFIG"
         Because klipper-toolchanger-easy reroutes probe to each tool object, when you run `SAVE_CONFIG` it saves the values to `[probe]`. Having a `[probe]` section in your config while also having `[tool_probe]` will cause issues with Klipper. `SAVE_CONFIG` should be avoided.

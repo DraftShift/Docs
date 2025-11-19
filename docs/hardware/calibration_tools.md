@@ -21,14 +21,14 @@ Converting an existing [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronU
 
 ### Axiscope
 
-Axiscope is a specialized tool created by members of our community that is designed to simplify the calibration process for multi-tool 3D printers running [Klipper-toolchanger](#){:target="_blank"} using camera-assisted alignment.
+Axiscope is a specialized tool created by members of our community that is designed to simplify the calibration process for multi-tool 3D printers running [Klipper-toolchanger](../software/index.md#klipper-toolchanger){:target="_blank"} using camera-assisted alignment.
 
 It provides a streamlined web interface for:
 
 * Manual XY calibration using camera feedback.
 * Automatic Z alignment through use of a Z endstop or [Sexball Probe](#sexball-probe).
 * Quick and precise tool alignment.
-* No calculations required, the offsets are given to you in the exact format used with [Klipper-toolchanger](#).
+* No calculations required, the offsets are given to you in the exact format used with [Klipper-toolchanger](../software/index.md#klipper-toolchanger).
 
 ![Axiscope](../assets/camera.png){:width="540"}
 

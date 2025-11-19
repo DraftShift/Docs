@@ -5,6 +5,9 @@ image: "backplate_xol.png"
 summary: >
     StealthChanger Backplate for the XOL.
 
+    !!! warning "Z Joints"
+      Replacement of your Z joints with something with a lower profile such as [hartk123's GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or [Ellis'Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} is necessary to avoid bottoming out your Z carriage on the deck panel when using XOL.
+
 printed_bom:
   XOL Backplate:
     qty: 1
@@ -139,7 +142,7 @@ steps:
       # - "Shuttle"
   
   - title: "Testing" 
-    description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the Hardware Troubleshooting."
+    description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the [Hardware Troubleshooting](../../../troubleshooting/)."
     camera:
       azimuth: 318
       polar: 77

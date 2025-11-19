@@ -1,6 +1,6 @@
 
 ## Summary
-[Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} is a [klipper-toolchanger]() fork by [averen](https://github.com/jwellman80){:target="_blank"} that adds tool-changing support to [Klipper](#){:target="_blank"}. It works through a combination of Python modules and macros that coordinate tool management and calibration. Key features include:
+[Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} is a [klipper-toolchanger]() fork by [averen](https://github.com/jwellman80){:target="_blank"} that adds tool-changing support to [Klipper](https://www.klipper3d.org/){:target="_blank"}. It works through a combination of Python modules and macros that coordinate tool management and calibration. Key features include:
 
 * Comprehensive tool-change framework — Adds full multi-tool management to Klipper, including tool selection, pickup, and parking logic.
 * Per-tool configuration — Supports unique settings for each tool, such as offsets, fans, heaters, and extruder assignments.

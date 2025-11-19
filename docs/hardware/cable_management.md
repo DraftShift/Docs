@@ -4,7 +4,7 @@ search:
 ---
 
 ## Umbilical Cables
-An umbilical cable is required for each toolhead. They typically route from a [distribution board](../electronics.md#distribution-boards) to a [toolhead board](../electronics.md#toolhead-boards). On a StealthChanger, keeping the tool's umbilical in a controlled state is extremely important. If a tool's umbilical were to obstruct any of the other tools, it could result in a crash and cause a print failure. 
+An umbilical cable is required for each toolhead. They typically route from a [distribution board](../electronics/distro_boards.md) to a [toolhead board](../electronics/th_boards.md). On a StealthChanger, keeping the tool's umbilical in a controlled state is extremely important. If a tool's umbilical were to obstruct any of the other tools, it could result in a crash and cause a print failure. 
 
 To help the umbilical move in a controlled fashion, we employ the use of a flat spring steel or piano wire. This addition gives the umbilical a controlled arc and helps it return to its resting position safely.
 
@@ -14,7 +14,7 @@ To help the umbilical move in a controlled fashion, we employ the use of a flat 
 ![Umbilical Cables](../assets/umbilicals.png){:width="540"}
 
 ## Fanny Pack
-Originally by [ManCheetah](https://www.printables.com/@EddieSha_454383){:target="_blank"}, the Fanny Pack has been adopted by DraftShift Design as the de facto method of housing a [distribution board](../electronics.md#distribution-boards) on the rear of the printer. Compared to the original, our updated version brings compatibility with a number of [distribution boards](../electronics.md#distribution-boards) and buck converter options.
+Originally by [ManCheetah](https://www.printables.com/@EddieSha_454383){:target="_blank"}, the Fanny Pack has been adopted by DraftShift Design as the de facto method of housing a [distribution board](../electronics/distro_boards.md) on the rear of the printer. Compared to the original, our updated version brings compatibility with a number of [distribution boards](../electronics/distro_boards.md) and buck converter options.
 
 ![Fanny Pack](../assets/fanny_pack.png){:width="540"}
 
@@ -24,4 +24,4 @@ The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your
 ![Wire Duct](../assets/wire_duct.png){:width="540"}
 
 ## Assembly
-See the [Umbilical Build Guide](#), [Fanny Pack Build Guide](guides/cable_management/fanny_pack/index.md) and [Wire Duct Build Guide](#) sections for assembly instructions.
+See the [Build Guides](../hardware/guides/cable_management/index.md) for assembly instructions.

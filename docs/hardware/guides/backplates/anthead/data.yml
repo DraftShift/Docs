@@ -150,7 +150,7 @@ steps:
       # - "Shuttle"
   
   - title: "Testing" 
-    description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the Hardware Troubleshooting."
+    description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the [Hardware Troubleshooting](../../../troubleshooting/)."
     camera:
       azimuth: 318
       polar: 77

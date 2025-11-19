@@ -33,13 +33,22 @@
 
 ---
 
-### Next Issue
-- How to resolve.
+###  Gantry Can't Reach the Bed
+Some tools are shorter than others and with some of the shorter tools the z-rail carriages reach the end of their travel before the nozzle can reach the bed, this can be a problem for probing, QGL and printing.
+
+- Remove or modify the Z-belt-covers
+- Use taller bed spacers
+- Some tools like A4T & XOL require the use of lower profile Z joints. [hartk123's GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or [Ellis'Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} are good options.
 
 ---
 
-### Another Issue
-- How to resolve.
+### Inconsistant QGL
+- Make sure the umbilical cable is not pulling on the toolhead as it probes.
+- Check preload screws.
+
+### Bad Input Shaper Results
+- Ensure the Backplate's preload screws have been adjusted.
+- Check your configuration to ensure the correct accelerometer is assigned to `[resonance_tester]`.
 
 ---
 

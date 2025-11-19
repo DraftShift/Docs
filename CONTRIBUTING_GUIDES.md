@@ -24,14 +24,12 @@ docs/hardware/guides/
 │   ├── anthead/
 │   │   ├── data.yml          # Assembly configuration
 │   │   ├── Anthead_SF.glb    # 3D model file
-│   │   ├── assembly.md       # Assembly page
 │   │   └── index.md          # Overview page
 │   └── [other_backplates]/
 ├── toolheads/
 │   ├── anthead/
 │   │   ├── data.yml
 │   │   ├── Anthead.glb
-│   │   ├── assembly.md
 │   │   └── index.md
 │   └── [other_toolheads]/
 ├── modular_docks/
@@ -50,7 +48,6 @@ Each category folder (e.g., `toolheads`, `backplates`) contains individual guide
 Each guide folder must contain:
 - **`data.yml`** - The assembly configuration file
 - **`[ModelName].glb`** - The 3D model file referenced in `data.yml`
-- **`assembly.md`** - Page that displays the assembly viewer
 - **`index.md`** - Overview page with embedded assembly viewer
 
 ---
@@ -67,27 +64,10 @@ A GLB (GL Transmission Format Binary) file containing the 3D model. The model sh
 - Have clearly named parts/meshes that match the names used in `visible` and `focus` arrays
 - Be optimized for web viewing (reasonable polygon count)
 - Include all parts needed for the assembly
+- The .glb files can be exported from a .step with Freecad. 
+- Import the .glb file in to Blender and export it again using compression.
 
-### 3. assembly.md
-
-A simple markdown file that loads the assembly viewer:
-
-```markdown
-# [Guide Name] Assembly
-
-{% set assembly = get_hardware("category_name")["Guide Title"] %}
-{% include "_templates/assembly_viewer.md" %}
-```
-
-**Example:**
-```markdown
-# Anthead Assembly
-
-{% set assembly = get_hardware("toolheads")["Anthead"] %}
-{% include "_templates/assembly_viewer.md" %}
-```
-
-### 4. index.md
+### 3. index.md
 
 An overview page that includes both overview information and the assembly viewer:
 

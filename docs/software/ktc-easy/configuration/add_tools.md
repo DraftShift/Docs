@@ -1,11 +1,11 @@
 
 # Adding Subsequent Tools
 
-Adding additional tool configurations works much like setting up T0. Simply create a new [tool configuration](#) file and populate it with the necessary values. If your tools share similar hardware, you can save time by copying an existing [tool configuration](#)
+Adding additional tool configurations works much like setting up T0. Simply create a new [tool configuration](../configuration/tool.md) file and populate it with the necessary values. If your tools share similar hardware, you can save time by copying an existing [tool configuration](../configuration/tool.md)
  and renaming it to Tn.cfg.
 
 ## Numbering
-[Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} requires the tools to be numbered sequentially. If you only have `T0.cfg` you next [tool config](#) must be `T1.cfg`.
+[Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} requires the tools to be numbered sequentially. If you only have `T0.cfg` you next [tool config](../configuration/tool.md) must be `T1.cfg`.
 
 The following items need to be incremented:
 
@@ -38,9 +38,9 @@ These include:
 ## Simpler Than It Looks
 [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} makes adding more tools and getting them to work with klipper is a rather simple process. At this point the tools should show up in the UI and you should be able to control the heaters, fans and so on. However, there are more steps required to get the printer to change tools.
 
-Go through the [Pre Launch](#) steps again for each additional tool, optionally excluding the [Probe offset](#) calibration and [First Print](#) test.
+Go through the [Pre Launch](../configuration/validation.md#pre-launch) steps again for each additional tool, optionally excluding the [Probe offset](../configuration/validation.md#probe-offset) calibration and [First Print](../configuration/validation.md#first-print) test.
 
 !!! tip "Probe Offsets for Subsequent Tools"
     All tool offsets are calibrated relative to T0. Setting probe offsets for tools other than T0 is generally only useful if you need to home using that specific tool. However, even if another tool is used for homing, it’s recommended to home T0 again before starting a print to ensure consistent alignment and accuracy.
 
-With the tools broken in and functioning corrently, we can move on to [Calibration](#).
+With the tools broken in and functioning corrently, we can move on to [Calibration](../../../calibration/index.md).

@@ -143,8 +143,9 @@ nav:
     - Overview: calibration/index.md
     - Nozzle Offsets: calibration/nozzle_offsets.md
     - Dock Locations: calibration/dock_locations.md
-  - Collaborations: collaborations.md
+  - Contributing: contributing.md
   - Resellers: resellers.md
+  - DraftShift Design: draftshift.md
 
 plugins:
   - search
