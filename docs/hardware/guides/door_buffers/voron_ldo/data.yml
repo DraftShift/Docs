@@ -1,5 +1,6 @@
 title: Door Buffer (LDO Version)
 model: "Door_Buffer_LDO.glb"
+image: "door_buffer_ldo.png"
 
 summary: >
     The LDO version of Door Buffer for Voron 2.4.

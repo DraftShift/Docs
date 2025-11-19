@@ -1,5 +1,6 @@
 title: Door Buffer (Voron Standard Door)
 model: "Door_Buffer_DSD.glb"
+image: "door_buffer_dsd.png"
 
 summary: >
     A door buffer for Voron 2.4 Standard Doors.

@@ -3,6 +3,7 @@
 
 title: Anthead
 model: "Anthead.glb"
+image: "anthead_assembly.png"
 
 primary_parts:
   - "Main Body"
