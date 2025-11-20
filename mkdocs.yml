@@ -38,8 +38,9 @@ nav:
   - Power & Electronics:
     - Overview: electronics/index.md
     - Power: electronics/power.md
-    - Distribution Boards: electronics/distro_boards.md
     - Toolhead Boards: electronics/th_boards.md
+    - Distribution Boards: electronics/distro_boards.md
+
 
   - Hardware:
     - StealthChanger: hardware/stealthchanger.md

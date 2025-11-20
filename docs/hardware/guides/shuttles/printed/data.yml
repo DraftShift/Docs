@@ -3,7 +3,7 @@ model: "Shuttle_MGN12.glb"
 image: "shuttle_printed.png"
 
 summary: >
-    The Stealthchanger Printed Shuttle.
+    The StealthChanger Printed Shuttle.
 
     !!! tip "Printing"
         This is a critical component for StealthChanger. Make sure you have read the [Print Tuning Guide](../../../../getting_started.md#print-tuning) before printing.

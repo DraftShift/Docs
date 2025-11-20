@@ -1424,19 +1424,19 @@ function updateStep() {
         return; // Model initialization callback will call updateStep() again
     }
     
-    // Show/hide navigation buttons
+    // Enable/disable navigation buttons
     const prevBtn = document.getElementById('prev-step');
     const nextBtn = document.getElementById('next-step');
     const maxStep = assemblySteps.length - 1;
     
     if (prevBtn) {
-        // Show previous button if: not on step 0, OR on step 0 with a selected subcategory
-        const showPrev = currentStep > 0 || (currentStep === 0 && selectedSubCategory);
-        prevBtn.style.display = showPrev ? 'inline-block' : 'none';
+        // Enable previous button if: not on step 0, OR on step 0 with a selected subcategory
+        const canGoPrev = currentStep > 0 || (currentStep === 0 && selectedSubCategory);
+        prevBtn.disabled = !canGoPrev;
     }
     if (nextBtn) {
-        const showNext = currentStep < maxStep;
-        nextBtn.style.display = showNext ? 'inline-block' : 'none';
+        const canGoNext = currentStep < maxStep;
+        nextBtn.disabled = !canGoNext;
     }
     
     // Only update model-related things if model is initialized
@@ -1744,6 +1744,41 @@ function setupAssemblyViewer() {
     if (resetColorsBtn) {
         resetColorsBtn.innerHTML = '';
         setIcon(resetColorsBtn, 'icon-refresh');
+    }
+    
+    // Setup navigation button icons
+    const prevBtn = document.getElementById('prev-step');
+    const nextBtn = document.getElementById('next-step');
+    if (prevBtn) {
+        prevBtn.innerHTML = '';
+        setIcon(prevBtn, 'icon-chevron-left');
+    }
+    if (nextBtn) {
+        nextBtn.innerHTML = '';
+        setIcon(nextBtn, 'icon-chevron-right');
+    }
+    
+    // Setup step info toggle button
+    const toggleStepInfoBtn = document.getElementById('toggle-step-info');
+    const stepContentOverlay = document.getElementById('step-content-overlay');
+    if (toggleStepInfoBtn && stepContentOverlay) {
+        toggleStepInfoBtn.innerHTML = '';
+        setIcon(toggleStepInfoBtn, 'icon-info');
+        toggleStepInfoBtn.setAttribute('data-tooltip', 'Hide Step Info');
+        
+        // Start visible by default
+        stepContentOverlay.classList.remove('hidden');
+        
+        toggleStepInfoBtn.onclick = function() {
+            this.blur();
+            const isHidden = stepContentOverlay.classList.toggle('hidden');
+            
+            if (isHidden) {
+                toggleStepInfoBtn.setAttribute('data-tooltip', 'Show Step Info');
+            } else {
+                toggleStepInfoBtn.setAttribute('data-tooltip', 'Hide Step Info');
+            }
+        };
     }
     
     // Setup color picker

@@ -40,13 +40,12 @@
     </div>
 {% endmacro %}
 
-<div id="step-content">
-    <h3 id="step-title">{{ assembly.steps[0].title if assembly.steps is defined else "" }}</h3>
-    <p id="step-description">{{ assembly.steps[0].description if assembly.steps is defined else "" }}</p>
-</div>
-
 <div id="model-viewer-container">
     <div id="model-viewer">
+        <div id="step-content-overlay">
+
+            <p id="step-description">{{ assembly.steps[0].description if assembly.steps is defined else "" }}</p>
+        </div>
         <div class="model-overlay-content">
             <div class="parts-header">
                 <div class="parts-buttons">
@@ -54,6 +53,7 @@
                     <button id="deselect-all-parts" class="parts-button icon-button" data-tooltip="Hide All"></button>
                     <button id="toggle-focus" class="parts-button icon-button" data-tooltip="Reload Current Step"></button>
                     <button id="open-color-picker" class="parts-button icon-button" data-tooltip="Colors"></button>
+                    <button id="toggle-step-info" class="parts-button icon-button" data-tooltip="Hide Step Info"></button>
                 </div>
                 <button id="collapse-parts" class="parts-button icon-button collapse-button" data-tooltip="Collapse"></button>
             </div>
@@ -76,16 +76,11 @@
                 <div>Pan Z: <span id="overlay-pan-z">0</span></div>
             </div>
         </div>
-    </div>
-</div>
-
-<div id="step-nav">
-    <div>
-        <button id="prev-step" class="step-nav-button">← Previous</button>
-    </div>
-    <span id="step-counter">Step 1 of {{ assembly.steps|length }}</span>
-    <div>
-        <button id="next-step" class="step-nav-button">Next →</button>
+        <div id="step-nav">
+            <button id="prev-step" class="step-nav-button"></button>
+            <span id="step-counter">Step 1 of {{ assembly.steps|length }}</span>
+            <button id="next-step" class="step-nav-button"></button>
+        </div>
     </div>
 </div>
 
@@ -111,6 +106,9 @@
     </symbol>
     <symbol id="icon-close" viewBox="0 0 24 24">
         <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24">
+        <path d="M11 7h2v2h-2V7m0 4h2v6h-2v-6m1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
     </symbol>
 </svg>
 

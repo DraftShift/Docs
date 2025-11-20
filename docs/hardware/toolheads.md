@@ -4,7 +4,7 @@ For the purposes of StealthChanger the toolhead selection is rather important. I
 
 
 ???+ info "Printing"
-    Officially supported toolheads do not require modification to work with StealthChanger, only the addition of the Stealthchanger backplate and possibly a spacer. Each toolhead can be sourced from their respective repositories. Toolheads that are not officially supported will require modification to work with StealthChanger and will be marked as a usermod.
+    Officially supported toolheads do not require modification to work with StealthChanger, only the addition of the StealthChanger backplate and possibly a spacer. Each toolhead can be sourced from their respective repositories. Toolheads that are not officially supported will require modification to work with StealthChanger and will be marked as a usermod.
 
 ??? info "Extruders"
     * You can use any extruder you want as long as it is supported by the toolhead of your choice.

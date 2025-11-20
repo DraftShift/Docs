@@ -69,7 +69,7 @@ hardware_bom:
 
 steps:
   - title: "The Backplate"
-    description: 'This guide usaes a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/).'
+    description: "This guide usaes a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/)."
     camera:
       azimuth: 295
       polar: 118

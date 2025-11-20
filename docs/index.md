@@ -22,12 +22,12 @@ The [Door Buffer](hardware/door_buffer.md) moves the mounting point of the [Modu
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Tophat](assets/tophat_extrusion.png){ width=300 align=left } 
 ### Tophat
-The [Tophat](hardware/tophat.md) raises the top panel of the printer to allow room for the tool's umbilicals. There are both [3d printed](hardware/tophat.md#printed-tophat) and [extrusion](hardware/tophat.md#extrusion-tophat) options available.
+The [Tophat](hardware/tophat.md) raises the top panel of the printer to allow room for the tool's [umbilical cables](hardware/cable_management.md#umbilical-cables). There are both [3d printed](hardware/tophat.md#printed-tophat) and [extrusion](hardware/tophat.md#extrusion-tophat) options available.
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Cable Management](assets/cable_management.png){ width=250 align=right } 
 ### Cable Management
-Proper [Cable Management](hardware/cable_management.md) plays a critical role in the performance and reliability of [StealthChanger](hardware/stealthchanger.md), though it is frequently underestimated. The [Cable Management](hardware/cable_management.md) section provides guidance on managing [umbilicals](hardware/cable_management.md#umbilical-cables) for tools, integrating the [Fanny Pack](hardware/cable_management.md#fanny-pack) to house the distribution board, and utilizing [Wire Duct](hardware/cable_management.md#wire-duct) to maintain cable organization.
+Proper [Cable Management](hardware/cable_management.md) plays a critical role in the performance and reliability of [StealthChanger](hardware/stealthchanger.md), though it is frequently underestimated. The [Cable Management](hardware/cable_management.md) section provides guidance on managing [umbilical cables](hardware/cable_management.md#umbilical-cables) for tools, integrating the [Fanny Pack](hardware/cable_management.md#fanny-pack) to house the distribution board, and utilizing [Wire Duct](hardware/cable_management.md#wire-duct) to maintain cable organization.
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Cable Management](assets/sexball.png){ width=250 align=left } 

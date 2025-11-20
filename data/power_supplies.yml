@@ -1,0 +1,65 @@
+MEAN WELL:
+  LRS-200:
+    wattage: 200
+    dimensions: [215, 115, 30]
+    fan: false
+  LRS-350:
+    wattage: 350
+    dimensions: [215, 115, 30]
+    fan: true
+  LRS-450:
+    wattage: 450
+    dimensions: [225, 124, 35]
+    fan: true
+  LRS-600:
+    wattage: 600
+    dimensions: [225, 124, 41]
+    fan: true
+  UHP-200:
+    wattage: 200
+    dimensions: [194, 55, 26]
+    fan: false
+  UHP-350:
+    wattage: 350
+    dimensions: [220, 62, 31]
+    fan: false
+  UHP-500:
+    wattage: 500
+    dimensions: [232, 81, 31]
+    fan: false
+
+MORNSUN:
+  LM-200:
+    wattage: 200
+    dimensions: [179, 99, 30]
+    fan: false
+  LM-350:
+    wattage: 350
+    dimensions: [215, 115, 30]
+    fan: true
+  LM-450:
+    wattage: 450
+    dimensions: [215, 115, 30]
+    fan: true
+  LM-600:
+    wattage: 600
+    dimensions: [267, 106, 40]
+    fan: true
+  LMF-200:
+    wattage: 200
+    dimensions: [194, 55, 26]
+    fan: false
+  LMF-350:
+    wattage: 350
+    dimensions: [220, 62, 31]
+    fan: false
+  LMF-500:
+    wattage: 500
+    dimensions: [232, 81, 31]
+    fan: false
+
+LDO:
+  LCP300:
+    wattage: 275@24V / 25@5V
+    dimensions: [120, 95, 35]
+    fan: false

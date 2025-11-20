@@ -28,7 +28,7 @@ If any of these steps fails, the issue could be either hardware or software rela
     If you have any issues initializing or homing, please consult [Software Troubleshooting](../../troubleshooting.md).
 
 ### Backplate Break In
-Because the Stealthchanger’s action relies on precisely fitted pins and bushings, it’s a good idea to operate the mechanism repeatedly to allow the components to seat properly. This break-in process should be performed for every tool.
+Because the StealthChanger’s action relies on precisely fitted pins and bushings, it’s a good idea to operate the mechanism repeatedly to allow the components to seat properly. This break-in process should be performed for every tool.
 
 !!! note "TAP Only"
     This method only works for TAP probing.
