@@ -220,7 +220,7 @@ steps:
       - "Shuttle M3x8 BHCS"
 
   - title: "Remove Belt Helper"
-    description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x25-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them."
+    description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x25-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them. The Shuttle is now installed. Tension your belts with the idlers as you normally would."
     camera:
       azimuth: 108
       polar: 71

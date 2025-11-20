@@ -263,7 +263,7 @@ steps:
        - Umbilical Cover Magnets
 
   - title: "Umbillical Cover install"
-    description: "Install Cover install"
+    description: "Install Cover"
     camera:
       azimuth: 277
       polar: 82

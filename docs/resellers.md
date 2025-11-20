@@ -6,7 +6,7 @@
 <div class="grid cards" style="text-align: center;" markdown>
 {% for reseller, res_data in resellers.regions[region].items() %}
 {% if res_data.is_sponsor and res_data.is_sponsor != false %}
--    ### <span style="padding-left: 22.5px;"><i title="{{ res_data.is_sponsor }}" style="float: right; cursor: help;">:star:{ style="pointer-events: none;" }</i>
+-    ### <span style="padding-left: 30px;"><i title="{{ res_data.is_sponsor }}" style="float: right; cursor: help;">:star:{ .lg style="pointer-events: none;" }</i>
             {{- reseller -}}
         </span> 
 {% else %}

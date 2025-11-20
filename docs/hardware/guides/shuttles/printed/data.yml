@@ -6,7 +6,7 @@ summary: >
     The StealthChanger Printed Shuttle.
 
     !!! tip "Printing"
-        This is a critical component for StealthChanger. Make sure you have read the [Print Tuning Guide](../../../../getting_started.md#print-tuning) before printing.
+        The Shuttle is a critical component for StealthChanger. Make sure you have read the [Print Tuning Guide](../../../../getting_started.md#print-tuning) before printing.
         The StealthChanger Shuttle must be printed with supports.
 
 printed_bom:
@@ -35,7 +35,7 @@ primary_parts:
 
 steps:
   - title: "Install Bushings"
-    description: "Install the 3 bushings into the shuttle making sure they remain straight. Use a parallel wrench if you have one."
+    description: "Install the 3 4x6x6mm bushings into the shuttle ensuring they remain straight. Use a parallel wrench if you have one."
     camera:
       azimuth: 295
       polar: 60
@@ -49,7 +49,7 @@ steps:
       - "Bushings"
 
   - title: "Install Magnets"
-    description: "Secure 3 6x3mm magnets with super glue ensuring the maget pole going towards the print is in the same direction."
+    description: "Secure the 3 6x3mm magnets with super glue."
     camera:
       azimuth: 295
       polar: 60
@@ -64,7 +64,7 @@ steps:
       - "6x3mm Magnets"
   
   - title: "Install Screws"
-    description: "Screw in the 2 M3x40 SHCS screws in the bottom of the shuttle. Make sure they are full thread screws. If the screws have a shoulder they could crack the part."
+    description: "Screw in the 2 M3x40 SHCS screws in the bottom of the shuttle. Make sure they are full thread screws. If the screws have a shoulder they could crack the printed part."
     camera:
       azimuth: 102
       polar: 60
@@ -80,7 +80,7 @@ steps:
       - "M3x40 SHCS"
 
   - title: "Install Heat Insert (Optional)"
-    description: "If using an endstop for X axis, install this heat insert."
+    description: "If using an endstop for X axis, install a heat insert in the underside of the Shuttle."
     camera:
       azimuth: 98
       polar: 117
