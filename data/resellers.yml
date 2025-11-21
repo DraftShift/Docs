@@ -25,13 +25,14 @@ regions:
       logo_url: https://store.isiks.tech/cdn/shop/files/Isiks_Tech_Profile_TP_Amber_R_bb275eff-e8fe-421c-b146-a2a8de49f57a.png?v=1735439881&width=280
       description: ""
       url: https://store.isiks.tech/
-      product_url: 
+      product_url: https://store.isiks.tech/collections/toolchanger
   Canada:
      Bobcat 3D:
       is_sponsor: false
       logo_url: https://i.etsystatic.com/35950299/r/isla/eb87d7/62833842/isla_100x100.62833842_cptwbaxu.jpg
       description: ""
       url: https://www.etsy.com/shop/bobcat3d/?etsrc=sdt
+      product_url: https://www.etsy.com/shop/bobcat3d/?etsrc=sdt&section_id=49329178
   uk:
     123-3D:
       is_sponsor: false
@@ -83,3 +84,10 @@ regions:
       region: "world wide"
       url: https://www.fysetc.com/
       product_url: https://www.fysetc.com/search?type=stealth+changer&options%5Bprefix%5D=last&q=stealthchanger
+    LDO:
+      is_sponsor: false
+      logo_url: https://docs.ldomotors.com/ldo-logo-m&s.png
+      description: ""
+      region: "Find your LDO retailer"
+      url: https://docs.ldomotors.com/en/StealthChanger
+      product_url: https://ldomotion.com/resellers
