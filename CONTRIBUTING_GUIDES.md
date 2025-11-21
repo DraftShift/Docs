@@ -79,7 +79,7 @@ An overview page that includes both overview information and the assembly viewer
 ```markdown
 # [Guide Name]
 
-{% set assembly = get_hardware("category_name")["Guide Title"] %}
+{% set assembly = get_hardware("usermods")["Guide Name"] %}
 
 {% include "_templates/overview.md" %}
 
@@ -101,7 +101,7 @@ title: Anthead
 ```
 
 #### `author` (required)
-The author or organization that created the guide. Use "DSD" for official DraftShift Design guides.
+The author or organization that created the guide. Use "DraftShift Design" for official DraftShift Design guides.
 
 ```yaml
 author: "DraftShift Design"

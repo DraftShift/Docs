@@ -33,7 +33,7 @@ When printing a Shuttle, it is important to note that the selection of material 
     The hole spacing on MGN9 is too small to clamp the belts reliably without the screws getting in the way. [Shuttle Keeper](#shuttle-keeper) is required. 
 
 !!! info "*9mm belts"
-    9mm belts can be used with CNC Shuttles. If you want to use 9mm belts with a printed Shuttle, a [usermod by BT123](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI){:target="_blank"} is required.
+    9mm belts can be used with CNC Shuttles. If you want to use 9mm belts with a printed Shuttle, a [usermod by BT123](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper){:target="_blank"} is required.
 
 ## Shuttle Keeper
 The Shuttle Keeper is an additional component that can be used to hold the belts in place while the [Shuttle](#shuttle) is removed from the MGN Rail. There are situational reasons as to when and why you would want to use a Shuttle Keeper. See the below list for details.
