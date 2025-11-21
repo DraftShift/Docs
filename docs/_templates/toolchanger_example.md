@@ -11,10 +11,11 @@
     enable_force_move: True
 
     [toolchanger]
-    # Do not adjust the dropoff and pickup paths unless you know what they do.
+    # The example dropoff and pickup paths are configured to work with the Modular Dock.
+    # Do not adjust them unless you have a different dock or know what you are doing.
     params_dropoff_path: [{'y':9.5 ,'z':4}, {'y':9.5, 'z':2}, {'y':5.5, 'z':0}, {'z':0, 'y':0, 'f':0.5}, {'z':-10, 'y':0}, {'z':-10, 'y':16}]
     params_pickup_path: [{'z':-10, 'y':16}, {'z':-10, 'y':0}, {'z':0, 'y':0, 'f':0.5, 'verify':1}, {'y':5.5, 'z':0}, {'y':9.5, 'z':2}, {'y':9.5 ,'z':4}]
-    params_safe_y: 120 # The distance from absolute zero to the back of the tools in the dock. Allow some extra clearance.
+    params_safe_y: 120 # The distance from absolute zero to where the tool on the Shuttle clears the back of the tools in the dock. Allow some extra clearance.
     params_close_y: 30 # The relative distance from safe_y the gantry moves to while changing tools.
     params_fast_speed: 10000 # Movement speed while outside of the dock during tool changes.
     params_path_speed: 900 # Movement speed used for pickup and dropoff during tool changes.

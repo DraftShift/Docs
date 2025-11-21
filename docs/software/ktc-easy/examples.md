@@ -1,7 +1,5 @@
 # Configuration Examples
-
-!!! danger "TOOD"
-    provide examples for print_start/end, with and without primelines
+A collection of example configurations compatible with KTC-Easy.
 
 {% include "_templates/toolchanger_example.md" %}
 {% include "_templates/tool_examples.md" %}
