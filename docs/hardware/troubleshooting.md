@@ -31,6 +31,16 @@
 
     Big thank you to BT123 on Discord for this technique.
 
+!!! tip "Last Resort"
+    If you can't get the Shuttle and Backplate to mesh cleanly after attempting heat treatment and cleaning the bushings, you can try heating the pins with a soldering iron. This is a last resort and should only be done if you have tried everything else.
+
+    - Heat up the pin with a soldering iron.
+    - While the pin is hot, push it into the backplate with pliers (don't burn yourself!)
+    - Quickly put the backplate or tool onto the shuttle while the pin is still hot and make sure it seats fully.
+    - Wait 5-10min to let it cool down and settle.
+    - Tighten the pin with a screw or epoxy it in place.
+
+    Big thank you to Sebastiaan on Discord for this technique.
 ---
 
 ###  Gantry Can't Reach the Bed
