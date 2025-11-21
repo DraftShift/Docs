@@ -76,7 +76,7 @@ regions:
       region: "AU"
       url: https://store.dremc.com.au
       product_url: https://store.dremc.com.au/search?type=product&q=stealthchanger
-  International:
+  Distribution:
     Fysect:
       is_sponsor: false
       logo_url: https://www.fysetc.com/cdn/shop/files/FYSETC_White_125x.png?v=1662524387
@@ -90,4 +90,4 @@ regions:
       description: ""
       region: "Find your LDO retailer"
       url: https://docs.ldomotors.com/en/StealthChanger
-      product_url: https://ldomotion.com/resellers
+      product_url:

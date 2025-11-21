@@ -16,7 +16,9 @@
 {% if res_data.configurator_url %}
     [:fontawesome-solid-wrench: Configurator]({{ res_data.configurator_url }}){:target="_blank" .md-button}
 {% endif -%}
-    [:material-cart: Kits]({{ res_data.product_url }}){:target="_blank" .md-button} 
+{% if res_data.product_url %}
+    [:material-cart: Shop]({{ res_data.product_url }}){:target="_blank" .md-button} 
+{% endif %}
 {% endfor %}
 </div>
 

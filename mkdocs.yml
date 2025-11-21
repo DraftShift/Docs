@@ -20,17 +20,22 @@ theme:
     - navigation.instant.progress
   
   palette:
-    - scheme: slate
-      primary: indigo
-      accent: light blue 
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
-
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
 
 nav:
   - Introduction: index.md
@@ -87,9 +92,6 @@ nav:
         - Overview: hardware/guides/door_buffers/index.md
         - Voron Standard: hardware/guides/door_buffers/voron_sd/index.md
         - Voron LDO: hardware/guides/door_buffers/voron_ldo/index.md
-        # - Voron Clicky-Clack: hardware/guides/door_buffers/voron_ccd/index.md
-        # - Micron Standard: hardware/guides/door_buffers/micron_sd/index.md
-        # - Micron Colony Clacker: hardware/guides/door_buffers/micron_ccd/index.md
 
       - Modular Dock:
         - Overview: hardware/guides/modular_docks/index.md
@@ -142,8 +144,9 @@ nav:
 
   - Calibration:
     - Overview: calibration/index.md
-    - Nozzle Offsets: calibration/nozzle_offsets.md
     - Dock Locations: calibration/dock_locations.md
+    - Nozzle Offsets: calibration/nozzle_offsets.md
+
   - Contributing: contributing.md
   - Resellers: resellers.md
   - DraftShift Design: draftshift.md
