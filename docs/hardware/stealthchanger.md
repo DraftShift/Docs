@@ -63,3 +63,48 @@ The StealthChanger Backplate is the companion component to the [Shuttle](#shuttl
 
 ## Assembly
 See the [Shuttle Build Guides](guides/shuttles/index.md) and [Backplate Build Guides](guides/backplates/index.md) sections for assembly instructions.
+
+## FAQ
+
+**Quick Links:**
+
+- [Do I need an OctoTAP board per toolhead?](#do-i-need-an-octotap-board-per-toolhead)
+- [My magnets don't fit in my backplate](#my-magnets-dont-fit-in-my-backplate)
+- [My shuttle and backplate don't mate well](#my-shuttle-and-backplate-dont-mate-well)
+- [My dimensions are spot on but it still doesn't mate smoothly](#my-dimensions-are-spot-on-but-it-still-doesnt-mate-smoothly)
+- [Do I really need N52 magnets?](#do-i-really-need-n52-magnets)
+- [How do I install the magnets?](#how-do-i-install-the-magnets)
+
+---
+
+### Do I need an OctoTAP board per toolhead?
+Yes. Each toolhead needs an OctoTAP board to detect which tool is actively on the shuttle. The optical sensor's beam is broken by the shuttle's flag (the protrusion at the top), which allows the software to identify the active tool and detect successful tool changes (crash detection).
+
+---
+
+### My magnets don't fit in my backplate
+Measure your magnets with a caliper—cheaply sourced magnets are often not exactly 6x3mm. Also check your [print settings](../getting_started.md#print-tuning) to ensure your printer has calibrated filament shrinkage.
+
+---
+
+### My shuttle and backplate don't mate well
+With a CNC shuttle, it's critical to calibrate your filament shrinkage. Printed shuttles have more tolerance since both parts shrink similarly, but CNC shuttles require exact alignment. Measure the distance between the outside edges of the pins—it should be exactly 39mm. Even 0.1mm off can cause binding.
+
+See [Print Tuning](../getting_started.md#print-tuning) and [Hardware Troubleshooting](troubleshooting.md#shuttle-and-backplate-resistance) for more help.
+
+---
+
+### My dimensions are spot on but it still doesn't mate smoothly
+If your pins are held in by screws, mate the backplate with the shuttle first, then tighten the pin screws while mated. This aligns the pins perfectly with the shuttle bushings. Then bed in the parts by running `PROBE_ACCURACY SAMPLES=100` repeatedly (place something hard under the nozzle to avoid dimpling the PEI plate).
+
+If issues persist, you could try [heat-treating the backplate](troubleshooting.md#shuttle-and-backplate-resistance) to adjust it slightly.
+
+---
+
+### Do I really need N52 magnets?
+Yes. N52 magnets are much stronger than N35 and make the shuttle/toolhead connection more rigid. N35 magnets can cause reliability issues and introduce play.
+
+---
+
+### How do I install the magnets?
+If you have screw-in magnets, just screw them in place. For standard magnets, use two-component epoxy (not CA glue/super glue) that doesn't set immediately. This allows you to press in the magnet and adjust it flush with the backplate or shuttle. CA glue can lose its bond in enclosed printers due to heat, causing magnets to pop out.

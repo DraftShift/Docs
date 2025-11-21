@@ -18,6 +18,21 @@
 
     Big thank you to unguided-wanderer on Discord for this technique.
 
+??? tip "More Aggressive Heat Treating (Pins Still Not Smooth)"
+    If the standard heat treating method above doesn't resolve binding or if your tool still slowly drags itself into place when putting it on the shuttle, you can use a more aggressive approach to mold the pin housing:
+
+    Pin alignment is crucial for smooth operation. It's possible that the plastic prevents the pin from aligning perfectly with the shuttle, but you can mold the pin housing of the backplate by heating up the pin:
+
+    1. Heat up the pin with a soldering iron
+    2. When it's hot push it into the backplate with pliers (don't burn yourself!)
+    3. While still hot put the backplate or tool onto the shuttle and make sure it seats fully.
+    4. Wait 5-10min to let it cool down and settle.
+    5. Tighten the pin with a screw or epoxy it in place.
+
+    It should now mate much smoother
+
+    Big thank you to WHYYTE on Discord for this technique.
+
 !!! tip "Cleaning Bushings"
     Sometimes the bushings aren't debured or do not slide well when you recieve them.
 
@@ -43,8 +58,15 @@ Some tools are shorter than others and with some of the shorter tools the z-rail
 ---
 
 ### Inconsistant QGL
-- Make sure the umbilical cable is not pulling on the toolhead as it probes.
-- Check preload screws.
+If you have a lot of variance when running `PROBE_ACCURACY` or your QGL fails to level, check the following:
+
+- Umbilical cable isn't pulling on the toolhead, especially at the front corners, which can cause the optotap to activate at different heights 
+- Preload screws are properly adjusted
+- Shuttle screws are tight in the X-rail carriage (they may loosen over time)
+- OctoTAP board is secure on the backplate
+- Screws holding the backplate to the toolhead are tight
+- Printed shuttle hasn't cracked, especially near the top bushings
+
 
 ### Bad Input Shaper Results
 - Ensure the Backplate's preload screws have been adjusted.
