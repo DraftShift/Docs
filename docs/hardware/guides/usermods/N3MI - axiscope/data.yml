@@ -1,4 +1,5 @@
 title: Axiscope Camera
+author: "N3MI"
 summary: >
     A camera which complements the [Axiscope](https://github.com/nic335/Axiscope){:target="_blank"} software to get precise XY alignment between the tool's nozzles.
 

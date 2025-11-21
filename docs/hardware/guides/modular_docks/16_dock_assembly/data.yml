@@ -1,9 +1,10 @@
 title: Modular Dock Assembly
+author: "DraftShift Design"
 summary: >
     This guide will guide you through the assembly of the Modular Dock. It is presumed you have already assembled the [Blocker](../../../modular_dock.md#blocker), [Base](../../../modular_dock.md#base) and [Frame](../../../modular_dock.md#frame) sub-assemblies.
 
     !!! note "Variations"
-        [Spring Steel Blocker](../blocker_spring_steel/index.md), [Anthead Base](../base_anthead/index.md) and [Standard Crossbar Frame](../frame_standard_crossbar/index.md) are used for the purpose of this guide. You may be using different parts, but the assembly process is the same.
+        [Spring Steel Blocker](../01_blocker_spring_steel/index.md), [Anthead Base](../04_base_anthead/index.md) and [Standard Crossbar Frame](../15_frame_standard_crossbar/index.md) are used for the purpose of this guide. You may be using different parts, but the assembly process is the same.
 
 printed_bom: {}
 

@@ -38,7 +38,9 @@ def define_env(env):
                 guide_path = os.path.join(guide_parent, guide_folder)
 
                 if os.path.isdir(guide_path):
-                    guide_folder = guide_folder.replace(" ", "_").lower()
+                    # Store the actual folder name (with spaces, original case)
+                    # This is used for generating correct paths in templates
+                    actual_folder_name = guide_folder
                     
                     # Look for YAML files in the guide folder
                     for filename in os.listdir(guide_path):
@@ -50,7 +52,7 @@ def define_env(env):
                                 # Debug: print what's being loaded
                                 print(f"Loading guide: {folder} -> {data.get('title', 'NO TITLE')}")
                                 
-                                data['folder'] = guide_folder
+                                data['folder'] = actual_folder_name
                                 try:
                                     env.variables.guides[folder][data['title']] = data
 

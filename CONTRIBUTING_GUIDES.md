@@ -21,17 +21,18 @@ All build guides are organized under `docs/hardware/guides/` with the following 
 ```
 docs/hardware/guides/
 ├── backplates/
-│   ├── anthead/
+│   ├── 1_a4t/
 │   │   ├── data.yml          # Assembly configuration
-│   │   ├── Anthead_SF.glb    # 3D model file
+│   │   ├── model.glb         # 3D model file (standardized name)
+│   │   ├── image.png         # Preview image (standardized name)
 │   │   └── index.md          # Overview page
+│   ├── 2_anthead/
+│   │   ├── data.yml
+│   │   ├── model.glb
+│   │   ├── image.png
+│   │   └── index.md
 │   └── [other_backplates]/
 ├── toolheads/
-│   ├── anthead/
-│   │   ├── data.yml
-│   │   ├── Anthead.glb
-│   │   └── index.md
-│   └── [other_toolheads]/
 ├── modular_docks/
 ├── cable_management/
 ├── calibration_tools/
@@ -48,10 +49,13 @@ Each category folder (e.g., `toolheads`, `backplates`) contains individual guide
 
 ### Guide Folders
 
-Each guide folder must contain:
-- **`data.yml`** - The assembly configuration file
-- **`[ModelName].glb`** - The 3D model file referenced in `data.yml`
-- **`index.md`** - Overview page with embedded assembly viewer
+Each guide folder must:
+- Be named with an index prefix (e.g., `1_name`, `2_name`) to control sort order in navigation
+- Contain the following standardized files:
+  - **`data.yml`** - The assembly configuration file
+  - **`model.glb`** - The 3D model file (standardized filename)
+  - **`image.png`** - Preview image for guide cards (standardized filename)
+  - **`index.md`** - Overview page with embedded assembly viewer
 
 ---
 
@@ -98,21 +102,14 @@ The display name of the assembly guide.
 title: Anthead
 ```
 
-#### `model` (required)
-The filename of the GLB model file (must be in the same directory).
+#### `author` (required)
+The author or organization that created the guide. Use "DSD" for official DraftShift Design guides.
 
 ```yaml
-model: "Anthead.glb"
+author: "DraftShift Design"
 ```
 
-#### `image` (optional)
-A preview image for the guide (used in overview cards).
-
-```yaml
-image: "backplate_anthead_SF.png"
-```
-
-#### `summary` (optional)
+#### `summary` (required)
 A description of the assembly. Supports markdown formatting including admonitions.
 
 ```yaml
@@ -123,7 +120,7 @@ summary: >
       This is my message
 ```
 
-#### `printed_bom` (optional)
+#### `printed_bom` (required)
 Bill of materials for printed parts. Each part can have multiple download links.
 
 ```yaml
@@ -140,7 +137,7 @@ printed_bom:
       Link: https://github.com/example/spacer.stl?raw=true
 ```
 
-#### `hardware_bom` (optional)
+#### `hardware_bom` (required)
 Bill of materials for hardware components.
 
 ```yaml

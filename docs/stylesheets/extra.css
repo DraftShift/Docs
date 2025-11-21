@@ -57,10 +57,21 @@
 }
 
 .guide-card-title {
-  margin: 0;
+  margin: 0 0 0.25rem 0;
   font-size: 1.1rem;
   font-weight: 600;
 }
+
+.guide-card-author {
+  /* margin: 0; */
+  margin-top: -1.0rem;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  opacity: 0.8;
+}
+
 
 /* Contributors Grid */
 .contributors-grid {
@@ -120,4 +131,14 @@ img.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Guide author line - complementary content below title */
+.guide-author {
+  margin-top: -2.0rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  opacity: 0.8;
 }

@@ -5,45 +5,9 @@
 {% set focus_color = (55, 255, 0) %}
 {% set bg_color = (30,30,30) %}
 
-{% macro color_picker_overlay() %}
-    <div id="color-picker-overlay" class="color-picker-overlay">
-        <div class="color-boxes-container">
-            <div class="color-box-wrapper" data-tooltip="Primary">
-                <div class="color-box" id="primary-color-box" data-color-type="primary" style="background: rgb({{ primary_color[0] }}, {{ primary_color[1] }}, {{ primary_color[2] }});">
-                    <input type="color" class="color-input" data-color-type="primary" value="{{ '#%02x%02x%02x' | format(primary_color[0], primary_color[1], primary_color[2]) }}">
-                </div>
-            </div>
-            <div class="color-box-wrapper" data-tooltip="Accent">
-                <div class="color-box" id="accent-color-box" data-color-type="accent" style="background: rgb({{ accent_color[0] }}, {{ accent_color[1] }}, {{ accent_color[2] }});">
-                    <input type="color" class="color-input" data-color-type="accent" value="{{ '#%02x%02x%02x' | format(accent_color[0], accent_color[1], accent_color[2]) }}">
-                </div>
-            </div>
-            <div class="color-box-wrapper" data-tooltip="Frame">
-                <div class="color-box" id="frame-color-box" data-color-type="frame" style="background: rgb({{ frame_color[0] }}, {{ frame_color[1] }}, {{ frame_color[2] }});">
-                    <input type="color" class="color-input" data-color-type="frame" value="{{ '#%02x%02x%02x' | format(frame_color[0], frame_color[1], frame_color[2]) }}">
-                </div>
-            </div>
-            <div class="color-box-wrapper" data-tooltip="Focus">
-                <div class="color-box" id="focus-color-box" data-color-type="focus" style="background: rgb({{ focus_color[0] }}, {{ focus_color[1] }}, {{ focus_color[2] }});">
-                    <input type="color" class="color-input" data-color-type="focus" value="{{ '#%02x%02x%02x' | format(focus_color[0], focus_color[1], focus_color[2]) }}">
-                </div>
-            </div>
-            <div class="color-box-wrapper" data-tooltip="Background">
-                <div class="color-box" id="bg-color-box" data-color-type="bg" style="background: rgb({{ bg_color[0] }}, {{ bg_color[1] }}, {{ bg_color[2] }});">
-                    <input type="color" class="color-input" data-color-type="bg" value="{{ '#%02x%02x%02x' | format(bg_color[0], bg_color[1], bg_color[2]) }}">
-                </div>
-            </div>
-            <div class="color-box-wrapper" data-tooltip="Reset Colors">
-                <button id="reset-colors" class="color-box reset-button icon-button"></button>
-            </div>
-        </div>
-    </div>
-{% endmacro %}
-
 <div id="model-viewer-container">
     <div id="model-viewer">
         <div id="step-content-overlay">
-
             <p id="step-description">{{ assembly.steps[0].description if assembly.steps is defined else "" }}</p>
         </div>
         <div class="model-overlay-content">
@@ -57,7 +21,38 @@
                 </div>
                 <button id="collapse-parts" class="parts-button icon-button collapse-button" data-tooltip="Collapse"></button>
             </div>
-            {{ color_picker_overlay() }}
+            <div id="color-picker-overlay" class="color-picker-overlay">
+                <div class="color-boxes-container">
+                    <div class="color-box-wrapper" data-tooltip="Primary">
+                        <div class="color-box" id="primary-color-box" data-color-type="primary" style="background: rgb({{ primary_color[0] }}, {{ primary_color[1] }}, {{ primary_color[2] }});">
+                            <input type="color" class="color-input" data-color-type="primary" value="{{ '#%02x%02x%02x' | format(primary_color[0], primary_color[1], primary_color[2]) }}">
+                        </div>
+                    </div>
+                    <div class="color-box-wrapper" data-tooltip="Accent">
+                        <div class="color-box" id="accent-color-box" data-color-type="accent" style="background: rgb({{ accent_color[0] }}, {{ accent_color[1] }}, {{ accent_color[2] }});">
+                            <input type="color" class="color-input" data-color-type="accent" value="{{ '#%02x%02x%02x' | format(accent_color[0], accent_color[1], accent_color[2]) }}">
+                        </div>
+                    </div>
+                    <div class="color-box-wrapper" data-tooltip="Frame">
+                        <div class="color-box" id="frame-color-box" data-color-type="frame" style="background: rgb({{ frame_color[0] }}, {{ frame_color[1] }}, {{ frame_color[2] }});">
+                            <input type="color" class="color-input" data-color-type="frame" value="{{ '#%02x%02x%02x' | format(frame_color[0], frame_color[1], frame_color[2]) }}">
+                        </div>
+                    </div>
+                    <div class="color-box-wrapper" data-tooltip="Focus">
+                        <div class="color-box" id="focus-color-box" data-color-type="focus" style="background: rgb({{ focus_color[0] }}, {{ focus_color[1] }}, {{ focus_color[2] }});">
+                            <input type="color" class="color-input" data-color-type="focus" value="{{ '#%02x%02x%02x' | format(focus_color[0], focus_color[1], focus_color[2]) }}">
+                        </div>
+                    </div>
+                    <div class="color-box-wrapper" data-tooltip="Background">
+                        <div class="color-box" id="bg-color-box" data-color-type="bg" style="background: rgb({{ bg_color[0] }}, {{ bg_color[1] }}, {{ bg_color[2] }});">
+                            <input type="color" class="color-input" data-color-type="bg" value="{{ '#%02x%02x%02x' | format(bg_color[0], bg_color[1], bg_color[2]) }}">
+                        </div>
+                    </div>
+                    <div class="color-box-wrapper" data-tooltip="Reset Colors">
+                        <button id="reset-colors" class="color-box reset-button icon-button"></button>
+                    </div>
+                </div>
+            </div>
             <div id="parts-panel">
                 <div id="parts-list"></div>
             </div>

@@ -1,3 +1,6 @@
+
+<p class="guide-author">{{ assembly.author }}</p>
+
 ## Overview
 
 === ":material-clipboard-text:{ .lg .middle } Summary"
