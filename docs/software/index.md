@@ -3,9 +3,9 @@
 ## Klipper
 StealthChanger has been tested and verified to work with [Klipper](https://www.klipper3d.org/){:target="_blank"}-based 3D printers. Other firmware platforms are not currently supported.
 
-!!! example "Calico"
-    - Calico does not work for TAP based probing.
-    - Calico may work with Non-TAP systems, however it has not been thoroughly tested.
+!!! example "Kalico"
+    - Kalico does not work for TAP based probing.
+    - Kalico may work with Non-TAP systems, however it has not been thoroughly tested.
 
 ## Klipper-toolchanger
 Often referred to as KTC, [klipper-toolchanger](https://github.com/viesturz/klipper-toolchanger){:target="_blank"} is a collection of extensions developed by [viesturz](https://github.com/viesturz){:target="_blank"} that add tool-changing functionality to [Klipper](https://github.com/Klipper3d/klipper){:target="_blank"}. StealthChanger uses a fork of this project called [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} — also known as KTC-easy — which has been streamlined and optimized specifically for the StealthChanger community.
