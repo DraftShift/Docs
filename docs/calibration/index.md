@@ -60,10 +60,8 @@ With accurate park positions, tool changes become repeatable and collision-free.
 Finally, you align where each nozzle actually prints so that tools agree on Z height and X/Y position on the bed.
 
 - **Config section:** `[tool Tn]`
-- **Typical fields:**
-  - `gcode_z_offset`
-  - `gcode_x_offset`
-  - `gcode_y_offset`
+- **Parameters:** `gcode_z_offset`, `gcode_x_offset`,  `gcode_y_offset`
+
 
 ### What are G-code offsets?
 

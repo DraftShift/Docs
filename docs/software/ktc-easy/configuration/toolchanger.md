@@ -23,7 +23,7 @@ The `[toolchanger]` section enables the tool changing capability and contains va
 
 ``` cfg
 [toolchanger]
-# These paths have been verified to work with StealthChanger and should not be changed unless you understand what you are doing.
+# These paths have been verified to work with StealthChanger with ModularDock, it should not be changed unless you understand what you are doing.
 params_dropoff_path: [{'y':9.5 ,'z':4}, {'y':9.5, 'z':2}, {'y':5.5, 'z':0}, {'z':0, 'y':0, 'f':0.5}, {'z':-10, 'y':0}, {'z':-10, 'y':16}]
 params_pickup_path: [{'z':-10, 'y':16}, {'z':-10, 'y':0}, {'z':0, 'y':0, 'f':0.5, 'verify':1}, {'y':5.5, 'z':0}, {'y':9.5, 'z':2}, {'y':9.5 ,'z':4}]
 

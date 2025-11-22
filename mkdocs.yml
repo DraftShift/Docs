@@ -82,9 +82,9 @@ nav:
 
   - Calibration:
     - Overview: calibration/index.md
-    - Dock Locations: calibration/dock_locations.md
-    - Nozzle Offsets: calibration/nozzle_offsets.md
-    - Troubleshooting: calibration/troubleshooting.md
+    - Probe Offset: calibration/probe_offset.md
+    - Dock Positions: calibration/dock_positions.md
+    - Gcode Offsets: calibration/gcode_offsets.md
     - FAQ: calibration/faq.md
 
   - Contributing: contributing.md
