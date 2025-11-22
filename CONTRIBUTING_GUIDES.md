@@ -199,13 +199,6 @@ Each step in the `steps` array defines one stage of the assembly process.
 
 #### Step Fields
 
-##### `title` (required)
-The step title displayed to the user.
-
-```yaml
-- title: "Install Heatset Inserts"
-```
-
 ##### `description` (required)
 Detailed instructions for the step. Supports markdown formatting.
 
@@ -350,7 +343,7 @@ Understanding how to control part visibility and focus is key to creating clear 
 
 ```yaml
 # Step 1: Just the main body and inserts
-- title: "Install Heat Inserts"
+- description: "Install Heat Inserts"
   visible:
     - "Main Body"
     - "Heat Inserts"
@@ -358,7 +351,7 @@ Understanding how to control part visibility and focus is key to creating clear 
     - "Heat Inserts"
 
 # Step 2: Add the backplate, keep previous parts visible
-- title: "Attach Backplate"
+- description: "Attach Backplate"
   visible:
     - "Main Body"
     - "Heat Inserts"
@@ -377,8 +370,7 @@ Use `focus` to draw attention to:
 
 **Example: Highlighting new hardware:**
 ```yaml
-- title: "Attach Ducts"
-  description: "Secure each duct to the Main Body with 2 M3x8 BHCS screws."
+- description: "Secure each duct to the Main Body with 2 M3x8 BHCS screws."
   visible:
     - "Main Body"
     - "Duct Left"
@@ -436,8 +428,7 @@ accent_parts:
   - "Mounting Plate"
 
 steps:
-  - title: "Install Heat Inserts"
-    description: "Install 4 heat inserts into the Mount Bracket using a soldering iron."
+  - description: "Install 4 heat inserts into the Mount Bracket using a soldering iron."
     camera:
       azimuth: 45
       polar: 60
@@ -451,8 +442,7 @@ steps:
     focus:
       - "Heat Inserts"
 
-  - title: "Attach Mounting Plate"
-    description: "Secure the Mounting Plate to the bracket using 4 M3x8 BHCS screws."
+  - description: "Secure the Mounting Plate to the bracket using 4 M3x8 BHCS screws."
     camera:
       azimuth: 315
       polar: 75
@@ -468,8 +458,7 @@ steps:
     focus:
       - "M3x8 BHCS Screws"
 
-  - title: "Complete"
-    description: "Your mount is now ready for installation!"
+  - description: "Your mount is now ready for installation!"
     camera:
       azimuth: 30
       polar: 65

@@ -78,8 +78,7 @@ transparent_parts:
   "Clear Panel": 0.3
 
 steps:
-  - title: "Heat Inserts"
-    description: "Install 6 heat inserts in to each of the 4 medallions."
+  - description: "Install 6 heat inserts in to each of the 4 medallions."
     camera:
       azimuth: 282
       polar: 76
@@ -93,8 +92,7 @@ steps:
     focus:
     - "Medallion Heat Inserts Front"
   
-  - title: "More Heat Inserts"
-    description: "Install 6 heat inserts in to each of the 4 Side B pieces."
+  - description: "Install 6 heat inserts in to each of the 4 Side B pieces."
     camera:
       azimuth: 305
       polar: 39
@@ -108,8 +106,7 @@ steps:
     focus:
       - "SideB Heat Insert Front"
 
-  - title: "Even More Heat Inserts"
-    description: "Install 2 heat inserts in to each of the Side A pieces."
+  - description: "Install 2 heat inserts in to each of the Side A pieces."
     camera:
       azimuth: 103
       polar: 35
@@ -123,8 +120,7 @@ steps:
     focus:
       - "SideA Heat Insert Front"
 
-  - title: "Medallion"
-    description: "Attatch each medallion to the Side A and Side B pieces using 6 M3x8 BHCS screws."
+  - description: "Attatch each medallion to the Side A and Side B pieces using 6 M3x8 BHCS screws."
     camera:
       azimuth: 289
       polar: 69
@@ -144,8 +140,7 @@ steps:
     focus:
       - "Medallion Hardware Front"
 
-  - title: "Frame Prep"
-    description: "Insert 4 M3 T-nuts in to each of the top extrusions of the printer."
+  - description: "Insert 4 M3 T-nuts in to each of the top extrusions of the printer."
     camera:
       azimuth: 91
       polar: 24
@@ -159,8 +154,7 @@ steps:
       - "T Nuts"
 
   # TODO ADD MISSING HARDWARE
-  - title: "Sides Fitment"
-    description: "Attach the 3d printed sides to each of the top extrusions using M3x8 SHCS screws. Leave these loose for now, they need to be able to move for the next step."
+  - description: "Attach the 3d printed sides to each of the top extrusions using M3x8 SHCS screws. Leave these loose for now, they need to be able to move for the next step."
     camera:
       azimuth: 104
       polar: 49
@@ -200,8 +194,7 @@ steps:
       - "SideA Hardware Front"
       - "SideB Hardware Front"
 
-  - title: "Join Sides"
-    description: "Secure each of the sides together by screwing 4 M3x8 SHCS through the Side A corners in to the Side B heat inserts."
+  - description: "Secure each of the sides together by screwing 4 M3x8 SHCS through the Side A corners in to the Side B heat inserts."
     camera:
       azimuth: 82
       polar: 80
@@ -241,8 +234,7 @@ steps:
     focus:
       - "SideA Hardware Front Side"
 
-  - title: "Top Panel"
-    description: "Secure the top panel with 16 M3x8 SHCS screws using the standard corner clips from a Voron 2.4 and the 4 MidClips."
+  - description: "Secure the top panel with 16 M3x8 SHCS screws using the standard corner clips from a Voron 2.4 and the 4 MidClips."
     camera:
       azimuth: 91
       polar: 30
@@ -254,8 +246,7 @@ steps:
       - "Top Clips"
       - "Top Clips M3x8 SHCS"
 
-  - title: "Final Tightening"
-    description: "Now that the Tophat is assembled, tighten the 16 M3x8 SHCS screws to secure it to the frame."
+  - description: "Now that the Tophat is assembled, tighten the 16 M3x8 SHCS screws to secure it to the frame."
     camera:
       azimuth: 276
       polar: 51

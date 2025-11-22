@@ -35,8 +35,7 @@ frame_parts:
   - "Crossbar"
 
 steps:
-  - title: "Preload Lower T Nuts"
-    description: "Add 2 M5 T Nuts to the [Crossbar](../../../door_buffer/#crossbar)."
+  - description: "Add 2 M5 T Nuts to the [Crossbar](../../../door_buffer/#crossbar)."
     camera:
       azimuth: 80
       polar: 57
@@ -54,8 +53,7 @@ steps:
     focus:
     - "Bottom T Nuts"
 
-  - title: "Preload Upper T Nuts"
-    description: "Add 2 M5 T Nuts to the lower side of the top of the printer's frame."
+  - description: "Add 2 M5 T Nuts to the lower side of the top of the printer's frame."
     camera:
       azimuth: 78
       polar: 156
@@ -74,8 +72,7 @@ steps:
     - "Top T Nuts"
 
 
-  - title: "Place Dock"
-    description: "Place the dock between the crossbar and the frame. Its easier to do this in the center of the printer and then slide the dock into its position. Make sure the tool will be able to reach the dock. The outer docks need to be a minimum of ~30mm from the inside of the printers frame for a Voron 2.4 or ~19mm for Micron."
+  - description: "Place the dock between the crossbar and the frame. Its easier to do this in the center of the printer and then slide the dock into its position. Make sure the tool will be able to reach the dock. The outer docks need to be a minimum of ~30mm from the inside of the printers frame for a Voron 2.4 or ~19mm for Micron."
     camera:
       azimuth: 91
       polar: 74
@@ -145,8 +142,7 @@ steps:
     - "PTFE Tube 15mm"
     - "Wiper M3x8 BHCS"
 
-  - title: "Secure Bottom"
-    description: "Secure the bottom of the dock using 2 M5x10 BHCS screws."
+  - description: "Secure the bottom of the dock using 2 M5x10 BHCS screws."
     camera:
       azimuth: 90
       polar: 20
@@ -192,8 +188,7 @@ steps:
     focus:
     - "Bottom M5x10 BHCS"
 
-  - title: "Secure Top"
-    description: "Secure the top of the dock using 2 M5x10 BHCS screws."
+  - description: "Secure the top of the dock using 2 M5x10 BHCS screws."
     camera:
       azimuth: 90
       polar: 166
@@ -240,8 +235,7 @@ steps:
     focus:
     - "Top M5x10 BHCS"
 
-  - title: "Complete"
-    description: "You have completed the installation of the Modular Dock. The Back plate still needs adjustment, but it will be adjusted in to its final position during calibration."
+  - description: "You have completed the installation of the Modular Dock. The Back plate still needs adjustment, but it will be adjusted in to its final position during calibration."
     camera:
       azimuth: 98
       polar: 69

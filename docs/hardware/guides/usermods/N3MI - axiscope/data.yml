@@ -42,8 +42,7 @@ transparent_parts:
   "LED Bulbs": 0.8
 
 steps:
-  - title: "Install Magnets"
-    description: "Install the 4 6x3mm magnets in the Case Lower using glue to keep them in place."
+  - description: "Install the 4 6x3mm magnets in the Case Lower using glue to keep them in place."
     camera:
       azimuth: 270
       polar: 180
@@ -56,8 +55,7 @@ steps:
     focus:
       - "6x3 Magnets"
 
-  - title: "LED Alignment"
-    description: "On the PCB there will be silkscreen of the diode symbol (A triangle pointing towards a line) in 6 places. The LEDs will be installed in the holes where the 4 corner symbols are. The LEDs have a flat side and a shorter leg, this is the cathode (negative) leg. Place the led through the holes from the lens side ensuring the cathode is through the hole where the line and point of the triangle are."
+  - description: "On the PCB there will be silkscreen of the diode symbol (A triangle pointing towards a line) in 6 places. The LEDs will be installed in the holes where the 4 corner symbols are. The LEDs have a flat side and a shorter leg, this is the cathode (negative) leg. Place the led through the holes from the lens side ensuring the cathode is through the hole where the line and point of the triangle are."
     camera:
       azimuth: 180
       polar: 148
@@ -74,8 +72,7 @@ steps:
       - "LED Legs"
       - "Diode Silkscreen"
 
-  - title: "Solder LEDs"
-    description: "Place the Case Upper over the lens and LEDs to keep them in place. Solder the LED legs and trim the legs with flush cutters."
+  - description: "Place the Case Upper over the lens and LEDs to keep them in place. Solder the LED legs and trim the legs with flush cutters."
     camera:
       azimuth: 90
       polar: 180
@@ -91,8 +88,7 @@ steps:
     focus:
       - "LED Legs"
 
-  - title: "Testing"
-    description: "Before completing the assembly, its a good idea to test the electronics to make sure everything works. Check polarity with a multimeter if you have one. Plugging the module in to a PC should turn the LEDs on and the camera should be available as a webcam."
+  - description: "Before completing the assembly, its a good idea to test the electronics to make sure everything works. Check polarity with a multimeter if you have one. Plugging the module in to a PC should turn the LEDs on and the camera should be available as a webcam."
     camera:
       azimuth: 245
       polar: 51
@@ -106,8 +102,7 @@ steps:
       - "LED Bulbs"
       - "LED Legs"
 
-  - title: "Final assembly"
-    description: "The Upper and Lower case printed pieces have snap fit tabs. Enclose the pcb between the pieces ensuring cable connector is in the correct place and the 4 tabs snap together."
+  - description: "The Upper and Lower case printed pieces have snap fit tabs. Enclose the pcb between the pieces ensuring cable connector is in the correct place and the 4 tabs snap together."
     camera:
       azimuth: 307
       polar: 121

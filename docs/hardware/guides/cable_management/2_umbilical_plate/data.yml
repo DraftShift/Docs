@@ -67,8 +67,7 @@ frame_parts:
   - "Frame"
 
 steps:
-  - title: "Heat Inserts "
-    description: "Install 4 heat inserts into the Face Plate."
+  - description: "Install 4 heat inserts into the Face Plate."
     camera:
       azimuth: 271
       polar: 128
@@ -82,8 +81,7 @@ steps:
       - "Threaded Inserts"
 
 
-  - title: "Logo"
-    description: "Install Logo Insert."
+  - description: "Install Logo Insert."
     camera:
       azimuth: 276
       polar: 91
@@ -98,8 +96,7 @@ steps:
       - "Logo Insert"
 
 
-  - title: "Foam"
-    description: "Apply 1mm foam around the perimiter of the Face Plate."
+  - description: "Apply 1mm foam around the perimiter of the Face Plate."
     camera:
       azimuth: 276
       polar: 91
@@ -114,8 +111,7 @@ steps:
     focus: 
       - "1mm Foam"
 
-  - title: "Face Plate Install Part 1"
-    description: "Install Face Plate over the Outer Plate. The Face Plate is designed to flex. Start with the Face plate over one of the side ports and flex the plate so that it fits over the rest."
+  - description: "Install Face Plate over the Outer Plate. The Face Plate is designed to flex. Start with the Face plate over one of the side ports and flex the plate so that it fits over the rest."
     camera:
       azimuth: 50
       polar: 69
@@ -132,8 +128,7 @@ steps:
     focus: 
       - "Face Plate"
 
-  - title: "Face Plate Install Part 2"
-    description: "Place the Umbilical Plate assembly over the rear panel."
+  - description: "Place the Umbilical Plate assembly over the rear panel."
     camera:
       azimuth: 270
       polar: 83
@@ -155,8 +150,7 @@ steps:
       - "Outer Plate"
       - "Hexes"
 
-  - title: "Face Plate Install Parts 2"
-    description: "Install 4 M3x10 SHCS Screws."
+  - description: "Install 4 M3x10 SHCS Screws."
     camera:
       azimuth: 270
       polar: 83
@@ -175,8 +169,7 @@ steps:
     focus: 
       - "M3x10 SHCS Screws"
 
-  - title: "Frame Prep"
-    description: "Install 2 M5 T-nuts in to the rear center of the top rear frame extrusion."
+  - description: "Install 2 M5 T-nuts in to the rear center of the top rear frame extrusion."
     camera:
       azimuth: 276
       polar: 91
@@ -189,8 +182,7 @@ steps:
     focus: 
       - "M5 T-Nuts"
 
-  - title: "Attach to Frame"
-    description: "Attach the assembly to the frame with 2 M5x10 BHCS Screws."
+  - description: "Attach the assembly to the frame with 2 M5x10 BHCS Screws."
     camera:
       azimuth: 276
       polar: 91

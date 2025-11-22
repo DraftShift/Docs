@@ -42,8 +42,7 @@ accent_parts:
   - "Silicone Jig"
 
 steps:
-  - title: "Silicone Blocker"
-    description: "Put a small amount of RTV silicone in the jig and place a small piece of spring steel in the jig. Clamp the 2 pieces together making sure the spring steel doesnt slide out and leave  to dry for a minimum of 24 hours. Carefully remove the jig from the Silcone and trim the edges."
+  - description: "Put a small amount of RTV silicone in the jig and place a small piece of spring steel in the jig. Clamp the 2 pieces together making sure the spring steel doesnt slide out and leave  to dry for a minimum of 24 hours. Carefully remove the jig from the Silcone and trim the edges."
     camera:
       azimuth: 39
       polar: 64
@@ -58,8 +57,7 @@ steps:
     - "Spring Steel"
     - "Silicone"
 
-  - title: "Install Heat Inserts"
-    description: "Install the heat inserts in to the Spring Steel Body."
+  - description: "Install the heat inserts in to the Spring Steel Body."
     camera:
       azimuth: 39
       polar: 64
@@ -72,8 +70,7 @@ steps:
     focus:
     - "Heat Inserts"
 
-  - title: "Fit Clamp"
-    description: "Fit the clamp by loosly install 2 M3x8 BHCS screws."
+  - description: "Fit the clamp by loosly install 2 M3x8 BHCS screws."
     camera:
       azimuth: 39
       polar: 64
@@ -88,8 +85,7 @@ steps:
     focus:
     - "M3x8 BHCS Screws"
 
-  - title: "Install Spring Steel"
-    description: "Insert the spring steel in to the clamp and tighten it down. Note: You may need to adjust the position of the clamp later so that it sits directly under the nozzle."
+  - description: "Insert the spring steel in to the clamp and tighten it down. Note: You may need to adjust the position of the clamp later so that it sits directly under the nozzle."
     camera:
       azimuth: 39
       polar: 64

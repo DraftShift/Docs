@@ -84,8 +84,7 @@ hardware_bom:
     qty: 1
 
 steps:
-  - title: "The Backplate"
-    description: "This guide usaes a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/)."
+  - description: "This guide usaes a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/)."
     camera:
       azimuth: 295
       polar: 118
@@ -96,8 +95,7 @@ steps:
       - "Backplate"
       - "Backplate Hardware"
 
-  - title: "Optional LEDs - Part 1"
-    description: 'Solder the 3 LEDs using the [LED Solder Fixture](https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture){target="_blank"}'
+  - description: 'Solder the 3 LEDs using the [LED Solder Fixture](https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture){target="_blank"}'
     camera:
       azimuth: 91
       polar: 34
@@ -110,8 +108,7 @@ steps:
       - "LED Solder Jig"
       - "LED Wires"
 
-  - title: "Optional LEDs - Part 2"
-    description: "Insert the nozzle LEDs in to the Nozzle LED Carrier."
+  - description: "Insert the nozzle LEDs in to the Nozzle LED Carrier."
     camera:
       azimuth: 91
       polar: 21
@@ -128,8 +125,7 @@ steps:
       - "LED Pins"
       - "LED Wires"
 
-  - title: "Optional LEDs - Part 3"
-    description: "Fit the Nozzle LED Restraint in to the Nozzle LED Carrier by hooking the tab on the Carrier and pressing the Restraint down until it clips in to the 2 openings."
+  - description: "Fit the Nozzle LED Restraint in to the Nozzle LED Carrier by hooking the tab on the Carrier and pressing the Restraint down until it clips in to the 2 openings."
     camera:
       azimuth: 232
       polar: 76
@@ -145,8 +141,7 @@ steps:
     focus:
       - "Nozzle LED Restraint Jig"
 
-  - title: "Optional LEDs - Part 4"
-    description: "Slide the LED Carrier over the logo LED. Put the LEDs aside for now, they will be used later in the process."
+  - description: "Slide the LED Carrier over the logo LED. Put the LEDs aside for now, they will be used later in the process."
     camera:
       azimuth: 105
       polar: 53
@@ -163,8 +158,7 @@ steps:
     focus:
       - "LED Carrier Jig"
 
-  - title: "Heatset Inserts Part 1"
-    description: "Install 7 heat inserts into the Main Body."
+  - description: "Install 7 heat inserts into the Main Body."
     camera:
       azimuth: 214
       polar: 47
@@ -177,8 +171,7 @@ steps:
     focus: 
       - "Main Body Heat Inserts"
 
-  - title: "Heatset Inserts Part 2"
-    description: "Install 2 heat inserts into the each of the PCB Mount Spacers."
+  - description: "Install 2 heat inserts into the each of the PCB Mount Spacers."
     camera:
       azimuth: 265
       polar: 136
@@ -191,8 +184,7 @@ steps:
     focus: 
       - "Spacer Heat Inserts"
 
-  - title: "Heatset Inserts Part 3"
-    description: "Install 2 heat inserts into the PCB Mount."
+  - description: "Install 2 heat inserts into the PCB Mount."
     camera:
       azimuth: 92
       polar: 96
@@ -205,8 +197,7 @@ steps:
     focus: 
       - "PCB Mount Heat Inserts"
 
-  - title: "Heatset Inserts Part 4"
-    description: "Install a heat insert into each of the ducts."
+  - description: "Install a heat insert into each of the ducts."
     camera:
       azimuth: 266
       polar: 114
@@ -220,8 +211,7 @@ steps:
     focus: 
       - "Duct Heat Inserts"
 
-  - title: "Heatset Inserts Part 5"
-    description: "Install 4 heat inserts into the Hotend Mount."
+  - description: "Install 4 heat inserts into the Hotend Mount."
     camera:
       azimuth: 124
       polar: 97
@@ -234,8 +224,7 @@ steps:
     focus: 
       - "HE Mount Heat Inserts"
 
-  - title: "Install the Hotend"
-    description: "Install the hotend into the hotend mount using 4 M3x8 SHCS screws."
+  - description: "Install the hotend into the hotend mount using 4 M3x8 SHCS screws."
     camera:
       azimuth: 98
       polar: 32
@@ -250,8 +239,7 @@ steps:
     focus: 
       - "HE M3x8 SHCS"
 
-  - title: "Attach Hotend Fan"
-    description: "Attach the 25mm axial fan to the hotend mount using 2 M3x14 BHCS screws. Ensure the cable is on the bottom right."
+  - description: "Attach the 25mm axial fan to the hotend mount using 2 M3x14 BHCS screws. Ensure the cable is on the bottom right."
     camera:
       azimuth: 112
       polar: 78
@@ -268,8 +256,7 @@ steps:
     focus: 
       - "Axial Fan M3x14 BHCS"
 
-  - title: "Attach Hotend Mount to the StealthChanger Backplate"
-    description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capsure the M3x12 SCHS screw between the Backplate and the Spacer."
+  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capsure the M3x12 SCHS screw between the Backplate and the Spacer."
     camera:
       azimuth: 118
       polar: 71
@@ -292,8 +279,7 @@ steps:
       - "Spacer M3x12 SHCS"
       - "HE Mount M3x28 SHCS"
 
-  - title: "Grill"
-    description: "Insert the Grill into the Main Body, angling the top in first and the pushing the bottom in to place."
+  - description: "Insert the Grill into the Main Body, angling the top in first and the pushing the bottom in to place."
     camera:
       azimuth: 270
       polar: 124
@@ -307,8 +293,7 @@ steps:
     focus: 
       - "Grill"
 
-  - title: "Insert Diffuser"
-    description: "Insert the Diffuser in to the Main Body."
+  - description: "Insert the Diffuser in to the Main Body."
     camera:
       azimuth: 270
       polar: 124
@@ -325,8 +310,7 @@ steps:
       - "Light Shield"
       - "Diffuser"
 
-  - title: "Insert LEDs"
-    description: "Insert the LEDs in to the Main Body. Route the cables so that they will be around the hotend assembly abd out through the cable channel in the top of the Main Body."
+  - description: "Insert the LEDs in to the Main Body. Route the cables so that they will be around the hotend assembly abd out through the cable channel in the top of the Main Body."
     camera:
       azimuth: 270
       polar: 124
@@ -353,8 +337,7 @@ steps:
       - "Nozzle LEDs"
       - "Diffuser"
 
-  - title: "Attach Main Body."
-    description: "Attach the Main Body  to the Backplate using the M3x12 Screw that was captured in a previous step making sure that the wires clear. The wires for the Hotend fan should be routed through the hole in the side of the Main Body. Secure the Main Body to the Hotend Mount using 2 M3x6 BHCS screws."
+  - description: "Attach the Main Body  to the Backplate using the M3x12 Screw that was captured in a previous step making sure that the wires clear. The wires for the Hotend fan should be routed through the hole in the side of the Main Body. Secure the Main Body to the Hotend Mount using 2 M3x6 BHCS screws."
     camera:
       azimuth: 193
       polar: 81
@@ -388,8 +371,7 @@ steps:
       - "Main Body M3x6 BHCS"
       - "Spacer M3x12 SHCS"
 
-  - title: "Install Part Fans"
-    description: "Install a 40mm blower fan in each of the ducts."
+  - description: "Install a 40mm blower fan in each of the ducts."
     camera:
       azimuth: 266
       polar: 114
@@ -406,8 +388,7 @@ steps:
       - "4010 Blower Fan Left"
       - "4010 Blower Fan Right"
 
-  - title: "Attach Ducts Part 1"
-    description: "Attach the ducts to the Main Body by starting by hooking the bottom and then angling the top in to place. Secure each duct to the Main Body with 2 M3x8 BHCS screws."
+  - description: "Attach the ducts to the Main Body by starting by hooking the bottom and then angling the top in to place. Secure each duct to the Main Body with 2 M3x8 BHCS screws."
     camera:
       azimuth: 193
       polar: 81
@@ -446,8 +427,7 @@ steps:
     focus: 
       - "Duct Upper M3x8 BHCS"
 
-  - title: "Attach Ducts Part 2"
-    description: "Secure the Ducts to the Backplate using 2 M3x8 SHCS screws."
+  - description: "Secure the Ducts to the Backplate using 2 M3x8 SHCS screws."
     camera:
       azimuth: 273
       polar: 106
@@ -487,8 +467,7 @@ steps:
     focus: 
       - "Duct Lower M3x8 BHCS"
 
-  - title: "Install Magnets"
-    description: "Install a 6x3mm N52 magnet into each of the ducts. Ensure they attract to the magnets in the Modular Dock."
+  - description: "Install a 6x3mm N52 magnet into each of the ducts. Ensure they attract to the magnets in the Modular Dock."
     camera:
       azimuth: 270
       polar: 180
@@ -529,8 +508,7 @@ steps:
     focus: 
       - "Duct 6x3 Magnets"
 
-  - title: "PTFE Tube"
-    description: "Insert a piece of 4x2mm PTFE tube through the Main Body into the hotend."
+  - description: "Insert a piece of 4x2mm PTFE tube through the Main Body into the hotend."
     camera:
       azimuth: 140
       polar: 40
@@ -572,8 +550,7 @@ steps:
     focus: 
       - "4x2mm PTFE"
 
-  - title: "Attach Orbiter"
-    description: "Attach the Orbiter to the Main Body using 2 M3x12 BHCS screws."
+  - description: "Attach the Orbiter to the Main Body using 2 M3x12 BHCS screws."
     camera:
       azimuth: 140
       polar: 40
@@ -617,8 +594,7 @@ steps:
     focus: 
       - "Orbiter M3x12 BHCS"
 
-  - title: "Attach PCB Mount Spacers"
-    description: "Attach the 2 PCB Mount Spacers."
+  - description: "Attach the 2 PCB Mount Spacers."
     camera:
       azimuth: 232
       polar: 60
@@ -665,8 +641,7 @@ steps:
       - "Spacers"
       - "Spacer Heat Inserts"
 
-  - title: "Attach PCB Mount"
-    description: "Attach the PCB Mount using 4 M3x8 BHCS screws."
+  - description: "Attach the PCB Mount using 4 M3x8 BHCS screws."
     camera:
       azimuth: 257
       polar: 75
@@ -715,8 +690,7 @@ steps:
     focus: 
       - "PCB Mount M3x8 BHCS"
 
-  - title: "Attach TAP PCB"
-    description: "Attach the TAP PCB using 2 M3x8 BHCS screws."
+  - description: "Attach the TAP PCB using 2 M3x8 BHCS screws."
     camera:
       azimuth: 257
       polar: 75
@@ -767,8 +741,7 @@ steps:
     focus: 
       - "OptoTap M3x8 BHCS"
 
-  - title: "Route Wires"
-    description: "Attatch the Nitehawk36 PCB to the PCB Mount using 2 M3x8 BHCS screws and route all the wires to the board."
+  - description: "Attatch the Nitehawk36 PCB to the PCB Mount using 2 M3x8 BHCS screws and route all the wires to the board."
     camera:
       azimuth: 257
       polar: 75
@@ -821,8 +794,7 @@ steps:
     focus: 
       - "NH M3x8 BHCS"
 
-  - title: "Prepare Cover"
-    description: "Remove the built in supports from the Nitehawk36 cover."
+  - description: "Remove the built in supports from the Nitehawk36 cover."
     camera:
       azimuth: 90
       polar: 141
@@ -835,8 +807,7 @@ steps:
     focus: 
       - "NH Cover Supports"
 
-  - title: "Retain Cover Screws"
-    description: "Insert 2 M3x12 BHCS screws in to the cover."
+  - description: "Insert 2 M3x12 BHCS screws in to the cover."
     camera:
       azimuth: 269
       polar: 121
@@ -849,8 +820,7 @@ steps:
     focus: 
       - "NH M3x12 BHCS"
 
-  - title: "Attach Cover"
-    description: "Attach the cover to the PCB Mount using the 2 M3x12 BHCS screws."
+  - description: "Attach the cover to the PCB Mount using the 2 M3x12 BHCS screws."
     camera:
       azimuth: 265
       polar: 70

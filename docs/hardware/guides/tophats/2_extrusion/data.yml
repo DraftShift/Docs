@@ -95,8 +95,7 @@ transparent_parts:
   "Right Panel": 0.3
 
 steps:
-  - title: "Preload Screws"
-    description: "Preload all of the horizontal extrusions with 2 M5x16 screws in each."
+  - description: "Preload all of the horizontal extrusions with 2 M5x16 screws in each."
     camera:
       azimuth: 324
       polar: 77
@@ -111,8 +110,7 @@ steps:
       - "M5x16 BHCS BFL"
       - "M5x16 BHCS BFR"
 
-  - title: "Attach Verticals Part 1"
-    description: "Attach 2 horizontal extrusions to 2 of the vertical extrusions using the blind joint method."
+  - description: "Attach 2 horizontal extrusions to 2 of the vertical extrusions using the blind joint method."
     camera:
       azimuth: 316
       polar: 18
@@ -132,8 +130,7 @@ steps:
       - "M5x16 BHCS BLF"
 
 
-  - title: "Attach Vertiacls Part 2"
-    description: "Join the 2 piece assembled in the previous step by using the remaining 2 vertical extrusions."
+  - description: "Join the 2 piece assembled in the previous step by using the remaining 2 vertical extrusions."
     camera:
       azimuth: 29
       polar: 56
@@ -163,8 +160,7 @@ steps:
       - "M5x16 BHCS BLB"
       - "M5x16 BHCS BRF"
 
-  - title: "Complete Frame"
-    description: "Attach the remaining 4 horizontal extrusions between each of the verticals."
+  - description: "Attach the remaining 4 horizontal extrusions between each of the verticals."
     camera:
       azimuth: 114
       polar: 40
@@ -211,8 +207,7 @@ steps:
       - "M5x16 BHCS TRF"
       - "M5x16 BHCS TRB"
 
-  - title: "Left Hinge Bearing"
-    description: "Insert a 625-2RS bearing in to lower left hinge piece."
+  - description: "Insert a 625-2RS bearing in to lower left hinge piece."
     camera:
       azimuth: 206
       polar: 90
@@ -225,8 +220,7 @@ steps:
     focus:
       - "Left 625-2RS"
 
-  - title: "Assemble Left Hinge" 
-    description: "Secure the top left hinge to the bottom left hinge using a M5x16 BHCS screw and M5 shim."
+  - description: "Secure the top left hinge to the bottom left hinge using a M5x16 BHCS screw and M5 shim."
     camera:
       azimuth: 228
       polar: 99
@@ -243,8 +237,7 @@ steps:
       - "Left M5x16 BHCS"
       - "Left M5 Shim"
 
-  - title: "Right Hinge Bearing"
-    description: "Insert a 625-2RS bearing in to lower right hinge piece."
+  - description: "Insert a 625-2RS bearing in to lower right hinge piece."
     camera:
       azimuth: 358
       polar: 94
@@ -257,8 +250,7 @@ steps:
     focus:
       - "Right 625-2RS"
 
-  - title: "Assemble Right Hinge" 
-    description: "Secure the top right hinge to the bottom left hinge using a M5x16 BHCS screw and M5 shim."
+  - description: "Secure the top right hinge to the bottom left hinge using a M5x16 BHCS screw and M5 shim."
     camera:
       azimuth: 323
       polar: 95
@@ -275,8 +267,7 @@ steps:
       - "Right M5x16 BHCS"
       - "Right M5 Shim"
 
-  - title: "Prepare Panels"
-    description: "Remove the protective film and apply 1x5mm foam tape to the outer edges of each of the 4 side panels"
+  - description: "Remove the protective film and apply 1x5mm foam tape to the outer edges of each of the 4 side panels"
     camera:
       azimuth: 281
       polar: 85
@@ -289,8 +280,7 @@ steps:
     focus:
       - "Front Foam"
 
-  - title: "Preload Extrusions"
-    description: "Insert M3 T-nuts in to the extrusions on all 4 sides and top. Front, left, right and top sidez require 3 T-nuts per extrusion. The back requires 3 in the upper and lower extrusions and 5 in each of the vertical extrusions."
+  - description: "Insert M3 T-nuts in to the extrusions on all 4 sides and top. Front, left, right and top sidez require 3 T-nuts per extrusion. The back requires 3 in the upper and lower extrusions and 5 in each of the vertical extrusions."
     camera:
       azimuth: 131
       polar: 46
@@ -342,8 +332,7 @@ steps:
       - "Right Hinge Upper Nuts"
       - "Left Hinge Upper Nuts"
 
-  - title: "Preload Clips"
-    description: "Insert a M3x8 SHCS screw in to each of the mid panel clips and 2 M3x8 SHCS screws in each of the corner panel clips."
+  - description: "Insert a M3x8 SHCS screw in to each of the mid panel clips and 2 M3x8 SHCS screws in each of the corner panel clips."
     camera:
       azimuth: 131
       polar: 46
@@ -368,8 +357,7 @@ steps:
       - "Front Panel Screws"
       - "Back Panel Screws"
   
-  - title: "Front and Side Panels"
-    description: "Install front, left and right panels, securing each with 4 corner clips and 4 mid clips."
+  - description: "Install front, left and right panels, securing each with 4 corner clips and 4 mid clips."
     camera:
       azimuth: 122
       polar: 65
@@ -427,8 +415,7 @@ steps:
       - "Right Panel Screws"
       - "Front Panel Screws"
 
-  - title: "Top Panel"
-    description: "Install the top panel, securing it with 4 corner clips and 4 mid clips."
+  - description: "Install the top panel, securing it with 4 corner clips and 4 mid clips."
     camera:
       azimuth: 122
       polar: 65
@@ -485,8 +472,7 @@ steps:
       - "Top Clips"
       - "Top Panel Screws"
 
-  - title: "Back Panel"
-    description: "Install the top panel, securing it with 2 corner clips and 2 mid clips"
+  - description: "Install the top panel, securing it with 2 corner clips and 2 mid clips"
     camera:
       azimuth: 275
       polar: 81
@@ -546,8 +532,7 @@ steps:
       - "Back Clips"
       - "Back Panel Screws"
 
-  - title: "Install Hinges"
-    description: "Install each of the hinges using 5 M3x12 SHCS screws in the vertical extrusion and a M3x8 SHCS screw in the lower horizontal extrusion."
+  - description: "Install each of the hinges using 5 M3x12 SHCS screws in the vertical extrusion and a M3x8 SHCS screw in the lower horizontal extrusion."
     camera:
       azimuth: 253
       polar: 92
@@ -618,8 +603,7 @@ steps:
       - "Left Hinge Upper Screws"
 
 
-  - title: "Foam Extrusion"
-    description: "Apply 5x1mm foam around the bottom of the Tophat."
+  - description: "Apply 5x1mm foam around the bottom of the Tophat."
     camera:
       azimuth: 181
       polar: 180
@@ -689,8 +673,7 @@ steps:
     focus:
       - "Bottom Foam Tape"
 
-  - title: "Preload Printer Frame"
-    description: "Remove the top corner clips from the back of the printer and preload 2 M3 T-nuts in each of the rear vertical extrusions and 2 in the upper horizontal extrusion of the printer."
+  - description: "Remove the top corner clips from the back of the printer and preload 2 M3 T-nuts in each of the rear vertical extrusions and 2 in the upper horizontal extrusion of the printer."
     camera:
       azimuth: 285
       polar: 89
@@ -705,8 +688,7 @@ steps:
       - "Right Hinge Lower Nuts"
       - "Left Hinge Lower Nuts"
   
-  - title: "Install Tophat"
-    description: "Sit the tophat on top of the printer and attach each of the hinges using 2 M3x12 SHCS screws in the vertical extrusion and a M3x8 SHCS screw in the upper horizontal extrusion."
+  - description: "Sit the tophat on top of the printer and attach each of the hinges using 2 M3x12 SHCS screws in the vertical extrusion and a M3x8 SHCS screw in the upper horizontal extrusion."
     camera:
       azimuth: 281
       polar: 94

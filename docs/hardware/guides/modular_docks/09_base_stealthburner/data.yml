@@ -22,8 +22,7 @@ primary_parts:
   - "Base"
 
 steps:
-  - title: "Back Heat Insert"
-    description: "Optional: If you wish to use a Wiper, install a heat insert in to the Back plate."
+  - description: "Optional: If you wish to use a Wiper, install a heat insert in to the Back plate."
     camera:
       azimuth: 270
       polar: 154
@@ -36,8 +35,7 @@ steps:
     focus:
     - "Back Heat Insert"
 
-  - title: "Link Heat Inserts"
-    description: "Optional: If you are not using a [crossbar](../../door_buffer.md#crossbar), install 2 heat inserts in to the Base."
+  - description: "Optional: If you are not using a [crossbar](../../door_buffer.md#crossbar), install 2 heat inserts in to the Base."
     camera:
       azimuth: 270
       polar: 154
@@ -50,8 +48,7 @@ steps:
     focus:
     - "Link Heat Inserts"
 
-  - title: "Base Heat Inserts"
-    description: "Install 2 heat inserts in to the front of the Base and 2 in the back."
+  - description: "Install 2 heat inserts in to the front of the Base and 2 in the back."
     camera:
       azimuth: 271
       polar: 108
@@ -65,8 +62,7 @@ steps:
     focus:
     - "Base Heat Inserts"
 
-  - title: "Complete"
-    description: "Put the Base and Back plate aside for now. They will be used in the Final assembly."
+  - description: "Put the Base and Back plate aside for now. They will be used in the Final assembly."
     camera:
       azimuth: 59
       polar: 54

@@ -85,8 +85,7 @@ frame_parts:
   - "Crossbar"
 
 steps:
-  - title: "Heat Inserts"
-    description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
+  - description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
     camera:
       azimuth: 92
       polar: 87
@@ -106,8 +105,7 @@ steps:
     focus: 
       - "M3 Heat Inserts"
 
-  - title: "Insert Fasteners"
-    description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
+  - description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
     camera:
       azimuth: 249
       polar: 76
@@ -130,8 +128,7 @@ steps:
       - "M3x8 SHCS Screws"
       - "M3 Hammer Nuts"
 
-  - title: "Attach to Frame"
-    description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
+  - description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
     camera:
       azimuth: 145
       polar: 60
@@ -155,8 +152,7 @@ steps:
       - "Frame"
 
 
-  - title: "Prepare the dockbar"
-    description: "Attach the dockbar."
+  - description: "Attach the dockbar."
     camera:
       azimuth: 88
       polar: 85
@@ -180,8 +176,7 @@ steps:
     focus: 
       - "Crossbar"
 
-  - title: "Bolt on the Cross bar"
-    description: "Secure the dock bar to the doorbuffer using the M5x16 BHCS screw. Tighten the screws on both sides to ensure a firm attachment."
+  - description: "Secure the dock bar to the doorbuffer using the M5x16 BHCS screw. Tighten the screws on both sides to ensure a firm attachment."
     camera:
       azimuth: 125
       polar: 94
@@ -206,8 +201,7 @@ steps:
     focus: 
       - "Crossbar Screws"
       
-  - title: "Attach Ldo Voron Doorlatch"
-    description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
+  - description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
     camera:
       azimuth: 106
       polar: 82
@@ -232,8 +226,7 @@ steps:
     focus: 
       - "M3 Heat Inserts"
 
-  - title: "Attach LDO Doors"
-    description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape,  LDO door buffer is assuming you are using LDO door hindges."
+  - description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape,  LDO door buffer is assuming you are using LDO door hindges."
     camera:
       azimuth: 91
       polar: 86

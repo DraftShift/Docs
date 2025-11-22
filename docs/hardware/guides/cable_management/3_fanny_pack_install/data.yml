@@ -61,8 +61,7 @@ frame_parts:
   - "Frame"
 
 steps:
-  - title: "Ramp prep part 1"
-    description: "Install 2 heat inserts into the top of the ramp."
+  - description: "Install 2 heat inserts into the top of the ramp."
     camera:
       azimuth: 277
       polar: 50
@@ -77,8 +76,7 @@ steps:
       - "Ramp Heat Inserts"
 
 
-  - title: "Ramp prep part 2"
-    description: "Install 2 magnets into the top of the ramp."
+  - description: "Install 2 magnets into the top of the ramp."
     camera:
       azimuth: 323
       polar: 69
@@ -93,8 +91,7 @@ steps:
     focus: 
       - "Ramp Magnets"
 
-  - title: "Ramp install onto Fanny Pack Base "
-    description: "Install 2 M3x16 SHCS that attach the ramp to the base."
+  - description: "Install 2 M3x16 SHCS that attach the ramp to the base."
     camera:
       azimuth: 283
       polar: 87
@@ -113,8 +110,7 @@ steps:
     focus: 
       - "Fanny Pack M3x16 SHCS Screws"
 
-  - title: "VHB Tape"
-    description: "Apply 2 pieces of VHB Tape to the rear of the base."
+  - description: "Apply 2 pieces of VHB Tape to the rear of the base."
     camera:
       azimuth: 90
       polar: 94
@@ -136,8 +132,7 @@ steps:
 
      
 
-  - title: "Fanny Pack attachment to printer "
-    description: "VHB tape the back of Fanny Pack and align with umbilical plate. VHB tape holds fanny pack to back panel."
+  - description: "VHB tape the back of Fanny Pack and align with umbilical plate. VHB tape holds fanny pack to back panel."
     camera:
       azimuth: 283
       polar: 87
@@ -162,8 +157,7 @@ steps:
     focus: 
     focus: 
       
-  - title: "ECAS Bridge assembly"
-    description: "Press ECAS Fittings Into ECAS BrIdge one for each tool head."
+  - description: "Press ECAS Fittings Into ECAS BrIdge one for each tool head."
     camera:
       azimuth: 239
       polar: 67
@@ -176,8 +170,7 @@ steps:
     focus: 
       - ECAS Single
  
-  - title: "ECAS BRidge mounting part 1 "
-    description: "Set the ECAS Bridge into ECAS panel Bottom aligned with you umbilical."
+  - description: "Set the ECAS Bridge into ECAS panel Bottom aligned with you umbilical."
     camera:
       azimuth: 278
       polar: 77
@@ -194,8 +187,7 @@ steps:
     focus:       
       - ECAS Panel Bottom
      
-  - title: "ECAS Bridge mounting part  "
-    description: "Set the ECAS Panel top on top ."
+  - description: "Set the ECAS Panel top on top ."
     camera:
       azimuth: 273
       polar: 70
@@ -213,8 +205,7 @@ steps:
     focus:       
       - ECAS Panel Top
 
-  - title: "ECAS Bridge install"
-    description: "Install ECAS Bridge on to the Ramp with M3x16 SHCS x2"
+  - description: "Install ECAS Bridge on to the Ramp with M3x16 SHCS x2"
     camera:
       azimuth: 272
       polar: 57
@@ -246,8 +237,7 @@ steps:
     focus: 
       - ECAS M3x16 SHCS Screws
 
-  - title: "Umbilical Cover"
-    description: "Install magnets into umbilical cover making sure the attract to magnets in ramp and umbilical plate"
+  - description: "Install magnets into umbilical cover making sure the attract to magnets in ramp and umbilical plate"
     camera:
       azimuth: 94
       polar: 128
@@ -260,8 +250,7 @@ steps:
     focus: 
        - Umbilical Cover Magnets
 
-  - title: "Umbillical Cover install"
-    description: "Install Cover"
+  - description: "Install Cover"
     camera:
       azimuth: 277
       polar: 82

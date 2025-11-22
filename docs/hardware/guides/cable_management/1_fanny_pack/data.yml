@@ -62,8 +62,7 @@ accent_parts:
   - "Hexa Bracket"
 
 steps:
-  - title: "Heat Inserts Part 1"
-    description: "Install 4 heat inserts into the rear of the base."
+  - description: "Install 4 heat inserts into the rear of the base."
     camera:
       azimuth: 89
       polar: 81
@@ -76,8 +75,7 @@ steps:
     focus: 
       - "Base Heat Inserts"
 
-  - title: "Heat Inserts Part 2"
-    description: "Optional: Install 2 heat inserts into the lower rear of the base for the WAGO bracket."
+  - description: "Optional: Install 2 heat inserts into the lower rear of the base for the WAGO bracket."
     camera:
       azimuth: 89
       polar: 81
@@ -91,8 +89,7 @@ steps:
     focus: 
       - "Wago Heat Inserts"
 
-  - title: "Heat Inserts Part 3"
-    description: "Install 2 heat insert inside the base, these are used to mount the [Wire Duct](../../../cable_management/#wire-duct)."
+  - description: "Install 2 heat insert inside the base, these are used to mount the [Wire Duct](../../../cable_management/#wire-duct)."
     camera:
       azimuth: 300
       polar: 43
@@ -107,8 +104,7 @@ steps:
     focus: 
       - "Base Heat Inserts Inner"
 
-  - title: "Heat Inserts Part 4"
-    description: "Optional: Install 2 heat inserts for addon modules."
+  - description: "Optional: Install 2 heat inserts for addon modules."
     camera:
       azimuth: 272
       polar: 90
@@ -124,8 +120,7 @@ steps:
     focus: 
       - "Base Optional Heat Inserts"
 
-  - title: "Install Base Magnets"
-    description: "Install 4 6x3mm magnets into the base."
+  - description: "Install 4 6x3mm magnets into the base."
     camera:
       azimuth: 270
       polar: 103
@@ -142,8 +137,7 @@ steps:
     focus: 
       - "Base Magnets"
 
-  - title: "Install Distrobution Board Bracket"
-    description: "Attach the distribution board bracket to the Base using 2 M3x6 BHCS screws."
+  - description: "Attach the distribution board bracket to the Base using 2 M3x6 BHCS screws."
     camera:
       azimuth: 270
       polar: 103
@@ -162,8 +156,7 @@ steps:
     focus: 
       - "Hexa Bracket Screws"
 
-  - title: "Install Distrobustion Board"
-    description: "Install the distribution board using M3x6 BHCS screws."
+  - description: "Install the distribution board using M3x6 BHCS screws."
     camera:
       azimuth: 270
       polar: 103
@@ -184,8 +177,7 @@ steps:
     focus: 
       - "Hexa PCB Screws"
 
-  - title: "Addon Modules Part 1"
-    description: "Optional: Addon modules can be installed with M3x6 BHCS screws."
+  - description: "Optional: Addon modules can be installed with M3x6 BHCS screws."
     camera:
       azimuth: 313
       polar: 90
@@ -211,8 +203,7 @@ steps:
       - "Left M3x6 BHCS"
       - "Right M3x6 BHCS"
 
-  - title: "Addon Modules Part 2"
-    description: "Optional: Clip the Buck converter PCB in to the modules."
+  - description: "Optional: Clip the Buck converter PCB in to the modules."
     camera:
       azimuth: 283
       polar: 91
@@ -240,8 +231,7 @@ steps:
       - "Left 05KJ Mini Regulator"
       - "Right 05KJ Mini Regulator"
 
-  - title: "Addon Modules Part 3"
-    description: "Optional: Install the 221-415 WAGO bracket on to the base using M3x6 BHCS screws."
+  - description: "Optional: Install the 221-415 WAGO bracket on to the base using M3x6 BHCS screws."
     camera:
       azimuth: 301
       polar: 110
@@ -270,8 +260,7 @@ steps:
     focus: 
       - "Wago Hardware"
 
-  - title: "Addon Modules Part 4"
-    description: "Optional: Install 221-415 WAGO blocks in to the WAGO bracket."
+  - description: "Optional: Install 221-415 WAGO blocks in to the WAGO bracket."
     camera:
       azimuth: 301
       polar: 110
@@ -303,8 +292,7 @@ steps:
       - "WAGO Left"
       - "WAGO Right"
 
-  - title: "Cover Magnets Part 1"
-    description: "Place 4 magnets over the base's magnets."
+  - description: "Place 4 magnets over the base's magnets."
     camera:
       azimuth: 286
       polar: 119
@@ -336,8 +324,7 @@ steps:
     focus: 
       - "Cover Magnets"
 
-  - title: "Cover Magnets Part 2"
-    description: "Press the cover over the base at the magnet positions. If the magnets dont go in all the way, finish them with some parallel pliers."
+  - description: "Press the cover over the base at the magnet positions. If the magnets dont go in all the way, finish them with some parallel pliers."
     camera:
     camera:
       azimuth: 270
@@ -349,8 +336,7 @@ steps:
     focus: 
       - "Cover"
 
-  - title: "Complete"
-    description: "The Fanny Pack assembly is complete and ready to install on the printer."
+  - description: "The Fanny Pack assembly is complete and ready to install on the printer."
     camera:
       azimuth: 281
       polar: 69

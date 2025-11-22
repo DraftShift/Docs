@@ -34,8 +34,7 @@ frame_parts:
   - "Frame"
 
 steps:
-  - title: "EMS Base"
-    description: "Attach the EMS grill to the Wire Duct Base using 4 M3x6 BHCS screws and M3 nuts."
+  - description: "Attach the EMS grill to the Wire Duct Base using 4 M3x6 BHCS screws and M3 nuts."
     camera:
       azimuth: 276
       polar: 110
@@ -51,8 +50,7 @@ steps:
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"
 
-  - title: "Optional - Add EMS Mount"
-    description: "If you have an EMS mount to attach to the EMS grill, do so now."
+  - description: "If you have an EMS mount to attach to the EMS grill, do so now."
     camera:
       azimuth: 272
       polar: 94
@@ -70,8 +68,7 @@ steps:
       - "WLED EMS"
       - "WLED Hardware"
 
-  - title: "Mount Wire Duct Base"
-    description: "Attach the Wire Duct Base to the underside of the Fanny Pack using 2 M3x10 BHCS screws."
+  - description: "Attach the Wire Duct Base to the underside of the Fanny Pack using 2 M3x10 BHCS screws."
     camera:
       azimuth: 283
       polar: 115
@@ -95,8 +92,7 @@ steps:
     focus: 
       - "Duct Base M3x10 BHCS"
 
-  - title: "Mount Center Skirt"
-    description: "Attach the Rear Center Skirt using 2 M3x8 SHCS screws and T-Nuts."
+  - description: "Attach the Rear Center Skirt using 2 M3x8 SHCS screws and T-Nuts."
     camera:
       azimuth: 277
       polar: 153
@@ -123,8 +119,7 @@ steps:
       - "Skirt M3x8 SHCS Vertical"
       - "Skirt T-Nuts"
 
-  - title: "Pre-Install Screws"
-    description: "Install 2 M3x8 SHCS screws with hammerhead nuts into the 90 Degree Adapter."
+  - description: "Install 2 M3x8 SHCS screws with hammerhead nuts into the 90 Degree Adapter."
     camera:
       azimuth: 61
       polar: 67
@@ -139,8 +134,7 @@ steps:
       - "Skirt M3x8 SHCS Horizontal"
       - "M3 Hammerhead Nuts"
 
-  - title: "Mount 90 Degree Adaptor - Part 1"
-    description: "Attach the 90 Degree Adaptor to the rear frame using the 2 pre-installed M3x3 SHCS screws. Ensure the adaptor lines up with the pockets in the Rear Center Skirt."
+  - description: "Attach the 90 Degree Adaptor to the rear frame using the 2 pre-installed M3x3 SHCS screws. Ensure the adaptor lines up with the pockets in the Rear Center Skirt."
     camera:
       azimuth: 282
       polar: 99
@@ -170,8 +164,7 @@ steps:
       - "Skirt M3x8 SHCS Horizontal"
       - "M3 Hammerhead Nuts"
 
-  - title: "Mount 90 Degree Adaptor - Part 2"
-    description: "Secure the 90 Degree adaptor to the Rear Center Skirt using 2 M3x10 BHCS screws and M3 nuts."
+  - description: "Secure the 90 Degree adaptor to the Rear Center Skirt using 2 M3x10 BHCS screws and M3 nuts."
     camera:
       azimuth: 271
       polar: 101
@@ -203,8 +196,7 @@ steps:
       - "Skirt M3 Nuts"
       - "Skirt M3x10 BHCS"
 
-  - title: "Wire Duct Cover"
-    description: "Attach the Wire Duct Cover to the Wire Duct Base by flexing the Cover over the base."
+  - description: "Attach the Wire Duct Cover to the Wire Duct Base by flexing the Cover over the base."
     camera:
       azimuth: 271
       polar: 101
@@ -236,8 +228,7 @@ steps:
     focus: 
       - "Wire Duct Cover"
 
-  - title: "Wire Duct Connector"
-    description: "Measure the gap between the Wire duct cover and the 90 Degree Adaptor. The Wire Duct Connector needs to be scaled in the slicer to match the dimension you measured. Once printed, it flexes into place to fill the gap between the Wire Duct Cover and 90 Degree Adaptor."
+  - description: "Measure the gap between the Wire duct cover and the 90 Degree Adaptor. The Wire Duct Connector needs to be scaled in the slicer to match the dimension you measured. Once printed, it flexes into place to fill the gap between the Wire Duct Cover and 90 Degree Adaptor."
     camera:
       azimuth: 305
       polar: 75
@@ -271,8 +262,7 @@ steps:
       - "Wire Duct Connector Scaled"
 
 
-  - title: "Complete"
-    description: "The Wire Duct assembly is complete."
+  - description: "The Wire Duct assembly is complete."
     camera:
       azimuth: 288
       polar: 76

@@ -33,8 +33,7 @@ accent_parts:
   - "Backplate"
 
 steps:
-  - title: "M3 Heat Inserts"
-    description: "Install the 4 heat inserts into the backplate. Optionally, you can install a fifth heat insert in the rear of the backplate for a PCB mount."
+  - description: "Install the 4 heat inserts into the backplate. Optionally, you can install a fifth heat insert in the rear of the backplate for a PCB mount."
     camera:
       azimuth: 91
       polar: 79
@@ -47,8 +46,7 @@ steps:
     focus:
       - "M3 Heat Inserts"
 
-  - title: "6x3mm Magnet"
-    description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use super glue."
+  - description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use super glue."
     camera:
       azimuth: 244
       polar: 129
@@ -62,8 +60,7 @@ steps:
     focus:
       - "6x3mm Magnet"
 
-  - title: "M3x6 FHCS Screws" 
-    description: "Install the 2 M3x6 FHCS screws. These screws should not be tightened. They are preload adjustment screws and will be backed out in a later step."
+  - description: "Install the 2 M3x6 FHCS screws. These screws should not be tightened. They are preload adjustment screws and will be backed out in a later step."
     camera:
       azimuth: 267
       polar: 150
@@ -78,8 +75,7 @@ steps:
     focus:
       - "M3x6 FHCS Screws"
   
-  - title: "Bottom Pin" 
-    description: "Install the bottom 4x12mm pin and secure it with a M3x8 BHCS screw using a ball end allen wrench."
+  - description: "Install the bottom 4x12mm pin and secure it with a M3x8 BHCS screw using a ball end allen wrench."
     camera:
       azimuth: 303
       polar: 73
@@ -95,8 +91,7 @@ steps:
     focus:
       - "Bottom Pin With Screw"
 
-  - title: "Top Pins Part #1" 
-    description: "Install the top 2 pins just enough for the plastic to hold them in place."
+  - description: "Install the top 2 pins just enough for the plastic to hold them in place."
     camera:
       azimuth: 288
       polar: 94
@@ -113,8 +108,7 @@ steps:
     focus:
       - "Top Pins Step"
 
-  - title: "Top Pins Part #2" 
-    description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 BHCS screws."
+  - description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 BHCS screws."
     camera:
       azimuth: 314
       polar: 75
@@ -133,8 +127,7 @@ steps:
       - "Top Pins With Screws"
       # - "Shuttle"
   
-  - title: "Testing" 
-    description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the [Hardware Troubleshooting](../../../troubleshooting/)."
+  - description: "Test the operation. If your Shuttle and Backplate do not move smoothly, try loosening the top 2 screws, twist the pins and re-tighten while meshed with the Shuttle. A small amount of resistance is not nessacerily a bad thing. If you believe the weight of the toolhead would reliably mesh the Shuttle and Backplate, continue to the next step. If you are unable to achieve smooth operation between the Backplate and Shuttle, please consult the [Hardware Troubleshooting](../../../troubleshooting/)."
     camera:
       azimuth: 318
       polar: 77
@@ -158,8 +151,7 @@ steps:
       - "Bottom Pin With Screw"
       - "Top Pins With Screws"
   
-  - title: "Setting Preload" 
-    description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a slither of paper between the screw and magnet similar setting z offset."
+  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a slither of paper between the screw and magnet similar setting z offset."
     camera:
       azimuth: 359
       polar: 85

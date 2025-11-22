@@ -36,8 +36,7 @@ primary_parts:
   - "Frame Right"
 
 steps:
-  - title: "Bottom Heat Insert"
-    description: "Install 2 heat inserts in to the Bottom piece."
+  - description: "Install 2 heat inserts in to the Bottom piece."
     camera:
       azimuth: 274
       polar: 73
@@ -50,8 +49,7 @@ steps:
     focus:
       - "Bottom Heat Inserts"
 
-  - title: "Side Heat Inserts"
-    description: "Install 4 heat inserts in to left and right pieces, 2 in each."
+  - description: "Install 4 heat inserts in to left and right pieces, 2 in each."
     camera:
       azimuth: 270
       polar: 174
@@ -65,8 +63,7 @@ steps:
     focus:
       - "Frame Heat Inserts"
 
-  - title: "Attach Top"
-    description: "Attach the Top piece to the Left and Right pieces of the frame using 2 M3x16 SHCS screws."
+  - description: "Attach the Top piece to the Left and Right pieces of the frame using 2 M3x16 SHCS screws."
     camera:
       azimuth: 90
       polar: 4
@@ -82,8 +79,7 @@ steps:
     focus:
       - "Top M3x16 SHCS"
 
-  - title: "Attach Bottom"
-    description: "Attach the Bottom piece to the Left and Right pieces of the frame using 2 M3x16 SHCS screws."
+  - description: "Attach the Bottom piece to the Left and Right pieces of the frame using 2 M3x16 SHCS screws."
     camera:
       azimuth: 90
       polar: 165
@@ -101,8 +97,7 @@ steps:
     focus:
       - "Bottom M3x16 SHCS"
 
-  - title: "Complete"
-    description: "Put the Frame aside for now. It will be used in the Final assembly."
+  - description: "Put the Frame aside for now. It will be used in the Final assembly."
     camera:
       azimuth: 100
       polar: 93

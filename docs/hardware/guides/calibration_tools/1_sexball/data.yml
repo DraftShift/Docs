@@ -40,8 +40,7 @@ frame_parts:
   - "Frame"
 
 steps:
-  - title: "Sexball"
-    description: "Screw the M5x12mm threaded ball on to the 32mm shaft."
+  - description: "Screw the M5x12mm threaded ball on to the 32mm shaft."
     camera:
       azimuth: 26
       polar: 77
@@ -54,8 +53,7 @@ steps:
     focus:
       - "Ball"
 
-  - title: "Brass Bushing"
-    description: "Insert the 8x10x5 Brass Bushing in to the top of the Endstop Block."
+  - description: "Insert the 8x10x5 Brass Bushing in to the top of the Endstop Block."
     camera:
       azimuth: 104
       polar: 68
@@ -68,8 +66,7 @@ steps:
     focus:
       - "8x10x5mm Bushing"
 
-  - title: "Attach PCB"
-    description: "Mount the PCB to the bottom of the Endstop Block by screwing 2 M2x10 self tapping screws through the microswitch and in to the plastic part."
+  - description: "Mount the PCB to the bottom of the Endstop Block by screwing 2 M2x10 self tapping screws through the microswitch and in to the plastic part."
     camera:
       azimuth: 2
       polar: 96
@@ -84,8 +81,7 @@ steps:
     focus:
       - "M2x10 STS"
 
-  - title: "Mounting Screws"
-    description: "Install the 2 M3x25 SHCS screws with hammer nuts through the Endstop Block."
+  - description: "Install the 2 M3x25 SHCS screws with hammer nuts through the Endstop Block."
     camera:
       azimuth: 3
       polar: 84
@@ -103,8 +99,7 @@ steps:
       - "M3x25 SHCS"
       - "Hammerhead Nuts"
 
-  - title: "Install Shaft"
-    description: "Install the 5mm shaft in the top though the bushing. The Shaft is just floating in the bushing, make sure you don't loose it."
+  - description: "Install the 5mm shaft in the top though the bushing. The Shaft is just floating in the bushing, make sure you don't loose it."
     camera:
       azimuth: 40
       polar: 73
@@ -116,8 +111,7 @@ steps:
       - "Ball"
       - "Shaft"
 
-  - title: "Mount On Printer"
-    description: "The Sexball Probe is now complete and ready to be installed in to the printer. It can be installed in the front or rear of the machine, it's up to you. It's possible to reclaim some more printable by mounting it in the front however. To do this you will need to move your bed back to the furthest point where your nozzle can reach and reset your zero point in your printer config. Mount the Sexball Probe using the M3x25 SHCS screws and hammer nuts allowing the tool's nozzle to reach past the center of the ball by ~6mm."
+  - description: "The Sexball Probe is now complete and ready to be installed in to the printer. It can be installed in the front or rear of the machine, it's up to you. It's possible to reclaim some more printable by mounting it in the front however. To do this you will need to move your bed back to the furthest point where your nozzle can reach and reset your zero point in your printer config. Mount the Sexball Probe using the M3x25 SHCS screws and hammer nuts allowing the tool's nozzle to reach past the center of the ball by ~6mm."
     camera:
       azimuth: 26
       polar: 75

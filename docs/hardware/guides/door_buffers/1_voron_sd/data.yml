@@ -39,8 +39,7 @@ frame_parts:
   - "Dock Bar"
 
 steps:
-  - title: "Heat Inserts"
-    description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
+  - description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
     camera:
       azimuth: 114
       polar: 40
@@ -60,8 +59,7 @@ steps:
     focus: 
       - "Heat insert"
 
-  - title: "Insert Fasteners"
-    description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
+  - description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
     camera:
       azimuth: 249
       polar: 76
@@ -82,8 +80,7 @@ steps:
     focus: 
       - "M3x8 SHCS & Nuts"
 
-  - title: "Attach to Frame"
-    description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
+  - description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
     camera:
       azimuth: 145
       polar: 60
@@ -105,8 +102,7 @@ steps:
     focus: 
       - "Frame"
 
-  - title: "Insert T-nuts"
-    description: "Insert the M3 T-nuts into the designated slots on both sides in the middle side pieces. Ensure the threads align in the middle for the dockbar."
+  - description: "Insert the M3 T-nuts into the designated slots on both sides in the middle side pieces. Ensure the threads align in the middle for the dockbar."
     camera:
       azimuth: 104
       polar: 90
@@ -129,8 +125,7 @@ steps:
     focus: 
       - "M3 T Nuts"
 
-  - title: "Prepare the dockbar"
-    description: "Attach the dockbar with 3mm hole 5mm from the edge of the extrusion, make sure the T-nuts align with the holes in the dockbar."
+  - description: "Attach the dockbar with 3mm hole 5mm from the edge of the extrusion, make sure the T-nuts align with the holes in the dockbar."
     camera:
       azimuth: 88
       polar: 85
@@ -154,8 +149,7 @@ steps:
     focus: 
       - "Dock Bar"
 
-  - title: "Bolt on the dock bar"
-    description: "Secure the dock bar to the frame using the M3x20 SHCS screws and M3 shim washers. Tighten the screws on both sides to ensure a firm attachment."
+  - description: "Secure the dock bar to the frame using the M3x20 SHCS screws and M3 shim washers. Tighten the screws on both sides to ensure a firm attachment."
     camera:
       azimuth: 125
       polar: 94
@@ -182,8 +176,7 @@ steps:
       - "M3x20 SHCS"
       - "M3 Shim Washer"
 
-  - title: "Attach Stock Voron Doorlatch"
-    description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
+  - description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
     camera:
       azimuth: 106
       polar: 82
@@ -207,8 +200,7 @@ steps:
       - "M3 Shim Washer"
       - "M3x20 SHCS"
 
-  - title: "Attach Doors"
-    description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape."
+  - description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape."
     camera:
       azimuth: 91
       polar: 86

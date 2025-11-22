@@ -1339,17 +1339,13 @@ function updateStep() {
         clearInterval(blinkInterval);
         blinkInterval = null;
     }
-    
+        
     const step = assemblySteps[currentStep];
 
     document.getElementById('step-counter').textContent = `Step ${currentStep + 1} of ${assemblySteps.length}`;
-    
-    // Update step title and description
-    const stepTitle = document.getElementById('step-title');
+        
+    // Update step description
     const stepDescription = document.getElementById('step-description');
-    if (stepTitle && step.title) {
-        stepTitle.textContent = step.title;
-    }
     if (stepDescription && step.description) {
         // Convert markdown links [text](url){target="_blank"} to HTML links with target attribute
         // First handle links with target="_blank" attribute

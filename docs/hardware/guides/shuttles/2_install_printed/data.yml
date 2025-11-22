@@ -37,8 +37,7 @@ frame_parts:
   - "Extrusion"
 
 steps:
-  - title: "Belt Helper Heat Inserts Part 1"
-    description: "Install 2 heat inserts in to each block."
+  - description: "Install 2 heat inserts in to each block."
     camera:
       azimuth: 273
       polar: 81
@@ -54,8 +53,7 @@ steps:
       - "Heat Inserts Left"
       - "Heat Inserts Right"
   
-  - title: "Belt Helper Heat Inserts Part 2"
-    description: "Install another 2 heat inserts in to the right block."
+  - description: "Install another 2 heat inserts in to the right block."
     camera:
       azimuth: 33
       polar: 94
@@ -70,8 +68,7 @@ steps:
       - "Heat Inserts Right2"
 
   
-  - title: "Attach Clips"
-    description: "Loosely attach the left and right clips to their respective blocks using 2 M3x10 SHCS in each. Do not tighten the screws yet."
+  - description: "Loosely attach the left and right clips to their respective blocks using 2 M3x10 SHCS in each. Do not tighten the screws yet."
     camera:
       azimuth: 89
       polar: 138
@@ -92,8 +89,7 @@ steps:
       - "Left M3x10 SHCS"
       - "Right M3x10 SHCS"
 
-  - title: "Attach Belts to Left Block"
-    description: "Make sure your idlers are fully extended and clamp the left upper and lower belts between the left clip and block. You want 15 teeth exposed past the clip and even spacing between the belts which is indicated on the block with the raised centerline and embossed text. Tighten the 2 M3x10 SHCS screws."
+  - description: "Make sure your idlers are fully extended and clamp the left upper and lower belts between the left clip and block. You want 15 teeth exposed past the clip and even spacing between the belts which is indicated on the block with the raised centerline and embossed text. Tighten the 2 M3x10 SHCS screws."
     camera:
       azimuth: 104
       polar: 74
@@ -112,8 +108,7 @@ steps:
       - "Belts Left"
       - "Left M3x10 SHCS"
 
-  - title: "Assemble Keeper Mechanism"
-    description: "Loosely screw the 2 M3x25-50 SHCS screws through the left block and in to the heat inserts of the right block."
+  - description: "Loosely screw the 2 M3x25-50 SHCS screws through the left block and in to the heat inserts of the right block."
     camera:
       azimuth: 127
       polar: 82
@@ -137,8 +132,7 @@ steps:
     focus:
       - "M3x40 SHCS"
 
-  - title: "Attach Belts to Right Block"
-    description: "Snug fit the right upper and lower belts between the right clip and block. Pull as much of the upper and lower belts as you can through the right block keeping an even amount between the two and tighten the clip screws."
+  - description: "Snug fit the right upper and lower belts between the right clip and block. Pull as much of the upper and lower belts as you can through the right block keeping an even amount between the two and tighten the clip screws."
     camera:
       azimuth: 91
       polar: 83
@@ -163,8 +157,7 @@ steps:
       - "Belts Right Open"
       - "Right M3x10 SHCS Open"
   
-  - title: "Pre-Tension Belts"
-    description: "Adjust the upper and lower M3x25 screws until you are happy with the pre-tension of the belts. Cut the belts so they are butted up against each other."
+  - description: "Adjust the upper and lower M3x25 screws until you are happy with the pre-tension of the belts. Cut the belts so they are butted up against each other."
     camera:
       azimuth: 101
       polar: 81
@@ -188,8 +181,7 @@ steps:
     focus:
       - "M3x40 SHCS"
 
-  - title: "Attach Shuttle"
-    description: "Secure the shuttle to the MGN rail using the 4 M3x8 BHCS screws."
+  - description: "Secure the shuttle to the MGN rail using the 4 M3x8 BHCS screws."
     camera:
       azimuth: 106
       polar: 83
@@ -217,8 +209,7 @@ steps:
     focus:
       - "Shuttle M3x8 BHCS"
 
-  - title: "Remove Belt Helper"
-    description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x25-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them. The Shuttle is now installed. Tension your belts with the idlers as you normally would."
+  - description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x25-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them. The Shuttle is now installed. Tension your belts with the idlers as you normally would."
     camera:
       azimuth: 108
       polar: 71

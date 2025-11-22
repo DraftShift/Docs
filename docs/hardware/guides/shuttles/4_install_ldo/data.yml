@@ -34,8 +34,7 @@ hardware_bom:
     qty: 6
 
 steps:
-  - title: "Belt Helper Heat Inserts Part 1"
-    description: "Install 2 heat inserts in to each block."
+  - description: "Install 2 heat inserts in to each block."
     camera:
       azimuth: 273
       polar: 81
@@ -51,8 +50,7 @@ steps:
       - "Heat Inserts Left"
       - "Heat Inserts Right"
   
-  - title: "Belt Helper Heat Inserts Part 2"
-    description: "Install another 2 heat inserts in to the right block."
+  - description: "Install another 2 heat inserts in to the right block."
     camera:
       azimuth: 33
       polar: 94
@@ -66,8 +64,7 @@ steps:
     focus:
       - "Heat Inserts Right2"
 
-  - title: "Shuttle Preperation Part 1"
-    description: "Remove the Top Bracket by unscrewing the 2 M3x12 BHCS screws."
+  - description: "Remove the Top Bracket by unscrewing the 2 M3x12 BHCS screws."
     camera:
       azimuth: 100
       polar: 52
@@ -91,8 +88,7 @@ steps:
       - "Top Bracket Hardware"
       - "M3x12 BHCS Screws"
 
-  - title: "Shuttle Preperation Part 2"
-    description: "Remove the Belt Clamps by unscrewing the 2 M3x6 SHCS screws."
+  - description: "Remove the Belt Clamps by unscrewing the 2 M3x6 SHCS screws."
     camera:
       azimuth: 90
       polar: 87
@@ -114,8 +110,7 @@ steps:
       - "Left M25x4 BHCS"
       - "Right M25x4 BHCS"
 
-  - title: "Attach Left Belts"
-    description: "Attach the left portion of the belts to the shuttle by feeding them from the back and through the belt holes. Finally, clamp them using a belt clamp and M3x6 SHCS screw."
+  - description: "Attach the left portion of the belts to the shuttle by feeding them from the back and through the belt holes. Finally, clamp them using a belt clamp and M3x6 SHCS screw."
     camera:
       azimuth: 121
       polar: 60
@@ -134,8 +129,7 @@ steps:
       - "Belt Clamp Left"
       - "Left M25x4 BHCS"
 
-  - title: "Attach Belts to Left Block"
-    description: "Make sure your idlers are fully extended and clamp the left upper and lower belts between the left clip and block. Tighten the 2 M3x10 SHCS screws."
+  - description: "Make sure your idlers are fully extended and clamp the left upper and lower belts between the left clip and block. Tighten the 2 M3x10 SHCS screws."
     camera:
       azimuth: 104
       polar: 74
@@ -158,8 +152,7 @@ steps:
     focus:
       - "Left M3x10 SHCS"
 
-  - title: "Attach Right Block"
-    description: "Attach the right block using the 2 M3x40-50 SHCS screws."
+  - description: "Attach the right block using the 2 M3x40-50 SHCS screws."
     camera:
       azimuth: 91
       polar: 83
@@ -185,8 +178,7 @@ steps:
     focus:
       - "M3x40 SHCS"
 
-  - title: "Attach Belts to Right Block"
-    description: "Pull as much of the upper and lower belts as you can through the right block keeping an even amount between the two and tighten the clip screws."
+  - description: "Pull as much of the upper and lower belts as you can through the right block keeping an even amount between the two and tighten the clip screws."
     camera:
       azimuth: 91
       polar: 83
@@ -216,8 +208,7 @@ steps:
       - "Belts Right Open"
       - "Right M3x10 SHCS Open"
   
-  - title: "Pre-Tension Belts"
-    description: "Adjust the upper and lower M3x40-50 screws until you are happy with the pre-tension of the belts. Clamp the belts with the Belt Clamp and a M3x6 SHCS screw ensuring you have the same amount of belt on top and below and cut to length."
+  - description: "Adjust the upper and lower M3x40-50 screws until you are happy with the pre-tension of the belts. Clamp the belts with the Belt Clamp and a M3x6 SHCS screw ensuring you have the same amount of belt on top and below and cut to length."
     camera:
       azimuth: 101
       polar: 81
@@ -250,8 +241,7 @@ steps:
       - "Right M25x4 BHCS"
       - "Belt Clamp Right"
 
-  - title: "Attach Shuttle"
-    description: "Secure the shuttle to the MGN rail using the 4 M3x4 SHCS screws."
+  - description: "Secure the shuttle to the MGN rail using the 4 M3x4 SHCS screws."
     camera:
       azimuth: 106
       polar: 83
@@ -286,8 +276,7 @@ steps:
     focus:
       - "MGN12 Screws"
 
-  - title: "Remove Belt Helper"
-    description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x40-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them."
+  - description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x40-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them."
     camera:
       azimuth: 93
       polar: 71
@@ -310,8 +299,7 @@ steps:
       - "Belt Clamp Right"
       - "MGN12 Screws"
 
-  - title: "Reattach Top Bracket"
-    description: "Reattach the Top Bracket by screwing in the 2 M3x12 BHCS screws."
+  - description: "Reattach the Top Bracket by screwing in the 2 M3x12 BHCS screws."
     camera:
       azimuth: 106
       polar: 51
@@ -343,8 +331,7 @@ steps:
     focus:
       - "M3x12 BHCS Screws"
 
-  - title: "Shuttle Installed"
-    description: "The Shuttle is fully installed. You can now tension your belts as you usually would."
+  - description: "The Shuttle is fully installed. You can now tension your belts as you usually would."
     camera:
       azimuth: 92
       polar: 58

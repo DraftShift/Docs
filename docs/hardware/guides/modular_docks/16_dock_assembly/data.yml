@@ -45,8 +45,7 @@ primary_parts:
   - "PTFE Wiper"
 
 steps:
-  - title: "Assemble Base and Blocker"
-    description: "Insert the Blocker in to the Base and secure it using 4 M3x20/30 SHCS screws."
+  - description: "Insert the Blocker in to the Base and secure it using 4 M3x20/30 SHCS screws."
     camera:
       azimuth: 327
       polar: 66
@@ -67,8 +66,7 @@ steps:
     focus:
     - "Blocker Mount Screws"
 
-  - title: "Attach Frame Part 1"
-    description: "Attach the frame to the front of the Base using 2 M3x20 SHCS screws."
+  - description: "Attach the frame to the front of the Base using 2 M3x20 SHCS screws."
     camera:
       azimuth: 88
       polar: 91
@@ -98,8 +96,7 @@ steps:
     focus:
     - "Frame Front Mount Screws"
 
-  - title: "Attach Frame Part 2"
-    description: "Secure the frame to the Base using 2 M3x40/50 SHCS screws."
+  - description: "Secure the frame to the Base using 2 M3x40/50 SHCS screws."
     camera:
       azimuth: 274
       polar: 92
@@ -130,8 +127,7 @@ steps:
     focus:
     - "Frame Rear Mount Screws"
 
-  - title: "Attach Back"
-    description: "Attach the Back plate to the Base using 2 M3x10 SHCS screws. No need to tighten them, they will be used for adjustment later."
+  - description: "Attach the Back plate to the Base using 2 M3x10 SHCS screws. No need to tighten them, they will be used for adjustment later."
     camera:
       azimuth: 274
       polar: 92
@@ -165,8 +161,7 @@ steps:
     focus:
     - "Back Mount Screws"
 
-  - title: "Optional - Install Wiper"
-    description: "If you opted to install a wiper, put the PTFE tube through the holes of the PTFE Wiper and secure the wiper to the Back plate using a M3x8 BHCS screw."
+  - description: "If you opted to install a wiper, put the PTFE tube through the holes of the PTFE Wiper and secure the wiper to the Back plate using a M3x8 BHCS screw."
     camera:
       azimuth: 294
       polar: 50

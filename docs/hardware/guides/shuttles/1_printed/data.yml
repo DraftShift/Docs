@@ -32,8 +32,7 @@ primary_parts:
   - "Shuttle MGN12"
 
 steps:
-  - title: "Install Bushings"
-    description: "Install the 3 4x6x6mm bushings into the shuttle ensuring they remain straight. Use a parallel wrench if you have one."
+  - description: "Install the 3 4x6x6mm bushings into the shuttle ensuring they remain straight. Use a parallel wrench if you have one."
     camera:
       azimuth: 295
       polar: 60
@@ -46,8 +45,7 @@ steps:
     focus:
       - "Bushings"
 
-  - title: "Install Magnets"
-    description: "Secure the 3 6x3mm magnets with super glue."
+  - description: "Secure the 3 6x3mm magnets with super glue."
     camera:
       azimuth: 295
       polar: 60
@@ -61,8 +59,7 @@ steps:
     focus:
       - "6x3mm Magnets"
   
-  - title: "Install Screws"
-    description: "Screw in the 2 M3x40 SHCS screws in the bottom of the shuttle. Make sure they are full thread screws. If the screws have a shoulder they could crack the printed part."
+  - description: "Screw in the 2 M3x40 SHCS screws in the bottom of the shuttle. Make sure they are full thread screws. If the screws have a shoulder they could crack the printed part."
     camera:
       azimuth: 102
       polar: 60
@@ -77,8 +74,7 @@ steps:
     focus:
       - "M3x40 SHCS"
 
-  - title: "Install Heat Insert (Optional)"
-    description: "If using an endstop for X axis, install a heat insert in the underside of the Shuttle."
+  - description: "If using an endstop for X axis, install a heat insert in the underside of the Shuttle."
     camera:
       azimuth: 98
       polar: 117
@@ -89,8 +85,7 @@ steps:
     focus:
       - "M3 Heat Insert"
   
-  - title: "Final Assembly"
-    description: "The shuttle is now ready to be mounted to the printer."
+  - description: "The shuttle is now ready to be mounted to the printer."
     camera:
       azimuth: 90
       polar: 0

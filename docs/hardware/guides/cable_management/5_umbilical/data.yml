@@ -38,8 +38,7 @@ accent_parts:
   - "Terminator"
 
 steps:
-  - title: "spring Steel Part 1"
-    description: "Heat up spring steel and bend into shap shown below."
+  - description: "Heat up spring steel and bend into shap shown below."
     camera:
       azimuth: 332
       polar: 83
@@ -52,8 +51,7 @@ steps:
     focus: 
       - "Spring Steel"
 
-  - title: "Relief"
-    description: "Slide the relief on to spring steel With the bent portion locating into Relief."
+  - description: "Slide the relief on to spring steel With the bent portion locating into Relief."
     camera:
       azimuth: 333
       polar: 54
@@ -66,8 +64,7 @@ steps:
     focus: 
       - "Relief"
 
-  - title: "1st clip"
-    description: "Slide the 1st clip on to the spring steel pay close attention to the openings match Relief openings."
+  - description: "Slide the 1st clip on to the spring steel pay close attention to the openings match Relief openings."
     camera:
       azimuth: 338
       polar: 72
@@ -81,8 +78,7 @@ steps:
     focus: 
       - "1st Clip"
 
-  - title: "2nd clip threw 5th clip"
-    description: "Slide the 2nd 3rd 4th and 5th clip on to the spring steel pay close attention to the openings match Relief openings these will be spaced out later."
+  - description: "Slide the 2nd 3rd 4th and 5th clip on to the spring steel pay close attention to the openings match Relief openings these will be spaced out later."
     camera:
       azimuth: 348
       polar: 73
@@ -103,8 +99,7 @@ steps:
       - "4th Clip"
       - "5th Clip"        
  
-  - title: "Terminator Part 1"
-    description: "Slide the Terminator on to the spring steel pay close attention to the openings match Relief openings these will be spaced out later dont bend the spring steel for this like shown till u have on printer and are happy with the arc of the umbillical."
+  - description: "Slide the Terminator on to the spring steel pay close attention to the openings match Relief openings these will be spaced out later dont bend the spring steel for this like shown till u have on printer and are happy with the arc of the umbillical."
     camera:
       azimuth: 48
       polar: 64
@@ -124,8 +119,7 @@ steps:
     focus: 
       - "Terminator"
        
-  - title: "Wire and Ptfe"
-    description: "Install the wire and PTFE into all the TPU peices this gets them ready to install on machine and space the TPU peices so the umblical has a nice arc with tool sitting in dock."
+  - description: "Install the wire and PTFE into all the TPU peices this gets them ready to install on machine and space the TPU peices so the umblical has a nice arc with tool sitting in dock."
     camera:
       azimuth: 53
       polar: 60
@@ -148,8 +142,7 @@ steps:
       - "PTFE"
       - "Wire"
             
-  - title: "Terminator part 2"
-    description: "once u have Umbilical fitted on machine and are happy with the arc and length and position of tpu peices slide the terminator back and make a bend in the Spring Steel as shown."
+  - description: "once u have Umbilical fitted on machine and are happy with the arc and length and position of tpu peices slide the terminator back and make a bend in the Spring Steel as shown."
     camera:
       azimuth: 35
       polar: 76
@@ -171,8 +164,7 @@ steps:
       - "Spring Steel Bend"
       - "Spring Steel"
       
-  - title: "Terminator part 3"
-    description: "Slide the Terminator back down so the Spring steel bend is located in the recess for it."
+  - description: "Slide the Terminator back down so the Spring steel bend is located in the recess for it."
     camera:
       azimuth: 35
       polar: 76
