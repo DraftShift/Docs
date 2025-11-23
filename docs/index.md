@@ -7,7 +7,7 @@ Welcome to the official documentation for StealthChanger and the DraftShift Desi
 
 ![StealthChanger](assets/sc_anim.gif){ width=180 align=right }
 ### StealthChanger
-[StealthChanger](hardware/stealthchanger.md) consists of 2 major components, the [Shuttle](hardware/stealthchanger.md#shuttle) and [Backplate](hardware/stealthchanger.md#backplate). The shuttle gets attached the printers gantry, while the backplate gets attached to the back of each tool. This enables any flying gantry with front mounted MGN rail printer to become a toolchanger.
+[StealthChanger](hardware/stealthchanger.md) consists of 2 major components, the [Shuttle](hardware/stealthchanger.md#shuttle) and [Backplate](hardware/stealthchanger.md#backplate). The shuttle gets attached to the X-Carriage on the printers gantry, while the backplate gets attached to the back of each tool. This enables any flying gantry printer with front mounted MGN12- or MGN9-rail to become a toolchanger.
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Modular Dock](assets/dock_cropped.png){ width=160 align=left } 

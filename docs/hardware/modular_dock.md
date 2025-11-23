@@ -6,11 +6,11 @@ search:
 The Modular Dock gives you a place to rest the tools while they are not in use. Its modular design allows for flexible configurations to match any printer and toolhead combination.
 
 ## Application
-The modular dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](door_buffer.md#crossbar). The [crossbar](door_buffer.md#crossbar) is a part of the [Door Buffer](door_buffer.md) and offers a stirdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](door_buffer.md#crossbar).
+The modular dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](door_buffer.md#crossbar). The [crossbar](door_buffer.md#crossbar) is a part of the [Door Buffer](door_buffer.md) and offers a sturdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](door_buffer.md#crossbar).
 
-Alternativly, the dock can be mounted to the printers frame using the [Stabilizers](#stabilizers) and [Link](#links) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](door_buffer.md#crossbar).
+Alternatively, the dock can be mounted to the printers frame using the [Stabilizers](#stabilizers) and [Link](#links) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](door_buffer.md#crossbar).
 
-Finally, the docks can be hung from the top of the printers frame with no lower support. This is the least stable option, should only used the other options are not available to you.
+Finally, the docks can be hung from the top of the printers frame with no lower support. This is the least stable option, should only used when the other options are not available to you. If you choose to go for top-mounted docks it's recommended to mount extra corner brackets to avoid the top-extrusion twisting around the blind joints.
 
 ## Modularity
 Because of its modularity, the Modular Dock has many differing pieces that can become overwhelming rather quickly. To help navigate the options, the modular dock is broken down into the following subcomponents:
@@ -91,7 +91,7 @@ The links for the frame differ depending on whether your using 2020 or 1515 top 
 | ![Links](../assets/dock-links.png) |
 
 ### Stabilizers
-Stabilizers can be addded to the first and last dock to help with rigidity for hanging docks. There are left and right brackets for 2020 and 1515 frames which mount on the top Y axis extrusions of the frame, spacers and a brace which connects to the outer docks.
+Stabilizers can be added to the first and last dock to help with rigidity for hanging docks. There are left and right brackets for 2020 and 1515 frames which mount on the top Y axis extrusions of the frame, spacers and a brace which connects to the outer docks.
 
 !!! tip "Think ahead"
     * There are different versions of the brace depending on the combination of pieces chosen to build the dock. Make sure to get the correct version.

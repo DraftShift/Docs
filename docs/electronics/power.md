@@ -4,18 +4,25 @@ Every toolchanger build is different, the end user must calculate the required p
 !!! example "Wattage Calculation"
     The following calculations are theoretical and are provided only as an example of how one might estimate the power requirements for a 6 tool build. Actual values may vary depending on the specific components, settings, and operating conditions of your build.
 
-    - Printing heater max output = `70W`
-    - Resting heater output (30% of max for 5 tools) = `((70W / 100) * 30) * 5 tools = 105W`
-    - Printing fans - 3 total = `(0.1A * 3 fans) * 24V = 7.2W`
-    - Resting fans - 5 tools - `(0.1A * 24V) * 5 tools = 12W`
-    - Extruder motors - 0.6A for 6 tools - `(0.6A * 24V) * 6 tools = 86W`
+    
+    - Toolheads - Active heater at max output = `70W`
+    - Toolheads - Resting heater output (30% of max for 5 tools) = `((70W / 100) * 30) * 5 tools = 105W`
+    - Toolheads - Active part cooling fans - 2 total = `(0.1A * 2 fans) * 24V = 4.8W`
+    - Toolheads - Active hotend fans - 6 total = `(0.1A * 6 fans) * 24V = 14.4W`
+    - Toolheads - Extruder motors - 0.6A for 6 tools - `(0.6A * 24V) * 6 tools = 86W`
+    - Toolheads - combined total = `280,2W`  
 
-    - Combined total = `280.2W`
+    - Printer baseline = `120W`
+    - Combined total = `400,2W`
 
-In this example, 6 tools equipped with 70W heaters produce a combined load of 280W. This alone exceeds the standard Voron 200W power supply before accounting for motion stepper motors, electronics, fans, and other system components which would typically consume around 100-120W.
+In this example, 6 toolheads equipped with 70W heaters produce a combined load of 280W@24V. This alone exceeds the standard Voron 200W-24V power supply before accounting for motion stepper motors, electronics, fans, and other system components which would typically consume around 100-120W@24V.
+So be safe and choose an adequately rated powersupply for your expected current consumption.
+
+!!! warning current draw baseline amd spikes
+    A standard Voron v2 draws somewhere in the 50-120w range "just sitting there" with all heaters and fans off, make sure you account for your baseline and spikes when you run the numbers for your power consumption.
 
 !!! warning "DC Beds"
-    A typical Voron has an AC bed, which does not draw power from the printer's PSU. If you have a DC bed, you will need to calculate the power requirements for it separately.
+    A typical Voron has an AC bed, which does not draw power from the printer's PSU. If you have a DC bed, you will need to include that in your power calculations and spec the PSU accordingly.
 
 In practice, this means that either an [additional power supply](#additional-power-supplies) would be required to cover the extra demand, or the stock supply must be [replaced with a higher-wattage unit](#replacement-power-supplies). These figures are illustrative; your actual power requirements will depend on the specific hardware and configuration of your build.
 

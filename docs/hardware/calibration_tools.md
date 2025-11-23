@@ -40,7 +40,7 @@ More information can be found on the [Axiscope Github](https://github.com/nic335
 
 ### Nudge
 
-Nudge is a multi axis probe where the shaft is suspended in a wobbler. Nudging the probe in any axis makes contact with copper screws within the probe. 
+Nudge is a multi axis probe where the shaft is suspended in a wobbler using magnets and screws. Nudging the probe in any axis breaks contact with screws within the probe which triggers the probe.
 
 ![Nudge](../assets/nudge.png){:width="540"}
 
