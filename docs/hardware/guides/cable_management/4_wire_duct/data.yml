@@ -3,18 +3,51 @@ author: "DraftShift Design"
 summary: >
     This guide will walk you through the assembly of the Wire Duct. 
 
-    !!! danger "TODO"
-        This guide is currently a work in progress.
-    
+    !!! tip "TODO"
+        The Wire Duct Connector needs to be scaled to suit your build. It can be scaled in the slicer.
+
 printed_bom:
-  Base:
+  Wire Duct Base:
     qty: 1
     urls:
-      Link: https://github.com/DraftShift/CableManagement/blob/main/FannyPack/STLs/base.stl?raw=true
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/wire_duct_base.stl?raw=true
+  Wire Duct Cover:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/%5Ba%5D_wire_duct_cover.stl?raw=true
+  Wire Duct Connector:
+    qty: 1 (Scale to fit)
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/%5Ba%5D_wire_duct_connector_scale_to_fit.stl?raw=true
+  Center Rear Skirt:
+    qty: 1
+    urls:
+      Voron 250: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/v2_skirt/center_rear_skirt_250.stl?raw=true
+      Voron 300: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/v2_skirt/center_rear_skirt_300.stl?raw=true
+      Voron 350: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/v2_skirt/center_rear_skirt_350.stl?raw=true
+  90 Degree Adaptor:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/center_rear_skirt_90.stl?raw=true
+  EMS Brackets:
+    qty: Optional
+    urls:
+      Arduino Uno: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/EMS_Brackets/%5Ba%5D_ft-ems_uno_r3.stl?raw=true
+      WLED Board: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/EMS_Brackets/WLED.stl?raw=true
 
 hardware_bom:
   M3x6 BHCS Screws:
     qty: 4
+  M3x10 BHCS Screws:
+    qty: 2
+  M3x8 SHCS Screws:
+    qty: 4
+  M3 Hex Nuts:
+    qty: 6
+  M3 T-Nuts:
+    qty: 2
+  M3 Hammerhead Nuts:
+    qty: 2
 
 primary_parts:
   - "Center Skirt"
@@ -134,7 +167,7 @@ steps:
       - "Skirt M3x8 SHCS Horizontal"
       - "M3 Hammerhead Nuts"
 
-  - description: "Attach the 90 Degree Adaptor to the rear frame using the 2 pre-installed M3x3 SHCS screws. Ensure the adaptor lines up with the pockets in the Rear Center Skirt."
+  - description: "Attach the 90 Degree Adaptor to the rear frame using the 2 pre-installed M3x8 SHCS screws. Ensure the adaptor lines up with the pockets in the Rear Center Skirt."
     camera:
       azimuth: 282
       polar: 99
