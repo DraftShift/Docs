@@ -94,7 +94,7 @@ primary_parts:
 - "Primary Parts"
 - "Door Latches"
 - "Door Handles"
-- "Door Hindges"
+- "Door Hinges"
 
 accent_parts:
 - "Bottom Left"
@@ -106,6 +106,7 @@ accent_parts:
 frame_parts:
   - "Frame"
   - "Dock Bar"
+
 transparent_parts:
   "Door Panel Left": 0.3
   "Door Panel Right": 0.3

@@ -4,53 +4,57 @@ summary: >
     The LDO version of Door Buffer for Voron 2.4.
   
     !!! tip "Where can I get one?"
-        The hardware components for this guide are all included as a part of LDO's `StealthChanger Tophat and Door Buffer Kit`.
+        The hardware components for this guide are all included as a part of LDO's [StealthChanger Tophat and Door Buffer Kit](../../../../resellers.md).
 
     !!! info "Short/Standard?"
         There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../../toolheads.md) for compatibility.
 
 
 printed_bom:
- Top Left:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
-
- Top Right:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
-
-
- Top Mid:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
-
- Right:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
-
- Left:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
-
- Bottom Right:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
-
- Bottom Left:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer 
-
- Bottom Mid:
-    qty: 1
-    urls:
-      Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs/Door%20Buffer
+  LDO 300 Short:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/bottom_left_300s.stl?raw=true"
+      Bottom Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/bottom_right_300s.stl?raw=true"
+      Top Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/top_left_300s.stl?raw=true"
+      Top Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/top_right_300s.stl?raw=true"
+      Top Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/top_mid_300s.stl?raw=true"
+      Bottom Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/bottom_mid_300s.stl?raw=true"
+      Left Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/left_mid_300s.stl?raw=true"
+      Right Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300-short/right_mid_300s.stl?raw=true"
+  LDO 300 Standard:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/bottom_left_300.stl?raw=true"
+      Bottom Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/bottom_right_300.stl?raw=true"
+      Top Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/top_left_300.stl?raw=true"
+      Top Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/top_right_300.stl?raw=true"
+      Top Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/top_mid_300.stl?raw=true"
+      Bottom Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/bottom_mid_300.stl?raw=true"
+      Left Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/left_mid_300.stl?raw=true"
+      Right Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/300/right_mid_300.stl?raw=true"
+  LDO 350 Short:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/bottom_left_350s.stl?raw=true"
+      Bottom Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/bottom_right_350s.stl?raw=true"
+      Top Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/top_left_350s.stl?raw=true"
+      Top Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/top_right_350s.stl?raw=true"
+      Top Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/top_mid_350s.stl?raw=true"
+      Bottom Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/bottom_mid_350s.stl?raw=true"
+      Left Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/left_mid_350s.stl?raw=true"
+      Right Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350-short/right_mid_350s.stl?raw=true"
+  LDO 350 Standard:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/bottom_left_350.stl?raw=true"
+      Bottom Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/bottom_right_350.stl?raw=true"
+      Top Left: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/top_left_350.stl?raw=true"
+      Top Right: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/top_right_350.stl?raw=true"
+      Top Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/top_mid_350.stl?raw=true"
+      Bottom Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/bottom_mid_350.stl?raw=true"
+      Left Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/left_mid_350.stl?raw=true"
+      Right Mid: "https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Door%20Buffer/350/right_mid_350.stl?raw=true"
 
 hardware_bom:
   M3 heat Set Insert:
@@ -64,46 +68,61 @@ hardware_bom:
   
   M5x16 BHCS:
     qty: 2
-
-
-
+  
+  Existing Voron Door With LDO Hinges:
+    qty: 1
 
 primary_parts:
 - "Top Mid"
 - "Bottom Mid"
 - "Left Mid"
 - "Right Mid"
+- "Primary Parts"
+- "Door Latches"
+- "Handles"
+- "Hinges"
 
 accent_parts:
 - "Bottom Left"
 - "Bottom right"
 - "Top Left"
 - "Top Right"
+- "Accent Parts"
 
 frame_parts:
   - "Frame"
   - "Crossbar"
 
+transparent_parts:
+  "Door Panel Left": 0.3
+  "Door Panel Right": 0.3
+
 steps:
-  - description: "Insert the heat inserts into the designated holes in the printed parts. Use a soldering iron or heat insert tool to carefully heat and press them in until they are flush with the surface."
+  - description: "Insert a heat insert into each of the primary pieces."
     camera:
-      azimuth: 92
-      polar: 87
-      distance: 66
+      azimuth: 89
+      polar: 95
+      distance: 21
       pan_x: 0.00
       pan_y: 0.00
     visible: 
-      - "Bottom Left"
-      - "Bottom Right"
-      - "Top Left"
-      - "Top Right"
-      - "Top Mid"
-      - "Bottom Mid"
-      - "Left Mid"
-      - "Right Mid"
-      - "M3 Heat Inserts"
+      - "Primary Parts"
+      - "Primary Heat Inserts"
     focus: 
-      - "M3 Heat Inserts"
+      - "Primary Heat Inserts"
+
+  - description: "Insert a heat insert into each of the accent pieces."
+    camera:
+      azimuth: 90
+      polar: 119
+      distance: 25
+      pan_x: 2.95
+      pan_y: -4.27
+    visible: 
+      - "Accent Parts"
+      - "Accent Heat Inserts"
+    focus: 
+      - "Accent Heat Inserts"
 
   - description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
     camera:
@@ -152,7 +171,7 @@ steps:
       - "Frame"
 
 
-  - description: "Attach the dockbar."
+  - description: "Attach the crossbar."
     camera:
       azimuth: 88
       polar: 85
@@ -176,13 +195,13 @@ steps:
     focus: 
       - "Crossbar"
 
-  - description: "Secure the dock bar to the doorbuffer using the M5x16 BHCS screw. Tighten the screws on both sides to ensure a firm attachment."
+  - description: "Secure the crossbar to the doorbuffer using the 2 M5x16 BHCS screws. Tighten the screws on both sides to ensure a firm attachment."
     camera:
       azimuth: 125
-      polar: 94
-      distance: 80
-      pan_x: 5.24
-      pan_y: 0.35
+      polar: 80
+      distance: 35
+      pan_x: 16.25
+      pan_y: 0.97
     visible: 
       - "Bottom Left"
       - "Bottom Right"
@@ -201,52 +220,66 @@ steps:
     focus: 
       - "Crossbar Screws"
       
-  - description: "Attach the doorlatch top and bottom with a M3x8 SHCS screw."
+  - description: "Attach the top and bottom Voron door latches with a M3x8 SHCS screw."
     camera:
-      azimuth: 106
-      polar: 82
+      azimuth: 113
+      polar: 69
       distance: 33
-      pan_x: 1.55
-      pan_y: 21.35
+      pan_x: 0.24
+      pan_y: 21.48
     visible: 
-     - "Bottom Left"
-     - "Bottom Right"
-     - "Top Left"
-     - "Top Right"
-     - "Top Mid"
-     - "Bottom Mid"
-     - "Left Mid"
-     - "Right Mid"
-     - "M3 Heat Inserts"
-     - "M3x8 SHCS Screws"
-     - "M3 Hammer Nuts"
-     - "Frame"
-     - "Crossbar"
-     - "Crossbar Screws"
-    focus: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
       - "M3 Heat Inserts"
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+      - "Frame"
+      - "Crossbar"
+      - "Crossbar Screws"
+      - "Door Latches"
+      - "Door Latch Screws"
+      - "Door Latch Magnets"
+    focus:
+      - "Door Latch Screws"
 
-  - description: "Attach your stock voron doors. note if you are using old doors they may not line up perfectly and may require you take them off and apply new VHB tape,  LDO door buffer is assuming you are using LDO door hindges."
+  - description: "Attach the doors with LDO hinges using M3x8 SHCS screws. If you are using old doors they may not line up perfectly and may require you to take them off and apply fresh VHB tape."
     camera:
-      azimuth: 91
-      polar: 86
-      distance: 89
-      pan_x: 0.98
+      azimuth: 104
+      polar: 91
+      distance: 69
+      pan_x: 0.96
       pan_y: 0.12
     visible: 
-     - "Bottom Left"
-     - "Bottom Right"
-     - "Top Left"
-     - "Top Right"
-     - "Top Mid"
-     - "Bottom Mid"
-     - "Left Mid"
-     - "Right Mid"
-     - "M3 Heat Inserts"
-     - "M3x8 SHCS Screws"
-     - "M3 Hammer Nuts"
-     - "Frame"
-     - "Crossbar"
-     - "Crossbar Screws"
-    focus: 
+      - "Bottom Left"
+      - "Bottom Right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
       - "M3 Heat Inserts"
+      - "M3x8 SHCS Screws"
+      - "M3 Hammer Nuts"
+      - "Frame"
+      - "Crossbar"
+      - "Crossbar Screws"
+      - "Door Latches"
+      - "Door Latch Screws"
+      - "Door Latch Magnets"
+      - "Handles"
+      - "Hinges"
+      - "Door Magnets"
+      - "Door Panel Left"
+      - "Door Panel Right"
+      - "Hinge 40mm SHCS"
+      - "Hinge 8mm SHCS"
+      - "Door VHB"
+    focus:
+      - "Hinge 8mm SHCS"
