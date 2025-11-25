@@ -141,7 +141,7 @@
             samples_tolerance: 0.02
             samples_tolerance_retries: 3
             activate_gcode:
-            _TAP_PROBE_ACTIVATE HEATER=extruder{{ i if i > 0 else "" }} # change to match the extruder you are configuring: extruder, extruder1, etc.
+                _TAP_PROBE_ACTIVATE HEATER=extruder{{ i if i > 0 else "" }} # change to match the extruder you are configuring: extruder, extruder1, etc.
             {% endif %}
             {% if data.pin_map.rgb_pin|length -%}
             # change the neopixel section name to the tool you are configuring:
