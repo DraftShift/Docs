@@ -55,7 +55,24 @@ steps:
     focus:
       - "6x3 Magnets"
 
-  - description: "On the PCB there will be silkscreen of the diode symbol (A triangle pointing towards a line) in 6 places. The LEDs will be installed in the holes where the 4 corner symbols are. The LEDs have a flat side and a shorter leg, this is the cathode (negative) leg. Place the led through the holes from the lens side ensuring the cathode is through the hole where the line and point of the triangle are."
+  - description: "The PCB has a silkscreen with 6 diode symbols (A triangle pointing towards a line). The LEDs themselves have one long and one short leg. The short leg is the cathode(-) and the long leg is the anode(+)"
+    camera:
+      azimuth: 180
+      polar: 148
+      distance: 61
+      pan_x: -0.17
+      pan_y: 1.02
+    visible: 
+      - "OV9726 Camera"
+      - "Diode Silkscreen"
+      - "LED Bulbs"
+      - "LED Legs"
+    focus:
+      - "LED Bulbs"
+      - "LED Legs"
+      - "Diode Silkscreen"
+
+  - description: "The LEDs should be placed at the 4 corners over where the LED symbols are. The short leg (-) goes in the round through-hole closest to the line and point of the triangle. The long leg (+) goes into the square-through-hole."
     camera:
       azimuth: 180
       polar: 148
