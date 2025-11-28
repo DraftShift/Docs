@@ -1,6 +1,24 @@
 # Calibration Overview
 StealthChanger calibration consists of three primary stages: [Probe Offset](#probe-offset), [Dock Positions](#dock-positions), and [G-code Offsets](#g-code-offsets).
 
+## Important Notes 
+=== "TAP"
+    - **Only home/QGL/bedmesh with tool 0.** — Homing with other tools should only be done in order to switch to tool 0 which then can be used to home (again)/QGL/bedmesh.
+    - **The `gcode_z_offset`, `gcode_x_offset` and `gcode_y_offset` variables for tool 0 must always be zero.** — The offset values are relative to tool 0.
+
+    !!! warning "Before You Start"
+        - Because all G-code calibrations are relative to tool 0, it is essential that the printer has perfect first layer bed adhesion with tool 0 first.
+        - It is recommended that you run a test print with tool 0 before calibrating any G-code offsets.
+
+=== "Eddy Current"
+    - **Home/QGL/bedmesh is possible with any tool** — Requires the scanner to be mounted on the shuttle.
+    - **`gcode_z_offset` variable must be set for every tool** — Homing with the scanner on the shuttle requires each nozzle to have a z offset relative to the scanner.
+    - **`gcode_x_offset` and `gcode_y_offset` variables for tool 0 must always be zero.** — The offset values are relative to tool 0.
+
+    !!! warning "Before You Start"
+        - It is essential that the printer has perfect first layer bed adhesion with tool 0 first.
+        - It is recommended that you run a test print with tool 0 before calibrating any G-code offsets.
+
 ## Probe Offset
 Probe offset refers to the `[tool_probe]` parameter `z_offset` which is applied whenever the printer homes or performs bed leveling. This value represents the vertical distance between the probe’s trigger point and the nozzle tip, allowing Klipper to accurately determine the true Z=0 position for a given tool. A `z_offset` must be calibrated for T0, and for any additional tool that will be used for homing.
 
