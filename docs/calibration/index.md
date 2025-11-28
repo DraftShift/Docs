@@ -1,85 +1,40 @@
 # Calibration Overview
+StealthChanger calibration consists of three primary stages: [Probe Offset](#probe-offset), [Dock Positions](#dock-positions), and [G-code Offsets](#g-code-offsets).
 
+## Probe Offset
+Probe offset refers to the `[tool_probe]` parameter `z_offset` which is applied whenever the printer homes or performs bed leveling. This value represents the vertical distance between the probe’s trigger point and the nozzle tip, allowing Klipper to accurately determine the true Z=0 position for a given tool. A `z_offset` must be calibrated for T0, and for any additional tool that will be used for homing.
 
+!!! info "I'm building all my tools from the same hardware"
+    Even when using identical hardware, each tool may require a unique `z_offset` due to:
 
-Calibration requires three main steps:
+    - Variations in hardware components.
+    - Differences resulting from printing or assembly tolerances.
+    - Slight deviations between the nozzle’s physical zero point and the probe’s trigger point.
 
-1. [Probe Offset](probe_offset.md)
-2. [Dock Positions](dock_positions.md)
-3. [G-code Offsets](gcode_offsets.md)
+Accurate `z_offset` values ensure consistent and reliable first-layer performance across all tools.
 
-This page is a high-level overview. Use it to understand what needs to be calibrated and where it lives in the config before diving into the step-by-step guides.
+## Dock Positions
+Dock Positions refers to the `[tool Tn]` parameters `params_park_x`, `params_park_y`, and `params_park_z`. These values tell the printer the precise coordinates required to pick up or return a tool to its designated dock. In essence, a dock position defines the exact X/Y/Z point where the shuttle aligns with a tool so that the mechanical coupling can occur reliably. You can think of it as the tool’s pickup location for its specific dock.
 
----
+Each tool requires its own dock position because the docks are mounted at different locations along the front of the printer. Even small variations in mounting or alignment can cause the shuttle to miss the tool or collide with the dock.
 
-## 1. [Probe Offset](probe_offset.md)
+When dock positions are accurately calibrated, tool changes are consistent, repeatable, and free from collisions.
 
-The first step is establishing a **probe-based Z reference** for each tool.
+!!! tip "Calibrate you printer first"
+    Before setting dock positions, it is strongly recommended to calibrate your printer’s zero point.
 
-- **Config section:** `[tool_probe Tn]` in your tool config
-- **Parameter:** `z_offset`
+    Dock positions are defined relative to absolute zero—if the printer’s zero point changes, the dock positions will shift accordingly.
 
-### What is `z_offset`?
+## G-code Offsets
 
-The `z_offset` is used when the printer homes or levels the bed, it tells Klipper the vertical distance between your probe's trigger point and the nozzle tip.
+G-code offsets refers to the `[tool Tn]` parameters `gcode_z_offset`, `gcode_x_offset` and `gcode_y_offset`. These values determine the difference in the nozzle's position for each tool when it is on the shuttle, relative to T0. 
 
-Klipper uses this offset to calculate where Z=0 is for that specific nozzle.
+!!! info "Why G-code offsets matter"
+    When the slicer generates `G1 X100 Y100`, every tool should deposit filament at exactly the same physical location on the bed. G-code offsets make this possible by telling Klipper "this tool is 0.2mm left and 0.1mm forward off the reference tool, so adjust accordingly."
 
-Each tool could have a different `z_offset` because:
+### G-code Offset Calibration Methods
+There are multiple methods of calibrating the G-code offsets, 
 
-- Assembly tolerances can differ.
-- Travel between the nozzle's zero point and the sensor's trigger point can vary
-
-
-With correct `z_offset` values, consistent first layers are produced.
-
----
-
-## 2. [Dock Positions](dock_positions.md)
-
-Dock calibration is required for the printer to know where to pick up and park tools in their docks.
-
-
-- **Config section:** `[tool Tn]` in your tool config
-- **Parameters:** `params_park_x`, `params_park_y`, `params_park_z`
-### What are park positions?
-
-The park position is the exact X/Y/Z coordinate where the shuttle aligns with a docked tool so they can mechanically couple. Think of it as the "pickup point" for that specific dock.
-
-**Why each tool needs its own park position:**
-
-- Docks are physically mounted at different locations along the front of the printer
-- Even small positional errors can cause the shuttle to miss the tool or collide with the dock
-
-With accurate park positions, tool changes become repeatable and collision-free.
-
----
-
-## 3. [G-code offsets](gcode_offsets.md)
-
-Finally, you align where each nozzle actually prints so that tools agree on Z height and X/Y position on the bed.
-
-- **Config section:** `[tool Tn]`
-- **Parameters:** `gcode_z_offset`, `gcode_x_offset`,  `gcode_y_offset`
-
-
-### What are G-code offsets?
-
-G-code offsets compensate for the physical differences between tools so they all behave as if they're in the same position:
-
-- **`gcode_z_offset`**: Adjusts the effective Z height so all tools produce the same first-layer squish.
-
-- **`gcode_x_offset` and `gcode_y_offset`**: Shift the tool's X/Y position so all nozzles land on the same spot when given identical G-code coordinates. Without these, a multi-tool print would have visible misalignment between layers printed by different tools.
-
-**Why G-code offsets matter:**
-
-When your slicer generates `G1 X100 Y100`, every tool should deposit filament at exactly the same physical location on the bed. G-code offsets make this possible by telling Klipper "this tool is 0.2mm left and 0.1mm forward off the reference tool, so adjust accordingly."
-
-### Calibration Methods
-
-There are several ways to measure these offsets:
-
-- **[Manual](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder){:target="_blank"}** - Measuring the physical distance between nozzle with a printed tool
-- **[SexBall Probe](/hardware/calibration_tools/#sexball-probe)** – Mechanical probe using precision spheres for repeatable measurements
-- **[Axiscope](https://github.com/nic335/Axiscope){:target="_blank"}** – Camera-based visual alignment to printed targets
-- **[Nudge](https://github.com/zruncho3d/nudge){:target="_blank"}** – Software-guided Mechanical probe
+{% for method, data in cal_methods.items() %}
+- **[{{ method }}]({{ data.url }}){:target="_blank"}** – {{ data.description }}
+{% endfor %}

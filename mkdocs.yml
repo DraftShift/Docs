@@ -84,7 +84,8 @@ nav:
     - Overview: calibration/index.md
     - Probe Offset: calibration/probe_offset.md
     - Dock Positions: calibration/dock_positions.md
-    - Gcode Offsets: calibration/gcode_offsets.md
+    - G-code Offsets: calibration/gcode_offsets.md
+    - Tuning: calibration/tuning.md
     - FAQ: calibration/faq.md
 
   - Contributing: contributing.md

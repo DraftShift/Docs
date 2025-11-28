@@ -1,7 +1,14 @@
 ### Probe offset
-The last step before being able to print again is to calibrate your probe offsets. This procedure is different depending on whether you are using TAP or an Eddy current sensor for probing.
+Before being able to print, it is nesacerry to calibrate your probe offsets. This procedure differs depending on whether you are using the OptoTap Sensor or an Eddy current sensor for probing.
 
 === "TAP"
+    ``` cfg hl_lines="4"
+        [tool_probe T0]
+        pin: NHK0:gpio10
+        tool: 0 # change to the index of the tool. 0, 1, 2, etc.
+        z_offset = -1.05 # Needs to be calibrated. More positive = More Squish
+    ```
+
     1. Ensure that your [tool_probe](../configuration/tool.md#tool_probe) section's `z_offset` variable is set to `0`.
     2. Home the printer with `G28`.
     3. Run `QUAD_GANTRY_LEVEL`.
@@ -15,4 +22,4 @@ The last step before being able to print again is to calibrate your probe offset
         If you do save the values, you will need to move the offset from the bottom of `printer.cfg` to your tools `[tool_probe]` section.
 
 === "Eddy Current"
-    Set the probe offset as per your Sensor's documentation.
+    Set the probe offsets as per your sensor's documentation.
