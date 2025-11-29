@@ -41,7 +41,7 @@ nav:
   - Introduction: index.md
   - Getting Started: getting_started.md
   - Power & Electronics:
-    - Overview: electronics/index.md
+    - Power & Electronics Overview: electronics/index.md
     - Power: electronics/power.md
     - Toolhead Boards: electronics/th_boards.md
     - Distribution Boards: electronics/distro_boards.md
@@ -61,12 +61,12 @@ nav:
     - Troubleshooting: hardware/troubleshooting.md
 
   - Software:
-    - Overview: software/index.md
+    - Software Overview: software/index.md
     - Klipper-toolchanger-easy: 
-      - Overview: software/ktc-easy/index.md
+      - KTC-easy Overview: software/ktc-easy/index.md
       - Installation: software/ktc-easy/install.md
       - Configuration:
-        - Overview: software/ktc-easy/configuration/index.md
+        - Configuration Overview: software/ktc-easy/configuration/index.md
         - Existing Config: software/ktc-easy/configuration/existing.md
         - Toolchanger Config: software/ktc-easy/configuration/toolchanger.md
         - Tool Config: software/ktc-easy/configuration/tool.md
@@ -79,7 +79,7 @@ nav:
     - Troubleshooting: software/troubleshooting.md
 
   - Calibration:
-    - Overview: calibration/index.md
+    - Calibration Overview: calibration/index.md
     - Probe Offset: calibration/probe_offset.md
     - Dock Positions: calibration/dock_positions.md
     - G-code Offsets (Manual): calibration/manual_gcode_offsets.md
