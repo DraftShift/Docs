@@ -32,6 +32,28 @@ To run resonance tester without changing the `accel_chip` in [resonance_tester](
 AXES_SHAPER_CALIBRATION ACCEL_CHIP="'adxl345 T0'"
 ```
 
+### Applying the Results
+Each tool can have the frequency, and shaper type for the X and Y axis' set in it's `[tool Tn]` section by adding `params_input_shaper_freq_x`, `params_input_shaper_type_x`, `params_input_shaper_freq_y` and `params_input_shaper_type_y`.
+
+``` cfg hl_lines="12 13 14 15" title="Example [tool Tn] section with input shaper"
+[tool T0]
+tool_number: 0
+extruder: extruder
+fan: T0_partfan
+params_park_x: 5.0   # The absolute X-position of the tool in its dock.
+params_park_y: 10.8  # The absolute Y-position of the tool in its dock.
+params_park_z: 264.4 # The absolute Z-position where the tool and shuttle mate in the dock,determined when the TAP (or Z-probe) triggers.
+gcode_x_offset: 0 # The X-Axis offset of the nozzle's orifice in relation to tool 0
+gcode_y_offset: 0 # The Y-Axis offset of the nozzle's orifice in relation to tool 0
+gcode_z_offset: 0 # The Z-Axis offset of the nozzle's orifice in relation to tool 0
+
+params_input_shaper_freq_x: 62.2
+params_input_shaper_type_x: 'ei'
+params_input_shaper_freq_y: 41.0
+params_input_shaper_type_y: 'mzv'
+
+```
+
 ## Tool Change Speed
 The speed of a tool change is determined by multiple factors.
 
