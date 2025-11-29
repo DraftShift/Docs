@@ -58,12 +58,7 @@ Some tools are shorter than others and with some of the shorter tools the z-rail
 
 ### Bad Input Shaper Results
 - Ensure the Backplate's preload screws have been adjusted.
-- Check your configuration to ensure the correct accelerometer is assigned to `[resonance_tester]`.
-
-!!! tip "Input Shaper - "Pro Tip""
-    For example if you have your adxl on T0 defined as `[adxl345 T0]`
-
-    You can call shake-tune `axes_shaper_calibration ACCEL_CHIP="'adxl T0'"` to specify the accelerometer to use for the resonances test.
+- Check your configuration to ensure the correct accelerometer is assigned to `[resonance_tester]` or the correct accelerometer parameter was specified in the macro. Consult the [Resonance Calibration Section](../calibration/tuning.md#resonance) for more information.
 
 ---
 
