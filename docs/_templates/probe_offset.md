@@ -9,12 +9,12 @@ Before being able to print, it is nesacerry to calibrate your probe offsets. Thi
         z_offset = -1.05 # Needs to be calibrated. More positive = More Squish
     ```
 
-    1. Ensure that your [tool_probe](../configuration/tool.md#tool_probe) section's `z_offset` variable is set to `0`.
+    1. Ensure that your `[tool_probe]` section's `z_offset` variable is set to `0`.
     2. Home the printer with `G28`.
     3. Run `QUAD_GANTRY_LEVEL`.
     4. Run `G28 Z`.
     5. Run `PROBE_CALIBRATE`.
-    6. Change the `z_offset` variable in the tool's [[tool_probe]](../configuration/tool.md#tool_probe) section.
+    6. Change the `z_offset` variable in the tool's `[tool_probe]` section.
 
     !!! warning "SAVE_CONFIG"
         Because klipper-toolchanger-easy reroutes probe to each tool object, when you run `SAVE_CONFIG` it saves the values to `[probe]`. Having a `[probe]` section in your config while also having `[tool_probe]` will cause issues with Klipper. `SAVE_CONFIG` should be avoided.

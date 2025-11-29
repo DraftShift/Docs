@@ -54,5 +54,5 @@ G-code offsets refers to the `[tool Tn]` parameters `gcode_z_offset`, `gcode_x_o
 There are multiple methods of calibrating the G-code offsets, 
 
 {% for method, data in cal_methods.items() %}
-- **[{{ method }}]({{ data.url }}){:target="_blank"}** – {{ data.description }}
+- **[{{ method }}]({{ data.url|relative_url }}){% if data.url.startswith("http") %}{:target="_blank"}{% endif %}** – {{ data.description }}
 {% endfor %}

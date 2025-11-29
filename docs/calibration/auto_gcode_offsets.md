@@ -4,14 +4,14 @@ Automated calibration uses specialized tools to measure X/Y/Z offsets more preci
 
 {% for method, data in cal_methods.items() %}
 {% if method != "Manual" %}
-- **[{{ method }}]({{ data.url }}){:target="_blank"}** – {{ data.description }}
+- **[{{ method }}]({{ data.url|relative_url }}){% if data.url.startswith("http") %}{:target="_blank"}{% endif %}** – {{ data.description }}
 {% endif %}
 {% endfor %}
 
 ## Calibration With SexBall Probe
 
 ### Define Switch Location
-With the SexBall Probe mounted to the printer's bed extrusion, the absolute position of the ball needs to be added to the [[gcode_macro _CALIBRATION_SWITCH]](#) variables.
+With the SexBall Probe mounted to the printer's bed extrusion, the absolute position of the ball needs to be added to the [[gcode_macro _CALIBRATION_SWITCH]](../software/ktc-easy/configuration/toolchanger.md#gcode_macro-_calibration_switch) variables.
 
 ``` cfg title="Calibration switch variables example." hl_lines="2 3 4"
   [gcode_macro _CALIBRATION_SWITCH]
@@ -26,10 +26,10 @@ With the SexBall Probe mounted to the printer's bed extrusion, the absolute posi
 3. Home z again with `G28 Z`.
 4. Manually move the gantry so that the tool is ~1mm over the ball.
 5. Run `M114` to output the current position to console.
-6. Enter the positions in to the [[gcode_macro _CALIBRATION_SWITCH]](#) variables.
+6. Enter the positions in to the [[gcode_macro _CALIBRATION_SWITCH]](../software/ktc-easy/configuration/toolchanger.md#gcode_macro-_calibration_switch) variables.
 
 ### Enable Multi Axis Probing
-- Enable the multi-axis probe by defining the [[tools_calibrate]](#) section in [toolchanger-config.cfg](#).
+- Enable the multi-axis probe by defining the [[tools_calibrate]](../software/ktc-easy/configuration/toolchanger.md#tools_calibrate) section in [toolchanger-config.cfg](../software/ktc-easy/configuration/toolchanger.md).
 - Set the `pin` variable to the pin that your calibration probe is connected to.
 - Calibrate `trigger_to_bottom_z`
 
