@@ -1,4 +1,4 @@
-# Park Positions
+# Dock Positions
 {% macro code_block() %}
 ``` cfg title="[tool Tn] example." hl_lines="5 6 7"
   [tool T0]
@@ -24,29 +24,29 @@
 - **params_park_z**  
   The absolute Z-position where the tool and shuttle mate in the dock, determined when the TAP (or Z-probe) triggers.
 
-## How to Find Park Positions
+## How to Find Dock Positions
 
-Follow this guide to accurately locate each toolhead dock and set the correct parameters in your toolhead configuration.
+Follow this guide to accurately locate each tool's dock and set the correct parameters in your [tool configuration](../software/ktc-easy/configuration/tool.md).
 
-!!! warning "Start slow."
-    Increase speed only after confirming clearances.
-    Crashing into the dock can cause serious damage.
+!!! warning "Start Slow"
+    - Increase speed only after confirming clearances.
+    - Crashing into the dock can cause serious damage.
 
 ### 1. Prepare the Printer
 1. With T0 mounted on the shuttle, 
 2. Run `G28` to home the printer.
 3. Run `QUAD_GANTRY_LEVEL`.
-4. Run `G28 Z` to home Z axis again.
+4. Run `G28 Z` to home the Z axis again.
 
-### 2. Adjusting the tool resting position in the dock
+### 2. Adjusting the tool's resting position in the dock
 1. Ensure the dock's back plate is loosened and lowered to its lowest position.
-2. Using manual controls (Mainsail, Fluidd, KlipperScreen), carefully move **Tool 0 (T0)** into its dock.
-3. Align the **feet of the backplate** with the **rear of the dock**.
-4. Lower the gantry until the tool starts lifting off the shuttle.
+2. Using manual controls (Mainsail, Fluidd, KlipperScreen), carefully move tool 0 into its dock.
+3. Align the feet of the tool's Backplate with the rear of the dock.
+4. Lower the gantry until the tool's pins start lifting out of the shuttle's bushings.
 5. Adjust the dock’s back plate up until it touch the feet of the tool's backplate.
 
 !!! info "Adjustable Dock"
-    - The back of each dock is adjustable, ensuring the tool sits flat and the pins align properly when the shuttle picks it up.
+    - Each dock has an adjustable rear section that ensures the tool sits level and that the alignment pins engage correctly when the shuttle receives it.
     - If your toolhead leans or does not mate cleanly, adjust the dock’s back plate.
 
 ### 3. Find the actual pickup position
@@ -54,15 +54,16 @@ Follow this guide to accurately locate each toolhead dock and set the correct pa
 2. Manually position the tool being calibrated into the dock by hand.
 3. Manually jog the shuttle underneath the tool.
 4. Jog upward in small increments, meshing the tool on the shuttle until the OptoTap sensor triggers.
-5. Record the X/Y/Z positions where the TAP sensor triggers on a paper.
+5. Record the X/Y/Z positions where the OptoTap sensor triggers.
 6. Redo steps 2-5 for each tool.
 
 ### 4. Update the Toolhead Config
-- Insert your recorded values into the `params_park_x`, `params_park_y`, and `params_park_z` variables of each tool’s config.
+- Insert your recorded values into the `params_park_x`, `params_park_y`, and `params_park_z` variables of each [tool’s config](../software/ktc-easy/configuration/tool.md).
 
 !!! tip "Adding 1mm to Z"
     The `params_park_z` value is the height where the backplate and shuttle fully mate and the TAP sensor triggers.
-    Increasing the recorded value by 1mm will help ensure the OptoTap sensor is triggered and the tool is picked up correctly.
+
+    Increasing the recorded value by 1mm will help ensure the OptoTap sensor gets triggered and the tool is picked up correctly.
 
 {{ code_block() }}
 

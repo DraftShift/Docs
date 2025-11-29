@@ -56,15 +56,15 @@ With the SexBall Probe mounted to the printer's bed extrusion, the absolute posi
     1. Move the gantry so that the nozzle touches the top of the ball.
     2. Using small increments, lower the gantry until you hear the switch trigger.
     3. Run `M114` to log the gantry's current position to the console.
-    4. Keep an eye on the tool in the shuttle and continue to lower the gantry. The point where the tool starts to lift in the shuttle is the point where the switch has bottomed out.
+    4. Watching the tool on the shuttle, continue to lower the gantry. The point where the tool starts to lift, is the point where the switch has bottomed out.
     5. Run `M114` again and the difference between the 2 logged values is your `trigger_to_bottom_z` value.
 
 ### SexBall Nozzle Calibration
 
-1. Clean all the nozzles of your tools. Any debris on the tool will effect the accuracy of the results.
+1. Any debris on the tool will effect the accuracy of the results. Clean all of the tool's nozzles thoroughly. 
 2. With tool 0 on the shuttle, home the printer with `G28`.
 3. Run `QUAD_GANTRY_LEVEL` to level the gantry.
-4. Home z again with `G28 Z`.
+4. Home Z again with `G28 Z`.
 5. With your hand over the emergency stop, run `CALIBRATE_ALL_OFFSETS`.
 
 !!! info "CALIBRATE_ALL_OFFSETS"
@@ -77,18 +77,18 @@ With the SexBall Probe mounted to the printer's bed extrusion, the absolute posi
 ### SexBall Probe Z Offset Calibration
 
 
-1. Clean the tools nozzle. Any debris on the tool will effect the accuracy of the results.
+1. Any debris on the tool will effect the accuracy of the results. Clean all of the tool's nozzles thoroughly. 
 2. With tool 0 on the shuttle, home the printer with `G28`.
 3. Run `QUAD_GANTRY_LEVEL` to level the gantry.
 4. Home z again with `G28 Z`.
 5. Run `CALIBRATE_NOZZLE_PROBE_OFFSET`.
 
 !!! info "CALIBRATE_NOZZLE_PROBE_OFFSET"
-    `CALIBRATE_ALL_OFFSETS` will move the tool over the probe and heat it to 150c before locating the probe. It will then bottom out the probe and use the tool's OptoTap sensor to determine the `[tool_probe Tn]`'s `z_offset`.
+    `CALIBRATE_NOZZLE_PROBE_OFFSET` will move the tool over the probe and heat it to 150c before locating the probe. It will then bottom out the probe and use the tool's OptoTap sensor to determine the `[tool_probe Tn]`'s `z_offset`.
 
     The value logged to the console is the value to be used for the `[tool_probe Tn]`'s `z_offset`.
 
-!!! tip "Don't Trust the Robots"
+!!! warning "Don't Trust the Robots"
     The `[tool_probe Tn]` `z_offset` should be verified using a small test print. Because this procedure depends on the accuracy of the `trigger_to_bottom_z` value, it is advisable to confirm the offset by performing a short test print and noting any adjustments required to achieve proper first-layer adhesion.
 
     - If you need to raise the nozzle during the test print, the `z_offset` must be adjusted closer to zero by the same amount.

@@ -28,11 +28,10 @@ Manual calibration uses a paper test to measure Z-offsets between tools.
 4. Level the gantry: `QUAD_GANTRY_LEVEL`.
 5. Home Z again: `G28 Z`.
 6. Raise the nozzle 10mm: `G1 Z10 F600`.
-
 7. Manually remove the current tool and place the next tool on the shuttle
 8. Perform a [manual paper test](#manual-paper-test) and adjust Z until you feel slight resistance
 9. Once satisfied, run `M114` and copy the Z value from the console.
-10. Update the `gcode_z_offset` value in `[tool Tn]` section of the tool's config file
+10. Update the `gcode_z_offset` value in [[tool Tn]](../software/ktc-easy/configuration/tool.md#tool) section of the [tool's config](../software/ktc-easy/configuration/tool.md) file.
 11. Repeat from **step 6** for all remaining tools
 12. Run: `FIRMWARE_RESTART`
 
@@ -41,16 +40,16 @@ Manual calibration uses a paper test to measure Z-offsets between tools.
 The “paper test” involves placing a standard sheet of paper between the build plate and the nozzle, then carefully jogging the nozzle downward until you feel slight resistance as the paper is moved back and forth.
 
 !!! tip "Key Points"
-    - Use regular copy paper (approximately 100 microns / 0.1mm thick)
-    - Always perform the test at **room temperature** (both nozzle and bed cold)
-    - Ensure the nozzle and bed are clean and free of debris
-    - Use the same surface/tape that you normally print on
+    - Use regular copy paper (approximately 100 microns / 0.1mm thick).
+    - Always perform the test at **room temperature** with the nozzle and bed cold.
+    - Ensure the nozzle and bed are clean and free of debris.
+    - Use the same surface that you typically print on.
 
 1. Cut a small piece of paper (approximately 5x3 cm).
 2. Place it between the nozzle and bed.
 3. Using manual movements (Mainsail/Fluidd/KlipperScreen), jog the nozzle down in small increments.
 4. Push the paper back and forth to feel for resistance.
-5. Continue until you feel slight friction (paper can slide but with resistance)
+5. Continue until you feel slight friction where the paper slides, but with some resistance.
 
 ### G-code XY Offsets
 
