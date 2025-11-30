@@ -41,6 +41,10 @@ def generate_guides_nav(guides_root):
             categories.append(item)
     
     categories.sort()  # Sort alphabetically
+    # Manual reorder of certain guides folders
+    if "stealthchanger_assembly" in categories:
+        categories.remove("stealthchanger_assembly")
+        categories.insert(0, "stealthchanger_assembly")
     
     for category in categories:
         category_path = os.path.join(guides_root, category)

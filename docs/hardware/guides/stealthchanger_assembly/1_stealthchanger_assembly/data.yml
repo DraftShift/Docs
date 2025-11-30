@@ -1,5 +1,5 @@
 title: Stealthchanger Assembly
-author: "MikeyMike"
+author: "DraftShift Design"
 primary_parts:
   - "VoronV2"
   - "Cable Management"
@@ -14,60 +14,27 @@ accent_parts:
 
 
 summary: >
-  This is the full assembly of a Voron V2 250mm with stealthchanger
+  This is the full assembly of a Voron V2 250mm with Stealthchanger.  
+  
 
-  You can download the full CAD .STEP file from here: [https://github.com/N3MI-DG/sc-guides/tree/main](https://github.com/N3MI-DG/sc-guides/tree/main){target="_blank"}
+  You can [download the full CAD .STEP file from here](https://github.com/N3MI-DG/sc-guides/tree/main){target="_blank"}.
+  
 
   **Credits:**
-
-  - **[hartk1213](https://github.com/hartk1213){target="_blank"}:** Anthead
-
-  - **[TheSin-](https://github.com/TheSin-){target="_blank"}:** StealthChanger Backplate & PCB Mount
 
   - **[N3MI-DG](https://github.com/N3MI-DG){target="_blank"}:** StealthChanger 250 assembly CAD
 
 printed_bom:
-   Stealthchanger CAD:
+   Stealthchanger Printed parts:
      qty: 1
      urls:
-       Link: "https://github.com/N3MI-DG/sc-guides/tree/main"
-
-#   LED Solder Jig:
-#     qty: 1
-#     urls:
-#       Link: "https://download-directory.github.io/?url=https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture"
+       Link: "https://github.com/DraftShift/"
 
 hardware_bom:
-   M3x6 BHCS Screws:
-     qty: 6
-#   M3x8 BHCS Screws:
-#     qty: 10
-#   M3x12 BHCS Screws:
-#     qty: 4
-#   M3x14 BHCS Screws:
-#     qty: 2
-#   M3x8 SHCS Screws:
-#     qty: 4
-#   M3x12 BHCS Screw:
-#     qty: 1
-#   M3x28 SHCS Screws:
-#     qty: 2
-#   M3 Heat Insert:
-#     qty: 19
-#   6x3mm N52 Magnets:
-#     qty: 2
-#   Voron Revo Hotend:
-#     qty: 1
-#   Orbiter 2.x Extruder:
-#     qty: 1
-#   Nitehawk36 Toolhead Board:
-#     qty: 1
-#   25x10mm Radial Fan:
-#     qty: 1
-#   40x10mm Centrifugal/Blower Fan:
-#     qty: 2
-#   4x2mm PTFE ~40mm Long:
-#     qty: 1
+  Voron V2:
+      qty: 1
+  Stealthchanger Hardware set:
+     qty: 1
 
 steps:
   - description: "This is Stealthchanger on a Voron V2 250mm."
@@ -174,13 +141,27 @@ steps:
     focus:
       - "Tophat"
 
-  - description: "And that's all the parts. Now check out the other guides, they explain how to build and install everything"
+  - description: "And that's the parts. Now check out the other guides, they explain how to build and install everything (and the many different options and variations)"
     camera:
       azimuth: 60
       polar: 65
       distance: 95
       pan_x: 0.00
       pan_y: 0.00
+    visible:
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+      - "Cable Management"
+      - "Doorbuffer"
+      - "Docks"
+      - "Tools"
+      - "Tophat"
+    focus:
+      - "Cable Management"
+      - "Docks"
+      - "Doorbuffer"
+      - "Stealthchanger Shuttle"
+      - "Tools"
+      - "Tophat"
 
-      
 
