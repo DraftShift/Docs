@@ -2,6 +2,8 @@ title: Sexball Probe
 author: "DraftShift Design"
 summary: >
     Multi axis probe for nozzle calibration.
+
+
     !!! tip "Where can I get one?"
         The hardware components for this guide are all included as a part of LDO's `StealthChanger Base Kit`.
 
@@ -111,7 +113,7 @@ steps:
       - "Ball"
       - "Shaft"
 
-  - description: "The Sexball Probe is now complete and ready to be installed in to the printer. It can be installed in the front or rear of the machine, it's up to you. It's possible to reclaim some more printable by mounting it in the front however. To do this you will need to move your bed back to the furthest point where your nozzle can reach and reset your zero point in your printer config. Mount the Sexball Probe using the M3x25 SHCS screws and hammer nuts allowing the tool's nozzle to reach past the center of the ball by ~6mm."
+  - description: "The Sexball Probe is now complete and ready to be installed in to the printer. It can be installed in the front or rear of the machine, it's up to you. It's possible to reclaim some more printable area by mounting it in the front however. To do this you will need to move your bed back to the furthest point where your nozzle can reach and reset your zero point in your printer config. Mount the Sexball Probe using the M3x25 SHCS screws and hammer nuts allowing the tool's nozzle to reach past the center of the ball by ~6mm."
     camera:
       azimuth: 26
       polar: 75
