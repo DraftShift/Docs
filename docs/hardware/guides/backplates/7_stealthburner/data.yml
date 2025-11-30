@@ -40,7 +40,7 @@ steps:
     focus:
       - "M3 Heat Inserts"
 
-  - description: "Install the 6x3mm magnet using super glue making sure the polarity attracts the Backplate to the Shuttle."
+  - description: "Install the 6x3mm magnet using glue or epoxy making sure the polarity attracts the Backplate to the Shuttle."
     camera:
       azimuth: 244
       polar: 129
@@ -102,7 +102,7 @@ steps:
     focus:
       - "Top Pins Step"
 
-  - description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with super glue."
+  - description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with glue or epoxy."
     camera:
       azimuth: 318
       polar: 77

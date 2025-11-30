@@ -1,1 +1,0 @@
-![Soon](../assets/DSD_Soon.svg)

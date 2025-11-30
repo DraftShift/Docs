@@ -1,9 +1,7 @@
 
-
-## Klipper-toolchanger-easy
+## Clone and Install
 Connect to the printer via SSH and enter the following commands:
 
-### Clone and Install
 ``` bash { .copy }
 cd ~/
 git clone https://github.com/jwellman80/klipper-toolchanger-easy.git
@@ -21,7 +19,7 @@ You will be prompted to decide a Z probe solution. A typical StealthChanger uses
 !!! example "Eddy Current"
     Eddy current sensors on StealthChanger have additional requirements and some limitations, they are considered experimental. 
 
-### File Structure
+## File Structure
 After installation, your configuration will be organized as follows:
 
 ```
@@ -40,13 +38,13 @@ After installation, your configuration will be organized as follows:
 └── toolchanger-config.cfg      # User-editable overrides
 ```
 
-### Include Configs
+## Include Configs
 Include the configuration by adding the following to the start of your `printer.cfg`
 ``` cfg { .copy }
 [include toolchanger/readonly-configs/toolchanger-include.cfg]
 ```
 
-### Moonraker Config
+## Moonraker Config
 Optional, but recommended, add the following to your `moonraker.conf` to enable automatic updates:
 
 ``` cfg { .copy }

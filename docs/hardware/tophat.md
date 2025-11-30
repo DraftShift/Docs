@@ -21,7 +21,7 @@ The Extrusion Tophat is like an extension of your printer, it uses the same extr
 ![Extrusion Tophat](../assets/tophat_extrusion.png)
 
 !!! tip "LDO Kit"
-    The extra hardware for the Extrusion Tophat comes as part of the LDO Tophat and Door Buffer Kit.
+    The hardware required for the Extrusion Tophat comes as part of LDO's `Tophat and Door Buffer Kit`.
 
 ### Printed Tophat
 The Printed Tophat was developed for users that do not have easy access to aluminium extrusion or acrylic panels. The only additional hardware is screws, nut and heat inserts.

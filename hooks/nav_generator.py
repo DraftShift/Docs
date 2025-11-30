@@ -71,7 +71,7 @@ def generate_guides_nav(guides_root):
         # Add overview if it exists
         if os.path.exists(category_index):
             category_nav[category_display].append({
-                'Overview': f'hardware/guides/{category}/index.md'
+                f'{category_display} Overview': f'hardware/guides/{category}/index.md'
             })
         
         # Add each guide

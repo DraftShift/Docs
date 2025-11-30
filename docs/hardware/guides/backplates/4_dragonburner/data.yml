@@ -2,8 +2,9 @@ title: Backplate - DragonBurner
 author: "DraftShift Design"
 summary: >
     StealthChanger Backplate for the DragonBurner.
-    <br>
-    The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
+
+
+    - The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
 
 printed_bom:
   DragonBurner Backplate:
@@ -50,7 +51,7 @@ steps:
     focus:
       - "M3 Heat Inserts"
 
-  - description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use super glue."
+  - description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use glue or epoxy."
     camera:
       azimuth: 244
       polar: 129

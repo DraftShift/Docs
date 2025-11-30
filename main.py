@@ -78,7 +78,7 @@ def define_env(env):
         return ""
     
     @env.macro
-    def github_contributors(repo="DraftShift/StealthChanger"):
+    def github_contributors(repo="DraftShift/Docs"):
         """Fetch and display GitHub contributors for a repository (cached during build)"""
         import urllib.request
         import json
@@ -155,3 +155,49 @@ def define_env(env):
                 except:
                     pass
             return f'<p>Unable to load contributors: {str(e)}</p>'
+
+    @env.filter
+    def relative_url(path):
+        """Convert an absolute docs path to a relative path from the current page.
+        
+        Example: From 'calibration/index.md', '/hardware/calibration_tools/#sexball-probe'
+        becomes '../hardware/calibration_tools.md#sexball-probe'
+        """
+        import posixpath
+        
+        # External URLs - return as-is
+        if path.startswith(('http://', 'https://')):
+            return path
+        
+        # Not an absolute path - return as-is
+        if not path.startswith('/'):
+            return path
+        
+        # Get current page path from the environment
+        try:
+            current_page = env.page.file.src_path.replace('\\', '/')
+        except (AttributeError, TypeError):
+            # Fallback if page context not available - just strip leading slash and fix anchor
+            if '#' in path:
+                path_part, anchor = path.split('#', 1)
+                return path_part.lstrip('/') + '.md#' + anchor
+            return path.lstrip('/')
+        
+        # Split anchor/fragment from path
+        if '#' in path:
+            path_part, anchor = path.split('#', 1)
+            anchor = '.md#' + anchor
+        else:
+            path_part = path
+            anchor = ''
+        
+        # Remove leading/trailing slashes and normalize
+        target_path = path_part.strip('/')
+        
+        # Get directory of current page
+        current_dir = posixpath.dirname(current_page)
+        
+        # Calculate relative path
+        relative = posixpath.relpath(target_path, current_dir)
+        
+        return relative + anchor

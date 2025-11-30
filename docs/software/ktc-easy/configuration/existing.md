@@ -2,7 +2,9 @@
 In order for [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} to operate, some of your existing config will either be made redundant or need to be transferred in to a tool config file.
 
 ## Toolhead Sections
-Everything related to the toolhead will be moved in to a [tool config](../configuration/tool.md) file or made redundant. For now, its easier to comment these items out so you can reference them later if required.
+Everything related to the toolhead will be moved in to a [tool config](../configuration/tool.md) file or made redundant. 
+
+For now, it's best to comment out these items so they can be easily referenced later if needed.
 
 * [mcu mcu_name]
 * [extruder]
@@ -14,7 +16,7 @@ Everything related to the toolhead will be moved in to a [tool config](../config
 There may be more sections such as RGB, thermistors, etc. They all should be commented out.
 
 !!! tip "Toolhead Boards"
-    If you were already running a toolhead board, its likely these sections are all in a separate file. You can simply comment out the include in printer.cfg.
+    If you were already running a toolhead board, it's likely these sections are all in a separate file. You can simply comment out the include for that file in your printer.cfg.
 
 ## Homing Sections
 [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} has its own homing routine and requires any existing overrides to be disabled.
@@ -24,7 +26,7 @@ There may be more sections such as RGB, thermistors, etc. They all should be com
 * [safe_z]
 
 !!! info "[probe]"
-    Because each tool now has a TAP sensor, `[probe]` will be redefined as [[tool_probe]](../configuration/tool.md#tool_probe) and become part of your [tool config](../configuration/tool.md).
+    Because each tool now has its own OptoTap sensor, `[probe]` will be redefined as [[tool_probe]](../configuration/tool.md#tool_probe) and become part of your new [tool config](../configuration/tool.md).
 
 ## Saved Values
 If you have any if the following saved values at the bottom of printer.cfg that were saved via the `SAVE_CONFIG` macro, they will need to be removed.

@@ -9,7 +9,7 @@ An umbilical cable is required for each toolhead. They typically route from a [d
 To help the umbilical move in a controlled fashion, we employ the use of a flat spring steel or piano wire. This addition gives the umbilical a controlled arc and helps it return to its resting position safely.
 
 !!! tip "Spring Steel?"
-    Flat spring steel (3x0.3mm) is the preferred aid for the tool's umbilical. It provides better lateral control and is what comes supplied as part of the LDO Toolhead and Dock Kit.
+    Flat spring steel (3x0.3mm) is the preferred aid for the tool's umbilical. It provides better lateral control and is what comes supplied as part of the LDO `Toolhead and Dock Kit`.
 
 ![Umbilical Cables](../assets/umbilicals.png){:width="540"}
 
@@ -19,7 +19,7 @@ Originally by [ManCheetah](https://www.printables.com/@EddieSha_454383){:target=
 ![Fanny Pack](../assets/fanny_pack.png){:width="540"}
 
 ## Wire Duct
-The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your printers underside. Under its cover is an EMS compatible panel for you to mount any extra pieces you might need. 
+The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your printers electronics bay. Under its cover is an EMS compatible panel for you to mount any extra pieces you might need. 
 
 ![Wire Duct](../assets/wire_duct.png){:width="540"}
 

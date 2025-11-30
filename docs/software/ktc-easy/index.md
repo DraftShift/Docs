@@ -10,4 +10,4 @@
 * Deadband heating — Adds less strict heating requirements to increase tool change speeds
 
 ## Prerequisites
-Before installing [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"}, it is recommended that you first have a functional klipper based 3d printer. 
+Before installing [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"}, it is recommended that you first have a functional [Klipper](https://www.klipper3d.org/){:target="_blank"}-based 3d printer. 

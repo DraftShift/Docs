@@ -16,9 +16,10 @@ Every toolchanger build is different, the end user must calculate the required p
     - Combined total = `400,2W`
 
 In this example, 6 toolheads equipped with 70W heaters produce a combined load of 280W@24V. This alone exceeds the standard Voron 200W-24V power supply before accounting for motion stepper motors, electronics, fans, and other system components which would typically consume around 100-120W@24V.
-So be safe and choose an adequately rated powersupply for your expected current consumption.
 
-!!! warning current draw baseline amd spikes
+So be safe and choose an adequately rated PSU for your expected current consumption.
+
+!!! warning "Current Draw Baseline and Spikes"
     A standard Voron v2 draws somewhere in the 50-120w range "just sitting there" with all heaters and fans off, make sure you account for your baseline and spikes when you run the numbers for your power consumption.
 
 !!! warning "DC Beds"

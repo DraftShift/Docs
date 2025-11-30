@@ -1,8 +1,11 @@
 
 The toolchanger-config sets up the main toolchanger object as well as homing and tool calibration. It is important to have an understanding of each section and they effect the base klipper installation.
 
-### [rounded_path]
-Rounded path gives non-printing gcode moves calculated rounded corners to minimize jerk and increase toolchange times. 
+!!! note "Reference Examples"
+    The following sections are for reference only. The contetnts of the reference examples may differ from your config. For complete examples, please reference the [Examples](../examples.md) page.
+
+## [rounded_path]
+Rounded path gives non-printing G-code moves calculated rounded corners to minimize jerk and increase toolchange times. 
 
 ``` cfg
 [rounded_path]
@@ -10,7 +13,7 @@ resolution: 0.2
 replace_g0: False
 ```
 
-### [force_move]
+## [force_move]
 [Force move](https://www.klipper3d.org/Config_Reference.html?h=force_move#force_move){:target="_blank"} is built-in to [Klipper](https://www.klipper3d.org/){:target="_blank"} and is required to be enabled for [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"}.
 
 ``` cfg
@@ -18,7 +21,7 @@ replace_g0: False
 enable_force_move: True
 ```
 
-### [toolchanger]
+## [toolchanger]
 The `[toolchanger]` section enables the tool changing capability and contains variables specific to changing tools.
 
 ``` cfg
@@ -35,9 +38,9 @@ require_tool_present: True # Set to False to allow toolless movement. Toolless m
 ```
 
 !!! info "Info"
-    Further information on the [toolchanger] section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
+    Further information on the [toolchanger] section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#toolchanger){:target="_blank"} documentation.
 
-### [gcode_macro homing_override_config]
+## [gcode_macro homing_override_config]
 [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} has its own homing routine that homes the Y axis first which allows the tool on the shuttle to be clear of the umbilical cables before homing the X axis. 
 
 `homing_override_config` variables can be used to switch between sensorless and endstop homing.
@@ -51,13 +54,13 @@ variable_stepper_driver: "tmc2209"
 variable_homing_current: 0.49
 ```
 
-### [gcode_macro SET_TEMPERATURE_WITH_DEADBAND]
+## [gcode_macro SET_TEMPERATURE_WITH_DEADBAND]
 Adjusting the default deadband will change the precision required when using the `M109` macro.
 
 !!! tip "Deadband?"
     Deadband defines the acceptable temperature range around the target setpoint within which the printer considers the temperature “close enough” to proceed. For example, with a deadband value of 4, the printer will continue operation once the actual temperature is within ±2 °C of the target. 
     
-    * Increasing the deadband can allow faster tool change times but reduces temperature precision. 
+    * Increasing the deadband can allow faster tool change times, but reduces temperature precision. 
     * Decreasing the deadband improves accuracy at the cost of longer stabilization times.
 
 ``` cfg
@@ -65,7 +68,7 @@ Adjusting the default deadband will change the precision required when using the
 variable_default_deadband: 4.0 
 ```
 
-### [gcode_macro _CALIBRATION_SWITCH]
+## [gcode_macro _CALIBRATION_SWITCH]
 Change the `_CALIBRATION_SWITCH` macro variables to the absolute position of the top of your multi axis calibration probe. 
 
 This section is optional and only required if you are using a calibration probe.
@@ -78,10 +81,10 @@ variable_z: 5.00
 gcode:
 ```
 
-### [tools_calibrate]
-Defining the [tools_calibrate] section enables the multi axis probe calibration. Change the variables to match your requirements.
+## [tools_calibrate]
+Defining the `[tools_calibrate]` section enables the multi axis probe calibration. Change the variables to match your requirements.
 
-This section is optional and only required if you are using a calibration probe.
+This section is optional and only required if you are using an automated calibration probe such as [SexBall Probe](../../../hardware/calibration_tools.md#sexball-probe).
 
 ``` cfg
 [tools_calibrate]

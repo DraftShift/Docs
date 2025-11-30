@@ -45,7 +45,7 @@ steps:
     focus:
       - "Bushings"
 
-  - description: "Secure the 3 6x3mm magnets with super glue."
+  - description: "Secure the 3 6x3mm magnets with glue or epoxy."
     camera:
       azimuth: 295
       polar: 60

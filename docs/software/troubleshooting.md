@@ -1,8 +1,9 @@
 
 ## Common Issues
 ### INITIALIZE_TOOLCHANGER - Tool Not Recognized
-- Check that you have the correct pin assigned to the TAP sensor.
+- Check that you have the correct pin assigned to the OptoTap sensor.
 - If the tool initializes while off the shuttle, the logic is flipped. Either add or remove `!` to the pin definition.
+- Some OptoTap sensors require a pullup to operate. Try adding a `^` to the pin definition.
 - Check wring/crimps.
 
 ---
@@ -34,5 +35,4 @@
 
 ---
 
-## Community
-StealthChanger has an active and growing community of people who are willing to help. If your having trouble finding the information you need. Consider reaching out to our communities on [Discord](https://discord.gg/draftshift){target="_blank"} or [Facebook](https://www.facebook.com/groups/449879874593718/){target="_blank"} and be sure to mention your issue could not be resolved by the information here. We will do our best to accommodate the issue in the future.
+{% include "_templates/community_help.md" %}

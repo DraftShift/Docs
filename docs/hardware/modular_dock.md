@@ -3,30 +3,30 @@ search:
   boost: 2 
 ---
 
-The Modular Dock gives you a place to rest the tools while they are not in use. Its modular design allows for flexible configurations to match any printer and toolhead combination.
+The Modular Dock gives you a place to rest the tools while they are not in use. Its modular design allows for flexible configurations to suit any printer and toolhead combination.
 
 ## Application
-The modular dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](door_buffer.md#crossbar). The [crossbar](door_buffer.md#crossbar) is a part of the [Door Buffer](door_buffer.md) and offers a sturdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](door_buffer.md#crossbar).
+The Modular Dock can be used in a variety of ways. The most common and recommended way is to use it in combination with a [crossbar](door_buffer.md#crossbar). The [crossbar](door_buffer.md#crossbar) is a part of the [Door Buffer](door_buffer.md) and offers a sturdy mounting point for the dock to be supported both above by the frame and below by the [crossbar](door_buffer.md#crossbar).
 
-Alternatively, the dock can be mounted to the printers frame using the [Stabilizers](#stabilizers) and [Link](#links) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](door_buffer.md#crossbar).
+Alternatively, the dock can be mounted to the printer's frame using the [Stabilizers](#stabilizers) and [Link](#links) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](door_buffer.md#crossbar).
 
 Finally, the docks can be hung from the top of the printers frame with no lower support. This is the least stable option, should only used when the other options are not available to you. If you choose to go for top-mounted docks it's recommended to mount extra corner brackets to avoid the top-extrusion twisting around the blind joints.
 
 ## Modularity
 Because of its modularity, the Modular Dock has many differing pieces that can become overwhelming rather quickly. To help navigate the options, the modular dock is broken down into the following subcomponents:
 
-* [Base](#base) - The section that the tools rests on while docked.
-* [Blocker](#blocker) - A section that mounts inside the [base](#base) that blocks the nozzle while docked which helps with ooze control.
+* [Base](#base) - The section that the tool rests on while docked.
+* [Blocker](#blocker) - A section that mounts inside the [base](#base) and blocks the nozzle while docked, helping with ooze control.
 * [Back](#back) - Attaches to the rear of the [base](#base) to allow adjustment of the tools resting position.
 * [Wiper](#wiper) - A means of wiping the nozzle as the toolhead is exiting the dock.
-* [Frame](#frame) - The upright portion of the dock that connects to the top of the printers frame and optionally a [crossbar](door_buffer.md#crossbar).
-* [Links](#links) - Attaches to the bottom of the docks, increases rigidity for hanging docks.
+* [Frame](#frame) - The upright portion of the dock that connects to the top of the printer's frame and optionally a [crossbar](door_buffer.md#crossbar).
+* [Links](#links) - Attaches to the bottom of the docks, increasing rigidity for hanging docks.
 * [Stabilizers](#stabilizers) - Ties the docks in to the side of the frame, further increasing rigidity for hanging docks.
 * [Containers](#containers) - An optional addon that add a bit of flair to the front of the dock.
 
 ## Components
 ### Base
-The base is a large section that is toolhead specific and has been shaped to match the bottom of the toolhead. It defines the width of the dock and helps define the position the tool sits in on the Y Axis. The base can be availiable in 2 variants, `standard` and `stubby`. Every toolhead has a `standard` base, but not all toolheads have the smaller `stubby` base.
+The base is a large section that is toolhead specific which has been shaped to match the bottom of the toolhead. It defines the width of the dock and helps define the position that the tool sits in on the Y Axis. The base can be availiable in 2 variants, `standard` and `stubby`. Every toolhead has a `standard` base, but not all toolheads have the smaller `stubby` base.
 
 !!! warning "Smaller is better right?"
     The `stubby` base is **NOT** compatible when using a [Door Buffer](door_buffer.md). If you are using a [Door Buffer](door_buffer.md), you MUST use the `standard` base. 
@@ -36,7 +36,11 @@ The base is a large section that is toolhead specific and has been shaped to mat
 | ![Standard](../assets/dock-base_standard.png) | ![Stubby](../assets/dock-base_stubby.png) |
 
 ### Blocker
-The blocker is a section that is toolhead agnostic and mounts inside the [base](#base). It serves as a barrier to prevent ooze while the tool is docked. It is availiable in 2 variants, `cup` and `spring steel`. There is no real advantage using one over the other, its more about what you have available to you. The `cup` version uses a pen spring, screw and heatset insert, while the `spring steel` version strip of the spring steel. Both versions use high temperature RTV silicone to block the nozzle.
+The Blocker is a section that is toolhead agnostic and mounts inside the [Base](#base). It serves as a barrier to prevent ooze while the tool is docked. It is availiable in 2 variants, `cup` and `spring steel`. 
+
+There is no real advantage using one over the other, its more about what you have available to you.
+
+The `cup` version uses a pen spring, screw and heatset insert, while the `spring steel` version uses a strip of flat spring steel. Both versions use high temperature RTV silicone to block the nozzle.
 
 !!! tip "LDO Toolhead and Dock Kit"
     The LDO Toolhead and Dock Kit includes pre moulded `spring steel` blockers. If you are using the LDO kit, you will need to print the `spring steel` variant.
@@ -46,7 +50,7 @@ The blocker is a section that is toolhead agnostic and mounts inside the [base](
 | ![Cup](../assets/dock-cup_blocker.png) | ![Spring Steel](../assets/dock-spring_blocker.png) |
 
 ### Back
-The Back plate is toolhead specific and bolts to the rear of the [base](#base). Adjusting it up or down can help maintain the tool's alignment while it is docked.
+The Back plate is toolhead specific and bolts to the rear of the [Base](#base). Adjusting it up or down can help maintain the tool's alignment while it is docked.
 
 | Back |
 | :-: |
@@ -55,7 +59,7 @@ The Back plate is toolhead specific and bolts to the rear of the [base](#base). 
 ### Wiper
 The Wiper is toolhead agnostic and mounts to the [Back](#back) plate. There are 2 variants, `ptfe` and `bambu`. Both use a piece of PTFE tube to wipe the nozzle as it exits the dock. The `bambu` version emulates the wiper from the P1/X1 series of printers and can be printed or purchased from [BambuLab](https://bambulab.com){:target="_blank"}.
 
-!!! tip "Wipers are optional"
+!!! tip "Wipers Are Considered Optional"
     If you get excess ooze while returning to the print, a wiper may help.
 
 | Wiper - PTFE | Wiper - Bambu |
@@ -63,12 +67,12 @@ The Wiper is toolhead agnostic and mounts to the [Back](#back) plate. There are 
 | ![PTFE](../assets/dock-ptfe_wiper.png) | ![Bambu](../assets/dock-bambu_wiper.png) | -->
 
 ### Frame
-The frame is what can be considered the front of the dock. It consists of a left piece, right piece, top piece and bottom piece. 
+The Modular Dock Frame can be considered to be the front of the dock. It consists of left, right, top and bottom pieces. 
 
 The left and right pieces come in 2 variants, `standard` and `short`. This determines the height of the dock. 
 
-!!! warning "Short frame saves more space?"
-    Having a shorter frame can give you more printable area under the bed, but it does have some caveats. 
+!!! warning "Short Frame Saves More Space?"
+    Using the `short` version of the Frame can give you more printable area under the bed, but it does have some caveats. 
 
     * You may need to adjust the position of the z rails to ensure the carriage can reach.
     * [StealthBurner](toolheads.md#stealthburner) is not compatible with short docks.
@@ -82,16 +86,16 @@ There are 2020 and 1515 versions of the top and bottom pieces. Both versions hav
 
 
 ### Links
-Links can be used to tie the frame and base of the docks together to help with rigidity for hanging docks or when using [Stabilizers](#stabilizers). There are seperate links for each the frame and the base.
+Links can be used to tie the frame and base of the docks together to gain more rigidity for hanging docks or when using [Stabilizers](#stabilizers). There are seperate links pieces for the [Frame](#frame) and the [Base](#base).
 
-The links for the frame differ depending on whether your using 2020 or 1515 top and bottom pieces and whether you are using a wider tool or not. The links for the base are the same no matter the configuration.
+The links for the [Frame](#frame) differ depending on whether your using 2020 or 1515 top and bottom pieces and whether you are using a wider tool or not. The links for the [Base](#base) are the same no matter the configuration.
 
 | Links |
 | :-: |
 | ![Links](../assets/dock-links.png) |
 
 ### Stabilizers
-Stabilizers can be added to the first and last dock to help with rigidity for hanging docks. There are left and right brackets for 2020 and 1515 frames which mount on the top Y axis extrusions of the frame, spacers and a brace which connects to the outer docks.
+Stabilizers can be added to the first and last dock to help with rigidity for hanging docks. There are left and right brackets for 2020 and 1515 frames which mount on the top Y axis extrusions of the printer's frame, spacers and a brace which connects to the outer docks.
 
 !!! tip "Think ahead"
     * There are different versions of the brace depending on the combination of pieces chosen to build the dock. Make sure to get the correct version.

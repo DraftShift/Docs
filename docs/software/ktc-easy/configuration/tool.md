@@ -1,8 +1,10 @@
 
-Each tool has its own configuration file, stored by default in `~/printer_data/config/toolchanger/tools/`. These files should be named according to the tool’s index — for example, `T0.cfg`, `T1.cfg`, and so on. This structure keeps configurations organized and makes it easy to manage settings for individual tools.
+Each tool has its own configuration file, stored by default in `~/printer_data/config/toolchanger/tools/`. 
+
+These files should be named according to the tool’s index — for example, `T0.cfg`, `T1.cfg`, and so on. This structure keeps configurations organized and makes it easy to manage settings for individual tools.
 
 !!! tip "Don't be too hasty"
-    It’s a good idea to start by setting up a single tool (T0.cfg) first. Getting one toolhead working correctly helps identify and resolve any setup issues before applying the same configuration to additional tools.
+    It’s a good idea to start by setting up a single tool (T0.cfg) first. Getting one toolhead working correctly helps identify and resolve any issues before applying the same configuration to additional tools.
 
 As a minimum, the following sections are required in a tool config:
 
@@ -14,6 +16,9 @@ As a minimum, the following sections are required in a tool config:
 * [tool]
 * [tool_probe]
 * [gcode_macro Tn]
+
+!!! note "Reference Examples"
+    The following sections are for reference only. The contetnts of the reference examples may differ from your config. For complete examples, please reference the [Examples](../examples.md) page.
 
 ## [mcu]
 Each toolhead board requires a unique MCU name. Typically you would give them a descriptive name followed by the respective tool number.
@@ -122,7 +127,7 @@ To be able to control a tool's part cooling fans while it is not in use, klipper
     ```
 
 ## [tool]
-The [[tool]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool) section is a klipper-toolchanger-easy([#](https://github.com/jwellman80/klipper-toolchanger-easy/)){:target="_blank"} extension that is used to attach all the preceding sections and calibration values to a tool object that klipper-toolchanger-easy(https://github.com/jwellman80/klipper-toolchanger-easy/){:target="_blank"} references.
+The [[tool]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool) section is a [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy/){:target="_blank"} extension that is used to attach all the preceding sections and calibration values to a tool object that [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy/){:target="_blank"} references.
 
 !!! note "Offset and Park Values"
     The `gcode_[xyz]_offset` and `params_park_[xyz]` values should all default to zero. They are values that need to be calibrated. 
@@ -130,41 +135,41 @@ The [[tool]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/to
 === "T0"
     ``` cfg title="Tool 0 Config"
     [tool T0]
-    tool_number: 0
-    extruder: extruder
+    tool_number: 0 # change to the index of the tool. 0, 1, 2, etc.
+    extruder: extruder # change to match the extruder you are configuring: extruder, extruder1, etc.
     fan: T0_part_fan
     # detection_pin: # Only required for non TAP probing.
-    gcode_x_offset: 0
-    gcode_y_offset: 0
-    gcode_z_offset: 0
-    params_park_x: 0
-    params_park_y: 0
-    params_park_z: 0
+    params_park_x: 0 # The absolute X-position of the tool in its dock.
+    params_park_y: 0 # The absolute Y-position of the tool in its dock.
+    params_park_z: 0 # The absolute Z-position where the tool and shuttle mate in the dock, determined when the TAP (or Z-probe) triggers.
+    gcode_x_offset: 0 # The X-Axis offset of the nozzle's orifice in relation to tool 0
+    gcode_y_offset: 0 # The Y-Axis offset of the nozzle's orifice in relation to tool 0
+    gcode_z_offset: 0 # The Z-Axis offset of the nozzle's orifice in relation to tool 0
     ```
 
 === "T1"
     ``` cfg title="Tool 1 Config"
     [tool T1]
-    tool_number: 1
-    extruder: extruder1
+    tool_number: 1 # change to the index of the tool. 0, 1, 2, etc.
+    extruder: extruder1 # change to match the extruder you are configuring: extruder, extruder1, etc.
     fan: T1_part_fan
     # detection_pin: # Only required for non TAP probing.
-    gcode_x_offset: 0
-    gcode_y_offset: 0
-    gcode_z_offset: 0
-    params_park_x: 0
-    params_park_y: 0
-    params_park_z: 0
+    params_park_x: 0 # The absolute X-position of the tool in its dock.
+    params_park_y: 0 # The absolute Y-position of the tool in its dock.
+    params_park_z: 0 # The absolute Z-position where the tool and shuttle mate in the dock, determined when the TAP (or Z-probe) triggers.
+    gcode_x_offset: 0 # The X-Axis offset of the nozzle's orifice in relation to tool 0
+    gcode_y_offset: 0 # The Y-Axis offset of the nozzle's orifice in relation to tool 0
+    gcode_z_offset: 0 # The Z-Axis offset of the nozzle's orifice in relation to tool 0
     ```
 
 !!! example "Alternate probing"
     If you are using a probing method other than TAP, the `detection_pin` variable must also be set with the pin for the tool's tap sensor.
 
 !!! info "Info"
-    Further information on the [tool](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool){:target="_blank"} section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
+    Further information on the [[tool]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool){:target="_blank"} section can be found in the [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} documentation.
 
 ## [tool_probe]
-The [[tool_probe]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/tool_probe.md#tool-probe){:target="_blank"} section is a klipper-toolchanger extension that attaches a probe to the [tool object](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool){:target="_blank"}. This gives each tool the ability to be used as a tap probe and is also used to detect which tool is on the [Shuttle](../../../hardware/stealthchanger.md#shuttle).
+The [[tool_probe]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/tool_probe.md#tool-probe){:target="_blank"} section is a klipper-toolchanger extension that attaches a probe to the [tool object](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/toolchanger.md#tool){:target="_blank"}. This gives each tool the ability to be used as a TAP probe and is also used to detect which tool is on the [Shuttle](../../../hardware/stealthchanger.md#shuttle).
 
 !!! warning "[probe]"
     Using [[tool_probe]](https://github.com/jwellman80/klipper-toolchanger-easy/blob/main/tool_probe.md#tool-probe){:target="_blank"} replaces the need for a [[probe]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#probe){:target="_blank"} section in your config. If you have an existing [[probe]](https://www.klipper3d.org/Config_Reference.html?h=tmc2209#probe){:target="_blank"} section, it must be removed.
@@ -223,6 +228,3 @@ Each tool gets assigned a [gcode_macro](https://www.klipper3d.org/Config_Referen
     variable_active: 0 # Do not change
     gcode: SELECT_TOOL T=1
     ```
-
-## Examples
-You can see how the options described in the documentation come together in practice, take a look at the [Examples](../examples.md){:target="_blank"} page.

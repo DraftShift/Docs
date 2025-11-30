@@ -35,7 +35,7 @@ For StealthChanger we use standard gcode to change and operate the tools. Many m
     | {{ feature }} {%- for slicer, data in slicers.items() -%}| {{ ':fontawesome-solid-asterisk:{style="color:orange;"}' if data.features[category][feature] == 'kinda' else (':fontawesome-solid-check:{ style="color:green;" }' if data.features[category][feature] else ':fontawesome-solid-xmark:{ style="color:red;" }') }} {%- endfor -%}|{% endfor %}
 {% endfor %}
 
-!!! example ":fontawesome-solid-asterisk:{style="color:orange;"} Bug"
+!!! asterisk "Bug"
     Feature is supported but not functioning as intended.
 
 ## Slicer Gcodes
@@ -62,5 +62,5 @@ See below for custom gcode macros that will send the correct syntax to the [exam
 ```
 {% endfor %}
 
----
+{% if not loop.last %}---{% endif %}
 {% endfor %}

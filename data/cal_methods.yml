@@ -1,0 +1,19 @@
+
+Manual: 
+  url: https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder
+  description: Measuring the physical distance between nozzle offsets with a printed tool. This is the most time consuming method, but requires no additional hardware.
+SexBall Probe:
+  url: /hardware/calibration_tools/#sexball-probe
+  description: A modified [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_SexBolt_ZEndstop){:target="_blank"} that provides automated nozzle calibration. The hardware components for the SexBall Probe are included as a part of LDO's `StealthChanger Base Kit`.
+Axiscope: 
+  url: https://github.com/nic335/Axiscope
+  description: Semi-automatic camera-based visual alignment. Gives you the ability to visually see and calibrate the XY offsets through a magnified lens. Z offset is handled by use of a Z endstop/probe.
+Nudge:
+  url: https://github.com/zruncho3d/nudge
+  description: A DIY multi axis probe where the shaft is suspended in a wobbler that provides automated nozzle calibration.
+KTAMV:
+  url: https://github.com/TypQxQ/kTAMV
+  description: Klipper Tool Alignment (using) Machine Vision. Uses machine vision to determine the XY nozzle calibration. Results may vary depending on camera choice, lighting and nozzles used.
+NozzleAlign:
+  url: https://github.com/viesturz/NozzleAlign
+  description: A DIY multi axis probe.

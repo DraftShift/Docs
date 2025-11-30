@@ -9,7 +9,7 @@ Adding additional tool configurations works much like setting up T0. Simply crea
 
 The following items need to be incremented:
 
-* `[mcu]` section name and the serial/canbus id. All references to the MCU name's pins also need to be changed. 
+* `[mcu]` section name. All references to the MCU name's pins will need to be changed as well. 
 * `[extruder]` section name.
 * `[tmc2209]` section name.
 * `[heater_fan]` section name and its `heater` variable.
@@ -18,7 +18,7 @@ The following items need to be incremented:
 * `[tool_probe]` name and its `tool` and `activate_gcode` variables.
 * `[gcode_macro Tn]` and its `gcode` variable.
 
-If you have any extra sections such as RGB, adxl, etc. They will also need to be incremented.
+If you have any extra sections such as RGB, ADXL345, etc. They will also need to be incremented.
 
 ## Calibrated Values
 If you copied a previous tool's config, all calibrated values are for the previous tool. They will need to be recelebrated for the new tool.
@@ -41,6 +41,6 @@ These include:
 Go through the [Pre Launch](../configuration/validation.md#pre-launch) steps again for each additional tool, optionally excluding the [Probe offset](../configuration/validation.md#probe-offset) calibration and [First Print](../configuration/validation.md#first-print) test.
 
 !!! tip "Probe Offsets for Subsequent Tools"
-    All tool offsets are calibrated relative to T0. Setting probe offsets for tools other than T0 is generally only useful if you need to home using that specific tool. However, even if another tool is used for homing, it’s recommended to home T0 again before starting a print to ensure consistent alignment and accuracy.
+    All tool offsets are calibrated relative to T0. Setting probe offsets for tools other than T0 is generally only useful if you need to home using that specific tool. However, even if another tool is used for homing, it is required to home using T0 again before starting a print to ensure consistent alignment and accuracy.
 
 With the tools broken in and functioning corrently, we can move on to [Calibration](../../../calibration/index.md).

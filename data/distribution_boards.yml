@@ -3,7 +3,7 @@ manufacturers:
     Birdsnest CAN:
       image: birdsnest_can.jpg
       description: "CAN Distribution Board With I/O"
-      external_link: false
+      external_link: true
       url: https://store.isiks.tech
       product_url: https://store.isiks.tech/products/birds-nest-can
       features:
@@ -17,7 +17,7 @@ manufacturers:
     Birdsnest USB:
       image: birdsnest_usb.jpg
       description: "USB Hub Distribution Board With I/O"
-      external_link: false
+      external_link: true
       url: https://store.isiks.tech
       product_url: https://store.isiks.tech/products/birds-nest
       features:
@@ -31,7 +31,7 @@ manufacturers:
     Moar CAN:
       image: moar_can.jpg
       description: "Passive CAN Distribution Board"
-      external_link: false
+      external_link: true
       url: https://store.isiks.tech
       product_url: https://store.isiks.tech/products/moar_can
       features:
@@ -42,7 +42,7 @@ manufacturers:
     Nitehawk Hexa:
       image: nitehawk_hexa.jpg
       description: "USB Hub Distribution Board"
-      external_link: true
+      external_link: false
       url: https://ldo.com
       product_url: ../resellers.md
       features:
@@ -54,7 +54,7 @@ manufacturers:
     Hexa Fusion:
       image: hexa_distro.avif
       description: "Passive CAN Distribution Board"
-      external_link: false
+      external_link: true
       url: https://wiki.fysetc.com/docs/hexa_distro_fusion
       product_url: https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105007791
       features:
@@ -65,7 +65,7 @@ manufacturers:
     Hexa Distro Fusion:
       image: hexa_distro_fusion.png
       description: "CAN & USB Distribution Board"
-      external_link: false
+      external_link: true
       url: https://fysect.com
       product_url: https://www.aliexpress.com/item/1005009277985261.html
       features:
@@ -77,11 +77,12 @@ manufacturers:
           IO: 6
           RGB: 6
           Thermistor: 4
+
   BigTreeTech:
     CEB:
       image: ceb.webp
       description: "Passive CAN Distribution Board"
-      external_link: false
+      external_link: true
       url: https://biqu.equipment/
       product_url: https://biqu.equipment/products/bigtreetech-ceb
       features:
@@ -90,10 +91,10 @@ manufacturers:
         IO: No
 
   Mellow:
-    CanBus Expand Board:
+    CAN Bus Expand Board:
       image: Mellowceb.avif
       description: "Passive CAN Distribution Board"
-      external_link: false
+      external_link: true
       url: https://3dmellow.com/
       product_url: https://www.aliexpress.com/i/3256805705529626.html?gatewayAdapt=4itemAdapt
       features:

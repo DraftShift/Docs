@@ -26,7 +26,7 @@ regions:
       description: ""
       url: https://store.isiks.tech/
       product_url: https://store.isiks.tech/collections/toolchanger
-  Canada:
+  ca:
      Bobcat 3D:
       is_sponsor: false
       logo_url: https://i.etsystatic.com/35950299/r/isla/eb87d7/62833842/isla_100x100.62833842_cptwbaxu.jpg

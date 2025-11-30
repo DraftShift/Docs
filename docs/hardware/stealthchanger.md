@@ -29,15 +29,15 @@ When printing a Shuttle, it is important to note that the selection of material 
 | Printed | :fontawesome-solid-check:{style="color:green;"} | :fontawesome-solid-asterisk:{style="color:orange;"} | :fontawesome-solid-asterisk:{style="color:orange;"} | :fontawesome-solid-check:{style="color:green;"} | :fontawesome-solid-asterisk:{style="color:orange;"} |
 | CNC | :fontawesome-solid-check:{style="color:green;"} | :fontawesome-solid-xmark:{style="color:red;"} | :fontawesome-solid-xmark:{style="color:red;"} | :fontawesome-solid-check:{style="color:green;"} | :fontawesome-solid-check:{style="color:green;"} |
 
-!!! info "*MGN9/Micron"
-    The hole spacing on MGN9 is too small to clamp the belts reliably without the screws getting in the way. [Shuttle Keeper](#shuttle-keeper) is required. 
+!!! asterisk "MGN9/Micron"
+    The hole spacing on MGN9 is too small to clamp the belts reliably without the screws getting in the way. This means a Voron V2 with MGN9 on X axis or a Micron requires the use of the [Shuttle Keeper](#shuttle-keeper). 
 
-!!! info "*9mm belts"
+!!! asterisk "9mm belts"
     9mm belts can be used with CNC Shuttles. If you want to use 9mm belts with a printed Shuttle, a [usermod by BT123](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper){:target="_blank"} is required.
 
-!!! info "monolith and inverted belts"
+!!! info "Monolith and Inverted Belts"
     Inverted belts with printed shuttle require the use of this [usermod by BT123](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper){:target="_blank"}.
-    Inverted belts can be mounted to CNC Shuttle as is, but with monolith this results in slight angled belt-path. To get a straight belt path with CNC-shuttle you can either use [belt-lock](https://github.com/MikeYankeeOscarBeta/belt_lock){:target="_blank"} or this [XY-joint mod by dderg](https://github.com/Monolith3D/Monolith_Gantry/tree/main/UserMods/dderg/XY%20Joints%20compatible%20with%20Fysetc%20CNC%20Stealthchanger%20Shuttle){:target="_blank"}.
+    Inverted belts can be mounted to CNC Shuttle as is, but with [Monolith](https://github.com/Monolith3D/Monolith_Gantry/tree/main){target="_blank"} this results in slight angled belt-path. To get a straight belt path with CNC-shuttle you can either use [belt-lock](https://github.com/MikeYankeeOscarBeta/belt_lock){:target="_blank"} or this [XY-joint mod by dderg](https://github.com/Monolith3D/Monolith_Gantry/tree/main/UserMods/dderg/XY%20Joints%20compatible%20with%20Fysetc%20CNC%20Stealthchanger%20Shuttle){:target="_blank"}.
     
 
 ## Shuttle Keeper
@@ -55,14 +55,14 @@ Belt helper is a tool that will hold your belts for you while installing the [Sh
 
 ![Shuttle Install](../assets/shuttle_printed_install.png)
 
-!!! tip "One tool to rule them all"
+!!! tip "One Tool to Rule Them All"
     The Belt Helper was designed to assist with installing the printed [Shuttle](#shuttle). It can also be useful with CNC shuttles to give you that extra set of hands you always wanted.
 
 !!! info "Mini/Micro BFI"
     If using [Mini/Micro BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI){:target="_blank"}, the Belt Helper is required to pre tension your belts to a point where your idlers only need minimal adjustment.
 
 ## Backplate
-The StealthChanger Backplate is the companion component to the [Shuttle](#shuttle). Each compatible toolhead has its own unique Backplate that gets bolted to the tool. The backplate is a critical component of StealthChanger and requires you to ensure you have good print accuracy, especially when pairing with a CNC Shuttle. Please reference the [Print Tuning Section](../getting_started.md#print-tuning) before printing your Backplate. For a list of compatible tools, see out [Toolhead Page](toolheads.md).
+The StealthChanger Backplate is the companion component to the [Shuttle](#shuttle). Each compatible toolhead has its own unique Backplate that gets attached to the tool. The backplate is a critical component of StealthChanger and requires you to ensure you have good print accuracy, especially when pairing with a CNC Shuttle. Please reference the [Print Tuning Section](../getting_started.md#print-tuning) before printing your Backplate. For a list of compatible tools, see the [Toolheads](toolheads.md) page.
 
 ![Backplate](../assets/backplate.png)
 

@@ -4,7 +4,7 @@
 - Measure the outside of your top pins. You should have 39mm.
 - See [Print Tuning](../getting_started.md#print-tuning)
 
-- If you have calibrated your print and still experience issues, try the heat treatment method or may need to clean out the bushings:
+- If you have calibrated your print and still experience issues, you may want to try the heat treatment method or you can try cleaning out the bushings:
 
 !!! tip "Heat Treating"
     If you printed the shuttle and backplate and things are just not smooth or you have slight binding, you can Heat Treat it and here is how.
@@ -48,7 +48,7 @@ Some tools are shorter than others and with some of the shorter tools the z-rail
 
 - Remove or modify the Z-belt-covers
 - Use taller bed spacers
-- Some tools like A4T & XOL require the use of lower profile Z joints. [hartk123's GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or [Ellis'Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} are good options.
+- Some tools like A4T & XOL require the use of lower profile Z joints. hartk's [GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or Ellis' [Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} are good options.
 
 ---
 
@@ -58,14 +58,8 @@ Some tools are shorter than others and with some of the shorter tools the z-rail
 
 ### Bad Input Shaper Results
 - Ensure the Backplate's preload screws have been adjusted.
-- Check your configuration to ensure the correct accelerometer is assigned to `[resonance_tester]`.
-
-!!! tip "Input Shaper - "Pro Tip""
-    For example if you have your adxl on T0 defined as `[adxl345 T0]`
-
-    You can call shake-tune `axes_shaper_calibration ACCEL_CHIP="'adxl T0'"` to specify the accelerometer to use for the resonances test.
+- Check your configuration to ensure the correct accelerometer is assigned to `[resonance_tester]` or the correct accelerometer parameter was specified in the macro. Consult the [Resonance Calibration](../calibration/tuning.md#resonance) section for more information.
 
 ---
 
-## Community
-StealthChanger has an active and growing community of people who are willing to help. If your having trouble finding the information you need. Consider reaching out to our communities on [Discord](https://discord.gg/draftshift){target="_blank"} or [Facebook](https://www.facebook.com/groups/449879874593718/){target="_blank"} and be sure to mention your issue could not be resolved by the information here. We will do our best to accommodate the issue in the future.
+{% include "_templates/community_help.md" %}

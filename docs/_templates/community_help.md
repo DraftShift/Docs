@@ -1,0 +1,2 @@
+## Community
+StealthChanger has an active and growing community of people who are willing to help. If your having trouble finding the information you need. Consider reaching out to our communities on [Discord](https://discord.gg/draftshift){target="_blank"} or [facebook](https://www.facebook.com/groups/449879874593718/){target="_blank"} and be sure to mention that your issue could not be resolved by the information here. We will do our best to accommodate the issue in the future.

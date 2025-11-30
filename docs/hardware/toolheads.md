@@ -4,19 +4,23 @@ For the purposes of StealthChanger the toolhead selection is rather important. I
 
 
 ???+ info "Printing"
-    Officially supported toolheads do not require modification to work with StealthChanger, only the addition of the StealthChanger backplate and possibly a spacer. Each toolhead can be sourced from their respective repositories. Toolheads that are not officially supported will require modification to work with StealthChanger and will be marked as a usermod.
+    Officially supported toolheads require no modifications to operate with StealthChanger beyond the installation of the StealthChanger backplate and, where applicable, a spacer. Each toolhead can be sourced from their respective repositories. 
+    
+    Toolheads that require modification to work with StealthChanger are not officially supported and should be submitted as a usermod.
 
 ??? info "Extruders"
     * You can use any extruder you want as long as it is supported by the toolhead of your choice.
-    * It's important to note that the width of the extruder may impact the maximum tool count as it may render the tool width wider, potentially limiting the total number of tools that can be accommodated.
+    * It's important to note that the width of the extruder may impact the maximum tool count as it may require a wider dock, limiting the total number of tools that can be accommodated.
     * :warning: Pay attention to the tensioning screw on the extruder, it may collide with the tool beside it if it extends outside the tool's width and there is not enough room between them.
 
 ??? info "Hotends"
     * Choose whichever hotend you like, as long as the toolhead supports it, you can use it.
-    * :warning: Some high-flow hotends may require significant tuning to prevent oozing while moving to, and from the dock.
+    * :warning: Some high-flow hotends may require significant tuning to prevent oozing while moving to and from the dock.
 
 ??? tip "Community Recommendation"
-    Anthead is the recommended toolhead due to its integrated magnets in the fan ducts, which enhance stability during the docking process. Other tools can achieve similar results, but may require additional modifications.
+    [Anthead](#anthead) is the recommended toolhead due to its integrated magnets in the fan ducts, which enhance stability during the docking process. Other tools can achieve similar results, but may require additional modifications.
+
+    The LDO `Toolhead and Dock Kit` includes all necessary hardware for the [Anthead](#anthead), with the exception of the extruder and hotend components.
 
 <div class="grid cards" style="text-align: center;" markdown>
 

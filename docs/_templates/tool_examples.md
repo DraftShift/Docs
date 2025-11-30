@@ -118,9 +118,12 @@
             {% if version != "TAP" %}
             {{- "detection_pin: " ~ pin(mcu, data.pin_map.detection_pin, flip=True) }}
             {% endif -%}
-            params_park_x: 0 # Absolute X position of where the tool sits in it's dock.
-            params_park_y: 0 # Absolute Y position of where the tool sits in it's dock.
-            params_park_z: 0 # Absolute Z position of where the tool sits in it's dock.
+            params_park_x: 0 # The absolute X-position of the tool in its dock.
+            params_park_y: 0 # The absolute Y-position of the tool in its dock.
+            params_park_z: 0 # The absolute Z-position where the tool and shuttle mate in the dock, determined when the TAP (or Z-probe) triggers.
+            gcode_x_offset: 0 # The X-Axis offset of the nozzle's orifice in relation to tool 0
+            gcode_y_offset: 0 # The Y-Axis offset of the nozzle's orifice in relation to tool 0
+            gcode_z_offset: 0 # The Z-Axis offset of the nozzle's orifice in relation to tool 0
 
             # Results from input shaper
             params_input_shaper_type_x: 'mzv'

@@ -5,7 +5,7 @@ search:
 
 
 ## Sexball Probe
-The Sexball gets its rather raunchy name from being a derivative of [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_SexBolt_ZEndstop){:target="_blank"}. The addition of a ball at the end of the shaft allows us to do multi directional (XYZ) probing.
+The Sexball gets its rather raunchy name from being a derivative of hartk's [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_SexBolt_ZEndstop){:target="_blank"}. The addition of a ball at the end of the shaft allows it to do multi axis (XYZ) probing.
 
 Converting an existing [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_SexBolt_ZEndstop){:target="_blank"} is easy, all you need is to replace the existing shaft with a M5 threaded (one end) shaft and 12mm threaded ball.
 
@@ -15,25 +15,25 @@ Converting an existing [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronU
 ![Sexball Probe](../assets/sexball.png){:width="540"}
 
 !!! tip "LDO Kit"
-    All of the hardware components for a Sexball Probe come as a part of LDO's Base StealthChanger Kit.
+    All of the hardware components for a Sexball Probe come as a part of LDO's `Base StealthChanger Kit`.
 
 ## Community Tools
 
 ### Axiscope
 
-Axiscope is a specialized tool created by members of our community that is designed to simplify the calibration process for multi-tool 3D printers running [Klipper-toolchanger](../software/index.md#klipper-toolchanger){:target="_blank"} using camera-assisted alignment.
+[Axiscope](https://github.com/nic335/Axiscope){target="_blank"} is a specialized tool created by members of our community that is designed to simplify the calibration process for multi-tool 3D printers running [Klipper-toolchanger](../software/index.md#klipper-toolchanger){:target="_blank"} using camera-assisted alignment.
 
-It provides a streamlined web interface for:
+[Axiscope](https://github.com/nic335/Axiscope){target="_blank"} provides a streamlined web interface for:
 
-* Manual XY calibration using camera feedback.
-* Automatic Z alignment through use of a Z endstop or [Sexball Probe](#sexball-probe).
+* Semi-automated XY calibration using camera feedback.
+* Automated Z alignment through use of a Z endstop or [Sexball Probe](#sexball-probe).
 * Quick and precise tool alignment.
 * No calculations required, the offsets are given to you in the exact format used with [Klipper-toolchanger](../software/index.md#klipper-toolchanger).
 
 ![Axiscope](../assets/camera.png){:width="540"}
 
 !!! tip "Which Camera?"
-    Axiscope can technically use any webcam, but its recommended to use a camera that is built for purpose. See our build guide on how to assemble a camera specifically for Axiscope or consider [Ember Prototype's CXC camera](https://www.emberprototypes.com/products/cxc){:target="_blank"}.
+    [Axiscope](https://github.com/nic335/Axiscope){target="_blank"} can technically use any webcam, but it's recommended to use a camera that is built for purpose. See our [build guide](guides/usermods/N3MI%20-%20axiscope/index.md) on how to assemble a camera specifically for Axiscope or consider [Ember Prototype's CXC camera](https://www.emberprototypes.com/products/cxc){:target="_blank"}.
 
 More information can be found on the [Axiscope Github](https://github.com/nic335/Axiscope){:target="_blank"}.
 

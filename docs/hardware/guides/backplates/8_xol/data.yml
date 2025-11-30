@@ -4,7 +4,7 @@ summary: >
     StealthChanger Backplate for the XOL.
 
     !!! warning "Z Joints"
-      Replacement of your Z joints with something with a lower profile such as [hartk123's GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or [Ellis'Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} is necessary to avoid bottoming out your Z carriage on the deck panel when using XOL.
+        Replacement of your Z joints with a lower profile such as [hartk123's GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or [Ellis'Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} are recommended to avoid bottoming out your Z carriage on the deck panel when using A4T.
 
 printed_bom:
   XOL Backplate:
@@ -46,7 +46,7 @@ steps:
     focus:
       - "M3 Heat Inserts"
 
-  - description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use super glue."
+  - description: "Install the 6x3mm magnet making sure the polarity attracts the Backplate to the Shuttle. If using a tapered magnet, secure it with a M2x8mm FHCS screw (you can use the driver through the bottom pin hole), otherwise use glue or epoxy."
     camera:
       azimuth: 244
       polar: 129

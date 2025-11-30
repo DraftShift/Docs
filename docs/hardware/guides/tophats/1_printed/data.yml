@@ -153,7 +153,6 @@ steps:
     focus:
       - "T Nuts"
 
-  # TODO ADD MISSING HARDWARE
   - description: "Attach the 3d printed sides to each of the top extrusions using M3x8 SHCS screws. Leave these loose for now, they need to be able to move for the next step."
     camera:
       azimuth: 104
