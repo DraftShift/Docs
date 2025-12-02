@@ -28,7 +28,7 @@ sweeping_period: 0
 
 To run input shaper without changing the `accel_chip` in [[resonance_tester]](https://www.klipper3d.org/Config_Reference.html#resonance_tester){target="_blank"}, you can specify the accelerometer in the macro's parameters.
 
-``` cfg { .copy title="Shaketune input shaper example." }
+``` lua { .copy title="Shaketune input shaper example." }
 AXES_SHAPER_CALIBRATION ACCEL_CHIP="'adxl345 T0'"
 ```
 
