@@ -12,6 +12,9 @@ printed_bom:
 hardware_bom:
   4mmx12mm rounded pins with M3 internal thread:
     qty: 3
+    urls:
+        AliExpress: https://s.click.aliexpress.com/e/_DCQkrFP
+        Amazon US: https://amzn.to/3GZBSZn
   M3 Heat Inserts:
     qty: 4
   M3x6 FHCS screws (Must be ferrous):
@@ -20,6 +23,12 @@ hardware_bom:
     qty: 1
   6x3mm tapered magnet:
     qty: 1
+  M3x6 BHCS screws:
+    qty: 2
+  Optotap Sensor:
+    qty: 1
+    urls:
+        AliExpress: https://s.click.aliexpress.com/e/_DEGsGTV
 
 primary_parts:
   - "Shuttle"

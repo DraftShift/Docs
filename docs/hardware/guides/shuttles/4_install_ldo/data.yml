@@ -24,7 +24,7 @@ printed_bom:
       Link: https://download-directory.github.io/?url=https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper&filename=SC-Belt-Helper
 
 hardware_bom:
-  Fysetc CNC Shuttle:
+  LDO CNC Shuttle:
     qty: 1
   M3x10 SHCS Screws:
     qty: 4

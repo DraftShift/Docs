@@ -111,15 +111,15 @@ manufacturers:
       description: "High temperature CAN/USB toolboard with STMG0B1T3 MCU (125°C capable)"
       external_link: true
       url: https://github.com/FYSETC/H36_Combo
-      product_url: https://www.fysetc.com/products/fysetc-h36-v1-3-combo-high-temperature-resistance-klipper-canbus-tool-board-compatible-nema14-36mm-motor-onboard-tmc2209?_pos=8&_sid=55c08f5b8&_ss=r
+      product_url: https://s.click.aliexpress.com/e/_c2yt2XWz
       features:
         connector: XT30+2
         protocol: CAN/USB
-        fans: 2
-        fan_voltage: "24V"
+        fans: 4
+        fan_voltage: "5V/24V"
         thermistor: 1
-        rgb: 1
+        rgb: 2
         endstops: 2
         probe: 1
-        filament_sensor: 1
+        filament_sensor: 2
 

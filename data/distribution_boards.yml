@@ -56,7 +56,7 @@ manufacturers:
       description: "Passive CAN Distribution Board"
       external_link: true
       url: https://wiki.fysetc.com/docs/hexa_distro_fusion
-      product_url: https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105007791
+      product_url: https://s.click.aliexpress.com/e/_c45dqDeH
       features:
         protocol: CAN
         outputs: 6
@@ -67,7 +67,7 @@ manufacturers:
       description: "CAN & USB Distribution Board"
       external_link: true
       url: https://fysect.com
-      product_url: https://www.aliexpress.com/item/1005009277985261.html
+      product_url: https://s.click.aliexpress.com/e/_c3nPO9G1
       features:
         protocol: USB/CAN
         outputs: 6
@@ -96,7 +96,7 @@ manufacturers:
       description: "Passive CAN Distribution Board"
       external_link: true
       url: https://3dmellow.com/
-      product_url: https://www.aliexpress.com/i/3256805705529626.html?gatewayAdapt=4itemAdapt
+      product_url: https://s.click.aliexpress.com/e/_c4Pk0hFP
       features:
         protocol: CAN
         outputs: 4

@@ -14,17 +14,23 @@ printed_bom:
       Link: https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/LDO%20SexBall%20Probe%20Block.stl?raw=true
 
 hardware_bom:
-  M5x32mm Shaft With Thread One End:
+  M5x30mm Shaft With Thread One End:
     qty: 1
+    urls:
+      AliExpress: https://s.click.aliexpress.com/e/_omw2qxX
 
   M5x12mm Threaded Ball:
-    qty: 4
+    qty: 1
+    urls:
+      AliExpress: https://s.click.aliexpress.com/e/_o2DGfvf
 
   M2x10 Self Tapping Screws:
     qty: 2
 
-  LDO Z Endstop PCB:
+  LDO/HartK Z Endstop PCB:
     qty: 1
+    urls:
+      AliExpress: https://s.click.aliexpress.com/e/_c33QbbN3
   
   8x10x5 Brass Bushing:
     qty: 1

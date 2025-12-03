@@ -12,7 +12,7 @@ frame_parts:
   - "Extrusion"
 
 summary: >
-    This guide covers the installation of the [Fysetc CNC Shuttle](https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board){: target="_blank"} for StealthChanger. 
+    This guide covers the installation of the [Fysetc CNC Shuttle](https://s.click.aliexpress.com/e/_c45dqDeH){: target="_blank"} for StealthChanger. 
 
     !!! tip "Belt Helper"
         The Belt Helper tool will aid in holding the belts in place while installing the shuttle.
@@ -26,6 +26,8 @@ printed_bom:
 hardware_bom:
   Fysetc CNC Shuttle:
     qty: 1
+    urls:
+      AliExpress: https://s.click.aliexpress.com/e/_c45dqDeH 
   M3x10 SHCS Screws:
     qty: 4
   M3x40-50 Screws:
