@@ -188,6 +188,15 @@ transparent_parts:
   "LED Diffuser": 0.5
 ```
 
+#### `resources` (optional)
+Object defining external resource links displayed in the guide overview. Useful for linking to GitHub repositories, CAD files, or related documentation.
+
+```yaml
+resources:
+  Draftshift TopHat Github: https://github.com/DraftShift/Tophat
+  LDO Github: https://github.com/MotorDynamicsLab/LDOStealthChanger
+```
+
 #### `steps` (required)
 Array of assembly steps. See [Step Configuration](#step-configuration) below.
 
