@@ -1,0 +1,207 @@
+title: Umbilical Plate
+author: "DraftShift Design"
+summary: >
+    This guide will walk you through the assembly of the Umbilical Plate. 
+    
+printed_bom:
+  Voron 250mm:
+    qty: 1
+    urls:
+      2 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/250/Voron250_Plate_2_Tools_TPU_Version.stl?raw=true
+      3 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/250/Voron250_Plate_3_Tools_TPU_Version.stl?raw=true
+      4 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/250/Voron250_Plate_4_Tools_TPU_Version.stl?raw=true
+      5 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/250/Voron250_Plate_5_Tools_TPU_Version.stl?raw=true
+      
+  Voron 300mm:
+    qty: 1
+    urls:
+      2 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/300/Voron300_Plate_2_Tools_TPU_Version.stl?raw=true
+      3 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/300/Voron300_Plate_3_Tools_TPU_Version.stl?raw=true
+      4 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/300/Voron300_Plate_4_Tools_TPU_Version.stl?raw=true
+      5 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/300/Voron300_Plate_5_Tools_TPU_Version.stl?raw=true
+
+  Voron 350mm:
+    qty: 1
+    urls:
+      2 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/350/Voron350_Plate_2_Tools_TPU_Version.stl?raw=true
+      3 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/350/Voron350_Plate_3_Tools_TPU_Version.stl?raw=true
+      4 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/350/Voron350_Plate_4_Tools_TPU_Version.stl?raw=true
+      5 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/350/Voron350_Plate_5_Tools_TPU_Version.stl?raw=true
+      6 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/350/Voron350_Plate_6_Tools_TPU_Version.stl?raw=true
+
+  # Micron 180mm:
+  #   qty: 1
+  #   urls:
+  #     2 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Micron/Micron180_Plate_2_Tools.stl?raw=true
+  #     3 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Micron/Micron180_Plate_3_Tools.stl?raw=true
+  #     4 Tools: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Micron/Micron180_Plate_4_Tools.stl?raw=true
+
+  Logo Insert:
+    qty: 1
+    urls:
+      Voron: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/%5Bc%5D_Voron_Logo_Insert.stl?raw=true
+      # Micron: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Micron/%5Bc%5D_Micron_Logo_Insert.stl?raw=true
+
+hardware_bom:
+  M3x10 SHCS Screws:
+    qty: 4
+
+  M3 Heat Inserts:
+    qty: 4
+
+  M5x10 BHCS Screws:
+      qty: 2
+
+  M5 T-Nuts:
+    qty: 2
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+  N3MI's Original Usermod: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2#installation
+primary_parts:
+  - "Outer Plate"
+
+accent_parts:
+  - "Face Plate"
+  - "Hexes"
+
+frame_parts:
+  - "Frame"
+
+steps:
+  - description: "Install 4 heat inserts into the Face Plate."
+    camera:
+      azimuth: 271
+      polar: 128
+      distance: 38
+      pan_x: 0.04
+      pan_y: -0.08
+    visible: 
+      - "Face Plate"
+      - "Threaded Inserts"
+    focus: 
+      - "Threaded Inserts"
+
+
+  - description: "Install Logo Insert."
+    camera:
+      azimuth: 276
+      polar: 91
+      distance: 38
+      pan_x: 0.41
+      pan_y: 0.33
+    visible: 
+      - "Face Plate"
+      - "Threaded Inserts"
+      - "Logo Insert"
+    focus: 
+      - "Logo Insert"
+
+
+  - description: "Apply 1mm foam around the perimiter of the Face Plate."
+    camera:
+      azimuth: 276
+      polar: 91
+      distance: 38
+      pan_x: 0.41
+      pan_y: 0.33
+    visible: 
+      - "Face Plate"
+      - "Threaded Inserts"
+      - "Logo Insert"
+      - "1mm Foam"
+    focus: 
+      - "1mm Foam"
+
+  - description: "Install Face Plate over the Outer Plate. The Face Plate is designed to flex. Start with the Face plate over one of the side ports and flex the plate so that it fits over the rest."
+    camera:
+      azimuth: 50
+      polar: 69
+      distance: 38
+      pan_x: -4.26
+      pan_y: 0.21
+    visible: 
+      - "Outer Plate"
+      - "Hexes"
+      - "Face Plate"
+      - "Threaded Inserts"
+      - "Logo Insert"
+      - "1mm Foam"
+    focus: 
+      - "Face Plate"
+
+  - description: "Place the Umbilical Plate assembly over the rear panel."
+    camera:
+      azimuth: 270
+      polar: 83
+      distance: 43
+      pan_x: 0.41
+      pan_y: 0.32
+    visible: 
+      - "Outer Plate"
+      - "Rear Panel"
+      - "Hexes"
+      - "Face Plate"
+      - "Threaded Inserts"
+      - "Logo Insert"
+      - "1mm Foam"
+    focus: 
+      - "Face Plate"
+      - "Logo Insert"
+      - "1mm Foam"
+      - "Outer Plate"
+      - "Hexes"
+
+  - description: "Install 4 M3x10 SHCS Screws."
+    camera:
+      azimuth: 270
+      polar: 83
+      distance: 52
+      pan_x: 0.41
+      pan_y: 0.32
+    visible: 
+      - "Outer Plate"
+      - "Rear Panel"
+      - "Hexes"
+      - "Face Plate"
+      - "Threaded Inserts"
+      - "Logo Insert"
+      - "1mm Foam"
+      - "M3x10 SHCS Screws"
+    focus: 
+      - "M3x10 SHCS Screws"
+
+  - description: "Install 2 M5 T-nuts in to the rear center of the top rear frame extrusion."
+    camera:
+      azimuth: 276
+      polar: 91
+      distance: 45
+      pan_x: 0.41
+      pan_y: 0.33
+    visible: 
+      - "Frame"
+      - "M5 T-Nuts"
+    focus: 
+      - "M5 T-Nuts"
+
+  - description: "Attach the assembly to the frame with 2 M5x10 BHCS Screws."
+    camera:
+      azimuth: 276
+      polar: 91
+      distance: 45
+      pan_x: 0.41
+      pan_y: 0.33
+    visible: 
+      - "Frame"
+      - "M5 T-Nuts"
+      - "Outer Plate"
+      - "M5x10 BHCS Screws"
+      - "Rear Panel"
+      - "Hexes"
+      - "Face Plate"
+      - "Threaded Inserts"
+      - "Logo Insert"
+      - "1mm Foam"
+    focus: 
+      - "M5x10 BHCS Screws"
+      - "M3x10 SHCS Screws"

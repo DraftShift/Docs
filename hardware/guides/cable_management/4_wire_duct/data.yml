@@ -1,0 +1,330 @@
+title: Wire Duct
+author: "DraftShift Design"
+summary: >
+    This guide will walk you through the assembly of the Wire Duct. 
+
+    !!! tip "Scaled to fit"
+        The Wire Duct Connector needs to be scaled to suit your build. It can be scaled in the slicer.
+
+printed_bom:
+  Wire Duct Base:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/wire_duct_base.stl?raw=true
+  Wire Duct Cover:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/%5Ba%5D_wire_duct_cover.stl?raw=true
+  Wire Duct Connector:
+    qty: 1 (Scale to fit)
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/%5Ba%5D_wire_duct_connector_scale_to_fit.stl?raw=true
+  Center Rear Skirt:
+    qty: 1
+    urls:
+      Voron 250: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/v2_skirt/center_rear_skirt_250.stl?raw=true
+      Voron 300: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/v2_skirt/center_rear_skirt_300.stl?raw=true
+      Voron 350: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/v2_skirt/center_rear_skirt_350.stl?raw=true
+  90 Degree Adaptor:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/center_rear_skirt_90.stl?raw=true
+  EMS Brackets:
+    qty: Optional
+    urls:
+      Arduino Uno: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/EMS_Brackets/%5Ba%5D_ft-ems_uno_r3.stl?raw=true
+      WLED Board: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/EMS_Brackets/WLED.stl?raw=true
+
+hardware_bom:
+  M3x6 BHCS Screws:
+    qty: 4
+  M3x10 BHCS Screws:
+    qty: 2
+  M3x8 SHCS Screws:
+    qty: 4
+  M3 Hex Nuts:
+    qty: 6
+  M3 T-Nuts:
+    qty: 2
+  M3 Hammerhead Nuts:
+    qty: 2
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+
+primary_parts:
+  - "Center Skirt"
+  - "90 Center Rear Skirt"
+  - "Fanny Pack Base"
+  - "Wire Duct Base"
+  - "Wire Duct EMS"
+
+accent_parts:
+  - "Hexa Bracket"
+  - "WLED EMS"
+  - "Wire Duct Connector"
+  - "Wire Duct Connector Scaled"
+  - "Wire Duct Cover"
+
+frame_parts:
+  - "Frame"
+
+steps:
+  - description: "Attach the EMS grill to the Wire Duct Base using 4 M3x6 BHCS screws and M3 nuts."
+    camera:
+      azimuth: 276
+      polar: 110
+      distance: 27
+      pan_x: -0.52
+      pan_y: -0.50
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+    focus: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+
+  - description: "If you have an EMS mount to attach to the EMS grill, do so now."
+    camera:
+      azimuth: 272
+      polar: 94
+      distance: 18
+      pan_x: 0.15
+      pan_y: 0.34
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+    focus: 
+      - "WLED EMS"
+      - "WLED Hardware"
+
+  - description: "Attach the Wire Duct Base to the underside of the Fanny Pack using 2 M3x10 BHCS screws."
+    camera:
+      azimuth: 283
+      polar: 115
+      distance: 35
+      pan_x: 0.99
+      pan_y: -1.63
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+    focus: 
+      - "Duct Base M3x10 BHCS"
+
+  - description: "Attach the Rear Center Skirt using 2 M3x8 SHCS screws and T-Nuts."
+    camera:
+      azimuth: 277
+      polar: 153
+      distance: 35
+      pan_x: 0.51
+      pan_y: -10.25
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+      - "Center Skirt"
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+    focus: 
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+
+  - description: "Install 2 M3x8 SHCS screws with hammerhead nuts into the 90 Degree Adapter."
+    camera:
+      azimuth: 61
+      polar: 67
+      distance: 19
+      pan_x: -0.63
+      pan_y: -1.47
+    visible: 
+      - "90 Center Rear Skirt"
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+    focus: 
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+
+  - description: "Attach the 90 Degree Adaptor to the rear frame using the 2 pre-installed M3x8 SHCS screws. Ensure the adaptor lines up with the pockets in the Rear Center Skirt."
+    camera:
+      azimuth: 282
+      polar: 99
+      distance: 35
+      pan_x: 0.71
+      pan_y: -12.78
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+      - "Center Skirt"
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+      - "90 Center Rear Skirt"
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+    focus: 
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+
+  - description: "Secure the 90 Degree adaptor to the Rear Center Skirt using 2 M3x10 BHCS screws and M3 nuts."
+    camera:
+      azimuth: 271
+      polar: 101
+      distance: 25
+      pan_x: -0.13
+      pan_y: -16.54
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+      - "Center Skirt"
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+      - "90 Center Rear Skirt"
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+      - "Skirt M3 Nuts"
+      - "Skirt M3x10 BHCS"
+    focus: 
+      - "Skirt M3 Nuts"
+      - "Skirt M3x10 BHCS"
+
+  - description: "Attach the Wire Duct Cover to the Wire Duct Base by flexing the Cover over the base."
+    camera:
+      azimuth: 271
+      polar: 101
+      distance: 25
+      pan_x: -0.13
+      pan_y: -16.54
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+      - "Center Skirt"
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+      - "90 Center Rear Skirt"
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+      - "Skirt M3 Nuts"
+      - "Skirt M3x10 BHCS"
+      - "Wire Duct Cover"
+    focus: 
+      - "Wire Duct Cover"
+
+  - description: "Measure the gap between the Wire duct cover and the 90 Degree Adaptor. The Wire Duct Connector needs to be scaled in the slicer to match the dimension you measured. Once printed, it flexes into place to fill the gap between the Wire Duct Cover and 90 Degree Adaptor."
+    camera:
+      azimuth: 305
+      polar: 75
+      distance: 32
+      pan_x: 0.74
+      pan_y: -13.58
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+      - "Center Skirt"
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+      - "90 Center Rear Skirt"
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+      - "Skirt M3 Nuts"
+      - "Skirt M3x10 BHCS"
+      - "Wire Duct Cover"
+      - "Wire Duct Connector Scaled"
+    focus: 
+      - "Wire Duct Connector Scaled"
+
+
+  - description: "The Wire Duct assembly is complete."
+    camera:
+      azimuth: 288
+      polar: 76
+      distance: 44
+      pan_x: 2.37
+      pan_y: -3.84
+    visible: 
+      - "Duct Base M3 Nuts"
+      - "EMS Grill M3x6 BHCS"
+      - "Wire Duct Base"
+      - "Wire Duct EMS"
+      - "WLED EMS"
+      - "WLED Hardware"
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Hexa Bracket"
+      - "Duct Base M3x10 BHCS"
+      - "Panel"
+      - "Frame"
+      - "Center Skirt"
+      - "Skirt M3x8 SHCS Vertical"
+      - "Skirt T-Nuts"
+      - "90 Center Rear Skirt"
+      - "Skirt M3x8 SHCS Horizontal"
+      - "M3 Hammerhead Nuts"
+      - "Skirt M3 Nuts"
+      - "Skirt M3x10 BHCS"
+      - "Wire Duct Cover"
+      - "Wire Duct Connector Scaled"

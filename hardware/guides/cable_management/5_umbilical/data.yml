@@ -1,0 +1,230 @@
+title: Umbilical
+author: "DraftShift Design"
+summary: >
+    This guide will walk you through the assembly of an Umbilical. 
+
+    !!! tip "Bending"
+        Spring steel can snap rather easily when bending. Before bending, heat the area with a blow torch or lighter to a cherry (dull) red and let it cool. This helps make the steel more ductile and allows you to bend without snapping. 
+
+    !!! tip "More Information"
+        More information and photos can be found in [N3MI's original usermod](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2#installation){target="_blank"}.
+
+
+printed_bom:
+  TPU Clip:
+    qty: 5
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/%5Btpu%5D_Clip_Voron_xN.stl
+
+  Terminator:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/%5Btpu%5D_Terminator_Voron_xN.stl
+    
+  Relief:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/%5Btpu%5D_Relief_Voron_x5xN.stl
+
+hardware_bom:
+  Spring Steel .3x3mm by length needed:
+    qty: 1
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+  N3MI's original usermod: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2#installation
+
+primary_parts:
+
+accent_parts:
+  - "1st Clip"
+  - "2nd Clip"
+  - "3rd Clip"
+  - "4th Clip"
+  - "5th Clip"
+  - "Relief"
+  - "Terminator"
+
+steps:
+  - description: "Heat up spring steel and bend into shape shown below. The first bend should be done 12mm from the end and bent to 180 degrees. The second bend should be done 6mm from the bent end and bent to ~60 degrees."
+    camera:
+      azimuth: 332
+      polar: 83
+      distance: 15
+      pan_x: -15.43
+      pan_y: -0.75
+    visible: 
+      - "Spring Steel Bend"
+    focus: 
+      - "Spring Steel Bend"
+
+  - description: "Insert the spring steel into the Relief from the rear. The bends done earlier should be resting inside the relief."
+    camera:
+      azimuth: 337
+      polar: 46
+      distance: 23
+      pan_x: -14.57
+      pan_y: -4.21
+    visible: 
+      - "Spring Steel Bend"
+      - "Relief"
+    focus: 
+      - "Relief"
+
+  - description: "Slide the 1st clip on to the spring steel pay close attention to orientation of the clip. One side is for the PTFE, the other is for the cable."
+    camera:
+      azimuth: 307
+      polar: 55
+      distance: 30
+      pan_x: -4.39
+      pan_y: -3.18
+    visible: 
+      - "Spring Steel Bend"
+      - "Relief"
+      - "1st Clip"
+    focus: 
+      - "1st Clip"
+
+  - description: "Slide the 2nd 3rd 4th and 5th clip on to the spring steel paying close attention to their orientation. Do not worry about their spacing just yet, they can be adjusted later."
+    camera:
+      azimuth: 307
+      polar: 55
+      distance: 30
+      pan_x: -4.39
+      pan_y: -3.18
+    visible: 
+      - "Spring Steel Bend"
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip" 
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"       
+    focus: 
+      - "2nd Clip"
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"        
+ 
+  - description: "Slide the Terminator on to the spring steel."
+    camera:
+      azimuth: 317
+      polar: 54
+      distance: 39
+      pan_x: -4.22
+      pan_y: -1.92
+    visible: 
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip" 
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"  
+      - "Terminator" 
+      - "Spring Steel Bend"    
+    focus: 
+      - "Terminator"
+       
+  - description: "Starting at the toolhead end, install the cable and PTFE into the terminator. Install the cable and PTFE into the Relief. You need to make sure that the cable length inside the printer is enough for the tool to reach all 4 corners of the bed without pulling too hard on the umbilical. Space the clips evenly and attach them to the cable and PTFE."
+    camera:
+      azimuth: 303
+      polar: 55
+      distance: 38
+      pan_x: -0.45
+      pan_y: 0.86
+    visible: 
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip" 
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"  
+      - "Terminator" 
+      - "Spring Steel Bend"
+      - "Wire"
+      - "PTFE"    
+    focus: 
+      - "PTFE"
+      - "Wire"
+
+  - description: "Install the Relif into a port of the Umbilical Plate from the front by first feeding the cable and PTFE through. The spring steel bent earlier should latch in to the port."
+    camera:
+      azimuth: 303
+      polar: 55
+      distance: 38
+      pan_x: -0.45
+      pan_y: 0.86
+    visible: 
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip"
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"
+      - "Terminator"
+      - "Spring Steel Bend"
+      - "Wire"
+      - "PTFE"
+    focus:
+      - "Relief"
+
+  - description: "Plug the cable in to the toolhead and double check that the toolhead can comfortably reach all corners of the bed without pulling on the umbilical. Adjust the length as required."
+    camera:
+      azimuth: 303
+      polar: 55
+      distance: 38
+      pan_x: -0.45
+      pan_y: 0.86
+    visible: 
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip"
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"
+      - "Terminator"
+      - "Spring Steel Bend"
+      - "Wire"
+      - "PTFE"
+    focus:
+      - "Wire"
+
+  - description: "Check that the Terminator is still in the 100-150mm range and cut the spring steel to length. Be generous, it can be made shorter if required, but it cant be made longer. Add a slight bend so that the spring steel rests in the TPU part and it cant come out."
+    camera:
+      azimuth: 35
+      polar: 76
+      distance: 29
+      pan_x: 8.11
+      pan_y: 0.21
+    visible:
+      - "Spring Steel"
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip"
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"
+      - "Wire"
+      - "PTFE"
+      - "Terminator"
+    focus:
+      - "Spring Steel"
+
+  - description: "That completes the umbilical. It's a good idea to try one out before committing to the rest to make sure that the length is adequate and it behaves correctly."
+    camera:
+      azimuth: 57
+      polar: 26
+      distance: 51
+      pan_x: 5.85
+      pan_y: -3.45
+    visible:
+      - "Spring Steel"
+      - "Relief"
+      - "1st Clip"
+      - "2nd Clip"
+      - "3rd Clip"
+      - "4th Clip"
+      - "5th Clip"
+      - "Wire"
+      - "PTFE"
+      - "Terminator"

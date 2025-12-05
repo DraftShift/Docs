@@ -1,0 +1,150 @@
+/* Show vertical borders on tables (MkDocs Material) */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+}
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-icon[data-md-type="dsd-tophat"] {
+  font-size: 36px;
+}
+
+/* Guide Cards Styles */
+.guide-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Hide guide TOC headings but keep anchors functional */
+.guide-toc-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.guide-card-title {
+  /* margin: 0 0 0.25rem 0; */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none;
+}
+
+.guide-card-title:hover {
+  text-decoration: none;
+}
+
+.guide-card-author {
+  /* margin: 0; */
+  margin-top: -0.25rem;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light) !important;
+  font-style: italic;
+  opacity: 0.8;
+  text-decoration: none;
+  display: block;
+}
+
+.guide-card-author:hover {
+  text-decoration: none;
+}
+
+/* Contributors Grid */
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.contributor-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.contributor-card:hover {
+  border-color: var(--md-primary-fg-color);
+  background-color: var(--md-default-fg-color--lightest);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contributor-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contributor-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contributor-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contributor-contributions {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.25rem;
+}
+
+/* Center images */
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Guide author line - complementary content below title */
+.guide-author {
+  margin-top: -2.0rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Custom asterisk admonition - orange with asterisk icon */
+.md-typeset .admonition.asterisk,
+.md-typeset details.asterisk {
+  border-color: #ff9100;
+}
+.md-typeset .asterisk > .admonition-title,
+.md-typeset .asterisk > summary {
+  background-color: rgba(255, 145, 0, 0.1);
+}
+.md-typeset .asterisk > .admonition-title::before,
+.md-typeset .asterisk > summary::before {
+  background-color: #ff9100;
+  -webkit-mask-image: var(--md-admonition-icon--asterisk);
+  mask-image: var(--md-admonition-icon--asterisk);
+}
+:root {
+  --md-admonition-icon--asterisk: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 32c17.7 0 32 14.3 32 32V199.4l96.5-55.7c15.3-8.8 34.9-3.6 43.7 11.7s3.6 34.9-11.7 43.7L256 256l96.5 55.7c15.3 8.8 20.5 28.4 11.7 43.7s-28.4 20.5-43.7 11.7L224 311.4V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V311.4l-96.5 55.7c-15.3 8.8-34.9 3.6-43.7-11.7s-3.6-34.9 11.7-43.7L128 256 31.5 200.3c-15.3-8.8-20.5-28.4-11.7-43.7s28.4-20.5 43.7-11.7L160 199.4V64c0-17.7 14.3-32 32-32z"/></svg>');
+}

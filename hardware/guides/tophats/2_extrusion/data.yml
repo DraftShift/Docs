@@ -1,0 +1,705 @@
+title: Extrusion Tophat
+author: "DraftShift Design"
+summary: >
+    The Extrusion version of the Tophat uses aluminum extrusions and acrylic panels to create a sturdy frame that looks like extension of the 3d Printer.
+
+    !!! tip "Where can I get one?"
+        The hardware components for this guide are all included as a part of LDO's `StealthChanger Tophat and Door Buffer Kit`.
+
+    !!! info "Frame"
+        This guide assumes you have built a Voron 2.4 3d printer. 
+        If you are building this Tophat before your printer, it is highly advised to make yourself familiar with the Voron 2.4 manual in regards to the frame assembly.
+
+printed_bom:
+  Corner Panel Clips (4mm):
+    qty: 18
+    urls:
+      Link: https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/Panel_Mounting/corner_panel_clip_4mm_x8.stl?raw=true
+
+  Mid Panel Clips (4mm):
+    qty: 18
+    urls:
+      Link: https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/Panel_Mounting/midspan_panel_clip_4mm_x7.stl?raw=true
+
+  Hinges:
+    qty: 1
+    urls:
+      1mm Foam: https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/LDO%20Tophat%20Hinge%20(1mm%20foam).stl?raw=true
+      3mm Foam: https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/LDO%20Tophat%20Hinge%20(3mm%20foam).stl?raw=true
+
+hardware_bom:
+  Vertical Extrusions:
+    qty: 4
+
+  Horizontal Extrusions:
+    qty: 8
+
+  M5x16 BHCS:
+    qty: 18
+
+  M5 Shim:
+    qty: 2
+
+  M3x8 SHCS:
+    qty: 59
+
+  M3x12 SHCS:
+    qty: 12
+
+  M3 T Nut:
+    qty: 82
+
+  625-2RS Bearing:
+    qty: 2
+
+  5mmx1mmx5m Panel Foam Tape:
+    qty: 3
+
+  Tophat Side Panels:
+    qty: 4
+
+  Voron Top Panel (From existing printer):
+    qty: 1
+
+resources:
+  Draftshift TopHat Github: https://github.com/DraftShift/Tophat
+  LDO Github: https://github.com/MotorDynamicsLab/LDOStealthChanger
+
+primary_parts:
+  - "Back Clips"
+  - "Front Clips"
+  - "Left Clips"
+  - "Right Clips"
+  - "Top Clips"
+  - "Back Clips"
+  - "Right Hinge Lower"
+  - "Right Hinge Upper"
+  - "Left Hinge Lower"
+  - "Left Hinge Upper"
+
+frame_parts:
+  - "Horizontal Bottom Front"
+  - "Horizontal Bottom Left"
+  - "Horizontal Bottom Right"
+  - "Horizontal Bottom Back"
+  - "Horizontal Top Front"
+  - "Horizontal Top Left"
+  - "Horizontal Top Right"
+  - "Horizontal Top Back"
+  - "Vertical Front Left"
+  - "Vertical Front Right"
+  - "Vertical Back Left"
+  - "Vertical Back Right"
+
+transparent_parts:
+  "Top Panel": 0.3
+  "Front Panel": 0.3
+  "Back Panel": 0.3
+  "Left Panel": 0.3
+  "Right Panel": 0.3
+
+steps:
+  - description: "Preload all of the horizontal extrusions with 2 M5x16 screws in each."
+    camera:
+      azimuth: 324
+      polar: 77
+      distance: 34
+      pan_x: 5.00
+      pan_y: -1.52
+    visible: 
+      - "Horizontal Bottom Front"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+    focus:
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+
+  - description: "Attach 2 horizontal extrusions to 2 of the vertical extrusions using the blind joint method."
+    camera:
+      azimuth: 316
+      polar: 18
+      distance: 56
+      pan_x: 0.36
+      pan_y: 13.61
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Vertical Front Left"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+    focus:
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BLF"
+
+
+  - description: "Join the 2 piece assembled in the previous step by using the remaining 2 vertical extrusions."
+    camera:
+      azimuth: 29
+      polar: 56
+      distance: 89
+      pan_x: -0.43
+      pan_y: -3.92
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+    focus:
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BRF"
+
+  - description: "Attach the remaining 4 horizontal extrusions between each of the verticals."
+    camera:
+      azimuth: 114
+      polar: 40
+      distance: 85
+      pan_x: -0.45
+      pan_y: -1.65
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+    focus:
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+
+  - description: "Insert a 625-2RS bearing in to lower left hinge piece."
+    camera:
+      azimuth: 206
+      polar: 90
+      distance: 19
+      pan_x: -1.29
+      pan_y: 0.70
+    visible: 
+      - "Left Hinge Lower"
+      - "Left 625-2RS"
+    focus:
+      - "Left 625-2RS"
+
+  - description: "Secure the top left hinge to the bottom left hinge using a M5x16 BHCS screw and M5 shim."
+    camera:
+      azimuth: 228
+      polar: 99
+      distance: 23
+      pan_x: -1.70
+      pan_y: -0.58
+    visible: 
+      - "Left Hinge Lower"
+      - "Left 625-2RS"
+      - "Left Hinge Upper"
+      - "Left M5x16 BHCS"
+      - "Left M5 Shim"
+    focus:
+      - "Left M5x16 BHCS"
+      - "Left M5 Shim"
+
+  - description: "Insert a 625-2RS bearing in to lower right hinge piece."
+    camera:
+      azimuth: 358
+      polar: 94
+      distance: 19
+      pan_x: 0.34
+      pan_y: 0.33
+    visible: 
+      - "Right Hinge Lower"
+      - "Right 625-2RS"
+    focus:
+      - "Right 625-2RS"
+
+  - description: "Secure the top right hinge to the bottom left hinge using a M5x16 BHCS screw and M5 shim."
+    camera:
+      azimuth: 323
+      polar: 95
+      distance: 23
+      pan_x: 1.30
+      pan_y: -0.41
+    visible: 
+      - "Right Hinge Lower"
+      - "Right 625-2RS"
+      - "Right Hinge Upper"
+      - "Right M5x16 BHCS"
+      - "Right M5 Shim"
+    focus:
+      - "Right M5x16 BHCS"
+      - "Right M5 Shim"
+
+  - description: "Remove the protective film and apply 1x5mm foam tape to the outer edges of each of the 4 side panels"
+    camera:
+      azimuth: 281
+      polar: 85
+      distance: 44
+      pan_x: 1.35
+      pan_y: 1.89
+    visible: 
+      - "Front Panel"
+      - "Front Foam"
+    focus:
+      - "Front Foam"
+
+  - description: "Insert M3 T-nuts in to the extrusions on all 4 sides and top. Front, left, right and top sidez require 3 T-nuts per extrusion. The back requires 3 in the upper and lower extrusions and 5 in each of the vertical extrusions."
+    camera:
+      azimuth: 131
+      polar: 46
+      distance: 80
+      pan_x: -2.42
+      pan_y: -3.70
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Right Hinge Upper Nuts"
+      - "Left Hinge Upper Nuts"
+    focus:
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Right Hinge Upper Nuts"
+      - "Left Hinge Upper Nuts"
+
+  - description: "Insert a M3x8 SHCS screw in to each of the mid panel clips and 2 M3x8 SHCS screws in each of the corner panel clips."
+    camera:
+      azimuth: 131
+      polar: 46
+      distance: 80
+      pan_x: -2.09
+      pan_y: -5.25
+    visible: 
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Back Clips"
+      - "Top Clips"
+      - "Top Panel Screws"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+      - "Back Panel Screws"
+    focus:
+      - "Top Panel Screws"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+      - "Back Panel Screws"
+  
+  - description: "Install front, left and right panels, securing each with 4 corner clips and 4 mid clips."
+    camera:
+      azimuth: 122
+      polar: 65
+      distance: 85
+      pan_x: -1.41
+      pan_y: -2.83
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Front Panel"
+      - "Left Panel"
+      - "Right Panel"
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+    focus:
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+
+  - description: "Install the top panel, securing it with 4 corner clips and 4 mid clips."
+    camera:
+      azimuth: 122
+      polar: 65
+      distance: 85
+      pan_x: -1.41
+      pan_y: -2.83
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Front Panel"
+      - "Left Panel"
+      - "Right Panel"
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+      - "Top Panel"
+      - "Top Clips"
+      - "Top Panel Screws"
+    focus:
+      - "Top Clips"
+      - "Top Panel Screws"
+
+  - description: "Install the top panel, securing it with 2 corner clips and 2 mid clips"
+    camera:
+      azimuth: 275
+      polar: 81
+      distance: 69
+      pan_x: -1.02
+      pan_y: 0.96
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Front Panel"
+      - "Left Panel"
+      - "Right Panel"
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+      - "Top Panel"
+      - "Top Clips"
+      - "Top Panel Screws"
+      - "Back Panel"
+      - "Back Clips"
+      - "Back Panel Screws"
+    focus:
+      - "Back Clips"
+      - "Back Panel Screws"
+
+  - description: "Install each of the hinges using 5 M3x12 SHCS screws in the vertical extrusion and a M3x8 SHCS screw in the lower horizontal extrusion."
+    camera:
+      azimuth: 253
+      polar: 92
+      distance: 73
+      pan_x: 0.94
+      pan_y: 3.91
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Front Panel"
+      - "Left Panel"
+      - "Right Panel"
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+      - "Top Panel"
+      - "Top Clips"
+      - "Top Panel Screws"
+      - "Back Panel"
+      - "Back Clips"
+      - "Back Panel Screws"
+      - "Left Hinge Lower"
+      - "Left Hinge Upper"
+      - "Right Hinge Lower"
+      - "Right Hinge Upper"
+      - "Left M5x16 BHCS"
+      - "Left M5 Shim"
+      - "Right M5x16 BHCS"
+      - "Right M5 Shim"
+      - "Right Hinge Upper Screws"
+      - "Left Hinge Upper Screws"
+    focus:
+      - "Right Hinge Upper Screws"
+      - "Left Hinge Upper Screws"
+
+
+  - description: "Apply 5x1mm foam around the bottom of the Tophat."
+    camera:
+      azimuth: 181
+      polar: 180
+      distance: 69
+      pan_x: 0.00
+      pan_y: -0.00
+    visible: 
+      - "Horizontal Bottom Front"
+      - "Horizontal Bottom Left"
+      - "Horizontal Bottom Right"
+      - "Horizontal Bottom Back"
+      - "Horizontal Top Front"
+      - "Horizontal Top Left"
+      - "Horizontal Top Right"
+      - "Horizontal Top Back"
+      - "Vertical Front Left"
+      - "Vertical Front Right"
+      - "Vertical Back Left"
+      - "Vertical Back Right"
+      - "M5x16 BHCS BFL"
+      - "M5x16 BHCS BFR"
+      - "M5x16 BHCS BLF"
+      - "M5x16 BHCS BLB"
+      - "M5x16 BHCS BBL"
+      - "M5x16 BHCS BBR"
+      - "M5x16 BHCS BRF"
+      - "M5x16 BHCS BRB"
+      - "M5x16 BHCS TFL"
+      - "M5x16 BHCS TFR"
+      - "M5x16 BHCS TLF"
+      - "M5x16 BHCS TLB"
+      - "M5x16 BHCS TBL"
+      - "M5x16 BHCS TBR"
+      - "M5x16 BHCS TRF"
+      - "M5x16 BHCS TRB"
+      - "Top Panel Nuts"
+      - "Left Panel Nuts"
+      - "Right Panel Nuts"
+      - "Front Panel Nuts"
+      - "Back Panel Nuts"
+      - "Front Panel"
+      - "Left Panel"
+      - "Right Panel"
+      - "Front Clips"
+      - "Left Clips"
+      - "Right Clips"
+      - "Left Panel Screws"
+      - "Right Panel Screws"
+      - "Front Panel Screws"
+      - "Top Panel"
+      - "Top Clips"
+      - "Top Panel Screws"
+      - "Back Panel"
+      - "Back Clips"
+      - "Back Panel Screws"
+      - "Left Hinge Lower"
+      - "Left Hinge Upper"
+      - "Right Hinge Lower"
+      - "Right Hinge Upper"
+      - "Left M5x16 BHCS"
+      - "Left M5 Shim"
+      - "Right M5x16 BHCS"
+      - "Right M5 Shim"
+      - "Right Hinge Upper Screws"
+      - "Left Hinge Upper Screws"
+      - "Bottom Foam Tape"
+    focus:
+      - "Bottom Foam Tape"
+
+  - description: "Remove the top corner clips from the back of the printer and preload 2 M3 T-nuts in each of the rear vertical extrusions and 2 in the upper horizontal extrusion of the printer."
+    camera:
+      azimuth: 285
+      polar: 89
+      distance: 46
+      pan_x: 2.30
+      pan_y: 0.63
+    visible: 
+      - "Right Hinge Lower Nuts"
+      - "Left Hinge Lower Nuts"
+      - "Voron Back"
+    focus:
+      - "Right Hinge Lower Nuts"
+      - "Left Hinge Lower Nuts"
+  
+  - description: "Sit the tophat on top of the printer and attach each of the hinges using 2 M3x12 SHCS screws in the vertical extrusion and a M3x8 SHCS screw in the upper horizontal extrusion."
+    camera:
+      azimuth: 281
+      polar: 94
+      distance: 77
+      pan_x: -2.29
+      pan_y: 1.86
+    visible: []
+    focus:
+      - "Right Hinge Lower Screws"
+      - "Left Hinge Lower Screws"

@@ -1,0 +1,258 @@
+title: Printed Tophat
+author: "DraftShift Design"
+summary: >
+    The 3D printed version of the Tophat uses mostly printed parts and common hardware. 
+    This version is ideal for people who have limited access to extrusions and acrylic panels.
+
+printed_bom:
+  Side A:
+    qty: 4
+    urls:
+      250: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/250/Side_A_250_x4.3mf?raw=true
+      300: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/300/Side_A_300_x4.3mf?raw=true
+      350: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/350/Side_A_350_x4.3mf?raw=true
+  Side B:
+    qty: 4
+    urls:
+      250: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/250/Side_B_250_x4.3mf?raw=true
+      300: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/300/Side_B_300_x4.3mf?raw=true
+      350: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/350/Side_B_350_x4.3mf?raw=true
+  Medallion:
+    qty: 4
+    urls:
+      Voron: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion.stl?raw=true
+      Micron: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Micron.3mf?raw=true
+      Archetype: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Archetype.3mf?raw=true
+      Sovol: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Sovol.3mf?raw=true
+      Blank: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Medalion%20Blank.3mf?raw=true
+  Mid Clips:
+    qty: 4
+    urls:
+      Link: https://github.com/DraftShift/Tophat/blob/main/Printed%20version/STLs/Midclip_[a]_x4.stl?raw=true
+
+hardware_bom:
+    M3x8 SHCS Screws:
+      qty: 48
+    M3x8 BHCS Screws:
+      qty: 24
+    M3 Heat Inserts:
+      qty: 56
+    M3 T-Nut:
+      qty: 16
+    Voron Top Panel (From existing printer):
+      qty: 1
+
+resources:
+  Draftshift TopHat Github: https://github.com/DraftShift/Tophat
+
+primary_parts:
+  - "Medallion Primary Front"
+  - "Medallion Primary Back"
+  - "Medallion Primary Left"
+  - "Medallion Primary Right"
+  - "SideA Primary Front"
+  - "SideA Primary Back"
+  - "SideB Primary Front"
+  - "SideB Primary Back"
+  - "SideA Primary Left"
+  - "SideA Primary Right"
+  - "SideB Primary Left"
+  - "SideB Primary Right"
+
+accent_parts:
+  - "Medallion Accent Front"
+  - "Medallion Accent Back"
+  - "Medallion Accent Left"
+  - "Medallion Accent Right"
+  - "SideA Accent Front"
+  - "SideA Accent Back"
+  - "SideB Accent Front"
+  - "SideB Accent Back"
+  - "SideA Accent Left"
+  - "SideA Accent Right"
+  - "SideB Accent Left"
+  - "SideB Accent Right"
+  - "Top Clips"
+
+frame_parts:
+  - "Frame"
+
+transparent_parts:
+  "Clear Panel": 0.3
+
+steps:
+  - description: "Install 6 heat inserts in to each of the 4 medallions."
+    camera:
+      azimuth: 282
+      polar: 76
+      distance: 23
+      pan_x: 0.59
+      pan_y: 0.80
+    visible: 
+    - "Medallion Accent Front"
+    - "Medallion Primary Front"
+    - "Medallion Heat Inserts Front"
+    focus:
+    - "Medallion Heat Inserts Front"
+  
+  - description: "Install 6 heat inserts in to each of the 4 Side B pieces."
+    camera:
+      azimuth: 305
+      polar: 39
+      distance: 39
+      pan_x: 0.75
+      pan_y: 1.54
+    visible: 
+      - "SideB Primary Front"
+      - "SideB Accent Front"
+      - "SideB Heat Insert Front"
+    focus:
+      - "SideB Heat Insert Front"
+
+  - description: "Install 2 heat inserts in to each of the Side A pieces."
+    camera:
+      azimuth: 103
+      polar: 35
+      distance: 48
+      pan_x: 0.14
+      pan_y: 2.35
+    visible: 
+      - "SideA Primary Front"
+      - "SideA Accent Front"
+      - "SideA Heat Insert Front"
+    focus:
+      - "SideA Heat Insert Front"
+
+  - description: "Attatch each medallion to the Side A and Side B pieces using 6 M3x8 BHCS screws."
+    camera:
+      azimuth: 289
+      polar: 69
+      distance: 44
+      pan_x: 3.42
+      pan_y: -0.06
+    visible: 
+      - "SideA Primary Front"
+      - "SideA Accent Front"
+      - "SideA Heat Insert Front"
+      - "SideB Primary Front"
+      - "SideB Accent Front"
+      - "SideB Heat Insert Front"
+      - "Medallion Accent Front"
+      - "Medallion Primary Front"
+      - "Medallion Hardware Front"
+    focus:
+      - "Medallion Hardware Front"
+
+  - description: "Insert 4 M3 T-nuts in to each of the top extrusions of the printer."
+    camera:
+      azimuth: 91
+      polar: 24
+      distance: 62
+      pan_x: -0.19
+      pan_y: -3.48
+    visible:
+      - "Frame"
+      - "T Nuts"
+    focus:
+      - "T Nuts"
+
+  - description: "Attach the 3d printed sides to each of the top extrusions using M3x8 SHCS screws. Leave these loose for now, they need to be able to move for the next step."
+    camera:
+      azimuth: 104
+      polar: 49
+      distance: 53
+      pan_x: -4.55
+      pan_y: -22.92
+    visible:
+      - "Medallion Primary Front"
+      - "Medallion Primary Back"
+      - "Medallion Primary Left"
+      - "Medallion Primary Right"
+      - "SideA Primary Front"
+      - "SideA Primary Back"
+      - "SideB Primary Front"
+      - "SideB Primary Back"
+      - "SideA Primary Left"
+      - "SideA Primary Right"
+      - "SideB Primary Left"
+      - "SideB Primary Right"
+      - "Medallion Accent Front"
+      - "Medallion Accent Back"
+      - "Medallion Accent Left"
+      - "Medallion Accent Right"
+      - "SideA Accent Front"
+      - "SideA Accent Back"
+      - "SideB Accent Front"
+      - "SideB Accent Back"
+      - "SideA Accent Left"
+      - "SideA Accent Right"
+      - "SideB Accent Left"
+      - "SideB Accent Right"
+      - "Frame"
+      - "T Nuts"
+      - "SideA Hardware Front"
+      - "SideB Hardware Front"
+    focus:
+      - "SideA Hardware Front"
+      - "SideB Hardware Front"
+
+  - description: "Secure each of the sides together by screwing 4 M3x8 SHCS through the Side A corners in to the Side B heat inserts."
+    camera:
+      azimuth: 82
+      polar: 80
+      distance: 77
+      pan_x: 21.40
+      pan_y: -4.62
+    visible:
+      - "Medallion Primary Front"
+      - "Medallion Primary Back"
+      - "Medallion Primary Left"
+      - "Medallion Primary Right"
+      - "SideA Primary Front"
+      - "SideA Primary Back"
+      - "SideB Primary Front"
+      - "SideB Primary Back"
+      - "SideA Primary Left"
+      - "SideA Primary Right"
+      - "SideB Primary Left"
+      - "SideB Primary Right"
+      - "Medallion Accent Front"
+      - "Medallion Accent Back"
+      - "Medallion Accent Left"
+      - "Medallion Accent Right"
+      - "SideA Accent Front"
+      - "SideA Accent Back"
+      - "SideB Accent Front"
+      - "SideB Accent Back"
+      - "SideA Accent Left"
+      - "SideA Accent Right"
+      - "SideB Accent Left"
+      - "SideB Accent Right"
+      - "Frame"
+      - "T Nuts"
+      - "SideA Hardware Front"
+      - "SideB Hardware Front"
+      - "SideA Hardware Front Side"
+    focus:
+      - "SideA Hardware Front Side"
+
+  - description: "Secure the top panel with 16 M3x8 SHCS screws using the standard corner clips from a Voron 2.4 and the 4 MidClips."
+    camera:
+      azimuth: 91
+      polar: 30
+      distance: 77
+      pan_x: 0.41
+      pan_y: 0.90
+    visible: []
+    focus:
+      - "Top Clips"
+      - "Top Clips M3x8 SHCS"
+
+  - description: "Now that the Tophat is assembled, tighten the 16 M3x8 SHCS screws to secure it to the frame."
+    camera:
+      azimuth: 276
+      polar: 51
+      distance: 85
+      pan_x: -1.21
+      pan_y: -3.15
+    visible: []

@@ -1,0 +1,240 @@
+title: Modular Dock Assembly
+author: "DraftShift Design"
+summary: >
+    This guide will guide you through the assembly of the Modular Dock. It is presumed you have already assembled the [Blocker](../../../modular_dock.md#blocker), [Base](../../../modular_dock.md#base) and [Frame](../../../modular_dock.md#frame) sub-assemblies.
+
+    !!! note "Variations"
+        [Spring Steel Blocker](../01_blocker_spring_steel/index.md), [Anthead Base](../04_base_anthead/index.md) and [Standard Crossbar Frame](../15_frame_standard_crossbar/index.md) are used for the purpose of this guide. You may be using different parts, but the assembly process is the same.
+
+printed_bom: {}
+
+hardware_bom:
+    M3 Heat Inserts:
+      qty: 4-7
+    
+    M3x20 SHCS:
+      qty: 6 for Standard width, x2 for Wide
+    
+    M3x30 SHCS (Wide Only):
+      qty: 4
+    
+    M3x40 SHCS (Stubby Only):
+      qty: 2
+    
+    M3x50 SHCS (Non-Stubby Only):
+      qty: 2
+
+    M3x10 SHCS:
+      qty: 2
+
+    M3x8 BHCS (Wiper Only):
+      qty: 1
+    
+    PTFE Tube (Wiper Only):
+      qty: 15mm
+
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
+primary_parts:
+  - "Back"
+  - "Base"
+  - "Frame Left"
+  - "Frame Right"
+  - "Crossbar Top"
+  - "Crossbar Bottom"
+  - "Clamp"
+  - "Spring Steel Body"
+  - "PTFE Wiper"
+
+steps:
+  - description: "Insert the Blocker in to the Base and secure it using 4 M3x20/30 SHCS screws."
+    camera:
+      azimuth: 327
+      polar: 66
+      distance: 34
+      pan_x: 0.26
+      pan_y: -1.10
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    focus:
+    - "Blocker Mount Screws"
+
+  - description: "Attach the frame to the front of the Base using 2 M3x20 SHCS screws."
+    camera:
+      azimuth: 88
+      polar: 91
+      distance: 46
+      pan_x: 0.21
+      pan_y: -14.84
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Top M3x16 SHCS"
+    focus:
+    - "Frame Front Mount Screws"
+
+  - description: "Secure the frame to the Base using 2 M3x40/50 SHCS screws."
+    camera:
+      azimuth: 274
+      polar: 92
+      distance: 40
+      pan_x: -0.70
+      pan_y: -14.71
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    focus:
+    - "Frame Rear Mount Screws"
+
+  - description: "Attach the Back plate to the Base using 2 M3x10 SHCS screws. No need to tighten them, they will be used for adjustment later."
+    camera:
+      azimuth: 274
+      polar: 92
+      distance: 40
+      pan_x: -0.70
+      pan_y: -14.71
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    focus:
+    - "Back Mount Screws"
+
+  - description: "If you opted to install a wiper, put the PTFE tube through the holes of the PTFE Wiper and secure the wiper to the Back plate using a M3x8 BHCS screw."
+    camera:
+      azimuth: 294
+      polar: 50
+      distance: 34
+      pan_x: -2.72
+      pan_y: -18.61
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+    focus:
+    - "Wiper M3x8 BHCS"
+  
+    - title: "Complete"
+    description: "Modular Dock Assembly is complete. Now is the time to check that the blocker operates correctly.Sit a tool on the dock and check that the silicone square of the blocker is central to the nozzle. Adjust it if required."
+    camera:
+      azimuth: 48
+      polar: 63
+      distance: 81
+      pan_x: 0.02
+      pan_y: -0.03
+    visible: 
+    - "6x3mm Magnets"
+    - "Base"
+    - "Base Heat Inserts"
+    - "Blocker Mount Screws"
+    - "Clamp"
+    - "Heat Inserts"
+    - "M3x8 BHCS Screws"
+    - "Silicone"
+    - "Spring Steel"
+    - "Spring Steel Body"
+    - "Frame Left"
+    - "Frame Right"
+    - "Crossbar Top"
+    - "Crossbar Bottom"
+    - "Bottom Heat Inserts"
+    - "Bottom M3x16 SHCS"
+    - "Frame Heat Inserts"
+    - "Frame Front Mount Screws"
+    - "Frame Rear Mount Screws"
+    - "Top M3x16 SHCS"
+    - "Back"
+    - "Back Mount Screws"
+    - "Back Heat Insert"
+    - "PTFE Wiper"
+    - "PTFE Tube 15mm"
+    - "Wiper M3x8 BHCS"
+    focus:
+    - "Wiper M3x8 BHCS"

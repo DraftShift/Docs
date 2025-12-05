@@ -1,0 +1,870 @@
+title: Anthead
+author: "DraftShift Design"
+primary_parts:
+  - "Main Body"
+  - "Backplate"
+  - "Anthead Spacer"
+  - "Light Shield"
+  - "LED Carrier"
+  - "PCB Mount"
+  - "LED Solder Jig"
+  - "LED Carrier Jig"
+
+accent_parts:
+  - "Duct Right"
+  - "Duct Left"
+  - "NH Cover Shell" 
+  - "Nozzle LED Carrier"
+  - "Nozzle LED Restraint"
+  - "HE Mount"
+  - "Grill"
+  - "Nozzle LED Carrier Jig"
+  - "Nozzle LED Restraint Jig"
+
+summary: >
+  This guide will walk you through the assembly of an Anthead for StealthChanger with community usermods.
+
+  !!! tip "Making the best better?"
+      The stock Anthead works really well with StealthChanger, however with some small tweaks we can make it even better. 
+      This guide introduces some community usermods to make a complete and robust solution for reliable tool changes with StealthChanger.
+
+printed_bom:
+  Complete Anthead:
+    qty: 1
+    urls:
+      Link: "https://download-directory.github.io/?url=https://github.com/N3MI-DG/sc-guides/tree/main/Anthead/STL"
+
+  LED Solder Jig:
+    qty: 1
+    urls:
+      Link: "https://download-directory.github.io/?url=https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture"
+
+hardware_bom:
+  M3x6 BHCS Screws:
+    qty: 6
+  M3x8 BHCS Screws:
+    qty: 10
+  M3x12 BHCS Screws:
+    qty: 4
+  M3x14 BHCS Screws:
+    qty: 2
+  M3x8 SHCS Screws:
+    qty: 4
+  M3x12 BHCS Screw:
+    qty: 1
+  M3x28 SHCS Screws:
+    qty: 2
+  M3 Heat Insert:
+    qty: 19
+  6x3mm N52 Magnets:
+    qty: 2
+  Voron Revo Hotend:
+    qty: 1
+  Orbiter 2.x Extruder:
+    qty: 1
+  Nitehawk36 Toolhead Board:
+    qty: 1
+  25x10mm Radial Fan:
+    qty: 1
+  40x10mm Centrifugal/Blower Fan:
+    qty: 2
+  4x2mm PTFE ~40mm Long:
+    qty: 1
+
+resources:
+  Anthead Github: https://github.com/PrintersForAnts/AntHead
+  TheSin's StealthChanger Backplate & PCB Mount Usermod: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount
+  Averen's LED Solder Jig: https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture
+  N3MI's Nitehawk36 Cover, Spacers & Nozzle LEDs: https://github.com/N3MI-DG/sc-guides/tree/main/Anthead
+
+steps:
+  - description: "This guide uses a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/)."
+    camera:
+      azimuth: 295
+      polar: 118
+      distance: 42
+      pan_x: 0.87
+      pan_y: 0.60
+    visible: 
+      - "Backplate"
+      - "Backplate Hardware"
+
+  - description: 'Solder the 3 LEDs using the [LED Solder Fixture](https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture){target="_blank"}'
+    camera:
+      azimuth: 91
+      polar: 34
+      distance: 22
+      pan_x: 11.55
+      pan_y: -0.10
+    visible: 
+      - "Jig LEDs"
+      - "LED Pins"
+      - "LED Solder Jig"
+      - "LED Wires"
+
+  - description: "Insert the nozzle LEDs in to the Nozzle LED Carrier."
+    camera:
+      azimuth: 91
+      polar: 21
+      distance: 17
+      pan_x: 16.84
+      pan_y: 0.59
+    visible: 
+      - "Jig LEDs"
+      - "LED Pins"
+      - "LED Wires"
+      - "Nozzle LED Carrier Jig"
+    focus:
+      - "Jig LEDs"
+      - "LED Pins"
+      - "LED Wires"
+
+  - description: "Fit the Nozzle LED Restraint in to the Nozzle LED Carrier by hooking the tab on the Carrier and pressing the Restraint down until it clips in to the 2 openings."
+    camera:
+      azimuth: 232
+      polar: 76
+      distance: 21
+      pan_x: -13.39
+      pan_y: -2.54
+    visible: 
+      - "Jig LEDs"
+      - "LED Pins"
+      - "LED Wires"
+      - "Nozzle LED Carrier Jig"
+      - "Nozzle LED Restraint Jig"
+    focus:
+      - "Nozzle LED Restraint Jig"
+
+  - description: "Slide the LED Carrier over the logo LED. Put the LEDs aside for now, they will be used later in the process."
+    camera:
+      azimuth: 105
+      polar: 53
+      distance: 22
+      pan_x: 11.19
+      pan_y: -2.03
+    visible: 
+      - "Jig LEDs"
+      - "LED Carrier Jig"
+      - "LED Pins"
+      - "LED Wires"
+      - "Nozzle LED Carrier Jig"
+      - "Nozzle LED Restraint Jig"
+    focus:
+      - "LED Carrier Jig"
+
+  - description: "Install 7 heat inserts into the Main Body."
+    camera:
+      azimuth: 214
+      polar: 47
+      distance: 28
+      pan_x: 0.30
+      pan_y: 0.92
+    visible: 
+      - "Main Body"
+      - "Main Body Heat Inserts"
+    focus: 
+      - "Main Body Heat Inserts"
+
+  - description: "Install 2 heat inserts into the each of the PCB Mount Spacers."
+    camera:
+      azimuth: 265
+      polar: 136
+      distance: 23
+      pan_x: -0.02
+      pan_y: 0.44
+    visible: 
+      - "Spacers"
+      - "Spacer Heat Inserts"
+    focus: 
+      - "Spacer Heat Inserts"
+
+  - description: "Install 2 heat inserts into the PCB Mount."
+    camera:
+      azimuth: 92
+      polar: 96
+      distance: 37
+      pan_x: -1.06
+      pan_y: 0.06
+    visible: 
+      - "PCB Mount"
+      - "PCB Mount Heat Inserts"
+    focus: 
+      - "PCB Mount Heat Inserts"
+
+  - description: "Install a heat insert into each of the ducts."
+    camera:
+      azimuth: 266
+      polar: 114
+      distance: 36
+      pan_x: 1.20
+      pan_y: -0.10
+    visible: 
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+    focus: 
+      - "Duct Heat Inserts"
+
+  - description: "Install 4 heat inserts into the Hotend Mount."
+    camera:
+      azimuth: 124
+      polar: 97
+      distance: 22
+      pan_x: -0.18
+      pan_y: -0.46
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+    focus: 
+      - "HE Mount Heat Inserts"
+
+  - description: "Install the hotend into the hotend mount using 4 M3x8 SHCS screws."
+    camera:
+      azimuth: 98
+      polar: 32
+      distance: 31
+      pan_x: 0.09
+      pan_y: 1.83
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "Revo Voron"
+      - "HE M3x8 SHCS"
+    focus: 
+      - "HE M3x8 SHCS"
+
+  - description: "Attach the 25mm axial fan to the hotend mount using 2 M3x14 BHCS screws. Ensure the cable is on the bottom right."
+    camera:
+      azimuth: 112
+      polar: 78
+      distance: 28
+      pan_x: 0.46
+      pan_y: 1.26
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+    focus: 
+      - "Axial Fan M3x14 BHCS"
+
+  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capsure the M3x12 SCHS screw between the Backplate and the Spacer."
+    camera:
+      azimuth: 118
+      polar: 71
+      distance: 30
+      pan_x: -0.40
+      pan_y: 0.78
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+    focus: 
+      - "Spacer M3x12 SHCS"
+      - "HE Mount M3x28 SHCS"
+
+  - description: "Insert the Grill into the Main Body, angling the top in first and the pushing the bottom in to place."
+    camera:
+      azimuth: 270
+      polar: 124
+      distance: 32
+      pan_x: 0.12
+      pan_y: -0.26
+    visible: 
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+    focus: 
+      - "Grill"
+
+  - description: "Insert the Diffuser in to the Main Body."
+    camera:
+      azimuth: 270
+      polar: 124
+      distance: 32
+      pan_x: 0.12
+      pan_y: -0.26
+    visible: 
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "Light Shield"
+      - "Diffuser"
+    focus: 
+      - "Light Shield"
+      - "Diffuser"
+
+  - description: "Insert the LEDs in to the Main Body. Route the cables so that they will be around the hotend assembly abd out through the cable channel in the top of the Main Body."
+    camera:
+      azimuth: 270
+      polar: 124
+      distance: 32
+      pan_x: 0.12
+      pan_y: -0.26
+    visible: 
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+    focus: 
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+
+  - description: "Attach the Main Body  to the Backplate using the M3x12 Screw that was captured in a previous step making sure that the wires clear. The wires for the Hotend fan should be routed through the hole in the side of the Main Body. Secure the Main Body to the Hotend Mount using 2 M3x6 BHCS screws."
+    camera:
+      azimuth: 193
+      polar: 81
+      distance: 32
+      pan_x: -0.11
+      pan_y: -0.19
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+    focus: 
+      - "Main Body M3x6 BHCS"
+      - "Spacer M3x12 SHCS"
+
+  - description: "Install a 40mm blower fan in each of the ducts."
+    camera:
+      azimuth: 266
+      polar: 114
+      distance: 36
+      pan_x: 1.20
+      pan_y: -0.10
+    visible: 
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+    focus: 
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+
+  - description: "Attach the ducts to the Main Body by starting by hooking the bottom and then angling the top in to place. Secure each duct to the Main Body with 2 M3x8 BHCS screws."
+    camera:
+      azimuth: 193
+      polar: 81
+      distance: 32
+      pan_x: -0.11
+      pan_y: -0.19
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+    focus: 
+      - "Duct Upper M3x8 BHCS"
+
+  - description: "Secure the Ducts to the Backplate using 2 M3x8 SHCS screws."
+    camera:
+      azimuth: 273
+      polar: 106
+      distance: 36
+      pan_x: 0.20
+      pan_y: 1.07
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+    focus: 
+      - "Duct Lower M3x8 BHCS"
+
+  - description: "Install a 6x3mm N52 magnet into each of the ducts. Ensure they attract to the magnets in the Modular Dock."
+    camera:
+      azimuth: 270
+      polar: 180
+      distance: 36
+      pan_x: 0.07
+      pan_y: -1.82
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+    focus: 
+      - "Duct 6x3 Magnets"
+
+  - description: "Insert a piece of 4x2mm PTFE tube through the Main Body into the hotend."
+    camera:
+      azimuth: 140
+      polar: 40
+      distance: 33
+      pan_x: -0.67
+      pan_y: 1.59
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+    focus: 
+      - "4x2mm PTFE"
+
+  - description: "Attach the Orbiter to the Main Body using 2 M3x12 BHCS screws."
+    camera:
+      azimuth: 140
+      polar: 40
+      distance: 33
+      pan_x: -0.67
+      pan_y: 1.59
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+      - "Orbiter Extruder"
+      - "Orbiter M3x12 BHCS"
+    focus: 
+      - "Orbiter M3x12 BHCS"
+
+  - description: "Attach the 2 PCB Mount Spacers."
+    camera:
+      azimuth: 232
+      polar: 60
+      distance: 39
+      pan_x: 1.15
+      pan_y: 4.02
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+      - "Orbiter Extruder"
+      - "Orbiter M3x12 BHCS"
+      - "Spacers"
+      - "Spacer Heat Inserts"
+    focus: 
+      - "Spacers"
+      - "Spacer Heat Inserts"
+
+  - description: "Attach the PCB Mount using 4 M3x8 BHCS screws."
+    camera:
+      azimuth: 257
+      polar: 75
+      distance: 43
+      pan_x: 2.22
+      pan_y: 2.38
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+      - "Orbiter Extruder"
+      - "Orbiter M3x12 BHCS"
+      - "Spacers"
+      - "Spacer Heat Inserts"
+      - "PCB Mount"
+      - "PCB Mount Heat Inserts"
+      - "PCB Mount M3x8 BHCS"
+    focus: 
+      - "PCB Mount M3x8 BHCS"
+
+  - description: "Attach the TAP PCB using 2 M3x8 BHCS screws."
+    camera:
+      azimuth: 257
+      polar: 75
+      distance: 43
+      pan_x: 2.22
+      pan_y: 2.38
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+      - "Orbiter Extruder"
+      - "Orbiter M3x12 BHCS"
+      - "Spacers"
+      - "Spacer Heat Inserts"
+      - "PCB Mount"
+      - "PCB Mount Heat Inserts"
+      - "PCB Mount M3x8 BHCS"
+      - "OptoTap PCB"
+      - "OptoTap M3x8 BHCS"
+    focus: 
+      - "OptoTap M3x8 BHCS"
+
+  - description: "Attatch the Nitehawk36 PCB to the PCB Mount using 2 M3x8 BHCS screws and route all the wires to the board."
+    camera:
+      azimuth: 257
+      polar: 75
+      distance: 43
+      pan_x: 2.22
+      pan_y: 2.38
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+      - "Orbiter Extruder"
+      - "Orbiter M3x12 BHCS"
+      - "Spacers"
+      - "Spacer Heat Inserts"
+      - "PCB Mount"
+      - "PCB Mount Heat Inserts"
+      - "PCB Mount M3x8 BHCS"
+      - "OptoTap PCB"
+      - "OptoTap M3x8 BHCS"
+      - "Nitehawk36"
+      - "NH M3x8 BHCS"
+    focus: 
+      - "NH M3x8 BHCS"
+
+  - description: "Remove the built in supports from the Nitehawk36 cover."
+    camera:
+      azimuth: 90
+      polar: 141
+      distance: 27
+      pan_x: -0.21
+      pan_y: -0.08
+    visible: 
+      - "NH Cover Shell"
+      - "NH Cover Supports" 
+    focus: 
+      - "NH Cover Supports"
+
+  - description: "Insert 2 M3x12 BHCS screws in to the cover."
+    camera:
+      azimuth: 269
+      polar: 121
+      distance: 27
+      pan_x: 0.24
+      pan_y: -0.25
+    visible: 
+      - "NH Cover Shell"
+      - "NH M3x12 BHCS" 
+    focus: 
+      - "NH M3x12 BHCS"
+
+  - description: "Attach the cover to the PCB Mount using the 2 M3x12 BHCS screws."
+    camera:
+      azimuth: 265
+      polar: 70
+      distance: 65
+      pan_x: 0.90
+      pan_y: 0.92
+    visible: 
+      - "HE Mount"
+      - "HE Mount Heat Inserts"
+      - "HE M3x8 SHCS"
+      - "Revo Voron"
+      - "2510 Axial Fan"
+      - "Axial Fan M3x14 BHCS"
+      - "Anthead Spacer"
+      - "HE Mount M3x28 SHCS"
+      - "Backplate"
+      - "Backplate Hardware"
+      - "Spacer M3x12 SHCS"
+      - "Main Body"
+      - "Main Body Heat Inserts"
+      - "Grill"
+      - "LED Carrier"
+      - "Light Shield"
+      - "Logo LED"
+      - "Nozzle LED Carrier"
+      - "Nozzle LED Restraint"
+      - "Nozzle LEDs"
+      - "Diffuser"
+      - "Main Body M3x6 BHCS"
+      - "Duct Left"
+      - "Duct Right"
+      - "Duct Heat Inserts"
+      - "4010 Blower Fan Left"
+      - "4010 Blower Fan Right"
+      - "Duct Upper M3x8 BHCS"
+      - "Duct Lower M3x8 BHCS"
+      - "Duct 6x3 Magnets"
+      - "4x2mm PTFE"
+      - "Orbiter Extruder"
+      - "Orbiter M3x12 BHCS"
+      - "Spacers"
+      - "Spacer Heat Inserts"
+      - "PCB Mount"
+      - "PCB Mount Heat Inserts"
+      - "PCB Mount M3x8 BHCS"
+      - "OptoTap PCB"
+      - "OptoTap M3x8 BHCS"
+      - "Nitehawk36"
+      - "NH M3x8 BHCS"
+      - "NH Cover Shell"
+      - "NH M3x12 BHCS" 
+    focus: 
+      - "NH M3x12 BHCS"
