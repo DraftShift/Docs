@@ -78,7 +78,7 @@ resources:
   N3MI's Nitehawk36 Cover, Spacers & Nozzle LEDs: https://github.com/N3MI-DG/sc-guides/tree/main/Anthead
 
 steps:
-  - description: "This guide uses a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/anthead/)."
+  - description: "This guide uses a modified StealthChanger backplate which adds rigid mounting for the toolhead board mount. Both of these mods are by TheSin-. Before starting, ensure you have the correct StealthChanger Backplate for this guide. For assembly of the backplate, see the [StealthChanger Backplate Guide](../../backplates/2_anthead/)."
     camera:
       azimuth: 295
       polar: 118
