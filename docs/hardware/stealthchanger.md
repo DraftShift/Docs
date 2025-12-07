@@ -41,7 +41,7 @@ When printing a Shuttle, it is important to note that the selection of material 
     
 
 ## Shuttle Keeper
-The Shuttle Keeper is an additional component that can be used to hold the belts in place while the [Shuttle](#shuttle) is removed from the MGN Rail. There are situational reasons as to when and why you would want to use a Shuttle Keeper. See the below list for details.
+The Shuttle Keeper is an additional component that can be used to hold the belts in place while the [Shuttle](#shuttle) is removed from the MGN Rail. Shuttle Keeper remains on the printer after assembly. There are situational reasons as to when and why you would want to use a Shuttle Keeper. See the below list for details.
 
 * Only compatible with a printed [Shuttle](#shuttle).
 * Required for a MGN9 [Shuttle](#shuttle).
@@ -51,7 +51,7 @@ The Shuttle Keeper is an additional component that can be used to hold the belts
 ![Shuttle Keeper](../assets/shuttle_keeper.png)
 
 ## Belt Helper
-Belt helper is a tool that will hold your belts for you while installing the [Shuttle](#shuttle). Once attached to the belts, the Belt Helper will assist in pulling the belts into position for the [Shuttle](#shuttle) to clamp them.
+Belt helper is a tool that will hold your belts for you while installing the [Shuttle](#shuttle). Once attached to the belts, the Belt Helper will assist in pulling the belts into position for the [Shuttle](#shuttle) to clamp them. Belt Helper is removed from the printer after Shuttle assembly.
 
 ![Shuttle Install](../assets/shuttle_printed_install.png)
 
