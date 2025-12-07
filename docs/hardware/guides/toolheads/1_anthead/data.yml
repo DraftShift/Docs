@@ -45,13 +45,13 @@ hardware_bom:
   M3x8 BHCS Screws:
     qty: 10
   M3x12 BHCS Screws:
-    qty: 4
+    qty: 4-5
   M3x14 BHCS Screws:
     qty: 2
   M3x8 SHCS Screws:
     qty: 4
-  M3x12 BHCS Screw:
-    qty: 1
+  M3x12 SHCS Screw:
+    qty: 0-1
   M3x28 SHCS Screws:
     qty: 2
   M3 Heat Insert:
@@ -250,7 +250,7 @@ steps:
     focus: 
       - "Axial Fan M3x14 BHCS"
 
-  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capsure the M3x12 SCHS screw between the Backplate and the Spacer."
+  - description: "Attach the hotend mount to the StealthChanger Backplate using 2 M3x28 SHCS screws. Make sure to capture the M3x12 SCHS screw between the Backplate and the Spacer. Note this SCHS is tightened through the backplate behind the optotap; if your driver bit does not fit the hole, you may require a M3x12 BHCS screw here instead."
     camera:
       azimuth: 118
       polar: 71
@@ -304,7 +304,7 @@ steps:
       - "Light Shield"
       - "Diffuser"
 
-  - description: "Insert the LEDs in to the Main Body. Route the cables so that they will be around the hotend assembly abd out through the cable channel in the top of the Main Body."
+  - description: "Insert the LEDs in to the Main Body. Route the cables so that they will be around the hotend assembly and out through the cable channel in the top of the Main Body."
     camera:
       azimuth: 270
       polar: 124
@@ -331,7 +331,7 @@ steps:
       - "Nozzle LEDs"
       - "Diffuser"
 
-  - description: "Attach the Main Body  to the Backplate using the M3x12 Screw that was captured in a previous step making sure that the wires clear. The wires for the Hotend fan should be routed through the hole in the side of the Main Body. Secure the Main Body to the Hotend Mount using 2 M3x6 BHCS screws."
+  - description: "Attach the Main Body to the Backplate using the M3x12 Screw that was captured in a previous step making sure that the wires are not pinched nor trapped. The wires for the Hotend fan should be routed through the hole in the side of the Main Body. Secure the Main Body to the Hotend Mount using 2 M3x6 BHCS screws."
     camera:
       azimuth: 193
       polar: 81
@@ -382,7 +382,7 @@ steps:
       - "4010 Blower Fan Left"
       - "4010 Blower Fan Right"
 
-  - description: "Attach the ducts to the Main Body by starting by hooking the bottom and then angling the top in to place. Secure each duct to the Main Body with 2 M3x8 BHCS screws."
+  - description: "Attach the ducts to the Main Body by starting with hooking the bottom and then angling the top in to place. Secure each duct to the Main Body with 2 M3x8 BHCS screws."
     camera:
       azimuth: 193
       polar: 81
@@ -502,7 +502,7 @@ steps:
     focus: 
       - "Duct 6x3 Magnets"
 
-  - description: "Insert a piece of 4x2mm PTFE tube through the Main Body into the hotend."
+  - description: "Insert a piece of 4x2mm PTFE tube through the Main Body into the hotend. The length of the tube depends on your extruder."
     camera:
       azimuth: 140
       polar: 40
@@ -684,7 +684,7 @@ steps:
     focus: 
       - "PCB Mount M3x8 BHCS"
 
-  - description: "Attach the TAP PCB using 2 M3x8 BHCS screws."
+  - description: "Attach the TAP PCB using 2 M3x8 BHCS screws. Note the orientation as shown: short trapeziod side up."
     camera:
       azimuth: 257
       polar: 75
@@ -735,7 +735,7 @@ steps:
     focus: 
       - "OptoTap M3x8 BHCS"
 
-  - description: "Attatch the Nitehawk36 PCB to the PCB Mount using 2 M3x8 BHCS screws and route all the wires to the board."
+  - description: "Attach the Nitehawk36 PCB to the PCB Mount using 2 M3x8 BHCS screws and route all the wires to the board."
     camera:
       azimuth: 257
       polar: 75
