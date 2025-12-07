@@ -19,17 +19,17 @@ Your printer needs to print dimensionally accurate parts due to the tolerances r
 It is highly recommended that before printing the shuttle and tool back plates for StealthChanger, your printer and filament be tuned for dimensional accuracy. 
 
 !!! info "But but but, my prints look great!"
-    Dimensional accuracy is often overlooked when our printers are making amazing looking parts. If you experience any binding or resistance while meshing the StealthChanger backplate to the shuttle, accuracy is dimensional accuracy is likely the culprit. This becomes even more evident when combining CNC shuttle with a printed tool back plate. 
+    Dimensional accuracy is often overlooked when our printers are making amazing looking parts. If you experience any binding or resistance while meshing the StealthChanger backplate to the shuttle, most often it is dimensional accuracy that is likely the culprit. This becomes even more evident when combining CNC shuttle with a printed tool back plate. 
     
     Many have found great success using [Califlower](https://vector3d.shop/products/califlower-calibration-tool-mk2){:target="_blank"} or one of its [derivatives](https://www.printables.com/search/models?q=califlower){:target="_blank"} to achieve the required dimensional accuracy for these high tolerance pieces.
 
 ## Losses
-The addition of more tools and docks inside the printer typically means you end up with some lost printable build-volume. There should not be much loss in XY bed space, but while printing underneath the dock there is limited Z travel. These losses vary based on the printer’s configuration, as well as the selected tool and dock.
+The addition of more tools and docks inside the printer typically means you end up with some lost printable build-volume. There should not be much loss in XY bed space, but whenever printing underneath the dock there is limited Z travel. These losses vary based on the printer’s configuration, as well as the selected tool and dock.
 
 !!! info "So I can just increase the size of my Z axis to get rid of losses?"
     Increasing the height of the printer is often the first thing that comes to mind when trying to maintain the full printable area, unfortunately it also requires increasing the length of the umbilical for each tool which can become troublesome.
 
-    If you require 100% of your build area, consider instead extending the printer in the Y axis. This will move the docks outside of the printable area of the bed and keep the umbilical at a shorter length as they only need to reach past the bed while at the top of the machine where there is more slack. The extended Y Vorons have been dubbed [Vorlong](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Vorlong_%2B100y){:target="_blank"}.
+    If you require 100% of your build area, consider instead extending the printer in the Y axis. This will move the docks outside of the printable area of the bed and keep the umbilical at a shorter length as they only need to reach past the bed while at the top of the machine where there is more slack. These extended-Y Vorons have been dubbed [Vorlong](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Vorlong_%2B100y){:target="_blank"}.
 
 
 ## Community
