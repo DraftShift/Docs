@@ -19,7 +19,7 @@ Originally by [ManCheetah](https://www.printables.com/@EddieSha_454383){:target=
 ![Fanny Pack](../assets/fanny_pack.png){:width="540"}
 
 ## Wire Duct
-The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your printers electronics bay. Under its cover is an EMS compatible panel for you to mount any extra pieces you might need. 
+The Wire Duct serves as a conduit between the [Fanny Pack](#fanny-pack) and your printers electronics bay. Under its cover is an EMS compatible panel for you to mount any extra pieces you might need. Often the given Wire Duct is not the perfect length for your printer, but the part can easily be stretched in CAD or the slicer to fit your situation.
 
 ![Wire Duct](../assets/wire_duct.png){:width="540"}
 
