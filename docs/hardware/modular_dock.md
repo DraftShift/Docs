@@ -69,7 +69,7 @@ The Wiper is toolhead agnostic and mounts to the [Back](#back) plate. There are 
 ### Frame
 The Modular Dock Frame can be considered to be the front of the dock. It consists of left, right, top and bottom pieces. 
 
-The left and right pieces come in 2 variants, `standard` and `short`. This determines the height of the dock. 
+The left and right pieces come in 2 variants, `standard` (170 mm) and `short` (130 mm). This determines the height of the dock as a function of how far below the top frame the crossbar sits.
 
 !!! warning "Short Frame Saves More Space?"
     Using the `short` version of the Frame can give you more printable area under the bed, but it does have some caveats. 
@@ -84,6 +84,7 @@ There are 2020 and 1515 versions of the top and bottom pieces. Both versions hav
 | :-: | :-: |
 | ![Standard-Standard](../assets/dock_z-standard_y-standard.png) | ![Short-Standard](../assets/dock_z-short_y-standard.png) |
 
+It is possible to build a set of docks without the Left and Right Frames. This allows a better view of the tools at rest, and allows the crossbar to be located at a wider range of heights. But the Frames provide additional places to hold magnets and so retain tools - without Frames, tools are more prone to fall out. And the Frames help stiffen the crossbar, without Frames more care may be required to prevent the crossbar rotating - such as [Door Buffer](door_buffer.md), or additional corner braces.
 
 ### Links
 Links can be used to tie the frame and base of the docks together to gain more rigidity for hanging docks or when using [Stabilizers](#stabilizers). There are seperate links pieces for the [Frame](#frame) and the [Base](#base).
