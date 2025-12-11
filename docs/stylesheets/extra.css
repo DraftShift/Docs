@@ -11,55 +11,6 @@
   font-size: 36px;
 }
 
-/* Guide Cards Styles */
-.guide-card-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Hide guide TOC headings but keep anchors functional */
-.guide-toc-heading {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.guide-card-title {
-  /* margin: 0 0 0.25rem 0; */
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color) !important;
-  text-decoration: none;
-}
-
-.guide-card-title:hover {
-  text-decoration: none;
-}
-
-.guide-card-author {
-  /* margin: 0; */
-  margin-top: -0.25rem;
-  margin-bottom: 0;
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light) !important;
-  font-style: italic;
-  opacity: 0.8;
-  text-decoration: none;
-  display: block;
-}
-
-.guide-card-author:hover {
-  text-decoration: none;
-}
-
 /* Contributors Grid */
 .contributors-grid {
   display: grid;
