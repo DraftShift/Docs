@@ -5,7 +5,8 @@ function getUrlParams() {
         filter: params.get('filter') || 'all',
         sort: params.get('sort') || 'popularity',
         order: params.get('order') || null,
-        username: params.get('username') || 'all'
+        username: params.get('username') || 'all',
+        page: params.get('page') || null
     };
 }
 
@@ -35,6 +36,171 @@ function updateUrlParams(updates) {
 function getCurrentSortOrder() {
     const ascIcon = document.getElementById('usermods-ascending');
     return ascIcon && ascIcon.style.display !== 'none' ? 'ascending' : 'descending';
+}
+
+let currentPage = 1;
+
+function getGrid() {
+    return document.querySelector('.grid.cards > ul');
+}
+
+function getItems() {
+    const grid = getGrid();
+    return grid ? Array.from(grid.children) : [];
+}
+
+function getPerPage() {
+    const val = (typeof window.per_page !== 'undefined') ? Number(window.per_page) : NaN;
+    return Number.isFinite(val) && val > 0 ? val : 20;
+}
+
+function setFiltered(item, hidden) {
+    if (!item) return;
+    item.dataset.usermodFiltered = hidden ? 'true' : 'false';
+}
+
+function setPaged(item, hidden) {
+    if (!item) return;
+    item.dataset.usermodPaged = hidden ? 'true' : 'false';
+}
+
+function applyVisibility(item) {
+    if (!item) return;
+    const filtered = item.dataset.usermodFiltered === 'true';
+    const paged = item.dataset.usermodPaged === 'true';
+    item.style.display = (filtered || paged) ? 'none' : '';
+}
+
+function getVisibleItems() {
+    return getItems().filter(item => item.dataset.usermodFiltered !== 'true');
+}
+
+function updateResultsCount(totalFiltered, startIndex, endIndex, totalPages) {
+    const el = document.getElementById('usermod-results-count');
+    if (!el) return;
+
+    if (!Number.isFinite(totalFiltered) || totalFiltered < 0) {
+        el.textContent = '';
+        return;
+    }
+
+    if (totalFiltered === 0) {
+        el.textContent = 'Showing 0 mods';
+        return;
+    }
+
+    const unit = totalFiltered === 1 ? 'mod' : 'mods';
+
+    if (!Number.isFinite(totalPages) || totalPages <= 1) {
+        el.textContent = `Showing ${totalFiltered} ${unit}`;
+        return;
+    }
+
+    el.textContent = `Showing ${startIndex}-${endIndex} of ${totalFiltered} ${unit}`;
+}
+
+function renderPagination(totalItems) {
+    const container = document.getElementById('usermod-pagination');
+    if (!container) return;
+
+    const perPage = getPerPage();
+    const totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    updateUrlParams({ page: totalPages > 1 ? String(currentPage) : null });
+
+    if (totalPages <= 1) {
+        container.innerHTML = '';
+        container.style.display = 'none';
+        return;
+    }
+
+    container.style.display = '';
+
+    const windowSize = 2;
+    const start = Math.max(1, currentPage - windowSize);
+    const end = Math.min(totalPages, currentPage + windowSize);
+
+    let html = '';
+    html += `<button type="button" class="usermod-page-btn" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>Prev</button>`;
+
+    if (start > 1) {
+        html += `<button type="button" class="usermod-page-btn" data-page="1">1</button>`;
+        if (start > 2) {
+            html += `<span class="usermod-page-ellipsis">…</span>`;
+        }
+    }
+
+    for (let p = start; p <= end; p++) {
+        html += `<button type="button" class="usermod-page-btn${p === currentPage ? ' is-active' : ''}" data-page="${p}" aria-current="${p === currentPage ? 'page' : 'false'}">${p}</button>`;
+    }
+
+    if (end < totalPages) {
+        if (end < totalPages - 1) {
+            html += `<span class="usermod-page-ellipsis">…</span>`;
+        }
+        html += `<button type="button" class="usermod-page-btn" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    html += `<button type="button" class="usermod-page-btn" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>`;
+    container.innerHTML = html;
+}
+
+function applyPagination() {
+    const perPage = getPerPage();
+    const visible = getVisibleItems();
+
+    const totalPages = Math.max(1, Math.ceil(visible.length / perPage));
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIndex = visible.length === 0 ? 0 : ((currentPage - 1) * perPage) + 1;
+    const endIndex = visible.length === 0 ? 0 : Math.min(currentPage * perPage, visible.length);
+
+    visible.forEach((item, idx) => {
+        const pageIdx = Math.floor(idx / perPage) + 1;
+        setPaged(item, pageIdx !== currentPage);
+        applyVisibility(item);
+    });
+
+    getItems().forEach(item => {
+        if (item.dataset.usermodFiltered === 'true') {
+            setPaged(item, false);
+            applyVisibility(item);
+        }
+    });
+
+    renderPagination(visible.length);
+    updateResultsCount(visible.length, startIndex, endIndex, totalPages);
+}
+
+function initPagination() {
+    const container = document.getElementById('usermod-pagination');
+    if (!container || container.dataset.initialized) return;
+    container.dataset.initialized = 'true';
+
+    container.addEventListener('click', function(e) {
+        const btn = e.target.closest('button[data-page]');
+        if (!btn || btn.disabled) return;
+        const page = Number(btn.dataset.page);
+        if (!Number.isFinite(page)) return;
+        currentPage = page;
+        applyPagination();
+    });
+}
+
+function getControlValues() {
+    const tagFilter = document.querySelector('select[name="tag-filter"]');
+    const orderSelect = document.querySelector('select[name="usermod-order"]');
+    const usernameFilter = document.querySelector('select[name="username-filter"]');
+
+    const filter = tagFilter ? tagFilter.value : 'all';
+    const sort = orderSelect ? orderSelect.value : 'popularity';
+    const order = getCurrentSortOrder();
+    const username = usernameFilter ? usernameFilter.value : 'all';
+
+    return { filter, sort, order, username };
 }
 
 function applyUrlParamsToControls() {
@@ -92,10 +258,12 @@ function applyUrlParamsToControls() {
     }
     
     // Trigger the actual filtering/sorting
-    applyFiltersAndSort(params.filter, params.sort, sortOrder, params.username);
+    const urlPage = Number(params.page);
+    currentPage = Number.isFinite(urlPage) && urlPage > 0 ? Math.floor(urlPage) : 1;
+    applyFiltersAndSort(params.filter, params.sort, sortOrder, params.username, false);
 }
 
-function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue) {
+function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue, resetPage) {
     const grid = document.querySelector('.grid.cards > ul');
     if (!grid) return;
     
@@ -108,7 +276,8 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue) {
         if (!heading) return;
         
         if (filterBy === 'all') {
-            item.style.display = '';
+            setFiltered(item, false);
+            applyVisibility(item);
         } else {
             let hasTag = false;
             for (const attr of heading.attributes) {
@@ -119,7 +288,8 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue) {
                     break;
                 }
             }
-            item.style.display = hasTag ? '' : 'none';
+            setFiltered(item, !hasTag);
+            applyVisibility(item);
         }
     });
     
@@ -130,7 +300,8 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue) {
             if (!heading) return;
             const username = heading.dataset.username || '';
             if (username.toLowerCase() !== usernameValue.toLowerCase()) {
-                item.style.display = 'none';
+                setFiltered(item, true);
+                applyVisibility(item);
             }
         });
     }
@@ -163,6 +334,11 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue) {
     });
     
     items.forEach(item => grid.appendChild(item));
+
+    if (resetPage !== false) {
+        currentPage = 1;
+    }
+    applyPagination();
 }
 
 // Sorting
@@ -184,13 +360,8 @@ document.addEventListener('click', function(e) {
             }
         }
 
-        // Reverse the current order
-        const grid = document.querySelector('.grid.cards > ul');
-        if (grid) {
-            const items = Array.from(grid.children);
-            items.reverse();
-            items.forEach(item => grid.appendChild(item));
-        }
+        const { filter, sort, order, username } = getControlValues();
+        applyFiltersAndSort(filter, sort, order, username);
         
         // Update URL with new order
         updateUrlParams({ order: getCurrentSortOrder() });
@@ -200,59 +371,19 @@ document.addEventListener('click', function(e) {
 // Filtering
 document.addEventListener('change', function(e) {
     if (e.target.name === 'tag-filter') {
-        const filterBy = e.target.value.toLowerCase();   // e.g. "input-shaper"
-        const grid = document.querySelector('.grid.cards > ul');
-        if (!grid) return;
-
-        const items = Array.from(grid.children);
-        items.forEach(item => {
-            const heading = item.querySelector('h3');
-            if (!heading) return;
-
-            if (filterBy === 'all') {
-                item.style.display = '';
-                return;
-            }
-
-            let hasTag = false;
-            // Look for any attribute whose name starts with data-tag-
-            for (const attr of heading.attributes) {
-                if (!attr.name.startsWith('data-tag-')) continue;
-                const wildcard = attr.name.substring('data-tag-'.length).toLowerCase(); // part after data-tag-
-                if (wildcard === filterBy) {
-                    hasTag = true;
-                    break;
-                }
-            }
-
-            item.style.display = hasTag ? '' : 'none';
-        });
+        const { filter, sort, order, username } = getControlValues();
+        applyFiltersAndSort(filter, sort, order, username);
         
         // Update URL
         updateUrlParams({ filter: e.target.value.toLowerCase() });
     }
 
     if (e.target.name === 'username-filter') {
-        const filterBy = e.target.value;
-        const grid = document.querySelector('.grid.cards > ul');
-        if (!grid) return;
-
-        const items = Array.from(grid.children);
-        items.forEach(item => {
-            const heading = item.querySelector('h3');
-            if (!heading) return;
-
-            if (filterBy === 'all') {
-                item.style.display = '';
-                return;
-            }
-
-            const username = heading.dataset.username || '';
-            item.style.display = (username === filterBy) ? '' : 'none';
-        });
+        const { filter, sort, order, username } = getControlValues();
+        applyFiltersAndSort(filter, sort, order, username);
         
         // Update URL
-        updateUrlParams({ username: filterBy });
+        updateUrlParams({ username: e.target.value });
     }
 
     if (e.target.name === 'usermod-order') {
@@ -267,13 +398,6 @@ document.addEventListener('change', function(e) {
             } else {
                 usernameFilter.style.display = 'none';
                 usernameFilter.value = 'all'; // Reset filter when hidden
-                // Re-show all items that might have been filtered by username
-                const grid = document.querySelector('.grid.cards > ul');
-                if (grid) {
-                    Array.from(grid.children).forEach(item => {
-                        item.style.display = '';
-                    });
-                }
             }
         }
 
@@ -293,37 +417,8 @@ document.addEventListener('change', function(e) {
             }
         }
 
-        const grid = document.querySelector('.grid.cards > ul');
-
-        if (grid) {
-            const items = Array.from(grid.children);
-            items.sort((a, b) => {
-                const aHeading = a.querySelector('h3');
-                const bHeading = b.querySelector('h3');
-                if (!aHeading || !bHeading) return 0;
-
-                const aVal = aHeading.dataset[sortBy] || '';
-                const bVal = bHeading.dataset[sortBy] || '';
-
-                const aNum = Number(aVal);
-                const bNum = Number(bVal);
-                const bothNumeric =
-                    !isNaN(aNum) && !isNaN(bNum) && aVal !== '' && bVal !== '';
-
-                if (bothNumeric) {
-                    // numeric ascending/descending based on data-sort
-                    return sortDir === 'ascending' ? aNum - bNum : bNum - aNum;
-                }
-
-                // string ascending/descending based on data-sort
-                const aStr = String(aVal);
-                const bStr = String(bVal);
-                return sortDir === 'ascending'
-                    ? aStr.localeCompare(bStr)
-                    : bStr.localeCompare(aStr);
-            });
-            items.forEach(item => grid.appendChild(item));
-        }
+        const { filter, username } = getControlValues();
+        applyFiltersAndSort(filter, sortBy, sortDir, username);
         
         // Update URL with sort field and order
         updateUrlParams({ 
@@ -338,6 +433,17 @@ function initUrlParams() {
     const grid = document.querySelector('.grid.cards > ul');
     if (!grid || grid.dataset.urlParamsInitialized) return;
     grid.dataset.urlParamsInitialized = 'true';
+
+    initPagination();
+    getItems().forEach(item => {
+        if (typeof item.dataset.usermodFiltered === 'undefined') {
+            setFiltered(item, false);
+        }
+        if (typeof item.dataset.usermodPaged === 'undefined') {
+            setPaged(item, false);
+        }
+        applyVisibility(item);
+    });
     
     applyUrlParamsToControls();
 }

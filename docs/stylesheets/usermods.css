@@ -8,6 +8,13 @@
   margin: 0.5rem 0 1rem;
 }
 
+.usermod-results-count {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
 select[name="tag-filter"],
 select[name="usermod-order"],
 select[name="username-filter"] {
@@ -91,6 +98,50 @@ select[name="username-filter"]:focus {
 .usermod-order-group:focus-within {
   border-color: var(--md-accent-fg-color);
   box-shadow: 0 0 0 1px var(--md-accent-fg-color);
+}
+
+
+.usermod-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0.25rem 0 1rem;
+}
+
+.usermod-page-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.55rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.usermod-page-btn:hover {
+  border-color: var(--md-accent-fg-color);
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+.usermod-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.usermod-page-btn.is-active {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 1px var(--md-accent-fg-color);
+}
+
+.usermod-page-ellipsis {
+  opacity: 0.75;
+  padding: 0 0.15rem;
 }
 
 

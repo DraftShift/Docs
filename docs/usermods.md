@@ -4,7 +4,7 @@ search:
 ---
 
 <!-- The usermod will not be displayed if it has one of these keyword in the title. -->
-{% set excludes = ['superseded', 'superseeded'] %}
+{% set excludes = ['superseded', 'superseeded', 'deprecated'] %}
 
 <!-- Downloads are worth double the value of a view -->
 {% set download_weight = 2 %}
@@ -48,7 +48,7 @@ search:
 
             {% set ns = namespace(skip=false) %}
             {% for ex in excludes %}
-                {% if ex in mod.name|lower %}
+                {% if ex in mod.name|lower or ex in mod.title|lower %}
                     {% set ns.skip = true %}
                 {% endif %}
             {% endfor %}
@@ -82,6 +82,7 @@ search:
 <!-- Make the mods accessable via javascript -->
 <script>
 var usermods = {{ all_mods|tojson }};
+var per_page = 20;
 </script>
 
 <!-- Template for the modal -->
@@ -189,19 +190,20 @@ If you would like your mods featured here, please consider [Submitting a Usermod
         <option value="all">All Users</option>
         {{ username_options|join('\n') }}
     </select>
+    <span id="usermod-results-count" class="usermod-results-count"></span>
 </div>
 
 <!-- Cards -->
 <div class="grid cards" style="text-align: center;" markdown>
 {% for mod in all_mods %}
 
-- ### {{ mod.name }} { .hidden-toc-heading data-repo="{{ mod.repository }}" data-index="{{ loop.index0 }}" {% for tag in mod.tags %}data-tag-{{ tag[0] }}="{{ tag[1] }}" {% endfor %} {% for var in orders %}data-{{ var[0] }}="{{ mod[var[0]] }}" {% endfor %}data-username="{{ mod.username }}" }
+- ### {{ mod.title }} { .hidden-toc-heading data-repo="{{ mod.repository }}" data-index="{{ loop.index0 }}" {% for tag in mod.tags %}data-tag-{{ tag[0] }}="{{ tag[1] }}" {% endfor %} {% for var in orders %}data-{{ var[0] }}="{{ mod[var[0]] }}" {% endfor %}data-username="{{ mod.username }}" }
 
-    ![{{ mod.name }}]({{ mod.thumbnail if mod.thumbnail else "assets/DSD_Soon.svg" }}){ .custom-card-image }
+    ![{{ mod.title }}]({{ mod.thumbnail if mod.thumbnail else "assets/DSD_image_missing.png" }}){ .custom-card-image }
 
     ---
 
-    **{{ mod.name }}**{ .custom-card-title }
+    **{{ mod.title }}**{ .custom-card-title }
     *{{ mod.username }}*{ .custom-card-author }
 
     <span class="usermod-card-stats">:material-eye: {{ mod.views }} :material-download: {{ mod.downloads }}</span>
@@ -221,3 +223,4 @@ If you would like your mods featured here, please consider [Submitting a Usermod
 
 {% endfor %}
 </div>
+<div id="usermod-pagination" class="usermod-pagination" aria-label="Usermods pagination"></div>
