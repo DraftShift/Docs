@@ -43,6 +43,7 @@ nav:
   - Power & Electronics:
     - Power & Electronics - Overview: electronics/index.md
     - Power: electronics/power.md
+    - OptoTap: electronics/optotap.md
     - Toolhead Boards: electronics/th_boards.md
     - Distribution Boards: electronics/distro_boards.md
 
