@@ -44,6 +44,7 @@ If you would like to contribute to StealthChanger, all of our projects are hoste
 - Ensure the mod is in it's own folder, do not put everything in the root of your UserMod folder.
 - Include a clear README.md per usermod, you may have a general one as well but each usermod requires it's own README.md.
 - Ensure the README.md contains all credits with links, respect and follows GPL.
+- Include images of your mod. Images speak a thousand words when people are looking for something in particular.
 - Submit a descriptive [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request){target="_blank"}
 - Be available to support your usermod. It's expected that you will be able to answer any questions that may arise surrounding your usermod.
 
