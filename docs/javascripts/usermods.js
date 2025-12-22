@@ -1,3 +1,7 @@
+// Ensure gtag is available globally (MkDocs Material uses dataLayer internally but doesn't expose gtag)
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
 // URL Parameter Handling
 function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
