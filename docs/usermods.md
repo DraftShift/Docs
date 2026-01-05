@@ -12,7 +12,15 @@ search:
 {% set repeat_view_weight = 0.1 %}
 {% set repeat_download_weight = 0.2 %}
 
+<!-- Set limit for repeat views/downloads -->
+{% set repeat_download_limit = 50 %}
+{% set repeat_view_limit = 100 %}
+
+<!-- Macro to calculate popularity -->
 {% macro get_popularity(f_views, f_downloads, r_views, r_downloads) %}
+    {% set r_views = [r_views, repeat_view_limit]|min %}
+    {% set r_downloads = [r_downloads, repeat_download_limit]|min %}
+
     {% set popularity = (f_views * first_view_weight) + (r_views * repeat_view_weight) + (f_downloads * first_download_weight) + (r_downloads * repeat_download_weight) %}
     {{ popularity }}
 {% endmacro %}
@@ -20,6 +28,7 @@ search:
 <!-- The variables that mods can be sorted by and their default orientation -->
 {% set orders = [('popularity', 'descending'), ('title', 'ascending'), ('username', 'ascending'), ('created_date', 'descending')] %}
 
+<!-- GA4 data -->
 {% set ga4_data = {} %}
 {% if ga4_usermods and ga4_usermods.usermods %}
     {% for ga4_mod in ga4_usermods.usermods %}
