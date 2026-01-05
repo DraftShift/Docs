@@ -41,9 +41,9 @@ printed_bom:
 
 hardware_bom:
   M3x6 BHCS Screws:
-    qty: 2
+    qty: 4
   M3x8 BHCS Screws:
-    qty: 14
+    qty: 12
   M3x12 BHCS Screws:
     qty: 5
   M3x14 BHCS Screws:
@@ -683,7 +683,7 @@ steps:
     focus: 
       - "PCB Mount M3x8 BHCS"
 
-  - description: "Attach the TAP PCB using 2 M3x8 BHCS screws. Note the orientation as shown: short trapeziod side up."
+  - description: "Attach the TAP PCB using 2 M3x6 BHCS screws. Note the orientation as shown: short trapeziod side up."
     camera:
       azimuth: 257
       polar: 75
