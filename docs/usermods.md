@@ -6,11 +6,27 @@ search:
 <!-- The usermod will not be displayed if it has one of these keyword in the title. -->
 {% set excludes = ['superseded', 'superseeded', 'deprecated'] %}
 
-<!-- Downloads are worth double the value of a view -->
-{% set download_weight = 2 %}
+<!-- Set up popularity weights -->
+{% set first_view_weight = 1.0 %}
+{% set first_download_weight = 3.0 %}
+{% set repeat_view_weight = 0.1 %}
+{% set repeat_download_weight = 0.2 %}
+
+{% macro get_popularity(f_views, f_downloads, r_views, r_downloads) %}
+    {% set popularity = (f_views * first_view_weight) + (r_views * repeat_view_weight) + (f_downloads * first_download_weight) + (r_downloads * repeat_download_weight) %}
+    {{ popularity }}
+{% endmacro %}
 
 <!-- The variables that mods can be sorted by and their default orientation -->
 {% set orders = [('popularity', 'descending'), ('title', 'ascending'), ('username', 'ascending'), ('created_date', 'descending')] %}
+
+{% set ga4_data = {} %}
+{% if ga4_usermods and ga4_usermods.usermods %}
+    {% for ga4_mod in ga4_usermods.usermods %}
+        {% set key = ga4_mod.mod_repository ~ '/' ~ ga4_mod.mod_author ~ '/' ~ ga4_mod.mod_title %}
+        {% set _ = ga4_data.update({key: ga4_mod}) %}
+    {% endfor %}
+{% endif %}
 
 <!-- grab the mods from the dataset, update and sort them -->
 {% set all_mods = [] %}
@@ -39,11 +55,23 @@ search:
                 {% endif %}
             {% endfor %}
 
+            {% set ga4_key = repo.name ~ '/' ~ user.username ~ '/' ~ mod.name %}
+            {% set ga4_mod = ga4_data.get(ga4_key, {}) %}
+            {% set total_views = ga4_mod.get('total_views', 0) %}
+            {% set total_downloads = ga4_mod.get('total_downloads', 0) %}
+
+            {% set first_time_views = ga4_mod.get('first_time_views', 0) %}
+            {% set first_time_downloads = ga4_mod.get('first_time_downloads', 0) %}
+            {% set repeat_views = ga4_mod.get('repeat_views', 0) %}
+            {% set repeat_downloads = ga4_mod.get('repeat_downloads', 0) %}
+
+            {% set popularity = get_popularity(first_time_views, first_time_downloads, repeat_views, repeat_downloads)|float %}
+
             {% set _ = mod.update({'username': user.username}) %}
             {% set _ = mod.update({'repository': repo.name}) %}
-            {% set _ = mod.update({'views': range(101, 999)|random}) %}
-            {% set _ = mod.update({'downloads': range(100)|random}) %}
-            {% set _ = mod.update({'popularity': mod.views + (mod.downloads*download_weight)}) %}
+            {% set _ = mod.update({'views': first_time_views|default(0)}) %}
+            {% set _ = mod.update({'downloads': first_time_downloads|default(0)}) %}
+            {% set _ = mod.update({'popularity': popularity}) %}
             {% set _ = mod.update({'tags': tags}) %}
 
             {% set ns = namespace(skip=false) %}
