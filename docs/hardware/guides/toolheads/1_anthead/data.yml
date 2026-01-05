@@ -543,7 +543,7 @@ steps:
     focus: 
       - "4x2mm PTFE"
 
-  - description: "Attach the Orbiter to the Main Body using 2 M3x12 BHCS screws."
+  - description: "Ensure the Orbiter's bowden guide is flush with the bottom of the extruder before attaching the Orbiter to the Anthead's Main Body using 2 M3x12 BHCS screws."
     camera:
       azimuth: 140
       polar: 40
