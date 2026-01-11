@@ -151,56 +151,44 @@ class DraftShiftCollector:
     def get_first_commits_for_paths(self, repo_name: str, paths: List[str]) -> Dict[str, Dict]:
         """
         Get first commit info for multiple paths efficiently.
-        Uses ONE API call to get all commits, then filters locally.
+        Queries each path individually to get accurate first commit.
         Returns dict mapping path -> {sha, date}
         """
-        # Get all commits for UserMods directory in one call (with pagination)
-        url = f"{self.base_url}/repos/{self.org_name}/{repo_name}/commits"
-        all_commits = []
-        page = 1
-        
-        while True:
-            response = self._get(url, {"path": "UserMods", "per_page": 100, "page": page})
-            if response.status_code != 200:
-                break
-            commits = response.json()
-            if not commits:
-                break
-            all_commits.extend(commits)
-            page += 1
-            # Safety limit
-            if page > 20:
-                break
-        
-        # Build a map of path -> earliest commit that touched it
-        # Process commits from oldest to newest (reverse order)
         path_commits = {}
         
-        for commit in reversed(all_commits):
-            sha = commit["sha"]
-            date = commit["commit"]["committer"]["date"]
-            message = commit["commit"]["message"].lower()
+        for path in paths:
+            # Get commits for this specific path (oldest first)
+            url = f"{self.base_url}/repos/{self.org_name}/{repo_name}/commits"
+            response = self._get(url, {"path": path, "per_page": 1, "page": 1})
             
-            # Check which paths this commit might have introduced
-            for path in paths:
-                if path not in path_commits:
-                    # Check if commit message mentions this path or user
-                    # This is a heuristic - the oldest commit touching UserMods
-                    # that mentions this path is likely the creation commit
-                    path_parts = path.split("/")
-                    if len(path_parts) >= 3:
-                        username = path_parts[1].lower()
-                        modname = path_parts[2].lower()
-                        if username in message or modname in message:
-                            path_commits[path] = {"sha": sha, "date": date}
-        
-        # For any paths we couldn't match, use the oldest commit as fallback
-        if all_commits:
-            oldest = all_commits[-1]
-            oldest_info = {"sha": oldest["sha"], "date": oldest["commit"]["committer"]["date"]}
-            for path in paths:
-                if path not in path_commits:
-                    path_commits[path] = oldest_info
+            if response.status_code == 200:
+                commits = response.json()
+                if commits:
+                    # The API returns newest first, but we want the oldest
+                    # So we need to get the last page
+                    # Check if there are more pages
+                    link_header = response.headers.get('Link', '')
+                    
+                    # Parse the Link header to find the last page
+                    last_page = 1
+                    if 'rel="last"' in link_header:
+                        import re
+                        match = re.search(r'[?&]page=(\d+)>; rel="last"', link_header)
+                        if match:
+                            last_page = int(match.group(1))
+                    
+                    # Fetch the last page to get the oldest commit
+                    if last_page > 1:
+                        response = self._get(url, {"path": path, "per_page": 1, "page": last_page})
+                        if response.status_code == 200:
+                            commits = response.json()
+                    
+                    if commits:
+                        oldest_commit = commits[-1] if len(commits) > 1 else commits[0]
+                        path_commits[path] = {
+                            "sha": oldest_commit["sha"],
+                            "date": oldest_commit["commit"]["committer"]["date"]
+                        }
         
         return path_commits
     

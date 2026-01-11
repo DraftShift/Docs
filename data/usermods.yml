@@ -1,4 +1,4 @@
-collected_at: '2025-12-12T08:13:20.099795'
+collected_at: '2026-01-11T11:43:32.326505'
 organization: DraftShift
 repositories:
 - name: StealthChanger
@@ -11,8 +11,8 @@ repositories:
       path: UserMods/BT123/MiniBFI + MicroBFI
       title: Mini BFI + Micro BFI
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI
-      created_commit: 14e7a64f2b29fd81f1bc958c43956f140afa15dd
-      created_date: '2025-10-28T23:38:27Z'
+      created_commit: 7940a945d3e875b69d2afd99320499414d5b5ae3
+      created_date: '2024-08-29T22:29:25Z'
       has_readme: true
       readme_data: '## MiniBFI and MicroBFI
 
@@ -100,8 +100,8 @@ repositories:
       path: UserMods/BT123/Split Keeper
       title: Split Keeper
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper
-      created_commit: 630440a0d42ae71bb0105d2eea28f4887a6cefed
-      created_date: '2024-02-05T11:04:32Z'
+      created_commit: 785a7b19f94e84e928ec93a0ecc2198cabb71e5b
+      created_date: '2024-06-16T01:37:28Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -117,8 +117,8 @@ repositories:
       path: UserMods/BT123/Xol PCB Mount On Backplates
       title: Xol PCB Mount On Backplates
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Xol%20PCB%20Mount%20On%20Backplates
-      created_commit: 14e7a64f2b29fd81f1bc958c43956f140afa15dd
-      created_date: '2025-10-28T23:38:27Z'
+      created_commit: aa89ef47d08681de766b6846a451dac9de73d232
+      created_date: '2024-06-25T14:24:00Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -135,8 +135,8 @@ repositories:
       path: UserMods/BrewNinja/Anthead
       title: Anthead
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BrewNinja/Anthead
-      created_commit: 516ac16db8509c6e283eb90c1f811267c871a06d
-      created_date: '2024-11-19T05:33:24Z'
+      created_commit: a89cceeac5f9b17c03e51280f2fd916c6a4875ae
+      created_date: '2025-04-02T20:56:43Z'
       has_readme: true
       readme_data: " - There is an improved printing version of N3MI's Voron Sherpa\
         \ spaced Stealhchanger main body. No supports needed.\n - Also, there is yet\
@@ -172,8 +172,8 @@ repositories:
       path: UserMods/Dumplap/SexBolt 2020 Top Mount
       title: SexBolt 2020 Top Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dumplap/SexBolt%202020%20Top%20Mount
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 9b57f7ff87eb9f73766f4605f4858af756dec12d
+      created_date: '2024-12-20T15:15:04Z'
       has_readme: true
       readme_data: '# SexBolt 2020 Top Mount
 
@@ -235,8 +235,8 @@ repositories:
       path: UserMods/Dumplap/Stealth Changer Build Plate Slicer Textures
       title: Slicer Build Plate Textures with StealthChanger & Micron
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dumplap/Stealth%20Changer%20Build%20Plate%20Slicer%20Textures
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 78997b0a70f4f8ad8131a5e0c43c10ff3ecbcacf
+      created_date: '2025-01-04T05:53:11Z'
       has_readme: true
       readme_data: '# Slicer Build Plate Textures with StealthChanger & Micron
 
@@ -367,8 +367,8 @@ repositories:
       path: UserMods/Dweenz/Anthead nozzle led fixes
       title: Anthead nozzle led fixes
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/Anthead%20nozzle%20led%20fixes
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 1964452f29c25f919c01b712aad26299dd8d8939
+      created_date: '2025-01-06T21:57:56Z'
       has_readme: true
       readme_data: 'A simple mod of N3MI''s nozzle LED for ANTHEAD SF. The Mainbodies
         are labeled VORONLOGO. UHF means ultra high flow, HF means high flow. Then
@@ -389,8 +389,8 @@ repositories:
       path: UserMods/Dweenz/AntheadOrbiterSpacer
       title: Anthead Orbiter Spacer
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadOrbiterSpacer
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: c636e95b61ce7609db5e9c834463701b083720a6
+      created_date: '2025-02-26T23:25:59Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -403,8 +403,8 @@ repositories:
       path: UserMods/Dweenz/AntheadSherpaMiniSpacer
       title: Voron 2.4 Stealthchanger Mods - Anthead Sherpa-Mini Spacer
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadSherpaMiniSpacer
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 516ac16db8509c6e283eb90c1f811267c871a06d
+      created_date: '2024-11-19T05:33:24Z'
       has_readme: true
       readme_data: '# Voron 2.4 Stealthchanger Mods - Anthead Sherpa-Mini Spacer
 
@@ -463,8 +463,8 @@ repositories:
       path: UserMods/EddieSha04/Tophat SC LED Logo
       title: Tophat SC LED Logo
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 4f728645a9a90c1d64b6304901ef9df45483a7cc
+      created_date: '2024-11-12T15:04:47Z'
       has_readme: false
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo/Images/IMG_0527.JPG
@@ -489,8 +489,8 @@ repositories:
       path: UserMods/EddieSha04/Tophat
       title: Tophat
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 4f728645a9a90c1d64b6304901ef9df45483a7cc
+      created_date: '2024-11-12T15:04:47Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -511,8 +511,8 @@ repositories:
       path: UserMods/MRSalguod/2.4 Dockable Nudge Mount
       title: 2.4 Dockable Nudge Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MRSalguod/2.4%20Dockable%20Nudge%20Mount
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: bef00555b1e31180e6e3ea8c880e65f3fc1085d8
+      created_date: '2025-04-04T20:01:17Z'
       has_readme: true
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MRSalguod/2.4%20Dockable%20Nudge%20Mount/images/docked.jpg
@@ -536,8 +536,8 @@ repositories:
       path: UserMods/MajorHack/PCB36mount for TheSin backplate
       title: MajorHack PCB36 Mount for TheSin Backplate & G2SA
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MajorHack/PCB36mount%20for%20TheSin%20backplate
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 806fdcc256ba82825350b05d735edda5980c6fb1
+      created_date: '2025-12-03T12:32:34Z'
       has_readme: true
       readme_data: "# MajorHack PCB36 Mount for TheSin Backplate & G2SA\n\nThis PCB36\
         \ mount is designed for use with [TheSin's backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount)\
@@ -589,8 +589,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/SCv1.1_Stealthburner_beef_backplate
       title: StealthChanger V1.1 Stealtburner beef backplate
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MikeYankeeOscarBeta/SCv1.1_Stealthburner_beef_backplate
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: a44f9a59d1c289e05bf96f27f21690943d71d7d2
+      created_date: '2025-06-14T21:07:56Z'
       has_readme: true
       readme_data: '# StealthChanger V1.1 Stealtburner beef backplate
 
@@ -622,8 +622,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/Xol-Toolhead
       title: DEPRECATED
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MikeYankeeOscarBeta/Xol-Toolhead
-      created_commit: 53e8d7db44c37e91126f315d8ac03c7f34074b6a
-      created_date: '2024-01-31T16:40:55Z'
+      created_commit: ff38729751c848ef2683c0523ff4f33d91bc98b1
+      created_date: '2024-01-31T16:46:17Z'
       has_readme: true
       readme_data: "# DEPRECATED\ndeprecated and no longer needed to use xol with\
         \ stealthchanger. use the mainline xol backplate and xol modular docks instead\n\
@@ -688,8 +688,8 @@ repositories:
       title: A variation on A4T Cowl (Sherpa and Orbitor 2 Mounting Pattern) to facilitate
         the Triangle Labs CHCB-V
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 6ce49de6c808d345f8ed3296669b3df880abb505
+      created_date: '2025-12-03T12:32:54Z'
       has_readme: true
       readme_data: "# A variation on A4T Cowl (Sherpa and Orbitor 2 Mounting Pattern)\
         \ to facilitate the Triangle Labs CHCB-V\n\n## Purpose\nTriangle Labs CHCB-V\
@@ -707,8 +707,8 @@ repositories:
       thumbnail: null
       images: []
       stls:
-      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl/A4T%20Cowling%20-%20CHCB-V%20-%20G2-Orbiter%20spacing%20%5Bxol-carriage%5D.stl
-      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl/A4T%20Cowling%20-%20CHCB-V%20%5Bxol-carriage%5D.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl/A4T%20Cowling%20-%20CHCB-V%20-%20G2-Orbiter%20spacing%20%5Bxol-carriage%5D%20V2.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl/A4T%20Cowling%20-%20CHCB-V%20%5Bxol-carriage%5D%20V2.stl
       cads:
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl/A4T%20Cowling%20-%20CHCB-V%20-%20G2-Orbiter%20spacing%20%5Bxol-carriage%5D.f3d
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/MugenMicko/A4T%20CHCB-V%20Cowl/A4T%20Cowling%20-%20CHCB-V%20%5Bxol-carriage%5D.f3d
@@ -717,8 +717,8 @@ repositories:
       path: UserMods/MugenMicko/Anthead Sherpa Mini EBB 36 PCB Mount
       title: A PCB Mounting solution for Anthead with Sherpa Mini and EBB36
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MugenMicko/Anthead%20Sherpa%20Mini%20EBB%2036%20PCB%20Mount
-      created_commit: 018bce0d653285538cc8f0b8d5f7b18892dd3296
-      created_date: '2025-10-28T23:36:24Z'
+      created_commit: 15bcaed303c25bbf08381e5211aa4db4a7049b38
+      created_date: '2025-08-18T15:05:54Z'
       has_readme: true
       readme_data: "# A PCB Mounting solution for Anthead with Sherpa Mini and EBB36\n\
         ## Purpose\nWhilst building my Stealthchanger Voron 2.4, my focus was being\
@@ -779,8 +779,8 @@ repositories:
       path: UserMods/MugenMicko/Anthead WWG2 EBB36 PCB Mount
       title: A PCB Mounting solution for Anthead with WWG2 and EBB36
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MugenMicko/Anthead%20WWG2%20EBB36%20PCB%20Mount
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 018bce0d653285538cc8f0b8d5f7b18892dd3296
+      created_date: '2025-10-28T23:36:24Z'
       has_readme: true
       readme_data: "# A PCB Mounting solution for Anthead with WWG2 and EBB36\n##\
         \ Purpose\nSomeone reached out commenting on my build which led to the discussion\
@@ -820,8 +820,8 @@ repositories:
       path: UserMods/N3MI-DG/Anthead_Mods
       title: A collection of mods for the AntHead.
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Anthead_Mods
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 8bdb38cbc13b54cee263eea150a4e38130b48ed9
+      created_date: '2025-01-07T23:52:21Z'
       has_readme: true
       readme_data: '# A collection of mods for the AntHead.
 
@@ -858,29 +858,35 @@ repositories:
       path: UserMods/N3MI-DG/Belt_Helper_3mm
       title: Belthelper 3mm Spacing (Micron, V0, etc.)
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Belt_Helper_3mm
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: ad14891b9185b07fed2630bc64c26d6e8478e60f
+      created_date: '2024-09-16T00:55:04Z'
       has_readme: true
       readme_data: '# Belthelper 3mm Spacing (Micron, V0, etc.)
+
+
+        <img src="https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/Belt_Helper_3mm/images/image.png"
+        width="600">
+
 
         In order to save y space and make it easier to attach belts to the shuttle
         backside you can use these clips to hold and tension all 4 belts.
 
 
-        you need to have 15 belt bumps visible from the beltclip on each belt. this
+        You need to have 15 belt bumps visible from the belt clip on each belt. This
         should leave the center beltline on the shuttle free and give equal clamping
         to all belts.
 
 
-        the distance between both block at the tensioner screws should be 6mm between
+        The distance between both block at the tensioner screws should be 6mm between
         them when everything is "set" and the shuttle is ready to screw on. This is
-        all according to cad and you might have to adjust the spaving to fit your
-        prints. hence the tenstioning screws.
+        all according to cad and you might have to adjust the spacing to fit your
+        prints. Hence the tensioning screws.
 
 
-        note: belts must be equal length before you start the process.'
-      thumbnail: null
-      images: []
+        **Note:** Belts must be equal length before you start the process.'
+      thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/Belt_Helper_3mm/images/image.png
+      images:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/Belt_Helper_3mm/images/image.png
       stls:
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/Belt_Helper_3mm/STL/Left%20Block.stl
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/Belt_Helper_3mm/STL/Left%20Clip.stl
@@ -893,8 +899,8 @@ repositories:
       path: UserMods/N3MI-DG/Carto_Mounts
       title: Cartographer Mounts for CNC Shuttles
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: ff7dbeaf20e1e043410e34a26831acbce509d41f
+      created_date: '2025-07-27T17:54:04Z'
       has_readme: true
       readme_data: "# Cartographer Mounts for CNC Shuttles\n\n## Description\nCartographer\
         \ mounts for Fysetc and LDO CNC shuttles. Tested with Anthead SF and Stealthburner.\n\
@@ -929,8 +935,8 @@ repositories:
       path: UserMods/N3MI-DG/Endstop_Mounts
       title: Endstop Mounts
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: a2102326368f62d7d0418f820c6f804cf44de2d9
+      created_date: '2025-05-14T17:25:07Z'
       has_readme: true
       readme_data: "# Endstop Mounts\n\nThis repository contains designs for three\
         \ types of shuttle:\n\n- **Fysetc**: For the Fysetc CNC shuttle.\n- **LDO**:\
@@ -1005,8 +1011,8 @@ repositories:
       path: UserMods/N3MI-DG/SC_Barf
       title: SC Barf LEDs
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/SC_Barf
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: f574fe19050bdb7ebbd5cc9852d41cbfb0df54d3
+      created_date: '2024-10-29T02:25:21Z'
       has_readme: true
       readme_data: '# SC Barf LEDs
 
@@ -1107,8 +1113,8 @@ repositories:
       path: UserMods/N3MI-DG/Sherpa_Micro_EBB36_Mount
       title: Sherpa Micro EBB36 Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Sherpa_Micro_EBB36_Mount
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: e4910ebf4bfd9aedebeb54e5f324b1397659466c
+      created_date: '2024-09-15T23:43:19Z'
       has_readme: true
       readme_data: '## Sherpa Micro EBB36 Mount With Cover
 
@@ -1146,19 +1152,29 @@ repositories:
       code: []
     - name: StealthBurner_SC_Barf
       path: UserMods/N3MI-DG/StealthBurner_SC_Barf
-      title: Stealth Burner SC Barf
+      title: StealthBurner SC Barf
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 5123d50cac923b175d11fe4b2680b5a6009ebded
+      created_date: '2024-12-28T07:22:16Z'
       has_readme: true
-      readme_data: 'SCbarf StealthBurner
+      readme_data: '# StealthBurner SC Barf
 
 
-        ![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/images/screenshot.png)
+        Adds SC Barf to the StealthBurner toolhead.
 
-        ![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/images/screenshot2.png)
+        ![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/StealthBurner_SC_Barf/images/photo.jpg)
 
-        ![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/images/photo.jpg)'
+        <br>
+
+        ![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/StealthBurner_SC_Barf/images/screenshot2.png)
+
+        <br>
+
+        ![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/StealthBurner_SC_Barf/images/screenshot.png)
+
+        <br>
+
+        Credits: [Voron Design](https://github.com/VoronDesign/Voron-Stealthburner)'
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/StealthBurner_SC_Barf/images/photo.jpg
       images:
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/N3MI-DG/StealthBurner_SC_Barf/images/photo.jpg
@@ -1177,8 +1193,8 @@ repositories:
       path: UserMods/Nic335/CHCB-V-Mount
       title: AntHead Hotend Mount – CHCB-V V6DM Edition
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/CHCB-V-Mount
-      created_commit: 3c88709dd82de25e16df451b3e09796992005b97
-      created_date: '2024-06-17T02:15:27Z'
+      created_commit: 875496a435875398e544cb2f19b6d675e95beb7f
+      created_date: '2025-10-28T23:37:23Z'
       has_readme: true
       readme_data: "# AntHead Hotend Mount – CHCB-V V6DM Edition\n\nThis repository\
         \ contains my personal modifications of the **AntHead** hotend mount to fit\
@@ -1208,8 +1224,8 @@ repositories:
       path: UserMods/Nic335/NH36Sock
       title: Umbilical Sock for NiteHawks36
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/NH36Sock
-      created_commit: 3c88709dd82de25e16df451b3e09796992005b97
-      created_date: '2024-06-17T02:15:27Z'
+      created_commit: d6363920425aed4c8d180ffffd30af195d221061
+      created_date: '2024-12-29T01:39:20Z'
       has_readme: true
       readme_data: "# Umbilical Sock for NiteHawks36\r\n\r\nThis was designed to properly\
         \ constrain the connector from flexing the NiteHawk36 and securely mount the\
@@ -1391,14 +1407,113 @@ repositories:
       cads: []
       code:
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/RNGIllSkillz/IllFilamentRunout/Config/fSence.cfg
+  - username: Sjack1209
+    mods:
+    - name: Jabberwocky Stealthchanger NH36 Mount
+      path: UserMods/Sjack1209/Jabberwocky Stealthchanger NH36 Mount
+      title: Jabberwocky Stealthchanger NH36 Mount
+      url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount
+      created_commit: 6e99fef295a92ff3df0567332f481c65beb7badb
+      created_date: '2025-12-31T00:09:27Z'
+      has_readme: true
+      readme_data: "# Jabberwocky Stealthchanger NH36 Mount\n\nThis was designed to\
+        \ properly mount the NiteHawk36 to the Jabberwocky Toolhead while using the\
+        \ Stealtchanger backplate and optical sensor. \n\nThe spacer is not required,\
+        \ but without it the mount sits directly against the back of the extruder\
+        \ stepper.\n\nThis is a remix of [UserMods/TheSin-/PCB36_Mount/PCBMount.stl](../../TheSin-/PCB36_Mount/PCBMount.stl)\
+        \ and is intended to be used with [UserMods/Nic335/NH36Sock/SplitSock.3mf](../../Nic335/NH36Sock/SplitSock.3mf)\
+        \ for attaching the umbilical\n \n<table>\n  <tr>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/CAD1.png\"\
+        \ width=\"280\"/></td>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/CAD2.png\"\
+        \ width=\"200\"/></td>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/CAD3.png\"\
+        \ width=\"350\"/></td>\n  </tr>\n  <tr>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/spacer.jpg\"\
+        \ width=\"300\"/></td>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/Assembled.jpg\"\
+        \ width=\"300\"/></td>\n\t<td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/Assembled1.jpg\"\
+        \ width=\"350\"/></td>\n  </tr>\n</table>\n\n## Printing\n\nUse standard voron\
+        \ print settings. 4 walls, 5 top & bottom laters, 40% infill.\n\n![photo](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/photo.jpg)\n\
+        \n\n## Installation\n\ninsert 2 heatset inserts into the back of the mount\
+        \ \n\n<img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/Heatsets.jpg\"\
+        \ style=\"width:280px;\"/>\n\nThen attach the mount and spacer to the Toolhead\
+        \ using 2 M3x10 or M3x12 BHCS \n\n<img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/Attached.jpg\"\
+        \ style=\"width:280px;\"/>\n\nNext, attach the NH36 with either 2 or 4 M3x8\
+        \ BHCS\n\n<img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/images/Assembled.jpg\"\
+        \ style=\"width:280px;\"/>\n\n\n## Bill of Materials (BOM)\n\nqty 2 M3 heatset\
+        \ inserts\n\n\n## Credits\n\nThanks to TheSin- for the original PCBMount file\
+        \ that was used.\n"
+      thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/Assembled.jpg
+      images:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/Assembled.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/Assembled1.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/Assembled2.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/Attached.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/CAD.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/CAD1.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/CAD2.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/CAD3.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/Heatsets.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/Images/spacer.jpg
+      stls:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/STL/Jabberwocky_Stealthchanger_NH36_Mount.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/STL/Jabberwocky_Stealthchanger_NH36_Mount_Spacer.stl
+      cads:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/CAD/Jabberwocky_Stealthchanger_NH36_Mount_and_Spacer.step
+      code:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky%20Stealthchanger%20NH36%20Mount/.metadata.yml
+    - name: Jabberwocky_Stealthchanger_NH36_Mount
+      path: UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount
+      title: Jabberwocky Stealthchanger NH36 Mount
+      url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount
+      created_commit: 52279e0d4dd4eb4f8a1220c78412b2a11bfc0c14
+      created_date: '2026-01-03T03:11:11Z'
+      has_readme: true
+      readme_data: "# Jabberwocky Stealthchanger NH36 Mount\n\nThis was designed to\
+        \ properly mount the NiteHawk36 to the Jabberwocky Toolhead while using the\
+        \ Stealtchanger backplate and optical sensor. \n\nThe spacer is not required,\
+        \ but without it the mount sits directly against the back of the extruder\
+        \ stepper.\n\nThis is a remix of [UserMods/TheSin-/PCB36_Mount/PCBMount.stl](../../TheSin-/PCB36_Mount/PCBMount.stl)\
+        \ and is intended to be used with [UserMods/Nic335/NH36Sock/SplitSock.3mf](../../Nic335/NH36Sock/SplitSock.3mf)\
+        \ for attaching the umbilical\n \n<table>\n  <tr>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD1.png\"\
+        \ width=\"280\"/></td>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD2.png\"\
+        \ width=\"200\"/></td>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD3.png\"\
+        \ width=\"350\"/></td>\n  </tr>\n  <tr>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/spacer.jpg\"\
+        \ width=\"300\"/></td>\n    <td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled.jpg\"\
+        \ width=\"300\"/></td>\n\t<td><img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled1.jpg\"\
+        \ width=\"350\"/></td>\n  </tr>\n</table>\n\n## Printing\n\nUse standard voron\
+        \ print settings. 4 walls, 5 top & bottom laters, 40% infill.\n\n![photo](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/photo.jpg)\n\
+        \n\n## Installation\n\ninsert 2 heatset inserts into the back of the mount\
+        \ \n\n<img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Heatsets.jpg\"\
+        \ style=\"width:280px;\"/>\n\nThen attach the mount and spacer to the Toolhead\
+        \ using 2 M3x10 or M3x12 BHCS \n\n<img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Attached.jpg\"\
+        \ style=\"width:280px;\"/>\n\nNext, attach the NH36 with either 2 or 4 M3x8\
+        \ BHCS\n\n<img src=\"https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled.jpg\"\
+        \ style=\"width:280px;\"/>\n\n\n## Bill of Materials (BOM)\n\nqty 2 M3 heatset\
+        \ inserts\n\n\n## Credits\n\nThanks to TheSin- for the original PCBMount file\
+        \ that was used.\n"
+      thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled.jpg
+      images:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled1.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Assembled2.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Attached.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD1.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD2.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/CAD3.png
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/Heatsets.jpg
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/Images/spacer.jpg
+      stls:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/STL/Jabberwocky_Stealthchanger_NH36_Mount.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/STL/Jabberwocky_Stealthchanger_NH36_Mount_Spacer.stl
+      cads:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Sjack1209/Jabberwocky_Stealthchanger_NH36_Mount/CAD/Jabberwocky_Stealthchanger_NH36_Mount_and_Spacer.step
+      code: []
   - username: Tavroswyn
     mods:
     - name: Anthead
       path: UserMods/Tavroswyn/Anthead
       title: Anthead AddOns for StealthChanger with Sherpa Mini and EBB36
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Tavroswyn/Anthead
-      created_commit: 516ac16db8509c6e283eb90c1f811267c871a06d
-      created_date: '2024-11-19T05:33:24Z'
+      created_commit: eecc6c3a8dd34d4c848665c9716f37d468d2e1b9
+      created_date: '2025-08-18T15:07:02Z'
       has_readme: true
       readme_data: '# Anthead AddOns for StealthChanger with Sherpa Mini and EBB36
 
@@ -1510,6 +1625,40 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Skirt/CAD/Front_Center_Skirt_StealthChanger.step
       - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Skirt/CAD/Rear_Center_Skirt_StealthChanger.step
       code: []
+    - name: TopHat
+      path: UserMods/Tavroswyn/TopHat
+      title: TopHat Alginer
+      url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Tavroswyn/TopHat
+      created_commit: 226b2816338d78d7b22aea1c39ec08321c306fc4
+      created_date: '2025-12-29T15:34:04Z'
+      has_readme: true
+      readme_data: '# TopHat Alginer
+
+        The extrusion based TopHat can just rest on the Voron on its own. However,
+        you always have to manually put it in the right spot and I might have just
+        had it slide down when I lifted one side of the printer up to look at something
+        in the Electronics Bay. I wanted a simple solution, that fits right next to
+        the Beefy Idlers and locks the TopHat to its corner, as you can see in the
+        picture. It is angled at the top, so the TopHat easily slides down on the
+        four TopHatAligners in each corner.
+
+
+        There are two STLs provided, where the [TopHatAligner B](STLs/TopHatAligner_B.stl)
+        is just a mirrored version of the [TopHatAligner A](STLs/TopHatAligner_A.stl).
+        You need two of each of the four corners of your TopHat. See the following
+        picture for the positioning in the back right corner.
+
+
+        ![Picture of TopHat Aligner in the top right corner](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/TopHat/images/TopHatAligner.jpg)'
+      thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/TopHat/images/TopHatAligner.jpg
+      images:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/TopHat/images/TopHatAligner.jpg
+      stls:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/TopHat/STLs/TopHatAligner_A.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/TopHat/STLs/TopHatAligner_B.stl
+      cads:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/TopHat/CAD/TopHat%20Aligner.step
+      code: []
     - name: Vorlong_+100y
       path: UserMods/Tavroswyn/Vorlong_+100y
       title: Modifications for Vorlong +100y with StealthChanger
@@ -1529,13 +1678,26 @@ repositories:
 
         The original design is described in [`Deck_Panel.PDF`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/Drawing_DXFs/Panels/Deck_Panel.PDF)
         and I copied the rounding values from the original dxf files. One could perfectly
-        adapt this manual 1:1 to the Vorlong +100y. However, having an additional
+        adapt this manually 1:1 to the Vorlong +100y. However, having an additional
         100mm on the y axis adds space for additional DIN rails. This opens up some
         space for electronics mounting and gives more support for the deck plate.
-        I decided on 3 DIN rails for my design, although 4 would fit too.
+        I decided on three DIN rails for my design, although four would fit too.
 
 
-        ## Credit
+        ![Picture of Electronics Bay on Vorlong](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/images/Electronics_Bay.jpg)
+
+
+        ## Side Skirts
+
+        With three DIN rails it makes sense to also have three fans, one blowing across
+        each rail. Therefore I extended the middle fan part by one fan. It is a rather
+        big part. If you don''t have a printer that big, you can just cut it in the
+        middle and it will be held together by the fan or the retainer in the middle
+        after assembly. After that, the side skirts needed to be adjusted, to fit
+        the remaining space, which are also provided.
+
+
+        # Credit
 
         Original designs from [Voron Design](https://github.com/VoronDesign) for the
         [Voron-2](https://github.com/VoronDesign/Voron-2) project.
@@ -1544,10 +1706,18 @@ repositories:
         Also check out the other [Vorlong +100y modifications](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Vorlong_%2B100y)
         by [TheSin-](https://github.com/TheSin-), who got me started on the Vorlong
         idea and provides the basics.'
-      thumbnail: null
-      images: []
-      stls: []
-      cads: []
+      thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/images/Electronics_Bay.jpg
+      images:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/images/Electronics_Bay.jpg
+      stls:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/STLs/Middle_Fan_Support%20Vorlong%20%283%20fans%29.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/STLs/Side%20Skirt%20A%20Vorlong.stl
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/STLs/Side%20Skirt%20B%20Vorlong.stl
+      cads:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/CAD/Middle%203%20Fan%20with%20Retainer.step
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/CAD/Middle%203%20Fan.step
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/CAD/Side%20Skirt%20A%20Vorlong.step
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/Tavroswyn/Vorlong_%2B100y/CAD/Side%20Skirt%20B%20Vorlong.step
       code: []
   - username: TheSin-
     mods:
@@ -1555,8 +1725,8 @@ repositories:
       path: UserMods/TheSin-/PCB36_Mount
       title: PCB36 Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: c88dc5eb7401b664e9e338ac6ac723a6de67f344
+      created_date: '2024-06-30T15:55:50Z'
       has_readme: true
       readme_data: '# PCB36 Mount
 
@@ -1612,8 +1782,8 @@ repositories:
       path: UserMods/TheSin-/SV08_Dockbar_Brackets
       title: SV08 Top Dockbar Brackets
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/SV08_Dockbar_Brackets
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: c88dc5eb7401b664e9e338ac6ac723a6de67f344
+      created_date: '2024-06-30T15:55:50Z'
       has_readme: true
       readme_data: '# SV08 Top Dockbar Brackets
 
@@ -1659,8 +1829,8 @@ repositories:
       path: UserMods/TheSin-/Vorlong_+100y
       title: Vorlong (+100 Y) Voron v2.4r2 builds
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Vorlong_%2B100y
-      created_commit: 7af52c6998a7790a9d24fb8d104bc7e54585c27b
-      created_date: '2025-03-18T23:11:02Z'
+      created_commit: 911161f09097b410b82390965243b79b10b992fd
+      created_date: '2024-11-29T18:43:02Z'
       has_readme: true
       readme_data: '# Vorlong (+100 Y) Voron v2.4r2 builds
 
@@ -1834,8 +2004,8 @@ repositories:
       path: UserMods/TheSin-/Z_Stop
       title: Shuttle Z Endstop
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Z_Stop
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: c88dc5eb7401b664e9e338ac6ac723a6de67f344
+      created_date: '2024-06-30T15:55:50Z'
       has_readme: true
       readme_data: '# Shuttle Z Endstop
 
@@ -1892,8 +2062,8 @@ repositories:
       path: UserMods/VIN-y/Endstops
       title: Endstops
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/VIN-y/Endstops
-      created_commit: 20420699c3c1fd60c939c98b2ead4cbf166d5219
-      created_date: '2024-01-06T19:41:09Z'
+      created_commit: 3b293b72ca0bf430164fe02f6b98924fa1075798
+      created_date: '2024-01-09T23:40:14Z'
       has_readme: true
       readme_data: "This mod is a remixing the endstop carrier from [MrTeliP](https://www.printables.com/model/325765-voron-24r2-pg7-cable-gland-and-endstop)\
         \ (on Printables)\n\n### Pupose\nIt move the X and Y endstop switches to a\
@@ -1923,8 +2093,8 @@ repositories:
       path: UserMods/cekim-git/CNCShuttleMount
       title: CNC Shuttle Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/CNCShuttleMount
-      created_commit: 5feec187a2bb63d7e5d25402b5315a57243349cf
-      created_date: '2025-10-29T17:23:27Z'
+      created_commit: 06eb71ea75d549e8e59e47f359f72817672cea7c
+      created_date: '2025-10-30T12:06:09Z'
       has_readme: true
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/cekim-git/CNCShuttleMount/v1.0/media/aseembly_on_shuttle_cinched.jpg
@@ -2062,8 +2232,8 @@ repositories:
       path: UserMods/cekim-git/EBB36Mount
       title: EBB36Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/EBB36Mount
-      created_commit: 5feec187a2bb63d7e5d25402b5315a57243349cf
-      created_date: '2025-10-29T17:23:27Z'
+      created_commit: 06eb71ea75d549e8e59e47f359f72817672cea7c
+      created_date: '2025-10-30T12:06:09Z'
       has_readme: false
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/cekim-git/EBB36Mount/v1.0/DB_EBB36_Orbiter2.0_Mount.jpg
@@ -2088,8 +2258,8 @@ repositories:
       path: UserMods/cekim-git/EddyMount
       title: Eddy Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/EddyMount
-      created_commit: 5feec187a2bb63d7e5d25402b5315a57243349cf
-      created_date: '2025-10-29T17:23:27Z'
+      created_commit: 06eb71ea75d549e8e59e47f359f72817672cea7c
+      created_date: '2025-10-30T12:06:09Z'
       has_readme: false
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/cekim-git/EddyMount/v1.0/FystecCNC/EddyDBHousing.jpg
@@ -2105,8 +2275,8 @@ repositories:
       path: UserMods/cekim-git/LowProfileGantryPG7Mount
       title: Low Profile Gantry PG7Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/LowProfileGantryPG7Mount
-      created_commit: 5feec187a2bb63d7e5d25402b5315a57243349cf
-      created_date: '2025-10-29T17:23:27Z'
+      created_commit: edd0bbd6f5a8386e7797a50c74ae1a0cdc4d6740
+      created_date: '2025-11-03T23:26:27Z'
       has_readme: false
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/cekim-git/LowProfileGantryPG7Mount/v1.0/media/alternate_piano_wire_and_fastener.jpg
@@ -2135,8 +2305,8 @@ repositories:
       path: UserMods/cekim-git/ToolCrash
       title: tool_crash
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/ToolCrash
-      created_commit: 5ccda54c9a5be0c44d87f025b22a0e55bc31598a
-      created_date: '2025-10-18T02:17:10Z'
+      created_commit: 06eb71ea75d549e8e59e47f359f72817672cea7c
+      created_date: '2025-10-30T12:06:09Z'
       has_readme: true
       readme_data: "# tool_crash\n\nWork in progress to develop crash detection plugin\
         \ for klipper-toolchanger that supports inductive as well as tap probes and\
@@ -2191,8 +2361,8 @@ repositories:
       path: UserMods/cekim-git/old
       title: old
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/old
-      created_commit: 4d40181063e1589d30f54cdbeaf1be0fffaa1e66
-      created_date: '2024-01-20T14:52:18Z'
+      created_commit: 06eb71ea75d549e8e59e47f359f72817672cea7c
+      created_date: '2025-10-30T12:06:09Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -2210,8 +2380,8 @@ repositories:
       path: UserMods/dudewithan02/A4T-Xol-Fan-Splitter-PCB
       title: STEALTHCHANGER A4T / XOL TOOLHEAD FAN SPLITTER
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/dudewithan02/A4T-Xol-Fan-Splitter-PCB
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: ccff02fd8025681ceda6e2aa95e9aed205a96877
+      created_date: '2024-12-02T12:00:27Z'
       has_readme: true
       readme_data: '# STEALTHCHANGER A4T / XOL TOOLHEAD FAN SPLITTER
 
@@ -2346,8 +2516,8 @@ repositories:
       path: UserMods/fiferboy/BallTrigger
       title: Ball Trigger
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/fiferboy/BallTrigger
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: 803aa8f824c5b1bb8bb93981f87e5c74ecea4856
+      created_date: '2024-01-10T04:22:01Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -2363,8 +2533,8 @@ repositories:
       path: UserMods/fiferboy/BeefyMod_Superseeded
       title: Beefy Mod Superseeded
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/fiferboy/BeefyMod_Superseeded
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: a286aefd94556fde836dbde6bf42bbba7edd53eb
+      created_date: '2024-03-12T01:05:45Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -2386,8 +2556,8 @@ repositories:
       path: UserMods/jdmontgomer/Blackbird_Orbiter_Mount
       title: Blackbird Orbiter mount for Stealthchanger
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jdmontgomer/Blackbird_Orbiter_Mount
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: cce581401826c909ae2c37c35e4e5a96874d2dd6
+      created_date: '2024-07-23T15:21:20Z'
       has_readme: true
       readme_data: '# Blackbird Orbiter mount for Stealthchanger
 
@@ -2408,8 +2578,8 @@ repositories:
       path: UserMods/jdmontgomer/MiniSB_SC
       title: MiniSB StealthChanger
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jdmontgomer/MiniSB_SC
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: d639806cff1cda2fff08725ece3087ec5a240ff8
+      created_date: '2024-07-07T16:17:56Z'
       has_readme: true
       readme_data: "# MiniSB StealthChanger\n\nMini Stealthburner designed by [Voron\
         \ Design](https://vorondesign.com/).\n\n## StealthChanger backplate for the\
@@ -2444,8 +2614,8 @@ repositories:
       path: UserMods/jdmontgomer/Yavoth_LED_Cowl
       title: Yavoth LED Cowl
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jdmontgomer/Yavoth_LED_Cowl
-      created_commit: 12de119d75fdfeef498fedd8e34c5a9328d981ef
-      created_date: '2023-12-23T17:03:02Z'
+      created_commit: e48d838f5d5ec3067c70a73d7c5bf387caddf1ee
+      created_date: '2024-10-03T14:47:26Z'
       has_readme: true
       readme_data: '![](https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/jdmontgomer/Yavoth_LED_Cowl/media/sc_logo_version.png%3Fraw%3Dtrue)
 
@@ -2545,8 +2715,8 @@ repositories:
       path: UserMods/traxman25/Ant Head
       title: Ant Head
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Ant%20Head
-      created_commit: 0a2d56b565ed5e603996200372af976acf09cd1f
-      created_date: '2024-02-02T05:56:58Z'
+      created_commit: a78fe26d469bdae196d0dce0fd342751bf7c4337
+      created_date: '2025-01-03T20:32:36Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -2600,8 +2770,8 @@ repositories:
       path: UserMods/traxman25/Dragonburner_EBB36_SC_Mount
       title: Dragonburner EBB36 SC Mount
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Dragonburner_EBB36_SC_Mount
-      created_commit: 0a2d56b565ed5e603996200372af976acf09cd1f
-      created_date: '2024-02-02T05:56:58Z'
+      created_commit: 8abc50833fece587f94287685d44dcd06d4a828e
+      created_date: '2024-03-01T22:20:12Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -2617,8 +2787,8 @@ repositories:
       path: UserMods/traxman25/Dragonburner_Numbered_Cowls
       title: Dragonburner Numbered Cowls
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Dragonburner_Numbered_Cowls
-      created_commit: 0a2d56b565ed5e603996200372af976acf09cd1f
-      created_date: '2024-02-02T05:56:58Z'
+      created_commit: 8abc50833fece587f94287685d44dcd06d4a828e
+      created_date: '2024-03-01T22:20:12Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -2647,8 +2817,8 @@ repositories:
       path: UserMods/traxman25/images
       title: images
       url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/images
-      created_commit: 3b293b72ca0bf430164fe02f6b98924fa1075798
-      created_date: '2024-01-09T23:40:14Z'
+      created_commit: 8abc50833fece587f94287685d44dcd06d4a828e
+      created_date: '2024-03-01T22:20:12Z'
       has_readme: false
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/traxman25/images/DB5.jpg
@@ -2666,8 +2836,67 @@ repositories:
       stls: []
       cads: []
       code: []
-  head_commit: 7b6286f2557d8c5d46862db806abdb329c5cdc56
-  last_scanned: '2025-12-12T08:13:08.702891'
+  - username: voney
+    mods:
+    - name: AntHead
+      path: UserMods/voney/AntHead
+      title: Ant Head
+      url: https://github.com/DraftShift/StealthChanger/tree/main/UserMods/voney/AntHead
+      created_commit: a222978976e464bab957a0189f66e94490270532
+      created_date: '2025-12-31T00:07:18Z'
+      has_readme: false
+      readme_data: null
+      thumbnail: https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/images/AntHead_HGX_EBB.png
+      images:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/images/AntHead_HGX_EBB.png
+      stls:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/Anthead_Backplate_HGX_Lite_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/Anthead_Backplate_HGX_Lite_SF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/Anthead_HGX_Adaptor_Plate.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Diffusers.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num0_O2.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num0_O2_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num0_O2_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num0_Sherpa.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num0_Sherpa_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num0_Sherpa_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num1_O2.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num1_O2_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num1_O2_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num1_Sherpa.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num1_Sherpa_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num1_Sherpa_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num2_O2.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num2_O2_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num2_O2_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num2_Sherpa.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num2_Sherpa_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num2_Sherpa_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num3_O2.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num3_O2_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num3_O2_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num3_Sherpa.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num3_Sherpa_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num3_Sherpa_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num4_O2.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num4_O2_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num4_O2_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num4_Sherpa.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num4_Sherpa_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num4_Sherpa_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num5_O2.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num5_O2_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num5_O2_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num5_Sherpa.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num5_Sherpa_HF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Main_Body_Num5_Sherpa_UHF.3mf
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/Numbered_LEDs/Shields.3mf
+      cads:
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/AntHead_HGX_Adaptor_Plate.step
+      - https://raw.githubusercontent.com/DraftShift/StealthChanger/main/UserMods/voney/AntHead/HGX-Lite_Adaptor/Anthead_Backplate_HGX_Lite.step
+      code: []
+  head_commit: 9f36990ea07307cba51d839ec978fd4e5382deaf
+  last_scanned: '2026-01-11T11:42:51.070557'
 - name: ModularDock
   url: https://github.com/DraftShift/ModularDock
   has_usermods: true
@@ -2678,8 +2907,8 @@ repositories:
       path: UserMods/BlackShade/ShortFrame
       title: ShortFrame
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/BlackShade/ShortFrame
-      created_commit: d59c93d326846a32cc7340ce8297aea25148c10e
-      created_date: '2024-05-19T19:11:51Z'
+      created_commit: f284b29d808c5cdf53481b8ba909475c9a8bdb1c
+      created_date: '2024-03-03T17:13:17Z'
       has_readme: true
       readme_data: '# ShortFrame
 
@@ -2728,8 +2957,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/Monolith_Crossbar
       title: Monolith_Crossbar
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/MikeYankeeOscarBeta/Monolith_Crossbar
-      created_commit: f284b29d808c5cdf53481b8ba909475c9a8bdb1c
-      created_date: '2024-03-03T17:13:17Z'
+      created_commit: 1cd6db3a9a56d2c37fa697b7686121004c0ad9bb
+      created_date: '2024-08-19T15:01:31Z'
       has_readme: true
       readme_data: '# Monolith_Crossbar
 
@@ -2815,8 +3044,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/Xol_magdock_adapter
       title: XOL Magdock Adapter
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/MikeYankeeOscarBeta/Xol_magdock_adapter
-      created_commit: f284b29d808c5cdf53481b8ba909475c9a8bdb1c
-      created_date: '2024-03-03T17:13:17Z'
+      created_commit: 7c51128a88f3569082e49c1626d66382c245c582
+      created_date: '2024-12-30T20:07:17Z'
       has_readme: true
       readme_data: '# XOL Magdock Adapter
 
@@ -2862,8 +3091,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/Xol_magdock_feet
       title: XOL Magdock Feet
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/MikeYankeeOscarBeta/Xol_magdock_feet
-      created_commit: f284b29d808c5cdf53481b8ba909475c9a8bdb1c
-      created_date: '2024-03-03T17:13:17Z'
+      created_commit: 86a8ae25d361d8112b3bb952fee835467c97a1af
+      created_date: '2025-04-20T14:28:14Z'
       has_readme: true
       readme_data: "# XOL Magdock Feet\nby [MikeYankeeOscarBeta](https://github.com/MikeYankeeOscarBeta/)\
         \ (DraftShift Discord: #MikeyMike, VoronDesign Discord: #MikeyMike V2.5796,\
@@ -2909,10 +3138,24 @@ repositories:
       path: UserMods/N3MI-DG/Anthead Front Magnets
       title: Anthead Magnetic Duct Docks
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets
-      created_commit: f284b29d808c5cdf53481b8ba909475c9a8bdb1c
-      created_date: '2024-03-03T17:13:17Z'
+      created_commit: 00981806eee57f366c6f00e0b7689408514cefe4
+      created_date: '2025-07-27T17:53:04Z'
       has_readme: true
       readme_data: '# Anthead Magnetic Duct Docks
+
+
+        <img src="https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/image1.png"
+        width="800"/>
+
+        <br/>
+
+        <img src="https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/screenshot1.png"
+        width="400"/>
+
+        <img src="https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/screenshot2.png"
+        width="600"/>
+
+        <br/>
 
 
         ## Description
@@ -2996,15 +3239,22 @@ repositories:
         ## Credits
 
         [Hartk](https://github.com/hartk1213) - Original Anthead Ducts'
-      thumbnail: null
-      images: []
+      thumbnail: https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/image1.png
+      images:
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/image1.png
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/image2.png
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/image3.png
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/screenshot1.png
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/images/screenshot2.png
       stls:
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Left%20Short%20Standard.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Left%20Short.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Left%20Standard%20Stubby.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Left%20Standard.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Left_Duct_Standard.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Pucks%20Short.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Pucks%20Standard.stl
+      - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Right%20Short%20Standard.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Right%20Short.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Right%20Standard%20Stubby.stl
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/Anthead%20Front%20Magnets/STL/Right%20Standard.stl
@@ -3014,12 +3264,37 @@ repositories:
       code: []
     - name: KNOMI2
       path: UserMods/N3MI-DG/KNOMI2
-      title: KNOMI2
+      title: KNOMI2 Container Mod
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/N3MI-DG/KNOMI2
-      created_commit: 8dbb45fcef3b4c3ca66f7751e339f94d47e5a5da
-      created_date: '2024-04-28T02:08:08Z'
-      has_readme: false
-      readme_data: null
+      created_commit: 00981806eee57f366c6f00e0b7689408514cefe4
+      created_date: '2025-07-27T17:53:04Z'
+      has_readme: true
+      readme_data: '# KNOMI2 Container Mod
+
+        Allow the WIFI antenna to be mounted to the back of the container.
+
+        Added XH connector.
+
+        Added cable tie loop.
+
+        Added screws to secure the back plate.
+
+        Trimmed sides of frame at extremities of Knomi for cleaner printing.
+
+        Added extra clearance around USB port.
+
+
+        #### Extra BOM
+
+        2x M2x10mm Self Tapping Screws
+
+        1x XH-2A Female Connector
+
+        1x Cable Tie
+
+
+        <img src="https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/KNOMI2/images/photo.jpg"
+        width="400"/>'
       thumbnail: https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/KNOMI2/images/photo.jpg
       images:
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/N3MI-DG/KNOMI2/images/photo.jpg
@@ -3035,8 +3310,8 @@ repositories:
       path: UserMods/dudewithan02/A4T-Magnet-Docks
       title: STEALTHCHANGER A4T MAGNETIC DOCKS
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/dudewithan02/A4T-Magnet-Docks
-      created_commit: 23e67ceb23235a7628333e2174747330598e3cd0
-      created_date: '2025-01-04T16:23:11Z'
+      created_commit: 84f41dc735828efad366d6ca18784791d73bf0a3
+      created_date: '2024-12-02T11:47:33Z'
       has_readme: true
       readme_data: '# STEALTHCHANGER A4T MAGNETIC DOCKS
 
@@ -3158,8 +3433,8 @@ repositories:
       path: UserMods/jwellman80/Spring Cup Blocker
       title: Spring Cup Blocker
       url: https://github.com/DraftShift/ModularDock/tree/main/UserMods/jwellman80/Spring%20Cup%20Blocker
-      created_commit: f284b29d808c5cdf53481b8ba909475c9a8bdb1c
-      created_date: '2024-03-03T17:13:17Z'
+      created_commit: b6c3abeb97ec23f96fc929595a6eb5b4a73a47eb
+      created_date: '2025-06-14T21:09:51Z'
       has_readme: true
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/jwellman80/Spring%20Cup%20Blocker/Assets/SpringCupBlocker.jpg
@@ -3169,8 +3444,8 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/ModularDock/main/UserMods/jwellman80/Spring%20Cup%20Blocker/STLs/Spring%20Cup%20Blocker.stl
       cads: []
       code: []
-  head_commit: 80c4af4ff7381cf24e3f7eba9a08ce64af746fb7
-  last_scanned: '2025-12-12T08:13:12.128884'
+  head_commit: f0d6fca3a0a7aeb6141c4c7f1c194e6d5f4b686b
+  last_scanned: '2026-01-11T11:43:04.071643'
 - name: Tophat
   url: https://github.com/DraftShift/Tophat
   has_usermods: true
@@ -3199,8 +3474,8 @@ repositories:
       cads:
       - https://raw.githubusercontent.com/DraftShift/Tophat/main/UserMods/N3MI-DG/Medallion%20PCB/Source/TH_LEDS.step
       code: []
-  head_commit: a6b642330355bfcda29d21536043007aeac1b2ac
-  last_scanned: '2025-12-12T08:13:13.498891'
+  head_commit: ded9874133c3e26e7bf41fa3b877315a792a494f
+  last_scanned: '2026-01-11T11:43:05.838079'
 - name: DoorBuffer
   url: https://github.com/DraftShift/DoorBuffer
   has_usermods: true
@@ -3211,8 +3486,8 @@ repositories:
       path: UserMods/Dumplap/CAD
       title: CAD
       url: https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/Dumplap/CAD
-      created_commit: f8cd3f430045195ffde15928509f51cdf16e3132
-      created_date: '2024-06-02T07:14:21Z'
+      created_commit: 0e58ec5baa405e78c70b130f21d2788210aad0f8
+      created_date: '2024-10-01T04:21:45Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -3225,8 +3500,8 @@ repositories:
       path: UserMods/Dumplap/Media
       title: Media
       url: https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/Dumplap/Media
-      created_commit: f8cd3f430045195ffde15928509f51cdf16e3132
-      created_date: '2024-06-02T07:14:21Z'
+      created_commit: 0e58ec5baa405e78c70b130f21d2788210aad0f8
+      created_date: '2024-10-01T04:21:45Z'
       has_readme: false
       readme_data: null
       thumbnail: https://raw.githubusercontent.com/DraftShift/DoorBuffer/main/UserMods/Dumplap/Media/CNChing.png
@@ -3239,8 +3514,8 @@ repositories:
       path: UserMods/Dumplap/STL
       title: STL
       url: https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/Dumplap/STL
-      created_commit: 37106a33900d5135e92c530d2fdf94b409e02a8d
-      created_date: '2025-02-09T06:11:31Z'
+      created_commit: 0e58ec5baa405e78c70b130f21d2788210aad0f8
+      created_date: '2024-10-01T04:21:45Z'
       has_readme: false
       readme_data: null
       thumbnail: null
@@ -3262,8 +3537,8 @@ repositories:
       path: UserMods/MRSalguod/40mm BTT hdmi-5 extended mount
       title: 40mm BTT hdmi-5 extended mount
       url: https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/MRSalguod/40mm%20BTT%20hdmi-5%20extended%20mount
-      created_commit: 593147403c08b3a707f5bf7d9a79c72a12514c1f
-      created_date: '2024-11-09T16:12:29Z'
+      created_commit: 1e576d6132adafc6b3981fabfea2025a77cdb2fc
+      created_date: '2025-02-09T06:00:40Z'
       has_readme: true
       readme_data: "An extended bbt hdmi-5 mount for use with the [Clicky-Clack Fridge\
         \ Door](https://github.com/tanaes/whopping_Voron_mods/tree/main/clickyclacky_door)\
@@ -3298,8 +3573,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/Doorbuffer_Adapters
       title: Doorbuffer Adapters for Monolith_Crossbar
       url: https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/MikeYankeeOscarBeta/Doorbuffer_Adapters
-      created_commit: f8cd3f430045195ffde15928509f51cdf16e3132
-      created_date: '2024-06-02T07:14:21Z'
+      created_commit: 3b46023be58d17f402406992664f2f62e57e612b
+      created_date: '2024-12-29T08:42:20Z'
       has_readme: true
       readme_data: "# Doorbuffer Adapters for Monolith_Crossbar\nbased on DoorBuffer\
         \ Adapter by [TheSin-](https://github.com/TheSin-/) \n\nMonolith AWD mod by\
@@ -3393,8 +3668,8 @@ repositories:
       path: UserMods/MikeYankeeOscarBeta/Doorbuffer_Side_Door_latches
       title: Doorbuffer Side Door Latches
       url: https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/MikeYankeeOscarBeta/Doorbuffer_Side_Door_latches
-      created_commit: f8cd3f430045195ffde15928509f51cdf16e3132
-      created_date: '2024-06-02T07:14:21Z'
+      created_commit: a0407224b5ea9393c1de7ed26e733d2359aa39f7
+      created_date: '2025-04-06T01:03:53Z'
       has_readme: true
       readme_data: "# Doorbuffer Side Door Latches\n\nSwap your door with your sidepanel\
         \ with two door-buffers and some clips.\n\nA simple blank and a remix of RichardM's\
@@ -3431,8 +3706,8 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/DoorBuffer/main/UserMods/MikeYankeeOscarBeta/Doorbuffer_Side_Door_latches/CAD/NewLatchWithHandle_m2x10mmSHCS_screw_5.5mm_longboi%20v1.f3d
       - https://raw.githubusercontent.com/DraftShift/DoorBuffer/main/UserMods/MikeYankeeOscarBeta/Doorbuffer_Side_Door_latches/CAD/NewLatchWithHandle_m2x10mmSHCS_screw_5.5mm_shortboi%20v15.f3d
       code: []
-  head_commit: 3a2ae1a28cb1bc07ad33e03e0ff2208f7b76e5f6
-  last_scanned: '2025-12-12T08:13:15.985546'
+  head_commit: fd1d4e8c4f86a37223257b2c15e9667bef7f0369
+  last_scanned: '2026-01-11T11:43:15.573750'
 - name: CableManagement
   url: https://github.com/DraftShift/CableManagement
   has_usermods: true
@@ -3632,8 +3907,8 @@ repositories:
       path: UserMods/MugenMicko/PTFE Output Ramp Variations
       title: PTFE Output Ramp Variations
       url: https://github.com/DraftShift/CableManagement/tree/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations
-      created_commit: ba9f5e2569b3e2a558f38b367512aaa80b84981a
-      created_date: '2024-11-12T15:02:13Z'
+      created_commit: 6d52ddad692a728418ee4116b624fe9d277fcd1f
+      created_date: '2025-08-18T15:10:02Z'
       has_readme: true
       readme_data: "# PTFE Output Ramp Variations  \nSingle, Double, Triple, Four,\
         \ Five and Six Way Variations for the PTFE Ramp on FannyPack\nThese are to\
@@ -3651,6 +3926,12 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/Images/FannyPack1.jpg
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/Images/FannyPack2.jpg
       stls:
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_bottom%20Five%20Output.stl
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_bottom%20Four%20Output.stl
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_bottom%20Single%20Output.stl
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_bottom%20Six%20Output.stl
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_bottom%20Three%20Output.stl
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_bottom%20Two%20Output.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_top%20Five%20Output.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_top%20Four%20Output.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/MugenMicko/PTFE%20Output%20Ramp%20Variations/STL/ecas_panel_top%20Single%20Output.stl
@@ -3666,8 +3947,8 @@ repositories:
       path: UserMods/N3MI-DG/Camera_addon
       title: Umbilical Plate Camera Addon
       url: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Camera_addon
-      created_commit: ba9f5e2569b3e2a558f38b367512aaa80b84981a
-      created_date: '2024-11-12T15:02:13Z'
+      created_commit: 7f065c7a1cd0c6371d124fd82a7f3e4c986a7d2c
+      created_date: '2025-04-16T05:25:21Z'
       has_readme: true
       readme_data: '# Umbilical Plate Camera Addon
 
@@ -4046,12 +4327,28 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/N3MI-DG/Filament_Entry/bowden.py
     - name: Legacy
       path: UserMods/N3MI-DG/Legacy
-      title: Legacy
+      title: Legacy Cable Management Solutions
       url: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Legacy
       created_commit: 02e58513f191fe24b5b3892a9d38cc99eacc0222
       created_date: '2025-04-16T00:56:24Z'
-      has_readme: false
-      readme_data: null
+      has_readme: true
+      readme_data: '# Legacy Cable Management Solutions
+
+
+        **Note:** These mods are considered redundant. If you are building a new StealthChanger,
+        please consider using the following:
+
+
+        | <img src="https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/N3MI-DG/Legacy/../Umbilical_plates_V2/images/plate_tpu.jpg"
+        width="400"> | <img src="https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/N3MI-DG/Legacy/../../../media/images/FannyPack_Closed.png"
+        width="400"> |
+
+        | --- | --- |
+
+        | [Umbilical Plates V2](../Umbilical_plates_V2/) | [Fanny Pack](../../../STLs/FannyPack/)
+        |
+
+        '
       thumbnail: https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/N3MI-DG/Legacy/CAN_Cover%20%28LEGACY%29/images/btt_ceb_x2.jpg
       images:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/N3MI-DG/Legacy/CAN_Cover%20%28LEGACY%29/images/btt_ceb_x2.jpg
@@ -4364,8 +4661,8 @@ repositories:
       path: UserMods/N3MI-DG/Umbilical_plates_V2
       title: Umbilical System for StealthChanger
       url: https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2
-      created_commit: ba9f5e2569b3e2a558f38b367512aaa80b84981a
-      created_date: '2024-11-12T15:02:13Z'
+      created_commit: 990f3796db2495eee5d6f862c82a15abfcbdfbc7
+      created_date: '2025-01-05T23:55:04Z'
       has_readme: true
       readme_data: "# Umbilical System for StealthChanger\n![](https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/N3MI-DG/Umbilical_plates_V2/images/plate_tpu.jpg)\n\
         ## Introduction\nThis umbilical system is ultimately made up of 2 components.\
@@ -5352,8 +5649,8 @@ repositories:
       path: UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod
       title: Fysetc Hexa distro fusion holder for StealthChanger
       url: https://github.com/DraftShift/CableManagement/tree/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod
-      created_commit: 193208b1b597396d98a813684490455423d435cc
-      created_date: '2025-07-31T11:30:25Z'
+      created_commit: 8d0ec3a69867f2737f53dec6bd7ca767193146db
+      created_date: '2025-07-30T19:57:04Z'
       has_readme: true
       readme_data: '# Fysetc Hexa distro fusion holder for StealthChanger
 
@@ -5362,10 +5659,22 @@ repositories:
         ![](https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/images/hexa_distro_fusion.png)
 
 
+        Update:
+
+        There''s a V2 for a Cover ramp for [n3mi backplates](/STL/[a]_cover_ramp_n3mi_Hexa_distro_fusion_v2.stl)
+        as original version was not matching the M5 bolts distance. Keeping the original
+        if someone needs it.
+
+
+
+        ____________________________________________________________________________________________________________
+
         I had to widen (by 22.5mm to each side) the existing base, cover, PTFE ramps
         and cover ramp for n3mi''s umbilical plates, as this board is really big and
         it could not fit the existing FannyPack. Added 1cm on top of the base to add
         more clearance to USB cables.
+
+
 
 
         ## BOM
@@ -5394,12 +5703,14 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/images/hexa_distro_fusion.png
       stls:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STL/%5Ba%5D_cover_ramp_n3mi_Hexa_distro_fusion.stl
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STL/%5Ba%5D_cover_ramp_n3mi_Hexa_distro_fusion_v2.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STL/%5Ba%5D_ptfe_ramp_Hexa_distro_fusion.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STL/%5Ba%5D_sc_voron_cover_Hexa_distro_fusion.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STL/base_Hexa_distro_fusion.stl
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STL/hexa_distro_fusion_bracket.stl
       cads:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STEP/%5Ba%5D_cover_ramp_n3mi_Hexa_distro_fusion.step
+      - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STEP/%5Ba%5D_cover_ramp_n3mi_Hexa_distro_fusion_v2.step
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STEP/%5Ba%5D_ptfe_ramp_Hexa_distro_fusion.step
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STEP/%5Ba%5D_sc_voron_cover_Hexa_distro_fusion.step
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod/STEP/base_Hexa_distro_fusion.step
@@ -5411,8 +5722,8 @@ repositories:
       path: UserMods/seenit783/SV08 Umbilical Back Plate
       title: SV08 Umbilical Back Plate
       url: https://github.com/DraftShift/CableManagement/tree/main/UserMods/seenit783/SV08%20Umbilical%20Back%20Plate
-      created_commit: ba9f5e2569b3e2a558f38b367512aaa80b84981a
-      created_date: '2024-11-12T15:02:13Z'
+      created_commit: 9696014061b2bee59bc950d5a86531cdbb600c66
+      created_date: '2025-02-09T02:52:22Z'
       has_readme: true
       readme_data: "This is a mod of N3mi's umbilical back plate modded to fit the\
         \ Sovol Sv08.\nSV08 Umbilical Back Plate\n\n\n\n\nDescription\n\nThis mod\
@@ -5435,5 +5746,5 @@ repositories:
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/seenit783/SV08%20Umbilical%20Back%20Plate/Face%20Plate%20SV08%20Umbilical.step
       - https://raw.githubusercontent.com/DraftShift/CableManagement/main/UserMods/seenit783/SV08%20Umbilical%20Back%20Plate/Main%20Body%20SV08%20Umbilical.step
       code: []
-  head_commit: 397414fb53fbb366b400ab00790d84fcf8bbb299
-  last_scanned: '2025-12-12T08:13:20.099795'
+  head_commit: a106de08f081b4ee961e253d949d08b3425a4478
+  last_scanned: '2026-01-11T11:43:32.325460'
