@@ -208,6 +208,10 @@ Many talented members of the StealthChanger community have generously contribute
 
 If you would like your mods featured here, please consider [Submitting a Usermod](contributing.md#submitting-usermods).
 
+!!! info "Public Testing"
+    The usermod section is currently in public testing. The information displayed may not be representative of the original authors' intent. If you discover any bugs, please report them via [Discord](https://discord.gg/draftshift){target="_blank"} or [Facebook](https://www.facebook.com/groups/449879874593718/){target="_blank"}.
+
+
 <!-- Filters -->
 <div class="usermod-filters">
     <select name="tag-filter" title="Filter mods by criteria">
