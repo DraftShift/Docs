@@ -7,7 +7,7 @@ function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
     return {
         filter: params.get('filter') || 'all',
-        sort: params.get('sort') || 'popularity',
+        sort: params.get('sort') || (typeof defaultSort !== 'undefined' ? defaultSort : 'username'),
         order: params.get('order') || null,
         username: params.get('username') || 'all',
         page: params.get('page') || null
@@ -200,7 +200,7 @@ function getControlValues() {
     const usernameFilter = document.querySelector('select[name="username-filter"]');
 
     const filter = tagFilter ? tagFilter.value : 'all';
-    const sort = orderSelect ? orderSelect.value : 'popularity';
+    const sort = orderSelect ? orderSelect.value : (typeof defaultSort !== 'undefined' ? defaultSort : 'title');
     const order = getCurrentSortOrder();
     const username = usernameFilter ? usernameFilter.value : 'all';
 
@@ -311,8 +311,8 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue, r
     }
     
     // Apply sorting
-    const sortBy = sortValue || 'popularity';
-    const sortDir = sortOrder || 'descending';
+    const sortBy = sortValue || (typeof defaultSort !== 'undefined' ? defaultSort : 'title');
+    const sortDir = sortOrder || (typeof defaultSortOrder !== 'undefined' ? defaultSortOrder : 'ascending');
     
     items.sort((a, b) => {
         const aHeading = a.querySelector('h3');
@@ -772,6 +772,11 @@ function isFirstTimeView(modId) {
 }
 
 function trackUsermodView(mod) {
+  // Validate required fields before tracking
+  if (!mod || !mod.name || !mod.username || !mod.repository) {
+    return;
+  }
+
   // Create a unique identifier for this mod
   var modId = mod.repository + '/' + mod.username + '/' + mod.name;
   var firstTime = isFirstTimeView(modId);
@@ -819,6 +824,11 @@ function isFirstTimeDownload(modId) {
 }
 
 function trackUsermodDownload(mod) {
+  // Validate required fields before tracking
+  if (!mod || !mod.name || !mod.username || !mod.repository) {
+    return;
+  }
+
   // Create a unique identifier for this mod
   var modId = mod.repository + '/' + mod.username + '/' + mod.name;
   var firstTime = isFirstTimeDownload(modId);
