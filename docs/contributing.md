@@ -40,7 +40,7 @@ If you would like to contribute to StealthChanger, all of our projects are hoste
 
 ### Submitting Usermods
 
-- Create a directory in UserMods of your github username.
+- Create a directory in UserMods of your github username in the appropriate repository.
 - Ensure the mod is in it's own folder, do not put everything in the root of your UserMod folder.
 - Include a clear README.md per usermod, you may have a general one as well but each usermod requires it's own README.md.
 - Ensure the README.md contains all credits with links, respect and follows GPL.
