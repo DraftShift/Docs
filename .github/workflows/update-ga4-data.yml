@@ -1,0 +1,77 @@
+name: Update Data and Deploy Site
+on:
+  schedule:
+    # TODO switch to weekly after test period.
+    - cron: '0 2 * * *' # Run daily at 2 AM UTC
+    # - cron: '0 2 * * 1' # Run weekly on Monday at 2 AM UTC
+
+    # * * * * *
+    # │ │ │ │ │
+    # │ │ │ │ └─ Day of week (0-7, where 0 and 7 are Sunday)
+    # │ │ │ └─── Month (1-12)
+    # │ │ └───── Day of month (1-31)
+    # │ └─────── Hour (0-23)
+    # └───────── Minute (0-59)
+
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      
+      - name: Set up cache
+        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      
+      - name: Cache MkDocs Material
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install google-analytics-data pyyaml
+      
+      - name: Collect usermod data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python usermods.py
+      
+      - name: Create service account credentials file
+        run: |
+          echo '${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}' > credentials.json
+      
+      - name: Export GA4 analytics data
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: credentials.json
+        run: |
+          python ga4_export.py --property-id 511540530 --start-date 2025-12-25 --end-date yesterday
+
+      - name: Remove credentials file
+        if: always()
+        run: rm -f credentials.json
+      
+      - name: Commit and push updated data (if changed)
+        run: |
+          git add data/usermods.yml data/ga4_usermods.yml
+          git diff --staged --quiet || (git commit -m "Update generated data" && git push)

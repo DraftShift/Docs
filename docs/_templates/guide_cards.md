@@ -5,8 +5,8 @@
 
     ---
 
-    [**{{ title }}**]({{ guide.folder|urlencode }}/index.md){ .guide-card-title }  
-    [*{{ guide.author }}*]({{ guide.folder|urlencode }}/index.md){ .guide-card-author }
+    [**{{ title }}**]({{ guide.folder|urlencode }}/index.md){ .custom-card-title }  
+    [*{{ guide.author }}*]({{ guide.folder|urlencode }}/index.md){ .custom-card-author }
 {% endfor %}
 </div>
 
