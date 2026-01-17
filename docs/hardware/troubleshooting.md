@@ -2,6 +2,8 @@
 ## Common Issues
 ### Shuttle and Backplate Resistance
 - Measure the outside of your top pins. You should have 39mm.
+  ![Pin_Caliper](../assets/maas101_backplate.jpg)
+
 - See [Print Tuning](../getting_started.md#print-tuning)
 
 - If you have calibrated your print and still experience issues, you may want to try the heat treatment method or you can try cleaning out the bushings:

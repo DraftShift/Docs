@@ -1,7 +1,7 @@
 <div class="grid cards" style="text-align: center;" markdown>
-{% for title, guide in guides.items() %}
-- ## {{ title }} { .hidden-toc-heading }
-    [![{{ title }}]({{ guide.folder|urlencode }}/image.png){ .custom-card-image }]({{ guide.folder|urlencode }}/index.md)
+{% for title, guide in guides|dictsort %}
+- ## {{ title }} { .guide-toc-heading }
+    [![{{ title }}]({{ guide.folder|urlencode }}/image.png){ .guide-card-image }]({{ guide.folder|urlencode }}/index.md)
 
     ---
 

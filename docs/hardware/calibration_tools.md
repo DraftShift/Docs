@@ -3,6 +3,7 @@ search:
   boost: 2 
 ---
 
+Having multiple toolheads print on the same part introduces a new calibration challenge, as each toolhead must print precisely in relation to all the others. Therefore, each toolhead has to be calibrated in X, Y and Z to match the others.
 
 ## Sexball Probe
 The Sexball gets its rather raunchy name from being a derivative of hartk's [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_SexBolt_ZEndstop){:target="_blank"}. The addition of a ball at the end of the shaft allows it to do multi axis (XYZ) probing.
@@ -10,7 +11,7 @@ The Sexball gets its rather raunchy name from being a derivative of hartk's [Sex
 Converting an existing [Sexbolt Z Endstop](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_SexBolt_ZEndstop){:target="_blank"} is easy, all you need is to replace the existing shaft with a M5 threaded (one end) shaft and 12mm threaded ball.
 
 !!! warning "Not just any Z endstop"
-    Only Z endstops with a bushing are recommended for use as a Sexball Probe. If your Z endstop is the style with a deflanged pulley, you will need to source the another.
+    Only Z endstops with a bushing are recommended for use as a Sexball Probe. If your Z endstop is the style with a deflanged pulley, you will need to source another one.
 
 ![Sexball Probe](../assets/sexball.png){:width="540"}
 

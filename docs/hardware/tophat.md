@@ -9,7 +9,7 @@ While the tools are parked or when printing high up, the umbilical extends past 
 ## The Solutions
 
 ### Extrusion Tophat
-The Extrusion Tophat is like an extension of your printer, it uses the same extrusion and panel design as the printers frame. See the below table for a list of extrusion and panel sizes per printer size:
+The Extrusion Tophat is like an extension of your printer. It uses the same extrusion and panel design as the printers frame. See the below table for a list of extrusion and panel sizes per printer size:
 
 | Printer | Vertical Extrusion | Horizontal Extrusion | Panels |
 | :-: | :-: | :-: | :-: |
@@ -24,7 +24,7 @@ The Extrusion Tophat is like an extension of your printer, it uses the same extr
     The hardware required for the Extrusion Tophat comes as part of LDO's `Tophat and Door Buffer Kit`.
 
 ### Printed Tophat
-The Printed Tophat was developed for users that do not have easy access to aluminium extrusion or acrylic panels. The only additional hardware is screws, nut and heat inserts.
+The Printed Tophat was developed for users that do not have easy access to aluminium extrusion or acrylic panels. The only additional hardware is screws, nuts and heat-set inserts.
 
 ![Printed Tophat](../assets/tophat_printed.png)
 

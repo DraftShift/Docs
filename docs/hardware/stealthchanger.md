@@ -4,9 +4,10 @@ search:
 ---
 
 
-StealthChanger is the key component and namesake of the StealthChanger ecosystem. It can be broken down in to 2 main components, the [Shuttle](#shuttle) and [Backplate](#backplate), which allows the toolhead to be removed from the gantry and be docked so that another tool can be picked up. During operation, the mechanism also behaves like [Voron Tap](https://github.com/VoronDesign/Voron-Tap){:target="_blank"} and can be used for probing the bed.
+StealthChanger is the key component and namesake of the StealthChanger ecosystem. It can be broken down in to 2 main components, the [Shuttle](#shuttle) and [Backplate](#backplate), which allows the toolhead to be removed from the gantry and be docked so that another tool can be picked up. During operation, the mechanism also behaves like [Voron Tap](https://github.com/VoronDesign/Voron-Tap){:target="_blank"} and can be used for probing the bed. The [Shuttle](#shuttle) and [Backplate](#backplate) completely replace Voron TAP hardware, only the optoTAP sensor is re-used.
 
-![StealthChanger](../assets/sc_anim.gif){: .center }
+![StealthChanger](../assets/sc_anim.gif){: .left} ![StealthChanger](../assets/sc_tap_anim.gif){: width=256,height=358 }
+
 
 ## Shuttle
 The StealthChanger Shuttle gets mounted to the gantry's X-rail MGN carriage and serves the purpose of being a receptacle for the [Backplate](#backplate). It uses bushings and magnets which allow the [Backplate](#backplate) to

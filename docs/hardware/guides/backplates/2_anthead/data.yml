@@ -6,7 +6,8 @@ summary: >
 
     - Standard flow version is used for the purpose of this guide.
 
-    - The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
+    !!! note "LDO CNC Shuttle"
+        It is recommended that 13mm long pins are used with the LDO CNC Shuttle due to it having tapered bushings. 13mm pins are included with the `LDO Tool & Dock Kit`.
 
 printed_bom:
   Anthead Backplate:
@@ -23,7 +24,7 @@ printed_bom:
         Spacer Full: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Anthead_Spacer_Full.stl?raw=true
 
 hardware_bom:
-  4mmx12mm rounded pins with M3 internal thread:
+  4mmx12-13mm rounded pins with M3 internal thread:
     qty: 3
     urls:
         AliExpress: https://s.click.aliexpress.com/e/_DCQkrFP
@@ -50,10 +51,22 @@ resources:
 
 primary_parts:
   - "Shuttle"
+  - "Spacer"
 accent_parts:
   - "Backplate"
 
 steps:
+  - description: "The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead."
+    camera:
+      azimuth: 107
+      polar: 65
+      distance: 73
+      pan_x: -0.18
+      pan_y: -1.29
+    visible:
+      - "Spacer"
+    focus:
+
   - description: "Install the 2 heat inserts into the backplate."
     camera:
       azimuth: 107
@@ -129,7 +142,7 @@ steps:
     focus:
       - "Top Pins Step"
 
-  - description: "Mesh the backplate and shuttle together and using the small end if an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 SHCS screws."
+  - description: "Mesh the backplate and shuttle together and using the small end of an allen wrench, push the top 2 4x12mm pins in the rest of the way and secure with 2 M3x10 SHCS screws."
     camera:
       azimuth: 280
       polar: 18
@@ -172,7 +185,7 @@ steps:
       - "Bottom Pin With Screw"
       - "Top Pins With Screws"
   
-  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a slither of paper between the screw and magnet similar setting z offset."
+  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way to ensure even contact is by using a sliver of paper between the screw and magnet similar to setting z offset."
     camera:
       azimuth: 359
       polar: 85

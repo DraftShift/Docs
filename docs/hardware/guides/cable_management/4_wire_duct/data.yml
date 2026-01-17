@@ -232,13 +232,13 @@ steps:
       - "Skirt M3 Nuts"
       - "Skirt M3x10 BHCS"
 
-  - description: "Attach the Wire Duct Cover to the Wire Duct Base by flexing the Cover over the base."
+  - description: "Attach the Wire Duct Cover to the Wire Duct Base. Insert the top tabs and press down to snap it into place."
     camera:
       azimuth: 271
       polar: 101
-      distance: 25
-      pan_x: -0.13
-      pan_y: -16.54
+      distance: 46
+      pan_x: 0.19
+      pan_y: 1.21
     visible: 
       - "Duct Base M3 Nuts"
       - "EMS Grill M3x6 BHCS"

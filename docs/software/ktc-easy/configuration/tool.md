@@ -218,13 +218,15 @@ Each tool gets assigned a [gcode_macro](https://www.klipper3d.org/Config_Referen
 === "T0"
     ``` cfg title="Tool 0 Config"
     [gcode_macro T0]
-    variable_active: 0 # Do not change
+    variable_active: 0 # Must be zero.
+    variable_color: "" # Leave empty
     gcode: SELECT_TOOL T=0
     ```
 
 === "T1"
     ``` cfg title="Tool 1 Config"
     [gcode_macro T1]
-    variable_active: 0 # Do not change
+    variable_active: 0 # Must be zero.
+    variable_color: "" # Leave empty
     gcode: SELECT_TOOL T=1
     ```

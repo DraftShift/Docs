@@ -19,6 +19,19 @@ There may be more sections such as RGB, thermistors, etc. They all should be com
     If you were already running a toolhead board, it's likely these sections are all in a separate file. You can simply comment out the include for that file in your printer.cfg.
 
 ## Homing Sections
+
+klipper-toolchanger uses the tool's probe for Z homing. `[stepper_z]` section needs to be updated:
+
+* Change `endstop_pin:` to use the virtual endstop:
+    ```cfg
+    endstop_pin: probe:z_virtual_endstop
+    ```
+* Remove `position_endstop:` as this is now determined by the [tool_probe Tn]
+
+!!! warning "position_endstop"
+    The `position_endstop:` parameter is incompatible with `probe:z_virtual_endstop` and must be removed to prevent configuration errors.
+
+
 [Klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy){:target="_blank"} has its own homing routine and requires any existing overrides to be disabled.
 
 * [probe]

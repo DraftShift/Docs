@@ -117,21 +117,13 @@ def on_config(config, **kwargs):
     # Generate the guides navigation
     guides_nav = generate_guides_nav(guides_root)
     
-    # Find the Hardware section in the nav
+    # Find the Build Guides in the nav
     nav = config.get('nav', [])
     
     for i, item in enumerate(nav):
-        if isinstance(item, dict) and 'Hardware' in item:
-            hardware_nav = item['Hardware']
-            
-            # Find the Build Guides section
-            for j, hw_item in enumerate(hardware_nav):
-                if isinstance(hw_item, dict) and 'Build Guides' in hw_item:
-                    # Replace Build Guides content with dynamically generated nav
-                    hardware_nav[j] = {'Build Guides': guides_nav}
-                    print(f"[nav_generator] Dynamically generated navigation for {len(guides_nav)} guide categories")
-                    break
-            
+        if isinstance(item, dict) and 'Build Guides' in item:
+            # Replace Build Guides content with dynamically generated nav
+            nav[i] = {'Build Guides': guides_nav}
             break
     
     return config

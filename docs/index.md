@@ -1,13 +1,17 @@
 Welcome to the official documentation for StealthChanger and the DraftShift Design ecosystem. This site will provide information on the many components and how to assemble, configure and operate them.
 
 ## What is StealthChanger
-[StealthChanger](hardware/stealthchanger.md) is the key componant of a larger ecosystem that can be used on Voron and other front mount printers. StealthChanger enables the tool to be completely removed from the gantry making it proficient in tool changing when combined with the rest of the DraftShift Design ecosystem.
+[StealthChanger](hardware/stealthchanger.md) is the key component of a larger ecosystem that can be used on Voron and other front mount printers. StealthChanger enables the tool to be completely removed from the gantry making it proficient in tool changing when combined with the rest of the DraftShift Design ecosystem.
 
-## DraftShift Design
-
-![StealthChanger](assets/sc_anim.gif){ width=180 align=right }
+<div style="clear: both; margin-bottom: 20px;"></div>
+![StealthChanger](assets/sc_anim.gif){ width=180 align=left }
 ### StealthChanger
-[StealthChanger](hardware/stealthchanger.md) consists of 2 major components, the [Shuttle](hardware/stealthchanger.md#shuttle) and [Backplate](hardware/stealthchanger.md#backplate). The shuttle gets attached to the X-Carriage on the printers gantry, while the backplate gets attached to the back of each tool. This enables any flying gantry printer with front mounted MGN12- or MGN9-rail to become a toolchanger.
+[StealthChanger](hardware/stealthchanger.md) consists of 2 major components, the [Shuttle](hardware/stealthchanger.md#shuttle) and [Backplate](hardware/stealthchanger.md#backplate). The shuttle gets attached to the X-Carriage on the printers gantry, attached to the back of each tool.
+
+<div style="clear: both; margin-bottom: 10px;"></div>
+![StealthChanger](assets/sc_tap_anim_small.gif){ width=180 align=right }
+This enables any flying gantry printer with front mounted MGN12- or MGN9-rail to become a toolchanger.  The constrained motion of the toolhead on the shuttle also serves as a TAP probe.
+
 
 <div style="clear: both; margin-bottom: 20px;"></div>
 ![Modular Dock](assets/dock_cropped.png){ width=160 align=left } 

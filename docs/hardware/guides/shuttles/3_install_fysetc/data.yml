@@ -138,7 +138,7 @@ steps:
       - "Left M3x6 SHCS"
       - "Right M3x6 SHCS"
 
-  - description: "Attach the left portion of the belts to the shuttle by feeding them from the back and through the belt holes. Finally, clamp them using a belt clamp and M3x6 SHCS screw."
+  - description: "Attach the left portion of the belts to the shuttle by feeding them from the back and through the belt holes. Snugly clamp the belts using a belt clamp and M3x6 SHCS screw. Ensure the belts are spaced evenly by pushing then to the center of the clamp and tighten."
     camera:
       azimuth: 121
       polar: 60

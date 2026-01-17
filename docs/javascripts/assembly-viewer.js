@@ -25,6 +25,7 @@ window.initialCameraPosition = null; // Store initial camera position after rece
 window.initialTarget = null; // Store initial orbit target after recenter
 window.referenceViewportSize = null; // Store viewport size when camera settings were applied
 window.baseDistance = null; // Store the base distance from YAML
+window.lastModelViewerSize = null; // Store last viewer size for resize-based framing preservation
 
 var currentStep = 0;
 var blinkInterval = null;
@@ -556,58 +557,54 @@ function initModelViewer(modelPath, onModelLoaded) {
     }
     resizeHandler = function () {
         if (!container.clientWidth || !container.clientHeight) return;
-        
-        // Calculate scale factor based on viewport size change
-        // Use the smaller dimension to determine scale (maintains framing in both orientations)
-        if (window.referenceViewportSize && window.baseDistance) {
-            const currentSize = Math.min(container.clientWidth, container.clientHeight);
-            const referenceSize = Math.min(window.referenceViewportSize.width, window.referenceViewportSize.height);
-            const rawScaleFactor = referenceSize / currentSize;
-            
-            // Apply the configurable ratio to control how much scaling occurs
-            // scaleFactor = 1 + (rawScaleFactor - 1) * ratio
-            // When ratio = 1.0: full scaling
-            // When ratio = 0.5: half the scaling effect
-            // When ratio = 0.0: no scaling (scaleFactor = 1.0)
-            const scaleFactor = 1 + (rawScaleFactor - 1) * distanceScaleRatio;
-            
-            // Scale the distance: smaller viewport = larger distance (object appears same size)
-            const scaledDistance = window.baseDistance * scaleFactor;
-            
-            // Get current camera position in spherical coordinates
-            const pos = camera.position;
-            const target = controls.target;
-            const relX = pos.x - target.x;
-            const relY = pos.y - target.y;
-            const relZ = pos.z - target.z;
-            
-            const currentDistance = Math.sqrt(relX * relX + relY * relY + relZ * relZ);
-            const polar = Math.acos(relY / currentDistance);
-            const azimuth = Math.atan2(relZ, relX);
-            
-            // Reposition camera at scaled distance with same angles
-            const x = scaledDistance * Math.sin(polar) * Math.cos(azimuth);
-            const y = scaledDistance * Math.cos(polar);
-            const z = scaledDistance * Math.sin(polar) * Math.sin(azimuth);
-            
-            camera.position.set(
-                target.x + x,
-                target.y + y,
-                target.z + z
-            );
-            
-            controls.update();
-        }
-        
+
+        // Track current size (used for optional future behaviors).
+        window.lastModelViewerSize = {
+            width: container.clientWidth,
+            height: container.clientHeight
+        };
+
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
+
         // Trigger render after resize
         needsRenderGlobal = true;
         renderFramesRemaining = 2;
     };
     window.addEventListener('resize', resizeHandler);
 
+    // Initialize last size for resize-based framing preservation
+    window.lastModelViewerSize = {
+        width: container.clientWidth,
+        height: container.clientHeight
+    };
+
+}
+
+function initializeModelViewer() {
+    if (!modelFile) {
+        console.error('No model file specified');
+        return;
+    }
+
+    if (UIManager && typeof UIManager.showLoading === 'function') {
+        UIManager.showLoading();
+    }
+
+    initModelViewer(modelFile, function() {
+        modelViewerInitialized = true;
+
+        if (UIManager && typeof UIManager.hideLoading === 'function') {
+            UIManager.hideLoading();
+        }
+
+        if (typeof createVisibilityControls === 'function' && window.modelViewerParts) {
+            createVisibilityControls(window.modelViewerParts);
+        }
+
+        updateStep();
+    });
 }
 
 // Populate visibility controls
@@ -1113,7 +1110,7 @@ const UIManager = {
         this.prevButtonHandler = function() {
             if (currentStep > 0) {
                 currentStep--;
-                updateStepHash();
+                updateUrlParams();
                 updateStep();
             }
         };
@@ -1122,7 +1119,7 @@ const UIManager = {
             const maxStep = assemblySteps.length - 1;
             if (currentStep < maxStep) {
                 currentStep++;
-                updateStepHash();
+                updateUrlParams();
                 updateStep();
             }
         };
@@ -1289,48 +1286,129 @@ const UIManager = {
     }
 }
 
-// Function to initialize the model viewer (called on first step access)
-function initializeModelViewer() {
-    if (modelViewerInitialized) return;
-    modelViewerInitialized = true;
-    
-    // Show loading overlay
-    UIManager.showLoading();
-    
-    // Defer model loading until browser is idle to avoid blocking the main thread
-    const loadModel = function() {
-        initModelViewer(
-        modelFile, 
-        function() {
-            // This callback runs after the model is fully loaded
-            
-            // Hide loading overlay
-            UIManager.hideLoading();
-            
-            // Populate the parts list in the overlay
-            createVisibilityControls(window.modelViewerParts);
-            
-            // Don't call updateStep here - it will be called and will handle colors
-            updateStep();
+// URL Parameter Registry
+// Each parameter defines: name, getValue (for URL updates), applyOnLoad, onPopstate
+var UrlParams = {
+    registry: [
+        {
+            name: 'step',
+            // Get current value for URL (return null to remove from URL)
+            getValue: function() {
+                return currentStep + 1; // 1-indexed
+            },
+            // Apply parameter on initial page load (before model loads)
+            applyOnLoad: function(value) {
+                if (value) {
+                    const stepNum = parseInt(value, 10) - 1; // Convert to 0-indexed
+                    if (stepNum >= 0 && stepNum < assemblySteps.length) {
+                        currentStep = stepNum;
+                    } else {
+                        currentStep = 0;
+                    }
+                } else {
+                    currentStep = 0;
+                }
+            },
+            // Handle popstate (browser back/forward)
+            onPopstate: function(value) {
+                if (value) {
+                    const stepNum = parseInt(value, 10) - 1;
+                    if (stepNum >= 0 && stepNum < assemblySteps.length && stepNum !== currentStep) {
+                        currentStep = stepNum;
+                        updateStep();
+                    }
+                }
+            }
+        },
+        {
+            name: 'max',
+            getValue: function() {
+                const viewerContainer = document.getElementById('model-viewer-container');
+                const isMaximized = viewerContainer && viewerContainer.classList.contains('fullscreen');
+                return isMaximized ? 'true' : null; // null removes from URL
+            },
+            applyOnLoad: null, // Handled after UI is ready in setupAssemblyViewer
+            onPopstate: function(value) {
+                const viewerContainer = document.getElementById('model-viewer-container');
+                const fullscreenBtn = document.getElementById('toggle-fullscreen');
+                if (viewerContainer && fullscreenBtn) {
+                    const isCurrentlyMaximized = viewerContainer.classList.contains('fullscreen');
+                    const shouldBeMaximized = (value === 'true');
+                    if (shouldBeMaximized && !isCurrentlyMaximized) {
+                        fullscreenBtn.click();
+                    } else if (!shouldBeMaximized && isCurrentlyMaximized) {
+                        fullscreenBtn.click();
+                    }
+                }
+            }
         }
-    );
-    };
+    ],
     
-    // Use requestIdleCallback if available, otherwise setTimeout
-    if (typeof requestIdleCallback !== 'undefined') {
-        requestIdleCallback(loadModel, { timeout: 1000 });
-    } else {
-        setTimeout(loadModel, 100);
+    // Update URL with current state from all registered parameters
+    updateUrl: function() {
+        const url = new URL(window.location.href);
+        
+        this.registry.forEach(function(param) {
+            const value = param.getValue();
+            if (value !== null && value !== undefined) {
+                url.searchParams.set(param.name, value);
+            } else {
+                url.searchParams.delete(param.name);
+            }
+        });
+        
+        url.hash = '';
+        
+        let pathname = url.pathname;
+        if (!pathname.endsWith('/')) {
+            pathname += '/';
+        }
+        
+        const newUrl = pathname + url.search;
+        if (window.location.pathname + window.location.search !== newUrl) {
+            window.history.pushState(null, '', newUrl);
+        }
+    },
+    
+    // Parse URL and return object with all parameter values
+    parse: function() {
+        const url = new URL(window.location.href);
+        const result = {};
+        this.registry.forEach(function(param) {
+            result[param.name] = url.searchParams.get(param.name);
+        });
+        return result;
+    },
+    
+    // Apply all parameters on initial page load
+    applyOnLoad: function() {
+        const params = this.parse();
+        this.registry.forEach(function(param) {
+            if (param.applyOnLoad) {
+                param.applyOnLoad(params[param.name]);
+            }
+        });
+    },
+    
+    // Handle popstate event (browser back/forward)
+    handlePopstate: function() {
+        const params = this.parse();
+        this.registry.forEach(function(param) {
+            if (param.onPopstate) {
+                param.onPopstate(params[param.name]);
+            }
+        });
     }
+};
+
+// Convenience function for updating URL
+function updateUrlParams() {
+    UrlParams.updateUrl();
 }
 
-// Helper function to update URL hash
-function updateStepHash() {
-    const stepNum = currentStep + 1; // Convert to 1-indexed
-    const newHash = `#step-${stepNum}`;
-    if (window.location.hash !== newHash) {
-        window.history.pushState(null, '', newHash);
-    }
+// Convenience function for getting URL params (maintains backward compatibility)
+function getUrlParams() {
+    return UrlParams.parse();
 }
 
 function updateStep() {
@@ -1398,9 +1476,7 @@ function updateStep() {
             });
         } else {
             // Apply base colors (primary, accent, frame)
-            if (baseColors.length > 0) {
-                setFocusParts(baseColors);
-            }
+            setFocusParts(baseColors);
         }
     }
     
@@ -1462,28 +1538,11 @@ function updateStep() {
                 window.initialTarget.z + worldPan.z
             );
             
-            // Apply camera position with initial scaling based on viewport size
+            // Apply camera position (use authored YAML distance; do not scale by viewport size)
             if (azimuth !== null && polar !== null && distance !== null) {
-                // Get current viewport size
-                const container = document.getElementById('model-viewer');
-                let scaledDistance = distance;
-                
-                if (container) {
-                    // Calculate scale factor based on current viewport vs reference viewport
-                    const currentSize = Math.min(container.clientWidth, container.clientHeight);
-                    const referenceSize = Math.min(referenceFullViewportSize.width, referenceFullViewportSize.height);
-                    const rawScaleFactor = referenceSize / currentSize;
-                    
-                    // Apply the configurable ratio to control how much scaling occurs
-                    const scaleFactor = 1 + (rawScaleFactor - 1) * distanceScaleRatio;
-                    
-                    // Scale the distance for initial load
-                    scaledDistance = distance * scaleFactor;
-                }
-                
-                const x = scaledDistance * Math.sin(polarRad) * Math.cos(azimuthRad);
-                const y = scaledDistance * Math.cos(polarRad);
-                const z = scaledDistance * Math.sin(polarRad) * Math.sin(azimuthRad);
+                const x = distance * Math.sin(polarRad) * Math.cos(azimuthRad);
+                const y = distance * Math.cos(polarRad);
+                const z = distance * Math.sin(polarRad) * Math.sin(azimuthRad);
                 
                 camera.position.set(
                     controls.target.x + x,
@@ -1493,16 +1552,6 @@ function updateStep() {
             }
             
             controls.update();
-            
-            // Store the reference viewport size (from config) and base distance for scaling on resize
-            // Always use referenceFullViewportSize as the baseline, not the current viewport size
-            if (distance !== null) {
-                window.referenceViewportSize = {
-                    width: referenceFullViewportSize.width,
-                    height: referenceFullViewportSize.height
-                };
-                window.baseDistance = distance;
-            }
             
             // Force camera change detection by clearing last position
             // This ensures lights update on next animate loop iteration
@@ -1599,19 +1648,8 @@ function setupAssemblyViewer() {
     // Reset state for new page
     modelViewerInitialized = false;
     
-    // Check URL hash for initial step (e.g., #step-5)
-    const hash = window.location.hash;
-    const stepMatch = hash.match(/^#step-(\d+)$/);
-    if (stepMatch) {
-        const stepNum = parseInt(stepMatch[1], 10) - 1; // Convert to 0-indexed
-        if (stepNum >= 0 && stepNum < assemblySteps.length) {
-            currentStep = stepNum;
-        } else {
-            currentStep = 0;
-        }
-    } else {
-        currentStep = 0;
-    }
+    // Apply URL parameters on load (step, max, etc.)
+    UrlParams.applyOnLoad();
     
     if (blinkInterval) {
         clearInterval(blinkInterval);
@@ -1697,6 +1735,72 @@ function setupAssemblyViewer() {
         };
     }
     
+    // Setup fullscreen toggle button
+    const fullscreenBtn = document.getElementById('toggle-fullscreen');
+    const fullscreenBackdrop = document.getElementById('fullscreen-backdrop');
+    const viewerContainer = document.getElementById('model-viewer-container');
+    
+    if (fullscreenBtn && fullscreenBackdrop && viewerContainer) {
+        setIcon(fullscreenBtn, 'icon-fullscreen');
+        
+        let savedScrollPosition = 0;
+        
+        const toggleFullscreen = function() {
+            fullscreenBtn.blur();
+            const willBeFullscreen = !viewerContainer.classList.contains('fullscreen');
+            const modelViewer = document.getElementById('model-viewer');
+            
+            if (willBeFullscreen) {
+                // Save scroll position and viewer size before going fullscreen
+                savedScrollPosition = window.scrollY || window.pageYOffset;
+                
+                viewerContainer.classList.add('fullscreen');
+                fullscreenBackdrop.classList.add('active');
+                setIcon(fullscreenBtn, 'icon-fullscreen-exit');
+                fullscreenBtn.setAttribute('data-tooltip', 'Minimize');
+                document.body.style.overflow = 'hidden';
+            } else {
+                viewerContainer.classList.remove('fullscreen');
+                fullscreenBackdrop.classList.remove('active');
+                setIcon(fullscreenBtn, 'icon-fullscreen');
+                fullscreenBtn.setAttribute('data-tooltip', 'Maximize');
+                document.body.style.overflow = '';
+                
+                // Restore scroll position after exiting fullscreen
+                window.scrollTo(0, savedScrollPosition);
+            }
+            
+            // Trigger resize to update renderer size
+            window.dispatchEvent(new Event('resize'));
+            
+            // Update URL to reflect fullscreen state
+            updateUrlParams();
+        };
+        
+        fullscreenBtn.onclick = toggleFullscreen;
+        
+        // Close fullscreen when clicking backdrop or the margin area around the viewer
+        fullscreenBackdrop.onclick = function() {
+            if (viewerContainer.classList.contains('fullscreen')) {
+                toggleFullscreen();
+            }
+        };
+        
+        // Close when clicking the container padding (outside the model-viewer)
+        viewerContainer.onclick = function(e) {
+            if (viewerContainer.classList.contains('fullscreen') && e.target === viewerContainer) {
+                toggleFullscreen();
+            }
+        };
+        
+        // Close fullscreen on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && viewerContainer.classList.contains('fullscreen')) {
+                toggleFullscreen();
+            }
+        });
+    }
+    
     // Setup color picker
     ColorPickerManager.setupColorPicker();
     
@@ -1720,17 +1824,9 @@ function setupAssemblyViewer() {
     UIManager.setupCollapseButton();
     UIManager.setupKeyboardShortcuts();
     
-    // Setup hash change listener for browser back/forward
-    window.addEventListener('hashchange', function() {
-        const hash = window.location.hash;
-        const stepMatch = hash.match(/^#step-(\d+)$/);
-        if (stepMatch) {
-            const stepNum = parseInt(stepMatch[1], 10) - 1;
-            if (stepNum >= 0 && stepNum < assemblySteps.length && stepNum !== currentStep) {
-                currentStep = stepNum;
-                updateStep();
-            }
-        }
+    // Setup popstate listener for browser back/forward with query parameters
+    window.addEventListener('popstate', function() {
+        UrlParams.handlePopstate();
     });
     
     // Setup camera overlay click to copy
@@ -1806,6 +1902,19 @@ function setupAssemblyViewer() {
         
         // Add the handler
         cameraOverlay.addEventListener('click', cameraOverlayHandler);
+    }
+    
+    // Check if we need to maximize the viewer after initialization (for max=true URL parameter)
+    const urlParams = UrlParams.parse();
+    if (urlParams.max === 'true') {
+        const fullscreenBtn = document.getElementById('toggle-fullscreen');
+        if (fullscreenBtn && viewerContainer && !viewerContainer.classList.contains('fullscreen')) {
+            // Use setTimeout to ensure the UI is fully rendered before maximizing
+            setTimeout(function() {
+                fullscreenBtn.click();
+                console.log('Applied fullscreen from URL parameter');
+            }, 100);
+        }
     }
 }
 

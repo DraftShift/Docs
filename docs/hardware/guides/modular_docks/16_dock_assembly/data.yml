@@ -48,7 +48,7 @@ primary_parts:
   - "PTFE Wiper"
 
 steps:
-  - description: "Insert the Blocker in to the Base and secure it using 4 M3x20/30 SHCS screws."
+  - description: "Insert the Blocker in to the Base and secure it using 4 M3x20 screws for a standard width dock or M3x30 SHCS screws for a wide dock."
     camera:
       azimuth: 327
       polar: 66
@@ -99,7 +99,7 @@ steps:
     focus:
     - "Frame Front Mount Screws"
 
-  - description: "Secure the frame to the Base using 2 M3x40/50 SHCS screws."
+  - description: "Secure the frame to the Base using 2 M3x40 SHCS screws for a stubby dock or M3x50 SHCS screws for a standard depth dock."
     camera:
       azimuth: 274
       polar: 92

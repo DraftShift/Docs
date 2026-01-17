@@ -111,7 +111,7 @@ steps:
       - "M3x25 SHCS"
       - "Hammerhead Nuts"
 
-  - description: "Install the 5mm shaft in the top though the bushing. The Shaft is just floating in the bushing, make sure you don't loose it."
+  - description: "Install the 5mm shaft in the top through the bushing. The Shaft is just floating in the bushing, make sure you don't loose it."
     camera:
       azimuth: 40
       polar: 73

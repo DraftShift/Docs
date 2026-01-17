@@ -58,7 +58,7 @@ params_input_shaper_type_y: 'mzv'
 The speed of a tool change is determined by multiple factors.
 
 1. The size of the printer.
-2. The quality of componants used.
+2. The quality of components used.
 3. The power given to the motors.
 4. `max_velocity` in the `[printer]` section.
 5. `max_accel` in the `[printer]` section.

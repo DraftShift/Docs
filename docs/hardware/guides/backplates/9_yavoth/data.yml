@@ -6,7 +6,8 @@ summary: >
 
     - High flow version is used for the purpose of this guide.
 
-    - The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead.
+    !!! note "LDO CNC Shuttle"
+        It is recommended that 13mm long pins are used with the LDO CNC Shuttle due to it having tapered bushings. 13mm pins are included with the `LDO Tool & Dock Kit`.
 
 printed_bom:
   Yavoth Backplate:
@@ -22,7 +23,7 @@ printed_bom:
         UHF: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/Yavoth_UHF_Spacer.stl?raw=true
 
 hardware_bom:
-  4mmx12mm rounded pins with M3 internal thread:
+  4mmx12-13mm rounded pins with M3 internal thread:
     qty: 3
     urls:
         AliExpress: https://s.click.aliexpress.com/e/_DCQkrFP
@@ -49,10 +50,22 @@ resources:
 
 primary_parts:
   - "Shuttle"
+  - "Spacer"
 accent_parts:
   - "Backplate"
 
 steps:
+  - description: "The Spacer is not used for the purpose of this guide. Put it aside in a safe place until building the toolhead."
+    camera:
+      azimuth: 107
+      polar: 65
+      distance: 73
+      pan_x: -0.18
+      pan_y: -1.29
+    visible:
+      - "Spacer"
+    focus:
+
   - description: "Install the 2 heat inserts into the backplate."
     camera:
       azimuth: 107
@@ -171,7 +184,7 @@ steps:
       - "Bottom Pin With Screw"
       - "Top Pins With Screws"
   
-  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a slither of paper between the screw and magnet similar setting z offset."
+  - description: "Set the preload for the Backplate by backing out the 2 M3x6 FHCS screws in small increments until they both make even contact with the magnets in the shuttle. An easy way ensure even contact is by using a sliver of paper between the screw and magnet similar setting z offset."
     camera:
       azimuth: 359
       polar: 85
@@ -188,3 +201,22 @@ steps:
       - "Shuttle"
     focus:
       - "M3x6 FHCS Screws"
+
+  - description: "Mount the OptoTap PCB using 2 M3x6 BHCS screws."
+    camera:
+      azimuth: 278
+      polar: 93
+      distance: 70
+      pan_x: -0.64
+      pan_y: 13.43
+    visible:
+      - "Backplate"
+      - "M3 Heat Inserts"
+      - "6x3mm Magnet"
+      - "M3x6 FHCS Screws"
+      - "Pins"
+      - "M3x8 BHCS Screws"
+      - "OptoTap PCB"
+      - "M3x6 BHCS Screws"
+    focus:
+      - "M3x6 BHCS Screws"

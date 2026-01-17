@@ -13,7 +13,7 @@ To give the [Modular Docks](modular_dock.md) the maximum amount of rigidity, the
 ![Idler interference](../assets/idler_interference.png){:width="340"}
 
 ### The Solution
-Adding a Door Buffer provides a means to install the [crossbar](#crossbar) and retain the ability to mount the door on the front. The Door Buffer uses 3d printed pieces to fill the gaps around the front of the printers frame and adds new mounting points for the door.
+Adding a Door Buffer provides a means to install the [crossbar](#crossbar) and retain the ability to mount the door on the front. The Door Buffer uses 3D printed pieces to fill the gaps around the front of the printers frame and adds new mounting points for the door.
 
 ![Door buffer solution](../assets/door_buffer_solution.png){:width="340"}
 
@@ -24,10 +24,10 @@ There are versions of the Door Buffer for both [standard Voron V2 doors](https:/
 
     * **2020/1515 Extrusion** - Using blind joints you can mount extrusion to the front of the frame essentially making it 4020/3015.
     * **4020/3015 Extrusion** - Build the front of your printers frame using larger extrusion. 
-    * **Mini/Micro BFI** - [Mini/Micro BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI){:target="_blank"} takes a different approach and shortens the BFI idlers. This means the [crossbar](#crossbar) can be kept within the printers frame at the cost of less printable area and reduces the amount you can adjust the AB belts.
+    * **Mini/Micro BFI** - [Mini/Micro BFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI){:target="_blank"} takes a different approach and shortens the BFI idlers. This means the [crossbar](#crossbar) can be kept within the printers frame at the cost of less printable area and reduces the amount you can adjust the A/B belts.
 
 ## Crossbar
-The crossbar is a piece of extrusion mounted to the front of the printer’s frame, providing a rigid and stable attachment point for the [Modular Dock](modular_dock.md).
+The crossbar is a piece of extrusion mounted to the front of the printer’s frame, providing a rigid and stable attachment point for the bottom of the [Modular Dock](modular_dock.md).
 
 The crossbar should be made from extrusion that matches your printer, 2020 for Voron V2 or 1515 for Micron. The length of the crossbar changes depending on the size of your frame and which version of Door Buffer you are using.
 

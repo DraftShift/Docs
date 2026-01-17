@@ -1,7 +1,7 @@
 title: Modular Dock Install - Crossbar
 author: "DraftShift Design"
 summary: >
-    This guide will guide you through the installation of the Modular Dock for printers with a Crossbar.
+    This guide will guide you through the installation of a Modular Dock for a printer with a Crossbar. These steps will need to be repeated for each tool's dock.
   
     !!! note "Variations"
         [Spring Steel Blocker](../01_blocker_spring_steel/index.md), [Anthead Base](../04_base_anthead/index.md) and [Standard Crossbar Frame](../15_frame_standard_crossbar/index.md) are used for the purpose of this guide. You may be using different parts, but the installation process is the same.
@@ -10,10 +10,10 @@ printed_bom: {}
 
 hardware_bom:
     M5x10 BHCS:
-      qty: 4
+      qty: 4 (per tool)
     
     M5 T Nuts:
-      qty: 4
+      qty: 4 (per tool)
 
 resources:
   DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock

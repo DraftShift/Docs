@@ -4,7 +4,7 @@ search:
 ---
 
 ## Umbilical Cables
-An umbilical cable is required for each toolhead. They typically route from a [distribution board](../electronics/distro_boards.md) to a [toolhead board](../electronics/th_boards.md). On a StealthChanger, keeping the tool's umbilical in a controlled state is extremely important. If a tool's umbilical were to obstruct any of the other tools, it could result in a crash and cause a print failure. 
+An umbilical cable is required for each toolhead. It consists of a PTFE tube that feeds the filament to the toolhead's extruder, and an electrical wire that transfers power and data from the [distribution board](../electronics/distro_boards.md) to a [toolhead board](../electronics/th_boards.md). On a StealthChanger, keeping the tool's umbilical in a controlled state is extremely important. If a tool's umbilical were to obstruct any of the other tools, it could result in a crash and cause a print failure.
 
 To help the umbilical move in a controlled fashion, we employ the use of a flat spring steel or piano wire. This addition gives the umbilical a controlled arc and helps it return to its resting position safely.
 

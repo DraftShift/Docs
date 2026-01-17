@@ -1,5 +1,5 @@
 ### Probe offset
-Before being able to print, it is nesacerry to calibrate your probe offsets. This procedure differs depending on whether you are using the OptoTap Sensor or an Eddy current sensor for probing.
+Before being able to print, it is necessary to calibrate your probe offsets. This procedure differs depending on whether you are using the OptoTap Sensor or an Eddy current sensor for probing.
 
 === "TAP"
     ``` cfg title="[tool_probe] example." hl_lines="4"

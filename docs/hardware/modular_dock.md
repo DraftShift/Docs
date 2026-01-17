@@ -10,7 +10,7 @@ The Modular Dock can be used in a variety of ways. The most common and recommend
 
 Alternatively, the dock can be mounted to the printer's frame using the [Stabilizers](#stabilizers) and [Link](#links) components. This keeps the lower portion of the docks in place by joining them together while the outer docks get supported by the side of the printers frame. This adds some rigidity, but will not provide the same level of stability as the [crossbar](door_buffer.md#crossbar).
 
-Finally, the docks can be hung from the top of the printers frame with no lower support. This is the least stable option, should only used when the other options are not available to you. If you choose to go for top-mounted docks it's recommended to mount extra corner brackets to avoid the top-extrusion twisting around the blind joints.
+Finally, the docks can be hung from the top of the printers frame with no lower support. This is the least stable option and should only used when the other options are not available to you. If you choose to go for top-mounted docks it's recommended to mount extra corner brackets to avoid the top-extrusion twisting around the blind joints.
 
 ## Modularity
 Because of its modularity, the Modular Dock has many differing pieces that can become overwhelming rather quickly. To help navigate the options, the modular dock is broken down into the following subcomponents:
@@ -78,7 +78,7 @@ The left and right pieces come in 2 variants, `standard` and `short`. This deter
     * [StealthBurner](toolheads.md#stealthburner) is not compatible with short docks.
     * [Containers](#containers) are not compatible with short docks.
 
-There are 2020 and 1515 versions of the top and bottom pieces. Both versions have 2 variants, `standard` and `crossbar`. The `crossbar` is used in combination with [Door Buffer](door_buffer.md), while the standard version can be used for a `crossbar` in-line with the frame or as a combination with [Stabilizers](#stabilizers) or when hanging from the top of the printers frame. Optionally there is also an 'L bracket' that can help with stability of hanging docks.
+Versions of both the top and bottom pieces are available for 1515 and 2020 extrusions. Both of those versions have 2 variants, `standard` and `crossbar`. The `crossbar` versions are used in combination with [Door Buffer](door_buffer.md), which mounts an extrusion outside of the frame as a crossbar. The `standard` versions can be used for a crossbar in-line with the frame, as a combination with [Stabilizers](#stabilizers) or when hanging from the top of the printers frame. Optionally there is also an 'L bracket' that can help with stability of hanging docks.
 
 | Standard Height | Short Height |
 | :-: | :-: |
@@ -88,7 +88,7 @@ There are 2020 and 1515 versions of the top and bottom pieces. Both versions hav
 ### Links
 Links can be used to tie the frame and base of the docks together to gain more rigidity for hanging docks or when using [Stabilizers](#stabilizers). There are seperate links pieces for the [Frame](#frame) and the [Base](#base).
 
-The links for the [Frame](#frame) differ depending on whether your using 2020 or 1515 top and bottom pieces and whether you are using a wider tool or not. The links for the [Base](#base) are the same no matter the configuration.
+The links for the [Frame](#frame) differ depending on whether 2020 or 1515 top and bottom pieces are used and whether the dock is for a wider tool or not. The links for the [Base](#base) are the same no matter the configuration.
 
 | Links |
 | :-: |
@@ -113,4 +113,4 @@ Containers are an aesthetic addon that can be position in the frame of the Modul
 | ![Containers](../assets/dock-container.png) |
 
 ## Assembly
-The assembly guide for the Modular Dock can be found in the [Build Guides](guides/modular_docks/index.md) section. There you will find a guide for the different componants and how to contruct the final assembly.
+The assembly guide for the Modular Dock can be found in the [Build Guides](guides/modular_docks/index.md) section. There you will find a guide for the different components and how to contruct the final assembly.

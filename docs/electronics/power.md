@@ -41,7 +41,7 @@ A common method for increasing available power capacity is to add a second power
     In multi-PSU systems, it is recommended to connect the negative (ground) rails together. This prevents floating grounds, which can lead to communication issues, inconsistent sensor readings, and other electrical irregularities.
 
 !!! tip "48 Volt"
-    If you’re adding another power supply and your motor drivers support it, incorporating a 48 V PSU can improve motion performance—particularly for Z-axis travel. Higher voltage reduces motor torque loss at speed, enabling faster and more responsive movement.
+    If you’re adding another power supply and your motor drivers support it, incorporating a 48 V PSU can improve motion performance—particularly for Z-axis travel. Higher voltage reduces motor torque loss at speed, enabling faster and more responsive movement. Moving the load from all the motors to the 48V power supply frees up some capacity on the 24V power supply.
 
     Ultimately, upgrading to 48 V motion can shorten tool-change times and may be a worthwhile improvement depending on your hardware capabilities and performance goals.
 
