@@ -2,6 +2,11 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 
+// Check if we're on the usermods page
+function isUsermodsPage() {
+    return typeof usermods !== 'undefined' || document.querySelector('.grid.cards') !== null;
+}
+
 // URL Parameter Handling
 function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
@@ -347,33 +352,37 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue, r
 
 // Sorting
 document.addEventListener('click', function(e) {
+    if (!isUsermodsPage()) return;
+    
     const sortButton = e.target.closest('#usermod-sort');
-    if (sortButton) {
-        e.preventDefault();
+    if (!sortButton) return;
+    
+    e.preventDefault();
 
-        // Flip the ascending/descending icons
-        const ascIcon = document.getElementById('usermods-ascending');
-        const descIcon = document.getElementById('usermods-descending');
-        if (ascIcon && descIcon) {
-            if (ascIcon.style.display === 'none') {
-                ascIcon.style.display = '';
-                descIcon.style.display = 'none';
-            } else {
-                ascIcon.style.display = 'none';
-                descIcon.style.display = '';
-            }
+    // Flip the ascending/descending icons
+    const ascIcon = document.getElementById('usermods-ascending');
+    const descIcon = document.getElementById('usermods-descending');
+    if (ascIcon && descIcon) {
+        if (ascIcon.style.display === 'none') {
+            ascIcon.style.display = '';
+            descIcon.style.display = 'none';
+        } else {
+            ascIcon.style.display = 'none';
+            descIcon.style.display = '';
         }
-
-        const { filter, sort, order, username } = getControlValues();
-        applyFiltersAndSort(filter, sort, order, username);
-        
-        // Update URL with new order
-        updateUrlParams({ order: getCurrentSortOrder() });
     }
+
+    const { filter, sort, order, username } = getControlValues();
+    applyFiltersAndSort(filter, sort, order, username);
+    
+    // Update URL with new order
+    updateUrlParams({ order: getCurrentSortOrder() });
 });
 
 // Filtering
 document.addEventListener('change', function(e) {
+    if (!isUsermodsPage()) return;
+    
     if (e.target.name === 'tag-filter') {
         const { filter, sort, order, username } = getControlValues();
         applyFiltersAndSort(filter, sort, order, username);
@@ -453,14 +462,20 @@ function initUrlParams() {
 }
 
 // Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initUrlParams);
+document.addEventListener('DOMContentLoaded', function() {
+    if (isUsermodsPage()) initUrlParams();
+});
 
 // Initialize on MkDocs Material SPA navigation
-document.addEventListener('DOMContentSwitch', initUrlParams);
+document.addEventListener('DOMContentSwitch', function() {
+    if (isUsermodsPage()) initUrlParams();
+});
 
 // Also try the instant loading event
 if (typeof document$ !== 'undefined') {
-    document$.subscribe(initUrlParams);
+    document$.subscribe(function() {
+        if (isUsermodsPage()) initUrlParams();
+    });
 }
 
 // Modal
@@ -679,15 +694,21 @@ function initUsermodModal() {
   if (backdrop) backdrop.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', function (e) {
+    // Only handle keyboard events if modal or lightbox is open
+    var modalOpen = modal && modal.classList.contains('is-open');
+    var lightboxOpen = lightbox && lightbox.classList.contains('is-open');
+    
+    if (!modalOpen && !lightboxOpen) return;
+    
     if (e.key === 'Escape' || e.keyCode === 27) {
-      if (lightbox && lightbox.classList.contains('is-open')) {
+      if (lightboxOpen) {
         closeLightbox();
-      } else {
+      } else if (modalOpen) {
         closeModal();
       }
     }
     // Arrow keys for lightbox navigation
-    if (lightbox && lightbox.classList.contains('is-open')) {
+    if (lightboxOpen) {
       if (e.key === 'ArrowLeft') lightboxNav(-1);
       if (e.key === 'ArrowRight') lightboxNav(1);
     }
@@ -733,14 +754,20 @@ function initUsermodModal() {
 }
 
 // Initialize on DOMContentLoaded (first page load)
-document.addEventListener('DOMContentLoaded', initUsermodModal);
+document.addEventListener('DOMContentLoaded', function() {
+    if (isUsermodsPage()) initUsermodModal();
+});
 
 // Initialize on MkDocs Material SPA navigation
-document.addEventListener('DOMContentSwitch', initUsermodModal);
+document.addEventListener('DOMContentSwitch', function() {
+    if (isUsermodsPage()) initUsermodModal();
+});
 
 // Also try the instant loading event
 if (typeof document$ !== 'undefined') {
-  document$.subscribe(initUsermodModal);
+  document$.subscribe(function() {
+      if (isUsermodsPage()) initUsermodModal();
+  });
 }
 
 // Analytics - Track usermod card views
