@@ -19,7 +19,7 @@ Your printer needs to print dimensionally accurate parts due to the tolerances r
 It is highly recommended that before printing the shuttle and tool back plates for StealthChanger, your printer and filament be tuned for dimensional accuracy. 
 
 !!! info "But but but, my prints look great!"
-    Dimensional accuracy is often overlooked when our printers are making amazing looking parts. If you experience any binding or resistance while meshing the StealthChanger backplate to the shuttle, most often it is dimensional accuracy that is likely the culprit. This becomes even more evident when combining CNC shuttle with a printed tool back plate. 
+    Dimensional accuracy is often overlooked when our printers are making amazing looking parts. If you experience any binding or resistance while meshing the StealthChanger backplate to the shuttle, most often it is dimensional accuracy that is the culprit. This becomes even more evident when combining CNC shuttle with a printed tool back plate. 
     
     Many have found great success using [Califlower](https://vector3d.shop/products/califlower-calibration-tool-mk2){:target="_blank"} or one of its [derivatives](https://www.printables.com/search/models?q=califlower){:target="_blank"} to achieve the required dimensional accuracy for these high tolerance pieces.
 
