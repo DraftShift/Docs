@@ -1107,26 +1107,30 @@ const UIManager = {
         }
         
         // Create and store new handlers
-        this.prevButtonHandler = function() {
+        this.prevButtonHandler = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             if (currentStep > 0) {
                 currentStep--;
-                updateUrlParams();
+                updateAssemblyViewerUrlParams();
                 updateStep();
             }
         };
         
-        this.nextButtonHandler = function() {
+        this.nextButtonHandler = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const maxStep = assemblySteps.length - 1;
             if (currentStep < maxStep) {
                 currentStep++;
-                updateUrlParams();
+                updateAssemblyViewerUrlParams();
                 updateStep();
             }
         };
         
         // Add the handlers
-        prevBtn.addEventListener('click', this.prevButtonHandler);
-        nextBtn.addEventListener('click', this.nextButtonHandler);
+        prevBtn.addEventListener('click', this.prevButtonHandler, true);
+        nextBtn.addEventListener('click', this.nextButtonHandler, true);
     },
     
     toggleButtonHandler: null,
@@ -1402,7 +1406,7 @@ var UrlParams = {
 };
 
 // Convenience function for updating URL
-function updateUrlParams() {
+function updateAssemblyViewerUrlParams() {
     UrlParams.updateUrl();
 }
 
@@ -1774,7 +1778,7 @@ function setupAssemblyViewer() {
             window.dispatchEvent(new Event('resize'));
             
             // Update URL to reflect fullscreen state
-            updateUrlParams();
+            updateAssemblyViewerUrlParams();
         };
         
         fullscreenBtn.onclick = toggleFullscreen;
