@@ -1,4 +1,4 @@
-exported_at: '2026-01-21T03:49:37.486890'
+exported_at: '2026-01-21T17:15:17.498717'
 data_through: '2026-01-20'
 property_id: '511540530'
 date_range:
@@ -12,9 +12,9 @@ usermods:
   repeat_views: 18
   unknown_views: 0
   total_views: 48
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: CNCShuttleMount
   mod_author: cekim-git
@@ -23,9 +23,9 @@ usermods:
   repeat_views: 6
   unknown_views: 0
   total_views: 37
-  first_time_downloads: 0
+  first_time_downloads: 2
   repeat_downloads: 0
-  unknown_downloads: 2
+  unknown_downloads: 0
   total_downloads: 2
 - mod_title: EddyMount
   mod_author: cekim-git
@@ -56,9 +56,9 @@ usermods:
   repeat_views: 1
   unknown_views: 0
   total_views: 20
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 3
+  first_time_downloads: 2
+  repeat_downloads: 1
+  unknown_downloads: 0
   total_downloads: 3
 - mod_title: Carto_Mounts
   mod_author: N3MI-DG
@@ -67,9 +67,9 @@ usermods:
   repeat_views: 2
   unknown_views: 0
   total_views: 19
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 4
+  first_time_downloads: 1
+  repeat_downloads: 3
+  unknown_downloads: 0
   total_downloads: 4
 - mod_title: ShortFrame
   mod_author: BlackShade
@@ -78,9 +78,9 @@ usermods:
   repeat_views: 3
   unknown_views: 0
   total_views: 21
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: Anthead Front Magnets
   mod_author: N3MI-DG
@@ -89,9 +89,9 @@ usermods:
   repeat_views: 5
   unknown_views: 0
   total_views: 17
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 5
+  first_time_downloads: 2
+  repeat_downloads: 3
+  unknown_downloads: 0
   total_downloads: 5
 - mod_title: Camera_addon
   mod_author: N3MI-DG
@@ -100,9 +100,9 @@ usermods:
   repeat_views: 2
   unknown_views: 0
   total_views: 11
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 8
+  first_time_downloads: 2
+  repeat_downloads: 6
+  unknown_downloads: 0
   total_downloads: 8
 - mod_title: EBB36Mount
   mod_author: cekim-git
@@ -155,9 +155,9 @@ usermods:
   repeat_views: 7
   unknown_views: 0
   total_views: 12
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 2
+  first_time_downloads: 1
+  repeat_downloads: 1
+  unknown_downloads: 0
   total_downloads: 2
 - mod_title: PTFE Output Ramp Variations
   mod_author: MugenMicko
@@ -166,9 +166,9 @@ usermods:
   repeat_views: 1
   unknown_views: 0
   total_views: 11
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 2
+  first_time_downloads: 1
+  repeat_downloads: 1
+  unknown_downloads: 0
   total_downloads: 2
 - mod_title: MiniBFI + MicroBFI
   mod_author: BT123
@@ -210,9 +210,9 @@ usermods:
   repeat_views: 0
   unknown_views: 0
   total_views: 9
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: A4T-Xol-Fan-Splitter-PCB
   mod_author: dudewithan02
@@ -243,9 +243,9 @@ usermods:
   repeat_views: 1
   unknown_views: 0
   total_views: 8
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: AntHead
   mod_author: voney
@@ -254,9 +254,9 @@ usermods:
   repeat_views: 0
   unknown_views: 0
   total_views: 8
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: Endstop_Mounts
   mod_author: N3MI-DG
@@ -276,9 +276,9 @@ usermods:
   repeat_views: 0
   unknown_views: 0
   total_views: 7
-  first_time_downloads: 0
+  first_time_downloads: 2
   repeat_downloads: 0
-  unknown_downloads: 2
+  unknown_downloads: 0
   total_downloads: 2
 - mod_title: Ant Head
   mod_author: traxman25
@@ -287,9 +287,9 @@ usermods:
   repeat_views: 2
   unknown_views: 0
   total_views: 5
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 4
+  first_time_downloads: 1
+  repeat_downloads: 3
+  unknown_downloads: 0
   total_downloads: 4
 - mod_title: Anthead_Mods
   mod_author: N3MI-DG
@@ -408,9 +408,9 @@ usermods:
   repeat_views: 2
   unknown_views: 0
   total_views: 4
-  first_time_downloads: 0
-  repeat_downloads: 0
-  unknown_downloads: 3
+  first_time_downloads: 1
+  repeat_downloads: 2
+  unknown_downloads: 0
   total_downloads: 3
 - mod_title: PTFE_Breakout_Block
   mod_author: FlisherOfatale
@@ -474,9 +474,9 @@ usermods:
   repeat_views: 0
   unknown_views: 0
   total_views: 5
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: Doorbuffer_Side_Door_latches
   mod_author: MikeYankeeOscarBeta
@@ -573,9 +573,9 @@ usermods:
   repeat_views: 2
   unknown_views: 0
   total_views: 4
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: Anthead nozzle led fixes
   mod_author: Dweenz
@@ -650,9 +650,9 @@ usermods:
   repeat_views: 2
   unknown_views: 0
   total_views: 3
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: Dragonburner_Cowl
   mod_author: paeppi88
@@ -727,9 +727,9 @@ usermods:
   repeat_views: 0
   unknown_views: 0
   total_views: 2
-  first_time_downloads: 0
+  first_time_downloads: 1
   repeat_downloads: 0
-  unknown_downloads: 1
+  unknown_downloads: 0
   total_downloads: 1
 - mod_title: Bushings_5.5
   mod_author: traxman25

@@ -65,7 +65,7 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: credentials.json
         run: |
-          python ga4_export.py --property-id 511540530 --start-date 2025-12-25 --end-date yesterday
+          python ga4_export.py --property-id 511540530 --start-date 2025-12-25 --end-date yesterday --dimensions mod_title mod_author mod_repository first_time_view first_time_download
 
       - name: Remove credentials file
         if: always()
