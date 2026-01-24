@@ -35,4 +35,11 @@
 
 ---
 
+### Heater extruder1 not supported
+- are you using elis bed fan macro's?
+- at line 53 of [bedfans.cfg](https://github.com/VoronDesign/VoronUsers/blob/8e5067f4f6457da8a552983dd210ec48c40be2ca/printer_mods/Ellis/Bed_Fans/Klipper_Macros/bedfans.cfg#L53){:target="_blank"}
+- change it from `{action_respond_info("Heater %s not supported" % HEATER)}` to `_SET_HEATER_TEMPERATURE {rawparams}`
+
+---
+
 {% include "_templates/community_help.md" %}
