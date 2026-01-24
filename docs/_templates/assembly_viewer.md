@@ -77,6 +77,7 @@
             <span id="step-counter">Step 1 of {{ assembly.steps|length }}</span>
             <button id="next-step" class="step-nav-button"></button>
         </div>
+        <div id="part-tooltip" class="part-tooltip"></div>
     </div>
 </div>
 
@@ -123,7 +124,10 @@ window.assemblyViewerData = {
     primaryParts: {{ assembly.primary_parts|tojson if assembly.primary_parts is defined else []}},
     accentParts: {{ assembly.accent_parts|tojson if assembly.accent_parts is defined else [] }},
     frameParts: {{ assembly.frame_parts|tojson if assembly.frame_parts is defined else [] }},
+    upgradeParts: {{ assembly.upgrade_parts|tojson if assembly.upgrade_parts is defined else [] }},
+    upgradeColor: {{ assembly.upgrade_color|tojson if assembly.upgrade_color is defined else [64, 64, 64] }},
     transparentParts: {{ assembly.transparent_parts|tojson if assembly.transparent_parts is defined else {} }},
+    partDescriptions: {{ assembly.part_descriptions|tojson if assembly.part_descriptions is defined else {} }},
     primaryColor: {{ primary_color|list }},
     accentColor: {{ accent_color|list }},
     frameColor: {{ frame_color|list }},

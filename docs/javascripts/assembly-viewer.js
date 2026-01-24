@@ -8,7 +8,10 @@ var bgColor = window.assemblyViewerData?.bgColor || [127, 127, 127];
 var primaryParts = window.assemblyViewerData?.primaryParts || [];
 var accentParts = window.assemblyViewerData?.accentParts || [];
 var frameParts = window.assemblyViewerData?.frameParts || [];
+var upgradeParts = window.assemblyViewerData?.upgradeParts || [];
+var upgradeColor = window.assemblyViewerData?.upgradeColor || [64, 64, 64];
 var transparentParts = window.assemblyViewerData?.transparentParts || {};
+var partDescriptions = window.assemblyViewerData?.partDescriptions || {};
 var primaryColor = window.assemblyViewerData?.primaryColor || [37, 13, 63];
 var accentColor = window.assemblyViewerData?.accentColor || [110, 63, 163];
 var frameColor = window.assemblyViewerData?.frameColor || [127, 127, 127];
@@ -19,6 +22,8 @@ window.modelViewerControls = null;
 window.modelViewerCamera = null;
 window.modelViewerParts = null;
 window.scene = null;
+window.modelViewerLabelRenderer = null;
+window.modelViewerPartLabels = {};
 window.originalPartColors = {}; // Store original colors for reset
 window.lightDirections = {}; // Store original light directions
 window.initialCameraPosition = null; // Store initial camera position after recenter
@@ -93,6 +98,94 @@ function applyColorToMaterial(material, color) {
     } else {
         material.color.copy(color);
     }
+}
+
+function applyUpgradeShaderToMaterial(material, threeUpgradeColor) {
+    if (!material || material.userData?.isUpgradeMaterial) return false;
+
+    material.userData = material.userData || {};
+    material.userData.isUpgradeMaterial = true;
+    material.userData.upgradeColor = threeUpgradeColor;
+
+    if (material.isMeshStandardMaterial || material.isMeshPhysicalMaterial) {
+        if (material.metalness !== undefined) {
+            material.metalness = Math.max(material.metalness, 0.85);
+        }
+        if (material.roughness !== undefined) {
+            material.roughness = Math.min(material.roughness, 0.18);
+        }
+        if (material.envMapIntensity !== undefined) {
+            material.envMapIntensity = Math.max(material.envMapIntensity, 1.35);
+        }
+        if (material.isMeshPhysicalMaterial && material.clearcoat !== undefined) {
+            material.clearcoat = Math.max(material.clearcoat, 0.9);
+            material.clearcoatRoughness = Math.min(material.clearcoatRoughness !== undefined ? material.clearcoatRoughness : 1.0, 0.08);
+        }
+    } else if (material.isMeshPhongMaterial) {
+        material.shininess = Math.max(material.shininess || 0, 120);
+        if (material.specular) {
+            material.specular.copy(threeUpgradeColor);
+        }
+    }
+
+    if (material.emissive) {
+        if (!material.userData.originalEmissive) {
+            material.userData.originalEmissive = material.emissive.clone();
+        }
+        material.emissive.copy(threeUpgradeColor);
+        material.emissiveIntensity = Math.max(material.emissiveIntensity || 0, 0.25);
+    }
+
+    if (!(material.isMeshStandardMaterial || material.isMeshPhysicalMaterial)) {
+        material.needsUpdate = true;
+        return true;
+    }
+
+    material.onBeforeCompile = function(shader) {
+        shader.uniforms.upgradeColor = { value: material.userData.upgradeColor };
+        shader.fragmentShader = 'uniform vec3 upgradeColor;\n' + shader.fragmentShader;
+        shader.fragmentShader = shader.fragmentShader.replace(
+            '#include <tonemapping_fragment>',
+            'float upgradeFresnel = pow(1.0 - abs(dot(normal, normalize(vViewPosition))), 2.0);\n' +
+            'outgoingLight = mix(outgoingLight, upgradeColor, upgradeFresnel * 0.9);\n' +
+            '#include <tonemapping_fragment>'
+        );
+        material.userData.upgradeShader = shader;
+    };
+
+    material.customProgramCacheKey = function() {
+        return 'upgradeEffect';
+    };
+
+    material.needsUpdate = true;
+
+    return true;
+}
+
+function applyUpgradeEffectToParts() {
+    if (!window.modelViewerParts || !upgradeParts || upgradeParts.length === 0) return;
+
+    const color = Array.isArray(upgradeColor) && upgradeColor.length >= 3 ? upgradeColor : [255, 200, 0];
+    const threeUpgradeColor = new THREE.Color(color[0] / 255, color[1] / 255, color[2] / 255);
+
+    upgradeParts.forEach(function(partName) {
+        const partObjects = window.modelViewerParts[partName];
+        if (!partObjects) {
+            console.warn('Upgrade part not found in model parts list:', partName);
+            return;
+        }
+
+        toArray(partObjects).forEach(function(partObject) {
+            partObject.traverse(function(child) {
+                if (child.isMesh && child.material) {
+                    const materials = Array.isArray(child.material) ? child.material : [child.material];
+                    materials.forEach(function(mat) {
+                        applyUpgradeShaderToMaterial(mat, threeUpgradeColor);
+                    });
+                }
+            });
+        });
+    });
 }
 
 // Helper function to create gradient background texture
@@ -240,6 +333,76 @@ function setFocusParts(focusArray) {
     });
 }
 
+function getFocusPartNames(focus) {
+    if (!focus || focus.length === 0) return [];
+    return focus
+        .map(function(item) {
+            if (typeof item === 'string') return item;
+            if (item && typeof item === 'object') return item.part;
+            return null;
+        })
+        .filter(function(name) { return !!name; });
+}
+
+function ensurePartLabel(partName) {
+    if (!partName || !window.modelViewerParts) return null;
+    if (window.modelViewerPartLabels && window.modelViewerPartLabels[partName]) {
+        return window.modelViewerPartLabels[partName];
+    }
+    if (typeof THREE === 'undefined' || typeof THREE.CSS2DObject === 'undefined') return null;
+
+    const partObjects = window.modelViewerParts[partName];
+    if (!partObjects) return null;
+
+    const partObject = toArray(partObjects)[0];
+    if (!partObject) return null;
+
+    const labelEl = document.createElement('div');
+    labelEl.className = 'part-label';
+    labelEl.textContent = (partDescriptions && partDescriptions[partName]) ? partDescriptions[partName] : partName;
+
+    const labelObj = new THREE.CSS2DObject(labelEl);
+    labelObj.visible = false;
+
+    try {
+        const box = new THREE.Box3().setFromObject(partObject);
+        const centerWorld = box.getCenter(new THREE.Vector3());
+        const topWorld = new THREE.Vector3(centerWorld.x, box.max.y, centerWorld.z);
+        const topLocal = partObject.worldToLocal(topWorld.clone());
+        topLocal.y += 1.0;
+        labelObj.position.copy(topLocal);
+    } catch (e) {
+        labelObj.position.set(0, 0, 0);
+    }
+
+    partObject.add(labelObj);
+    window.modelViewerPartLabels = window.modelViewerPartLabels || {};
+    window.modelViewerPartLabels[partName] = labelObj;
+    return labelObj;
+}
+
+function setActivePartLabels(activePartNames) {
+    if (!window.modelViewerPartLabels) return;
+    const activeSet = new Set(Array.isArray(activePartNames) ? activePartNames : []);
+
+    Object.keys(window.modelViewerPartLabels).forEach(function(partName) {
+        const labelObj = window.modelViewerPartLabels[partName];
+        if (labelObj) {
+            labelObj.visible = false;
+        }
+    });
+
+    activeSet.forEach(function(partName) {
+        const labelObj = ensurePartLabel(partName);
+        if (labelObj) {
+            labelObj.visible = true;
+        }
+    });
+
+    needsRenderGlobal = true;
+    renderFramesRemaining = Math.max(renderFramesRemaining, 2);
+}
+
 // Init the Model Viewer
 function initModelViewer(modelPath, onModelLoaded) {
     const container = document.getElementById('model-viewer');
@@ -267,6 +430,25 @@ function initModelViewer(modelPath, onModelLoaded) {
     renderer.domElement.style.borderRadius = '8px'; // Match container border-radius
     container.appendChild(renderer.domElement);
 
+    // Labels overlay (HTML) - attaches to parts via CSS2DObject
+    let labelRenderer = null;
+    if (typeof THREE.CSS2DRenderer !== 'undefined') {
+        labelRenderer = new THREE.CSS2DRenderer();
+        labelRenderer.setSize(container.clientWidth, container.clientHeight);
+        labelRenderer.domElement.className = 'model-viewer-label-layer';
+        labelRenderer.domElement.style.position = 'absolute';
+        labelRenderer.domElement.style.top = '0';
+        labelRenderer.domElement.style.left = '0';
+        labelRenderer.domElement.style.pointerEvents = 'none';
+        labelRenderer.domElement.style.width = '100%';
+        labelRenderer.domElement.style.height = '100%';
+        labelRenderer.domElement.style.zIndex = '0';
+        container.appendChild(labelRenderer.domElement);
+        window.modelViewerLabelRenderer = labelRenderer;
+    } else {
+        window.modelViewerLabelRenderer = null;
+    }
+
     // Create gradient background (lighter at top, darker at bottom)
     const bgColorArray = ColorManager.getColor('bg');
     scene.background = createGradientBackground(bgColorArray);
@@ -278,7 +460,13 @@ function initModelViewer(modelPath, onModelLoaded) {
     
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    
+
+    if (typeof THREE.RoomEnvironment !== 'undefined') {
+        const pmremGenerator = new THREE.PMREMGenerator(renderer);
+        const envTexture = pmremGenerator.fromScene(new THREE.RoomEnvironment(), 0.04).texture;
+        scene.environment = envTexture;
+        pmremGenerator.dispose();
+    }
 
     // Add ambient light for base illumination
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
@@ -462,6 +650,8 @@ function initModelViewer(modelPath, onModelLoaded) {
                 console.error('Error applying transparency:', error);
             }
             
+            applyUpgradeEffectToParts();
+            
             // Trigger initial render now that model is loaded and positioned
             needsRenderGlobal = true;
             
@@ -486,6 +676,34 @@ function initModelViewer(modelPath, onModelLoaded) {
     
     // Reusable vector to avoid object creation in loops/animate
     const tempVector = new THREE.Vector3();
+    
+    // Heartbeat animation for parts with descriptions
+    const heartbeatMeshes = [];
+    const heartbeatColor = new THREE.Color(0.4, 0.2, 0.05);
+    let heartbeatTime = 0;
+    
+    function setupHeartbeatMeshes() {
+        heartbeatMeshes.length = 0;
+        if (!window.modelViewerParts || !partDescriptions) return;
+        for (const [partName, meshes] of Object.entries(window.modelViewerParts)) {
+            if (partDescriptions[partName]) {
+                const meshArray = Array.isArray(meshes) ? meshes : [meshes];
+                meshArray.forEach(function(partMesh) {
+                    partMesh.traverse(function(child) {
+                        if (child.isMesh && child.material) {
+                            const materials = Array.isArray(child.material) ? child.material : [child.material];
+                            materials.forEach(function(mat) {
+                                if (mat.emissive) {
+                                    heartbeatMeshes.push({ material: mat, originalEmissive: mat.emissive.clone() });
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+        }
+    }
+    window.setupHeartbeatMeshes = setupHeartbeatMeshes;
     
     // Request render on control changes
     controls.addEventListener('change', function() {
@@ -531,6 +749,50 @@ function initModelViewer(modelPath, onModelLoaded) {
             needsRender = true;
         }
         
+        if(false) {
+            // Heartbeat animation for parts with descriptions
+            if (heartbeatMeshes.length > 0) {
+                heartbeatTime += 0.03;
+                const cycleTime = heartbeatTime % (10 * 60 * 0.03); // 10 seconds at 60fps with 0.03 increment
+                const beatWindow = 0.6; // Duration of each beat (slower, softer)
+                const totalBeatDuration = beatWindow * 2 + 0.2; // Two beats with small gap
+                
+                let pulse = 0;
+                if (cycleTime < beatWindow) {
+                    // First beat - smooth sine wave
+                    const beat = Math.sin((cycleTime / beatWindow) * Math.PI);
+                    pulse = beat * 0.08; // Softer intensity
+                } else if (cycleTime < beatWindow + 0.2) {
+                    // Small gap between beats - fade out smoothly
+                    const gapProgress = (cycleTime - beatWindow) / 0.2;
+                    pulse = (1 - gapProgress) * 0.02;
+                } else if (cycleTime < totalBeatDuration) {
+                    // Second beat
+                    const secondBeatTime = cycleTime - beatWindow - 0.2;
+                    const beat = Math.sin((secondBeatTime / beatWindow) * Math.PI);
+                    pulse = beat * 0.08;
+                }
+                
+                if (cycleTime < totalBeatDuration + 0.3) {
+                    // Smooth fade out after beats
+                    if (cycleTime >= totalBeatDuration) {
+                        const fadeProgress = (cycleTime - totalBeatDuration) / 0.3;
+                        pulse = (1 - fadeProgress) * 0.02;
+                    }
+                    heartbeatMeshes.forEach(function(item) {
+                        item.material.emissive.copy(item.originalEmissive);
+                        item.material.emissive.lerp(heartbeatColor, pulse);
+                    });
+                    needsRender = true;
+                } else {
+                    // Reset to original emissive when not beating
+                    heartbeatMeshes.forEach(function(item) {
+                        item.material.emissive.copy(item.originalEmissive);
+                    });
+                }
+            }
+        }
+        
         // Check global render flag (set by animations, visibility changes, etc.)
         if (needsRenderGlobal) {
             needsRender = true;
@@ -546,6 +808,9 @@ function initModelViewer(modelPath, onModelLoaded) {
         // Only render if something changed
         if (needsRender) {
             renderer.render(scene, camera);
+            if (labelRenderer) {
+                labelRenderer.render(scene, camera);
+            }
             needsRender = false;
         }
     }
@@ -567,6 +832,9 @@ function initModelViewer(modelPath, onModelLoaded) {
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
+        if (labelRenderer) {
+            labelRenderer.setSize(container.clientWidth, container.clientHeight);
+        }
 
         // Trigger render after resize
         needsRenderGlobal = true;
@@ -579,6 +847,118 @@ function initModelViewer(modelPath, onModelLoaded) {
         width: container.clientWidth,
         height: container.clientHeight
     };
+
+    // Raycaster for hover detection
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    const tooltip = document.getElementById('part-tooltip');
+    let hoveredPartName = null;
+
+    function getPartNameFromMesh(mesh) {
+        if (!window.modelViewerParts) return null;
+        for (const [partName, meshes] of Object.entries(window.modelViewerParts)) {
+            const meshArray = Array.isArray(meshes) ? meshes : [meshes];
+            for (const partMesh of meshArray) {
+                let current = mesh;
+                while (current) {
+                    if (current === partMesh) return partName;
+                    current = current.parent;
+                }
+            }
+        }
+        return null;
+    }
+
+    function onMouseMove(event) {
+        if (!tooltip) return;
+        const rect = container.getBoundingClientRect();
+        mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(scene.children, true);
+        let foundPartName = null;
+        for (const intersect of intersects) {
+            if (intersect.object.isMesh) {
+                if (intersect.object.isLineSegments) continue;
+                let isVisible = true;
+                let obj = intersect.object;
+                while (obj) {
+                    if (!obj.visible) { isVisible = false; break; }
+                    obj = obj.parent;
+                }
+                if (!isVisible) continue;
+                const partName = getPartNameFromMesh(intersect.object);
+                if (partName) { foundPartName = partName; break; }
+            }
+        }
+        const partDescription = foundPartName ? partDescriptions[foundPartName] : null;
+        if (foundPartName && partDescription) {
+            if (foundPartName !== hoveredPartName) {
+                hoveredPartName = foundPartName;
+                tooltip.textContent = partDescription;
+            }
+            tooltip.style.left = (event.clientX + 15) + 'px';
+            tooltip.style.top = (event.clientY + 15) + 'px';
+            tooltip.classList.add('visible');
+        } else {
+            hoveredPartName = null;
+            tooltip.classList.remove('visible');
+        }
+    }
+
+    function onMouseLeave() {
+        if (tooltip) {
+            hoveredPartName = null;
+            tooltip.classList.remove('visible');
+        }
+    }
+
+    renderer.domElement.addEventListener('mousemove', onMouseMove);
+    renderer.domElement.addEventListener('mouseleave', onMouseLeave);
+
+    // Touch support for mobile
+    function onTouchStart(event) {
+        if (!tooltip || event.touches.length !== 1) return;
+        const touch = event.touches[0];
+        const rect = container.getBoundingClientRect();
+        mouse.x = ((touch.clientX - rect.left) / rect.width) * 2 - 1;
+        mouse.y = -((touch.clientY - rect.top) / rect.height) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(scene.children, true);
+        let foundPartName = null;
+        for (const intersect of intersects) {
+            if (intersect.object.isMesh) {
+                if (intersect.object.isLineSegments) continue;
+                let isVisible = true;
+                let obj = intersect.object;
+                while (obj) {
+                    if (!obj.visible) { isVisible = false; break; }
+                    obj = obj.parent;
+                }
+                if (!isVisible) continue;
+                const partName = getPartNameFromMesh(intersect.object);
+                if (partName) { foundPartName = partName; break; }
+            }
+        }
+        const partDescription = foundPartName ? partDescriptions[foundPartName] : null;
+        if (foundPartName && partDescription) {
+            hoveredPartName = foundPartName;
+            tooltip.textContent = partDescription;
+            tooltip.style.left = (touch.clientX + 15) + 'px';
+            tooltip.style.top = (touch.clientY - 50) + 'px';
+            tooltip.classList.add('visible');
+            // Auto-hide after 3 seconds
+            setTimeout(function() {
+                tooltip.classList.remove('visible');
+                hoveredPartName = null;
+            }, 3000);
+        } else {
+            tooltip.classList.remove('visible');
+            hoveredPartName = null;
+        }
+    }
+
+    renderer.domElement.addEventListener('touchstart', onTouchStart, { passive: true });
 
 }
 
@@ -601,6 +981,11 @@ function initializeModelViewer() {
 
         if (typeof createVisibilityControls === 'function' && window.modelViewerParts) {
             createVisibilityControls(window.modelViewerParts);
+        }
+
+        // Setup heartbeat animation for parts with descriptions
+        if (typeof window.setupHeartbeatMeshes === 'function') {
+            window.setupHeartbeatMeshes();
         }
 
         updateStep();
@@ -1490,6 +1875,14 @@ function updateStep() {
         ColorManager.updateDisplay('focus', color[0], color[1], color[2]);
     }
     
+    // Update part-attached labels to match the active/focused parts
+    try {
+        const focusNames = getFocusPartNames(step.focus);
+        setActivePartLabels(focusNames);
+    } catch (e) {
+        // no-op
+    }
+    
     // Recenter - skip camera positioning if we have YAML camera settings
     recenterScene(!!step.camera);
     
@@ -1617,6 +2010,15 @@ function setupAssemblyViewer() {
     if (oldCanvas) {
         oldCanvas.remove();
     }
+
+    // Remove old label renderer overlay if it exists
+    const oldLabelLayer = modelViewerContainer.querySelector('.model-viewer-label-layer');
+    if (oldLabelLayer) {
+        oldLabelLayer.remove();
+    }
+
+    window.modelViewerLabelRenderer = null;
+    window.modelViewerPartLabels = {};
     
     // Clear the container's parts list
     const partsList = document.getElementById('parts-list');
@@ -1632,7 +2034,10 @@ function setupAssemblyViewer() {
         primaryParts = window.assemblyViewerData.primaryParts || [];
         accentParts = window.assemblyViewerData.accentParts || [];
         frameParts = window.assemblyViewerData.frameParts || [];
+        upgradeParts = window.assemblyViewerData.upgradeParts || [];
+        upgradeColor = window.assemblyViewerData.upgradeColor || [64, 64, 64];
         transparentParts = window.assemblyViewerData.transparentParts || {};
+        partDescriptions = window.assemblyViewerData.partDescriptions || {};
         primaryColor = window.assemblyViewerData.primaryColor || [37, 13, 63];
         accentColor = window.assemblyViewerData.accentColor || [110, 63, 163];
         frameColor = window.assemblyViewerData.frameColor || [127, 127, 127];

@@ -21,6 +21,13 @@ accent_parts:
   - "Nozzle LED Carrier Jig"
   - "Nozzle LED Restraint Jig"
 
+part_descriptions:
+  "Backplate": "Don't forget this is a usermoded backplate, grab it from the resources tab."
+
+# upgrade_parts:
+#   - "Backplate"
+# upgrade_color: [5, 10, 20]
+
 summary: >
   This guide will walk you through the assembly of an Anthead for StealthChanger with community usermods.
 
@@ -86,6 +93,8 @@ steps:
     visible: 
       - "Backplate"
       - "Backplate Hardware"
+    # focus: 
+    #   - "Backplate"
 
   - description: 'Solder the 3 LEDs using the [LED Solder Fixture](https://github.com/PrintersForAnts/AntHead/tree/main/UserMods/LED_Solder_Fixture){target="_blank"}'
     camera:
