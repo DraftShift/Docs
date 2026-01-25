@@ -1,5 +1,17 @@
 
 ## Common Issues
+
+### HomingViaProbeHelper.__init__() missing 1 required positional argument: 'param_helper'
+Klipper made changes 25 Jan 2026 to probe that require klipper-toolchanger to be updated. Until this happens, you can revert Klipper to before the breaking changes by running the following commands in terminal.
+
+``` bash {.copy}
+    sudo service klipper stop
+    cd ~/klipper
+    git checkout e605fd18560fbb5a7413ca12b72325ad4e18de16
+    sudo service klipper start
+```
+
+
 ### INITIALIZE_TOOLCHANGER - Tool Not Recognized
 - Check that you have the correct pin assigned to the OptoTap sensor.
 - If the tool initializes while off the shuttle, the logic is flipped. Either add or remove `!` to the pin definition.
