@@ -9,10 +9,11 @@ Before configuring and calibrating the other tools, it is advised to get the pri
 Make sure your toolhead passes all of the following checks before continuing.
 
 1. When you place the tool on the shuttle the OptoTap sensor triggers its LED.
-2. The part cooling fans turn on with `M106 S127` and off with `M107`.
-3. The hotend heats up and the hotend fan turn on with `M104 S200`.
-4. Once at temperature, the extruder motor moves with `G1 E100 F100`.
-5. Finally, turn the hotend off with `M104 S0`
+2. Validate that the tool is being detected by running `INITIALIZE_TOOLCHANGER` with, and without the tool on the shuttle. You should get confirmation that the tool has been detected when the tool is on the shuttle. It should also report `active tool: none` if the tool was not detected.
+3. Once the tool detected test the part cooling fans turn on with `M106 S127` and off with `M107`.
+4. The hotend heats up and the hotend fan turn on with `M104 S200` and off with `M104 S0`.
+5. Once at temperature, the extruder motor moves with `G1 E100 F100`.
+6. Finally, turn the hotend off with `M104 S0`
 
 If any of these steps fails, the issue could be either hardware or software related. Consult the [Hardware Troubleshooting](../../../hardware/troubleshooting.md) and [Software Troubleshooting](../../troubleshooting.md).
 
