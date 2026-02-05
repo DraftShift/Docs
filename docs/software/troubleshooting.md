@@ -1,9 +1,6 @@
 
 ## Common Issues
 
-### HomingViaProbeHelper.__init__() takes 4 positional arguments but 5 were given
-Update Klipper to the latest version. Klipper-toolchanger-easy requires Klipper 0.13.0-457 or greater.
-
 ### HomingViaProbeHelper.__init__() missing 1 required positional argument: 'param_helper'
 
 !!! info "UPDATE"
