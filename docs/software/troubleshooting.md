@@ -2,11 +2,7 @@
 ## Common Issues
 
 ### HomingViaProbeHelper.__init__() missing 1 required positional argument: 'param_helper'
-
-!!! info "UPDATE"
-    As of 4 Feb 2026 klipper-toolchanger-easy has been updated to support the changes made to probe in Klipper. Update klipper-toolchanger-easy to the latest version to resolve this issue. 
-
-Klipper made changes 25 Jan 2026 to probe that require klipper-toolchanger to be updated. You can revert Klipper to before the breaking changes by running the following commands in terminal.
+Klipper made changes 25 Jan 2026 to probe that require klipper-toolchanger to be updated. Until this happens, you can revert Klipper to before the breaking changes by running the following commands in terminal.
 
 ``` bash {.copy}
     sudo service klipper stop
