@@ -94,7 +94,7 @@ The standard Voron 2.4 example configurations are intentionally conservative reg
 With StealthChanger, the gantry operates at significantly higher speeds than most stock configurations. If a Z-axis motor were to skip at these elevated speeds, the resulting misalignment of the gantry corners could be severe enough to cause significant damage to the gantry.
 
 !!! warning "Flying too close to the sun"
-    This is an example of what could happen if you tune you coinfiguration too high for the hardware you are using. Thanks to fireishott on Discord for the image.
+    This is an example of what could happen if you tune your configuration too fast for the hardware you are using. Thanks to fireishott on Discord for the image.
 
     ![fireishot](../assets/fireishott.jpg)
 
