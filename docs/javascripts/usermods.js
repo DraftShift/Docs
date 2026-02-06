@@ -205,7 +205,7 @@ function getControlValues() {
     const usernameFilter = document.querySelector('select[name="username-filter"]');
 
     const filter = tagFilter ? tagFilter.value : 'all';
-    const sort = orderSelect ? orderSelect.value : (typeof defaultSort !== 'undefined' ? defaultSort : 'title');
+    const sort = orderSelect ? orderSelect.value : (typeof defaultSort !== 'undefined' ? defaultSort : 'popularity');
     const order = getCurrentSortOrder();
     const username = usernameFilter ? usernameFilter.value : 'all';
 
@@ -316,7 +316,7 @@ function applyFiltersAndSort(filterValue, sortValue, sortOrder, usernameValue, r
     }
     
     // Apply sorting
-    const sortBy = sortValue || (typeof defaultSort !== 'undefined' ? defaultSort : 'title');
+    const sortBy = sortValue || (typeof defaultSort !== 'undefined' ? defaultSort : 'popularity');
     const sortDir = sortOrder || (typeof defaultSortOrder !== 'undefined' ? defaultSortOrder : 'ascending');
     
     items.sort((a, b) => {
@@ -490,8 +490,8 @@ function initUsermodModal() {
   function openModal(modData) {
     document.getElementById('usermod-modal-title').textContent = modData.name;
     document.getElementById('usermod-modal-author').textContent = modData.username;
-    document.getElementById('usermod-modal-views').textContent = modData.views;
-    document.getElementById('usermod-modal-downloads').textContent = modData.downloads;
+    document.getElementById('usermod-modal-views').textContent = modData.views_formatted || modData.views;
+    document.getElementById('usermod-modal-downloads').textContent = modData.downloads_formatted || modData.downloads;
     document.getElementById('usermod-modal-created').textContent = String(modData.created_date).split('T')[0];
 
     document.getElementById('usermod-modal-readme').innerHTML = marked.parse(modData.readme || '');
@@ -741,8 +741,8 @@ function initUsermodModal() {
       name: mod['name'] || '',
       username: mod['username'] || '',
       repository: mod['repository'] || '',
-      views: mod['views'] !== undefined ? mod['views'] : 0,
-      downloads: mod['downloads'] !== undefined ? mod['downloads'] : 0,
+      views: mod['views_formatted'] !== undefined ? mod['views_formatted'] : 0,
+      downloads: mod['downloads_formatted'] !== undefined ? mod['downloads_formatted'] : 0,
       created_date: mod['created_date'] || '',
       images: mod['images'] || [],
       readme: mod['readme_data'] || '',
