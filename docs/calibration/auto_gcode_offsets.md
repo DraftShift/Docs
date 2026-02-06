@@ -72,7 +72,8 @@ With the SexBall Probe mounted to the printer's bed extrusion, the absolute posi
 
     After tool 0 has located the probe, it will turn off tool 0's heater and repeat the process for each subsequent tool. Tool 0 will be picked up again once the process has completed.
 
-    The values logged to the console are the offsets to be used in the `[tool Tn]`'s `gcode_x_offset`, `gcode_y_offset` and `gcode_z_offset` variables.
+    The values logged to the console are the offsets for `T1+` to be used in the `[tool Tn]`'s `gcode_x_offset`, `gcode_y_offset` and `gcode_z_offset` variables.
+    All of the `gcode_offsets` for `T0` should remain `0`.
 
 ### SexBall Probe Z Offset Calibration
 

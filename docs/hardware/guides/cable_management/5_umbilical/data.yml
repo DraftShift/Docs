@@ -14,7 +14,7 @@ printed_bom:
   TPU Clip:
     qty: 5
     urls:
-      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/%5Btpu%5D_Clip_Voron_xN.stl
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/TPU_Version/%5Btpu%5D_Clip_Voron_x5xN.stl
 
   Terminator:
     qty: 1
