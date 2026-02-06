@@ -73,6 +73,7 @@ nav:
         - Validation: software/ktc-easy/configuration/validation.md
         - Adding Tools: software/ktc-easy/configuration/add_tools.md
       - Updating: software/ktc-easy/updating.md
+      - Uninstall: software/ktc-easy/uninstall.md
 
     - Slicers: software/slicers.md
     - Troubleshooting: software/troubleshooting.md
