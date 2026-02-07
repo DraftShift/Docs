@@ -78,6 +78,102 @@ def define_env(env):
         return ""
     
     @env.macro
+    def format_count(count):
+        """
+        Format view/download counts for display.
+        Numbers over 999 are converted to 'k' format with increments of 100.
+        
+        Examples:
+            999 -> "999"
+            1000 -> "1k"
+            1050 -> "1k"
+            1100 -> "1.1k"
+            1500 -> "1.5k"
+            2340 -> "2.3k"
+        
+        Args:
+            count: Integer count to format
+        
+        Returns:
+            Formatted string
+        """
+        try:
+            count = int(count)
+        except (ValueError, TypeError):
+            return "0"
+        
+        if count < 1000:
+            return str(count)
+        
+        # Convert to thousands and round to nearest 0.1
+        k_value = count / 1000.0
+        # Round to 1 decimal place
+        k_rounded = round(k_value, 1)
+        
+        # Format: if it's a whole number, don't show decimal
+        if k_rounded == int(k_rounded):
+            return f"{int(k_rounded)}k"
+        else:
+            return f"{k_rounded}k"
+    
+    @env.macro
+    def get_popularity(f_views, f_downloads, r_views, r_downloads, created_date=None):
+        """
+        Calculate popularity score with conversion rate and time decay.
+        
+        Args:
+            f_views: First-time views
+            f_downloads: First-time downloads
+            r_views: Repeat views
+            r_downloads: Repeat downloads
+            created_date: ISO date string (optional, for time decay calculation)
+        
+        Returns:
+            Float popularity score
+        """
+        import math
+        from datetime import datetime
+        
+        # Weights
+        FIRST_VIEW_WEIGHT = 1.0
+        FIRST_DOWNLOAD_WEIGHT = 10.0
+        REPEAT_VIEW_WEIGHT = 0.1
+        REPEAT_DOWNLOAD_WEIGHT = 0.5
+        
+        # Limits
+        REPEAT_VIEW_LIMIT = 100
+        REPEAT_DOWNLOAD_LIMIT = 50
+        
+        # Apply limits to repeat metrics
+        r_views = min(r_views, REPEAT_VIEW_LIMIT)
+        r_downloads = min(r_downloads, REPEAT_DOWNLOAD_LIMIT)
+        
+        # Base popularity score
+        popularity = (
+            (f_views * FIRST_VIEW_WEIGHT) +
+            (r_views * REPEAT_VIEW_WEIGHT) +
+            (f_downloads * FIRST_DOWNLOAD_WEIGHT) +
+            (r_downloads * REPEAT_DOWNLOAD_WEIGHT)
+        )
+        
+        # Apply time decay if created_date is provided
+        if created_date:
+            try:
+                # Parse ISO date string
+                created = datetime.fromisoformat(str(created_date).split('T')[0])
+                now = datetime.now()
+                age_in_days = (now - created).days
+                
+                # Apply exponential decay (180-day half-life)
+                decay_factor = math.exp(-age_in_days / 180)
+                popularity = popularity * decay_factor
+            except (ValueError, AttributeError):
+                # If date parsing fails, skip decay
+                pass
+        
+        return popularity
+    
+    @env.macro
     def github_contributors(repo="DraftShift/Docs"):
         """Fetch and display GitHub contributors for a repository (cached during build)"""
         import urllib.request

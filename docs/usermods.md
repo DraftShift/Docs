@@ -4,30 +4,11 @@ search:
 ---
 
 <!-- The usermod will not be displayed if it has one of these keyword in the title. -->
-{% set excludes = ['superseded', 'superseeded', 'deprecated'] %}
-
-<!-- Set up popularity weights -->
-{% set first_view_weight = 1.0 %}
-{% set first_download_weight = 3.0 %}
-{% set repeat_view_weight = 0.1 %}
-{% set repeat_download_weight = 0.2 %}
-
-<!-- Set limit for repeat views/downloads -->
-{% set repeat_download_limit = 50 %}
-{% set repeat_view_limit = 100 %}
-
-<!-- Macro to calculate popularity -->
-{% macro get_popularity(f_views, f_downloads, r_views, r_downloads) %}
-    {% set r_views = [r_views, repeat_view_limit]|min %}
-    {% set r_downloads = [r_downloads, repeat_download_limit]|min %}
-
-    {% set popularity = (f_views * first_view_weight) + (r_views * repeat_view_weight) + (f_downloads * first_download_weight) + (r_downloads * repeat_download_weight) %}
-    {{ popularity }}
-{% endmacro %}
+{% set excludes = ['superseded', 'superseeded', 'deprecated', 'depreciated'] %}
 
 <!-- The variables that mods can be sorted by and their default orientation -->
-{# set orders = [('popularity', 'descending'), ('title', 'ascending'), ('username', 'ascending'), ('created_date', 'descending')] #}
-{% set orders = [('title', 'ascending'), ('username', 'ascending'), ('created_date', 'descending')] %}
+{% set orders = [('popularity', 'descending'), ('title', 'ascending'), ('username', 'ascending'), ('created_date', 'descending')] %}
+
 
 <!-- GA4 data -->
 {% set ga4_data = {} %}
@@ -75,12 +56,16 @@ search:
             {% set repeat_views = ga4_mod.get('repeat_views', 0) %}
             {% set repeat_downloads = ga4_mod.get('repeat_downloads', 0) %}
 
-            {% set popularity = get_popularity(first_time_views, first_time_downloads, repeat_views, repeat_downloads)|float %}
+            {% set popularity = get_popularity(first_time_views, first_time_downloads, repeat_views, repeat_downloads, mod.created_date)|float %}
+            {% set views_fmt = format_count(first_time_views|default(0)) %}
+            {% set downloads_fmt = format_count(first_time_downloads|default(0)) %}
 
             {% set _ = mod.update({'username': user.username}) %}
             {% set _ = mod.update({'repository': repo.name}) %}
             {% set _ = mod.update({'views': first_time_views|default(0)}) %}
             {% set _ = mod.update({'downloads': first_time_downloads|default(0)}) %}
+            {% set _ = mod.update({'views_formatted': views_fmt}) %}
+            {% set _ = mod.update({'downloads_formatted': downloads_fmt}) %}
             {% set _ = mod.update({'popularity': popularity}) %}
             {% set _ = mod.update({'tags': tags}) %}
 
@@ -97,8 +82,7 @@ search:
     {% endfor %}
 {% endfor %}
 
-{# set all_mods = all_mods|sort(attribute='popularity')|reverse|list #}
-{% set all_mods = all_mods|sort(attribute='username')|reverse|list %}
+{% set all_mods = all_mods|sort(attribute='popularity')|reverse|list %}
 {% set all_tags = all_tags|sort %}
 {% set all_usernames = all_usernames|unique|sort|list %}
 
@@ -122,8 +106,8 @@ search:
 <script>
 var usermods = {{ all_mods|tojson }};
 var per_page = 20;
-var defaultSort = '{{ orders[1][0] }}';
-var defaultSortOrder = '{{ orders[1][1] }}';
+var defaultSort = '{{ orders[0][0] }}';
+var defaultSortOrder = '{{ orders[0][1] }}';
 </script>
 
 <!-- Template for the modal -->
@@ -138,13 +122,13 @@ var defaultSortOrder = '{{ orders[1][1] }}';
                 <span id="usermod-modal-author" class="usermod-modal-author"></span>
                 <div class="usermod-modal-meta-row">
                     <!-- Views -->
-                    <span class="twemoji" style="display: none;">
+                    <span class="twemoji">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg>
                     </span>
-                    <span id="usermod-modal-views" style="display: none;"></span>
+                    <span id="usermod-modal-views"></span>
                     <!-- Downloads -->
-                    <span class="twemoji" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg></span>
-                    <span id="usermod-modal-downloads" style="display: none;"></span>
+                    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg></span>
+                    <span id="usermod-modal-downloads"></span>
                     <!-- Created Date -->
                     <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg></span>
                     <span id="usermod-modal-created"></span>
@@ -251,7 +235,7 @@ If you would like your mods featured here, please consider [Submitting a Usermod
     **{{ mod.title }}**{ .custom-card-title }
     *{{ mod.username }}*{ .custom-card-author }
 
-    <span class="usermod-card-stats" style="display: none;">:material-eye: {{ mod.views }} :material-download: {{ mod.downloads }}</span>
+    <span class="usermod-card-stats">:material-eye: {{ mod.views_formatted }} :material-download: {{ mod.downloads_formatted }}</span>
     <span class="usermod-card-date">:material-calendar: {{ mod.created_date.split('T')[0] }}</span>
 
     <ul class="usermod-tags">
