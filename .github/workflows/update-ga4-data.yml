@@ -2,8 +2,8 @@ name: Update Data and Deploy Site
 on:
   schedule:
     # TODO switch to weekly after test period.
-    - cron: '0 2 * * *' # Run daily at 2 AM UTC
-    # - cron: '0 2 * * 1' # Run weekly on Monday at 2 AM UTC
+    # - cron: '0 2 * * *' # Run daily at 2 AM UTC
+    - cron: '0 2 * * 1' # Run weekly on Monday at 2 AM UTC
 
     # * * * * *
     # │ │ │ │ │
