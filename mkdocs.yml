@@ -133,6 +133,7 @@ extra_css:
   - stylesheets/assembly-viewer.css
   - stylesheets/cards.css
   - stylesheets/usermods.css
+  - stylesheets/z-calc.css
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
@@ -142,6 +143,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js
   - javascripts/assembly-viewer.js
   - javascripts/usermods.js
+  - javascripts/z-calc.js
 
 extra:  
   social:

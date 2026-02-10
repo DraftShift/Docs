@@ -113,7 +113,10 @@ square_corner_velocity: 5.0
 
 - Increase your `max_z_accel` in increments of 100-200 at a time. Test with multiple tool changes between increments.
 - Increase your `max_z_velocity` in increments of 25-50 at a time. Test with multiple tool changes between increments.
-- Reference [Prusa's Max Speed Calculator](https://blog.prusa3d.com/calculator_3416/#speed){target="_blank"} for a visual on how the values will be applied.
+
+#### Z-Axis Speed Calculator
+
+{% include "_templates/z_speed_calc.md" %}
 
 ### params_fast_speed and params_path_speed
 `params_fast_speed` and `params_path_speed` are klipper-toolchanger's way of limiting the speeds used for tool changes and are located in the [`[toolchanger]`](../software/ktc-easy/configuration/toolchanger.md#toolchanger) section of the [toolchanger-config](../software/ktc-easy/configuration/toolchanger.md). 
