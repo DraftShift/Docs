@@ -93,7 +93,7 @@
             {%- endif %}
             {% if data.pin_map.part_fan_pin is iterable and data.pin_map.part_fan_pin is not string %}
             [multi_pin T{{ i }}_multipin]
-            pins: {{ data.pin_map.part_fan_pin|join(", ") }}
+            pins: {{ mcu ~ ":" ~ data.pin_map.part_fan_pin|join(", " ~ mcu ~ ":") }}
             {% endif %}
             # change the fan_generic section name to the tool you are configuring:
             # T0_partfan, T1_partfan, etc.
