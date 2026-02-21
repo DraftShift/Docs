@@ -170,9 +170,68 @@ Mellow SHT v2:
     heater_pin: "PA8"
     sensor_pin: "PA3"
     uart_pin: "PB5"
-    tx_pin:  ""
+    tx_pin: ""
     hotend_fan_pin: "PB10"
     he_tach_pin: "PB10"  
     part_fan_pin: "PB11"
     detection_pin: "PA1"
     rgb_pin: "PB0"
+
+Fysetc H36 V1.3 CAN:
+  mcu_name: "FHC"
+  protocol: "CAN"
+  preface: |
+    # This file contains common pin mappings for the Fysetc H36 Combo V1.3.
+    # To use this config, the firmware should be compiled for the 
+    # stm32g0b1".
+  accelerometer: "adxl345"
+  axis_map: ""
+  pullup_resistor: "2200"
+  sense_resistor: ""
+  pin_map:
+    acc_cs_pin: "PB12"
+    acc_sclk_pin: "PB10"
+    acc_mosi_pin: "PB11"
+    acc_miso_pin: "PB2"
+    step_pin: "PB9"
+    dir_pin: "PB8"
+    enable_pin: "!PB7"
+    heater_pin: "PA7"
+    sensor_pin: "PA6"
+    uart_pin: "PC14"
+    tx_pin: ""
+    hotend_fan_pin: "PA9"
+    he_tach_pin: "PC6"  
+    part_fan_pin: ["PB15", PB13]
+    detection_pin: "PA8"
+    rgb_pin: "PA10"
+
+Fysetc H36 V1.3 USB:
+  mcu_name: "FHC"
+  protocol: "USB"
+  preface: |
+    # This file contains common pin mappings for the Fysetc H36 Combo V1.3.
+    # To use this config, the firmware should be compiled for the 
+    # stm32g0b1".
+  accelerometer: "adxl345"
+  axis_map: ""
+  pullup_resistor: ""
+  sense_resistor: ""
+  pin_map:
+    acc_cs_pin: "PB12"
+    acc_sclk_pin: "PB10"
+    acc_mosi_pin: "PB11"
+    acc_miso_pin: "PB2"
+    step_pin: "PB9"
+    dir_pin: "PB8"
+    enable_pin: "!PB7"
+    heater_pin: "PA7"
+    sensor_pin: "PA6"
+    uart_pin: "PC14"
+    tx_pin: ""
+    hotend_fan_pin: "PA9"
+    he_tach_pin: "PC6"  
+    part_fan_pin: ["PB15", PB13]
+    detection_pin: "PA8"
+    rgb_pin: "PA10"
+    
