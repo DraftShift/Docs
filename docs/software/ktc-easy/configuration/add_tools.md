@@ -21,7 +21,7 @@ The following items need to be incremented:
 If you have any extra sections such as RGB, ADXL345, etc. They will also need to be incremented.
 
 ## Calibrated Values
-If you copied a previous tool's config, all calibrated values are for the previous tool. They will need to be recelebrated for the new tool.
+If you copied a previous tool's config, all calibrated values are for the previous tool. They will need to be recalibrated for the new tool.
 
 These include:
 
