@@ -1,0 +1,670 @@
+title: A4T
+author: "DraftShift Design"
+primary_parts:
+  - WWBMG Motor Plate
+  - WWBMG Body
+  - LED Carrier
+  - LED Filter
+  - Fan Insert Left
+  - Fan Insert Right
+accent_parts:
+  - Cowl
+  - A4T Backplate
+  - PCB Mount
+  - WWBMG Tension Arm
+  - Fan Duct
+summary: >
+  This guide will walk you through the assembly of an A4T (UHF) toolhead for StealthChanger.
+
+  !!! note "Configurations"
+      The A4T can be configured in numerous ways. This guide is an example of the A4T toolhead with a Rapido2 UHF hotend and a pre-assembled A4T WWBMG extruder.
+
+      Other configurations may differ from this guide.
+
+      - For StealthChanger, only XOL varients of the A4T cowl can be used.
+      - A4T toolhead requires the use of lower profile Z joints. hartk's [GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or Ellis' [Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} are good options.
+
+printed_bom:
+  Complete A4T:
+    qty: 1
+    urls:
+      Link: "https://download-directory.github.io/?url=https://github.com/N3MI-DG/sc-guides/tree/main/A4T/STL"
+
+hardware_bom:
+  M3x8 BHCS Screws:
+    qty: 2
+  M3x10 BHCS Screws:
+    qty: 2
+  M3x16 BHCS Screws:
+    qty: 2
+  M2.5x8 SHCS Screws:
+    qty: 4
+  M3x8 SHCS Screws:
+    qty: 5
+  M3x45 SHCS Screws:
+    qty: 2
+  M3 Heat Insert:
+    qty: 2
+  M3 Square Nuts:
+    qty: 4
+  Rapido2 UHF Hotend:
+    qty: 1
+  A4T WWBMG Extruder:
+    qty: 1
+  EBB36 Toolhead Board:
+    qty: 1
+  25x10mm Delta Radial Fan:
+    qty: 1
+  40x10mm Centrifugal/Blower Fan:
+    qty: 2
+  4x2mm PTFE ~33mm Long:
+    qty: 1
+  Neopixel LED:
+    qty: 3
+
+resources:
+  A4T Github: https://github.com/Armchair-Heavy-Industries/A4T
+  N3MI's CAD and STL collection: https://github.com/N3MI-DG/sc-guides/tree/main/A4T
+
+steps:
+  - description: "In this guide we will be assembling an A4T (UHF version) toolhead."
+    camera:
+      azimuth: 121
+      polar: 74
+      distance: 77
+      pan_x: -0.83
+      pan_y: -4.48
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+      - EBB36 Standoffs
+      - PCB Mount
+      - Heat Inserts (PCB Mount)
+      - M3x8 SHCS (PCB Mount)
+      - M3 Washer (PCB Mount)
+      - M3x8 SHCS (Standoffs)
+      - M3x10 BHCS (EBB36)
+      - EBB36 PCB
+
+  - description: "Install 2 M3 heat inserts in to the PCB Mount and put it aside for later."
+    camera:
+      azimuth: 90
+      polar: 99
+      distance: 44
+      pan_x: -0.34
+      pan_y: -1.71
+    visible: 
+      - PCB Mount
+      - Heat Inserts (PCB Mount)
+    focus:
+      - Heat Inserts (PCB Mount)
+
+  - description: "Loosely screw 2 M3x8 BHCS screws in to the upper heat inserts of the A4T Backplate and put it aside for later."
+    camera:
+      azimuth: 116
+      polar: 106
+      distance: 49
+      pan_x: 0.17
+      pan_y: 1.65
+    visible: 
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+    focus:
+      - M3x8 BHCS (Cowl)
+
+  - description: "Glue a Fan Insert in to each of the 2 4010 blower fans using the Install Shim to locate the insert."
+    camera:
+      azimuth: 184
+      polar: 138
+      distance: 28
+      pan_x: 0.62
+      pan_y: -0.35
+    visible:
+      - 4010 Blower Fan
+      - Install Shim
+      - Fan Insert
+    focus:
+      - Install Shim
+      - Fan Insert
+
+  - description: "Cut the holding tab off the Fan Insert with flush cutters."
+    camera:
+      azimuth: 184
+      polar: 138
+      distance: 28
+      pan_x: 0.62
+      pan_y: -0.35
+    visible:
+      - 4010 Blower Fan Left
+      - Fan Insert Left
+    focus:
+      - Fan Insert Left
+
+  - description: "Remove all of the built in supports from the Cowl."
+    camera:
+      azimuth: 275
+      polar: 105
+      distance: 44
+      pan_x: -0.12
+      pan_y: 0.59
+    visible: 
+      - Cowl
+      - Bridge Supports (Cowl)
+      - Supports (Cowl)
+    focus:
+      - Supports (Cowl)
+
+  - description: "Cut the bridge supports out of the Cowl with flush cutters."
+    camera:
+      azimuth: 275
+      polar: 105
+      distance: 44
+      pan_x: -0.12
+      pan_y: 0.59
+    visible: 
+      - Cowl
+      - Bridge Supports (Cowl)
+    focus:
+      - Bridge Supports (Cowl)
+
+  - description: "Place the logo LED filter and diffuser in to the cowl"
+    camera:
+      azimuth: 269
+      polar: 153
+      distance: 44
+      pan_x: 0.36
+      pan_y: 0.64
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+    focus:
+      - LED Filter
+      - LED diffuser
+
+  - description: "With the pre-wired logo LED in the LED carrier, slide the carrier in to the duct and fit the Nozzle LEDs in place."
+    camera:
+      azimuth: 270
+      polar: 138
+      distance: 44
+      pan_x: 0.34
+      pan_y: 0.12
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+    focus:
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+
+  - description: "Place the 2510 Delta fan in to the Cowl and secure by sliding the fan duct in to place."
+    camera:
+      azimuth: 270
+      polar: 138
+      distance: 44
+      pan_x: 0.34
+      pan_y: 0.12
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+    focus:
+      - Fan Duct
+
+  - description: "Install the 2 4010 blower fans by sliding them in place."
+    camera:
+      azimuth: 313
+      polar: 86
+      distance: 44
+      pan_x: -0.77
+      pan_y: -1.60
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+    focus:
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+
+  - description: "Install Rapido 2 UHF hotend using 4 M2.5x8 SHCS screws."
+    camera:
+      azimuth: 284
+      polar: 30
+      distance: 44
+      pan_x: -0.04
+      pan_y: -2.08
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+
+    focus:
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+
+  - description: "Insert 4 M3 square nuts in to the Cowl."
+    camera:
+      azimuth: 297
+      polar: 79
+      distance: 46
+      pan_x: -0.38
+      pan_y: -0.36
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+    focus:
+      - M3 Square Nuts
+
+  - description: "Attach the assembled Cowl to the A4T Backplate using 2 M3x45 SHCS screws and tighten the 2 pre installed M3x8 BHCS screws by feeding a wrench through the holes in the front of the Cowl."
+    camera:
+      azimuth: 148
+      polar: 98
+      distance: 63
+      pan_x: -1.73
+      pan_y: 3.43
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+    focus:
+      - M3x45 SHCS (Cowl)
+      - M3x8 BHCS (Cowl)
+
+  - description: "Secure the rear of the A4T Backplate using 2 M3x8 SHCS screws."
+    camera:
+      azimuth: 293
+      polar: 65
+      distance: 44
+      pan_x: -0.01
+      pan_y: 0.18
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+    focus:
+      - M3x8 SHCS (Backplate)
+
+  - description: "Install a ~33mm long piece of PTFE tube ensuring the top has a chamfered internal diameter."
+    camera:
+      azimuth: 143
+      polar: 47
+      distance: 44
+      pan_x: -1.15
+      pan_y: 3.86
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+    focus:
+      - PTFE Tube
+
+  - description: "Attach the WWBMG extruder using 2 M3x16 BHCS screws."
+    camera:
+      azimuth: 105
+      polar: 59
+      distance: 46
+      pan_x: 0.49
+      pan_y: 6.12
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+    focus:
+      -  WWBMG Mounting Screws
+
+  - description: "Attach the EBB36 Standoffs to the WWBMG motor screws."
+    camera:
+      azimuth: 291
+      polar: 61
+      distance: 51
+      pan_x: 1.77
+      pan_y: 6.66
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+      - EBB36 Standoffs
+    focus:
+      - EBB36 Standoffs
+
+  - description: "Attach the PCB Mount to the EBB standoffs using 3 M3x8 SHCS screws and a M3 washer."
+    camera:
+      azimuth: 278
+      polar: 84
+      distance: 42
+      pan_x: 2.18
+      pan_y: 5.40
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+      - EBB36 Standoffs
+      - PCB Mount
+      - Heat Inserts (PCB Mount)
+      - M3x8 SHCS (PCB Mount)
+      - M3 Washer (PCB Mount)
+      - M3x8 SHCS (Standoffs)
+    focus:
+      - M3x8 SHCS (PCB Mount)
+      - M3 Washer (PCB Mount)
+      - M3x8 SHCS (Standoffs)
+
+  - description: "Attach the EBB36 using 2 M3x10 BHCS screws."
+    camera:
+      azimuth: 282
+      polar: 71
+      distance: 51
+      pan_x: -0.14
+      pan_y: 0.95
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+      - EBB36 Standoffs
+      - PCB Mount
+      - Heat Inserts (PCB Mount)
+      - M3x8 SHCS (PCB Mount)
+      - M3 Washer (PCB Mount)
+      - M3x8 SHCS (Standoffs)
+      - M3x10 BHCS (EBB36)
+      - EBB36 PCB
+    focus:
+      - M3x10 BHCS (EBB36)
+
+  - description: "Route and terminate all of the hotend wires."
+    camera:
+      azimuth: 271
+      polar: 82
+      distance: 63
+      pan_x: 0.31
+      pan_y: -1.69
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+      - EBB36 Standoffs
+      - PCB Mount
+      - Heat Inserts (PCB Mount)
+      - M3x8 SHCS (PCB Mount)
+      - M3 Washer (PCB Mount)
+      - M3x8 SHCS (Standoffs)
+      - M3x10 BHCS (EBB36)
+      - EBB36 PCB
+
+  - description: "A4T assembly is complete."
+    camera:
+      azimuth: 121
+      polar: 74
+      distance: 77
+      pan_x: -0.83
+      pan_y: -4.48
+    visible: 
+      - Cowl
+      - LED Filter
+      - LED diffuser
+      - Nozzle LEDs
+      - LED Carrier
+      - Logo LED
+      - Delta 2510 Fan
+      - Fan Duct
+      - 4010 Blower Fan Left
+      - 4010 Blower Fan Right
+      - Fan Insert Left
+      - Fan Insert Right
+      - M25x8 SHCS Screws (Hotend)
+      - Rapido2 UHF
+      - M3 Square Nuts
+      - M3x45 SHCS (Cowl)
+      - A4T Backplate
+      - A4T Backplate Hardware
+      - M3x8 BHCS (Cowl)
+      - M3x8 SHCS (Backplate)
+      - PTFE Tube
+      -  WWBMG Motor Plate
+      -  WWBMG Tension Arm
+      -  WWBMG Body
+      -  WWBMG Hardware
+      -  WWBMG Mounting Screws
+      - EBB36 Standoffs
+      - PCB Mount
+      - Heat Inserts (PCB Mount)
+      - M3x8 SHCS (PCB Mount)
+      - M3 Washer (PCB Mount)
+      - M3x8 SHCS (Standoffs)
+      - M3x10 BHCS (EBB36)
+      - EBB36 PCB
