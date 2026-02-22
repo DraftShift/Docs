@@ -136,7 +136,7 @@
             [tool_probe T{{ i }}]
             pin: {{ pin(mcu, data.pin_map.detection_pin) }}
             tool: {{ i }} # change to the index of the tool. 0, 1, 2, etc.
-            z_offset = 0 # Needs to be calibrated. More positive = More Squish
+            z_offset: 0 # Needs to be calibrated. More positive = More Squish
             speed: 5.0
             samples: 3
             samples_result: median
