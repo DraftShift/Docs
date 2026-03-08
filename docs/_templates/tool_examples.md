@@ -126,10 +126,12 @@
             gcode_z_offset: 0 # The Z-Axis offset of the nozzle's orifice in relation to tool 0
 
             # Results from input shaper
+            params_input_shaper_freq_x: 0.1
             params_input_shaper_type_x: 'mzv'
-            params_input_shaper_freq_x: 52
+            params_input_shaper_damping_ratio_x: 0.1
+            params_input_shaper_freq_y: 0.1
             params_input_shaper_type_y: 'mzv'
-            params_input_shaper_freq_y: 37.2
+            params_input_shaper_damping_ratio_y: 0.1
             {% if version == "TAP" %}
             # change the tool_probe section name to the tool you are configuring:
             # T0, T1, etc.
