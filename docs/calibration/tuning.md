@@ -33,9 +33,16 @@ AXES_SHAPER_CALIBRATION ACCEL_CHIP="'adxl345 T0'"
 ```
 
 ### Applying the Results
-Each tool can have the frequency and shaper type defined for the X and Y axes in the [[tool Tn]](../software/ktc-easy/configuration/tool.md#tool) section by adding `params_input_shaper_freq_x`, `params_input_shaper_type_x`, `params_input_shaper_freq_y` and `params_input_shaper_type_y`.
+Each tool can have the frequency, shaper type, and damping ratio defined for the X and Y axes in the [[tool Tn]](../software/ktc-easy/configuration/tool.md#tool) section by adding the following parameters:
 
-``` cfg hl_lines="12 13 14 15" title="Example [tool Tn] section with input shaper"
+- `params_input_shaper_freq_x`
+- `params_input_shaper_type_x`
+- `params_input_shaper_damping_ratio_x`
+- `params_input_shaper_freq_y`
+- `params_input_shaper_type_y`
+- `params_input_shaper_damping_ratio_y`
+
+``` cfg hl_lines="12 13 14 15 16 17" title="Example [tool Tn] section with input shaper"
 [tool T0]
 tool_number: 0
 extruder: extruder
@@ -49,8 +56,10 @@ gcode_z_offset: 0 # The Z-Axis offset of the nozzle's orifice in relation to too
 
 params_input_shaper_freq_x: 62.2
 params_input_shaper_type_x: 'ei'
+params_input_shaper_damping_ratio_x: 0.098
 params_input_shaper_freq_y: 41.0
 params_input_shaper_type_y: 'mzv'
+params_input_shaper_damping_ratio_y: 0.088
 
 ```
 
