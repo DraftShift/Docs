@@ -110,7 +110,7 @@ steps:
       - M3x10 BHCS (EBB36)
       - EBB36 PCB
 
-  - description: "Install 2 M3 heat inserts in to the PCB Mount and put it aside for later."
+  - description: "Install 2 M3 heat inserts in to the PCB mount and put it aside for later."
     camera:
       azimuth: 90
       polar: 99
@@ -137,7 +137,7 @@ steps:
     focus:
       - M3x8 BHCS (Cowl)
 
-  - description: "Glue a Fan Insert in to each of the 2 4010 blower fans using the Install Shim to locate the insert."
+  - description: "Glue a fan insert in to each of the 2 4010 blower fans using the install shim to locate the insert."
     camera:
       azimuth: 184
       polar: 138
@@ -152,7 +152,7 @@ steps:
       - Install Shim
       - Fan Insert
 
-  - description: "Cut the holding tab off the Fan Insert with flush cutters."
+  - description: "Cut the holding tab off the fan insert with flush cutters."
     camera:
       azimuth: 184
       polar: 138
@@ -165,7 +165,7 @@ steps:
     focus:
       - Fan Insert Left
 
-  - description: "Remove all of the built in supports from the Cowl."
+  - description: "Remove all of the built in supports from the cowl."
     camera:
       azimuth: 275
       polar: 105
@@ -179,7 +179,7 @@ steps:
     focus:
       - Supports (Cowl)
 
-  - description: "Cut the bridge supports out of the Cowl with flush cutters."
+  - description: "Cut the bridge supports out of the cowl with flush cutters."
     camera:
       azimuth: 275
       polar: 105
@@ -207,7 +207,7 @@ steps:
       - LED Filter
       - LED diffuser
 
-  - description: "With the pre-wired logo LED in the LED carrier, slide the carrier in to the duct and fit the Nozzle LEDs in place."
+  - description: "With the pre-wired logo LED in the LED carrier, slide the carrier in to the duct and fit the nozzle LEDs in place."
     camera:
       azimuth: 270
       polar: 138
@@ -226,7 +226,7 @@ steps:
       - LED Carrier
       - Logo LED
 
-  - description: "Place the 2510 Delta fan in to the Cowl and secure by sliding the fan duct in to place."
+  - description: "Place the 2510 Delta fan in to the cowl and secure by sliding the fan duct in to place."
     camera:
       azimuth: 270
       polar: 138
@@ -298,7 +298,7 @@ steps:
       - M25x8 SHCS Screws (Hotend)
       - Rapido2 UHF
 
-  - description: "Insert 4 M3 square nuts in to the Cowl."
+  - description: "Insert 4 M3 square nuts in to the cowl."
     camera:
       azimuth: 297
       polar: 79
@@ -324,7 +324,7 @@ steps:
     focus:
       - M3 Square Nuts
 
-  - description: "Attach the assembled Cowl to the A4T Backplate using 2 M3x45 SHCS screws and tighten the 2 pre installed M3x8 BHCS screws by feeding a wrench through the holes in the front of the Cowl."
+  - description: "Attach the assembled cowl to the A4T Backplate using 2 M3x45 SHCS screws and tighten the 2 pre installed M3x8 BHCS screws by feeding a wrench through the holes in the front of the cowl."
     camera:
       azimuth: 148
       polar: 98
@@ -493,7 +493,7 @@ steps:
     focus:
       - EBB36 Standoffs
 
-  - description: "Attach the PCB Mount to the EBB standoffs using 3 M3x8 SHCS screws and a M3 washer."
+  - description: "Attach the PCB mount to the EBB standoffs using 3 M3x8 SHCS screws and a M3 washer."
     camera:
       azimuth: 278
       polar: 84
