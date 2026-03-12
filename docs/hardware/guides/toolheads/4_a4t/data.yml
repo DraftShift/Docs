@@ -21,7 +21,7 @@ summary: >
 
       Other configurations may differ from this guide.
 
-      - For StealthChanger, only XOL varients of the A4T cowl can be used.
+      - For StealthChanger, only XOL variants of the A4T cowl can be used.
       - A4T toolhead requires the use of lower profile Z joints. hartk's [GE5C Z Joint](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C){target="_blank"} or Ellis' [Short Z Joints](https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/Ellis/Short_Z_Joints){target="_blank"} are good options.
 
 printed_bom:
