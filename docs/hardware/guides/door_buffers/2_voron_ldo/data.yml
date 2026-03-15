@@ -9,6 +9,8 @@ summary: >
     !!! info "Short/Standard?"
         There are different printed files depending on whether you are using short Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../../toolheads.md) for compatibility.
 
+    !!! info "LDO Door"
+        The LDO Door Buffer expects that you will be using the LDO door as indicated in their Voron V2.4 Guide. You can find it [here](https://github.com/MotorDynamicsLab/LDOVoron2/tree/main/STLs/LDO%20Door){target="_blank"}.
 
 printed_bom:
   LDO 300 Short:
