@@ -183,10 +183,6 @@
             {% endif %}
           {% endfor %}
 
-          {% if params.TOOL is defined %}
-            PRIME_LINES INITIAL_TOOL={params.TOOL}
-          {% else %}
-            PRIME_LINES
-          {% endif %}
+          PRIME_LINES INITIAL_TOOL={TOOL}
         {% endraw %}
         ```
