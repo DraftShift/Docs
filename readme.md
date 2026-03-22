@@ -2,9 +2,7 @@
 
 This repository contains the source code for the DraftShift documentation website.
 
-Visit [https://draftshift.github.io/Docs](https://draftshift.github.io/Docs) for the actual documentation.
-
-
+Visit [https://stealthchanger.com](https://stealthchanger.com) for the actual documentation.
 
 ---
 
