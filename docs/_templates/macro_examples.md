@@ -98,6 +98,10 @@
           {% set TOOL_TEMP = params.TOOL_TEMP | default(0) | int %}
           {% set BED_TEMP = params.BED_TEMP | default(0) | int %}
 
+          # Configure these two options to your preference
+          {% set PREHEAT_MODE = 'staggered' %} # all_at_once, one_by_one, staggered
+          {% set PREHEAT_STAGGERED_BY_C = 100 %} # only used for staggered, when a tool is within this many °C of its target, move on to heating the next tool
+
           # Disable crash detection while homing/probing
           {% if printer.tool_probe_endstop is defined %}
             M117 Disabling crash detection
@@ -130,15 +134,24 @@
           {% if printer.toolchanger.tool_number != -1 %}
             M104 S0
           {% endif %}
-          # set each tool to target temperature
+          # Preheat each tool to target temperature
           {% for tool_nr in printer.toolchanger.tool_numbers %}
             {% set tooltemp_param = 'T' ~ tool_nr|string ~ '_TEMP' %}
             {% if tooltemp_param in params %}
-              M109 T{tool_nr} S{params[tooltemp_param]} #D350 # heat all tool one by one or stagered with D parameter.
-              # M104 T{tool_nr} S{params[tooltemp_param]} # heat all tool instantly.
+              {% if PREHEAT_MODE == 'all_at_once' %}
+                M117 Heating T{tool_nr} to {params[tooltemp_param]}°C
+                M104 T{tool_nr} S{params[tooltemp_param]} # heat all tools instantly
+              {% elif PREHEAT_MODE == 'one_by_one' %}
+                M117 Heating T{tool_nr} to {params[tooltemp_param]}°C
+                M109 T{tool_nr} S{params[tooltemp_param]} # heat tools one by one
+              {% elif PREHEAT_MODE == 'staggered' %}
+                M117 Heating T{tool_nr} to {params[tooltemp_param]}°C staggered by {PREHEAT_STAGGERED_BY_C}°C
+                M109 T{tool_nr} S{params[tooltemp_param]} D{PREHEAT_STAGGERED_BY_C * 2} # heat tools one by one, with deadband
+              {% endif %}
             {% endif %}
           {% endfor %}
 
+          # Dont forget to also include the `PRIME_LINES` macro from https://stealthchanger.com/software/ktc-easy/examples/#prime_lines
           PRIME_LINES INITIAL_TOOL={params.TOOL|default(0)|float}
 
           {% if printer.tool_probe_endstop is defined %}
