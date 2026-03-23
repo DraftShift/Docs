@@ -8,6 +8,7 @@
           {% set TOOL_TEMP = params.TOOL_TEMP | default(0) | int %}
           {% set BED_TEMP = params.BED_TEMP | default(0) | int %}
 
+          # Disable crash detection while homing/probing
           {% if printer.tool_probe_endstop is defined %}
             M117 Disabling crash detection
             STOP_CRASH_DETECTION
@@ -19,19 +20,24 @@
           M117 Homing
           G28
 
-          T0 ; Ensure we have T0 active for pre print calibrations.
-
           M117 Quad Gantry Level
           QUAD_GANTRY_LEVEL
 
-          G28 Z ; Home Z again after QGL
+          # Switch tool if not T0 to ensure we have T0 active for gcode offset accuracy
+          {% if printer.tool_probe_endstop is defined and printer.toolchanger.tool_number != 0 %}
+            M117 Switching to T0
+            T0
+          {% endif %}
+
+          M117 Homing Z
+          G28 Z
 
           BED_MESH_CALIBRATE ADAPTIVE=1 ; Run adaptive bed mesh
 
           ; Switch to the initial printing tool and preheat it.
           {% if TOOL > 0 %}
             M104 T0 S0 ; Shutdown T0.
-              T{params.TOOL} ; Switch to the initial printing tool
+            T{params.TOOL} ; Switch to the initial printing tool
           {% endif %}
 
           M117 Waiting on T{params.TOOL} S{TOOL_TEMP}C
@@ -78,5 +84,62 @@
           {% endfor %}
 
           M140 S0 ; shutdown bed heater
+        {% endraw %}
+        ```
+
+    === "PRINT_START - with PRIME_LINES"
+        ``` jinja { title="Example PRINT_START - Macro with PRIME_LINES" .copy }
+        {% raw %}
+        [gcode_macro PRINT_START]
+        gcode:
+          {% set TOOL = params.TOOL | default(0)| int %}
+          {% set TOOL_TEMP = params.TOOL_TEMP | default(0) | int %}
+          {% set BED_TEMP = params.BED_TEMP | default(0) | int %}
+
+          # Disable crash detection while homing/probing
+          {% if printer.tool_probe_endstop is defined %}
+            M117 Disabling crash detection
+            STOP_CRASH_DETECTION
+          {% endif %}
+
+          M117 Heating Bed
+          M190 S{BED_TEMP}
+
+          M117 Homing
+          G28
+
+          M117 Quad Gantry Level
+          QUAD_GANTRY_LEVEL
+
+          # switch tool if not T0 to ensure we have T0 active for gcode offset accuracy
+          {% if printer.tool_probe_endstop is defined and printer.toolchanger.tool_number != 0 %}
+            M117 Switching to T0
+            T0
+          {% endif %}
+
+          M117 Homing Z
+          G28 Z
+
+          BED_MESH_CALIBRATE ADAPTIVE=1 ; Run adaptive bed mesh
+
+          # turn off heaters in case we dont use this tool
+          {% if printer.toolchanger.tool_number != -1 %}
+            M104 S0
+          {% endif %}
+          # set each tool to target temperature
+          {% for tool_nr in printer.toolchanger.tool_numbers %}
+            {% set tooltemp_param = 'T' ~ tool_nr|string ~ '_TEMP' %}
+            {% if tooltemp_param in params %}
+              M109 T{tool_nr} S{params[tooltemp_param]} #D350 # heat all tool one by one or stagered with D parameter.
+              # M104 T{tool_nr} S{params[tooltemp_param]} # heat all tool instantly.
+            {% endif %}
+          {% endfor %}
+
+          PRIME_LINES INITIAL_TOOL={params.TOOL|default(0)|float}
+
+          {% if printer.tool_probe_endstop is defined %}
+            M117 Re-enabling crash detection
+            START_CRASH_DETECTION
+          {% endif %}
         {% endraw %}
         ```

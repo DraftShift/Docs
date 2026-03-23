@@ -141,7 +141,7 @@
         ```
 
 
-    === "PRINT_START (for PRIME_LINES)"
+    === "PRINT_START with PRIME_LINES"
         ``` jinja { title="PRINT_START macro that includes a call to the PRIME_LINES macro." .copy }
         {% raw %}
         [gcode_macro PRINT_START]
