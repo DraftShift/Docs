@@ -25,6 +25,8 @@
 
           # Switch tool if not T0 to ensure we have T0 active for gcode offset accuracy
           {% if printer.tool_probe_endstop is defined and printer.toolchanger.tool_number != 0 %}
+            M117 Homing Z before tool change
+            G28 Z
             M117 Switching to T0
             T0
           {% endif %}
@@ -113,6 +115,8 @@
 
           # switch tool if not T0 to ensure we have T0 active for gcode offset accuracy
           {% if printer.tool_probe_endstop is defined and printer.toolchanger.tool_number != 0 %}
+            M117 Homing Z before tool change
+            G28 Z
             M117 Switching to T0
             T0
           {% endif %}
