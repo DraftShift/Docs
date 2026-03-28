@@ -36,7 +36,7 @@
 
           BED_MESH_CALIBRATE ADAPTIVE=1 ; Run adaptive bed mesh
 
-          ; Switch to the initial printing tool and preheat it.
+          # Switch to the initial printing tool and preheat it.
           {% if TOOL > 0 %}
             M104 T0 S0 ; Shutdown T0.
             T{params.TOOL} ; Switch to the initial printing tool
@@ -93,14 +93,12 @@
         ``` jinja { title="Example PRINT_START - Macro with PRIME_LINES" .copy }
         {% raw %}
         [gcode_macro PRINT_START]
+        variable_preheat_mode:         'staggered' # all_at_once: heat all tools at once, one_by_one: wait for each tool before heating next, staggered: move on when within threshold of target
+        variable_preheat_staggered_offset: 100       # Only used for staggered mode. When a tool is within the staggered_offset variable, move on to heating the next tool
         gcode:
           {% set TOOL = params.TOOL | default(0)| int %}
           {% set TOOL_TEMP = params.TOOL_TEMP | default(0) | int %}
           {% set BED_TEMP = params.BED_TEMP | default(0) | int %}
-
-          # Configure these two options to your preference
-          {% set PREHEAT_MODE = 'staggered' %} # all_at_once, one_by_one, staggered
-          {% set PREHEAT_STAGGERED_BY_C = 100 %} # only used for staggered, when a tool is within this many °C of its target, move on to heating the next tool
 
           # Disable crash detection while homing/probing
           {% if printer.tool_probe_endstop is defined %}
@@ -138,15 +136,15 @@
           {% for tool_nr in printer.toolchanger.tool_numbers %}
             {% set tooltemp_param = 'T' ~ tool_nr|string ~ '_TEMP' %}
             {% if tooltemp_param in params %}
-              {% if PREHEAT_MODE == 'all_at_once' %}
+              {% if printer["gcode_macro PRINT_START"].preheat_mode == 'all_at_once' %}
                 M117 Heating T{tool_nr} to {params[tooltemp_param]}°C
-                M104 T{tool_nr} S{params[tooltemp_param]} # heat all tools instantly
-              {% elif PREHEAT_MODE == 'one_by_one' %}
+                M104 T{tool_nr} S{params[tooltemp_param]} ; heat all tools instantly
+              {% elif printer["gcode_macro PRINT_START"].preheat_mode == 'one_by_one' %}
                 M117 Heating T{tool_nr} to {params[tooltemp_param]}°C
-                M109 T{tool_nr} S{params[tooltemp_param]} # heat tools one by one
-              {% elif PREHEAT_MODE == 'staggered' %}
-                M117 Heating T{tool_nr} to {params[tooltemp_param]}°C staggered by {PREHEAT_STAGGERED_BY_C}°C
-                M109 T{tool_nr} S{params[tooltemp_param]} D{PREHEAT_STAGGERED_BY_C * 2} # heat tools one by one, with deadband
+                M109 T{tool_nr} S{params[tooltemp_param]} ; heat tools one by one
+              {% elif printer["gcode_macro PRINT_START"].preheat_mode == 'staggered' %}
+                M117 Heating T{tool_nr} to {params[tooltemp_param]}°C staggered by {printer["gcode_macro PRINT_START"].preheat_staggered_offset}°C
+                M109 T{tool_nr} S{params[tooltemp_param]} D{printer["gcode_macro PRINT_START"].preheat_staggered_offset * 2} ; heat tools one by one, with deadband
               {% endif %}
             {% endif %}
           {% endfor %}
