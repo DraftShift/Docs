@@ -85,7 +85,7 @@ EBB36 V1.2:
     he_tach_pin: ""
     part_fan_pin: "PA1"
     part_tach_pin: ""
-    detection_pin: "^PC13"
+    detection_pin: "^PB6"
     rgb_pin: "PD3"
 
 EBB36 Gen2 CAN:
