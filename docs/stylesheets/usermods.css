@@ -659,6 +659,7 @@ select[name="username-filter"]:focus {
   #usermod-modal-body {
     border-right: none;
     padding-right: 0;
+    overflow-y: visible;
   }
 
   #usermod-modal-files {
