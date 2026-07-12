@@ -1,0 +1,95 @@
+title: "Printed Shuttle Assembly"
+author: "DraftShift Design"
+summary: >
+    The StealthChanger Printed Shuttle.
+
+    !!! tip "Printing"
+        The Shuttle is a critical component for StealthChanger. Make sure you have read the [Print Tuning Guide](../../../../getting_started.md#print-tuning) before printing.
+        The StealthChanger Shuttle must be printed with supports.
+
+printed_bom:
+  StealthCahnger Shuttle:
+    qty: 1
+    urls: 
+      MGN12: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Shuttle%20MGN12%20(With%20belt%20grooves).stl?raw=true
+      MGN9: https://github.com/DraftShift/StealthChanger/blob/main/STLs/Shuttle%20MGN9.stl?raw=true
+
+hardware_bom:
+  4x6x6mm brass bushings:
+    qty: 3
+    urls:
+      Aliexpress: https://s.click.aliexpress.com/e/_Dmsh3LJ
+      US Amazon: https://amzn.to/3RAjKtY
+      UK Amazon: https://amzn.to/48jnoPO
+  6x3mm magnets:
+    qty: 3
+  M3x40 SHCS (full thread):
+    qty: 2
+  M3 heat insert (optional):
+    qty: 1
+
+primary_parts:
+  - "Shuttle MGN12"
+
+steps:
+  - description: "Install the 3 4x6x6mm bushings into the shuttle ensuring they remain straight. Use a parallel wrench if you have one."
+    camera:
+      azimuth: 295
+      polar: 60
+      distance: 55
+      pan_x: -0.89
+      pan_y: -5.64
+    visible:
+      - "Shuttle MGN12"
+      - "Bushings"
+    focus:
+      - "Bushings"
+
+  - description: "Secure the 3 6x3mm magnets with glue or epoxy."
+    camera:
+      azimuth: 295
+      polar: 60
+      distance: 55
+      pan_x: -0.89
+      pan_y: -5.64
+    visible:
+      - "Shuttle MGN12"
+      - "Bushings"
+      - "6x3mm Magnets"
+    focus:
+      - "6x3mm Magnets"
+  
+  - description: "Screw in the 2 M3x40 SHCS screws in the bottom of the shuttle. Make sure they are full thread screws. If the screws have a shoulder they could crack the printed part."
+    camera:
+      azimuth: 102
+      polar: 60
+      distance: 64
+      pan_x: -2.73
+      pan_y: -6.70
+    visible:
+      - "Shuttle MGN12"
+      - "Bushings"
+      - "6x3mm Magnets"
+      - "M3x40 SHCS"
+    focus:
+      - "M3x40 SHCS"
+
+  - description: "If using an endstop for X axis, install a heat insert in the underside of the Shuttle."
+    camera:
+      azimuth: 98
+      polar: 117
+      distance: 64
+      pan_x: -1.44
+      pan_y: 3.99
+    visible: []
+    focus:
+      - "M3 Heat Insert"
+  
+  - description: "The shuttle is now ready to be mounted to the printer."
+    camera:
+      azimuth: 90
+      polar: 0
+      distance: 80
+      pan_x: -0.00
+      pan_y: -0.00
+    visible: []

@@ -1,0 +1,152 @@
+title: Stealthchanger Assembly
+author: "DraftShift Design"
+
+summary: >
+  This is the full assembly of a Voron V2 250mm with Stealthchanger.  
+
+printed_bom:
+   Stealthchanger Printed parts:
+     qty: 1
+     urls:
+       Link: "https://github.com/DraftShift/"
+
+hardware_bom:
+  Voron V2:
+      qty: 1
+  Stealthchanger Hardware set:
+     qty: 1
+
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+  N3MI's Voron 250 Stealchanger CAD: https://github.com/N3MI-DG/sc-guides
+
+
+steps:
+  - description: "This is Stealthchanger on a Voron V2 250mm."
+    camera:
+      azimuth: 60
+      polar: 65
+      distance: 95
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "VoronV2"
+      - "Cable Management"
+      - "Docks"
+      - "Doorbuffer"
+      - "Stealthchanger Shuttle"
+      - "Tools"
+      - "Tophat"
+
+  - description: "You take a base Voron V2"
+    camera:
+      azimuth: 60
+      polar: 65
+      distance: 95
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "VoronV2"
+
+  - description: "Add stealthchanger shuttle"
+    camera:
+      azimuth: 60
+      polar: 65
+      distance: 40
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+    focus:
+      - "Stealthchanger Shuttle"
+
+  - description: "Add cable management"
+    camera:
+      azimuth: 309
+      polar: 57
+      distance: 74
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+      - "Cable Management"
+    focus:
+      - "Cable Management"
+
+  - description: "Add door buffer with crossbar"
+    camera:
+      azimuth: 60
+      polar: 65
+      distance: 95
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+      - "Cable Management"
+      - "Doorbuffer"
+    focus:
+      - "Doorbuffer"
+
+  - description: "Add docks and Tools"
+    camera:
+      azimuth: 339
+      polar: 81
+      distance: 54
+      pan_x: 7.51
+      pan_y: -0.20
+    visible: 
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+      - "Cable Management"
+      - "Doorbuffer"
+      - "Docks"
+      - "Tools"
+    focus:
+      - "Docks"
+      - "Tools"
+
+  - description: "Then add tophat"
+    camera:
+      azimuth: 60
+      polar: 65
+      distance: 95
+      pan_x: 0.00
+      pan_y: 0.00
+    visible:
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+      - "Cable Management"
+      - "Doorbuffer"
+      - "Docks"
+      - "Tools"
+      - "Tophat"
+    focus:
+      - "Tophat"
+
+  - description: "And that's the parts. Now check out the other guides, they explain how to build and install everything (and the many different options and variations)"
+    camera:
+      azimuth: 60
+      polar: 65
+      distance: 95
+      pan_x: 0.00
+      pan_y: 0.00
+    visible:
+      - "VoronV2"
+      - "Stealthchanger Shuttle"
+      - "Cable Management"
+      - "Doorbuffer"
+      - "Docks"
+      - "Tools"
+      - "Tophat"
+    focus:
+      - "Cable Management"
+      - "Docks"
+      - "Doorbuffer"
+      - "Stealthchanger Shuttle"
+      - "Tools"
+      - "Tophat"
+
+

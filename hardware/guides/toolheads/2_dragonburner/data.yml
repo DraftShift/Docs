@@ -1,0 +1,781 @@
+title: DragonBurner
+author: "DraftShift Design"
+primary_parts:
+  - "Sherpa Mini Mount"
+  - "DragonBurner Spacer"
+  - "2510 Spacer"
+  - "Bambu Mount"
+  - "EBB Mount"
+  - "Sherpa Mini Printed"
+  - "NeoPixel Mount"
+  - "Neopixel Carrier"
+
+accent_parts:
+  - "Cowl"
+  - "DragonBurner Backplate"
+  - "Solder Jig"
+
+summary: >
+  This guide will walk you through the assembly of an DragonBurner for StealthChanger.
+
+  !!! tip "It's your choice"
+      This guide uses the Sherpa Mini extruder, Bambulab Hotend and EBB36 toolhead PCB. You can sway from this configuration if you like, but the hardware BOM may change.
+
+printed_bom:
+  Complete DragonBurner:
+    qty: 1
+    urls:
+      Link: "https://download-directory.github.io/?url=https://github.com/N3MI-DG/sc-guides/tree/main/DragonBurner/STL"
+
+hardware_bom:
+  M3x8 BHCS Screws:
+    qty: 2
+  M3x12 BHCS Screws:
+    qty: 2
+  M3x16 BHCS Screws:
+    qty: 2
+  M3x20 BHCS Screws:
+    qty: 2
+  M3x10 SHCS Screws:
+    qty: 1
+  M3x20 SHCS Screws:
+    qty: 4
+  M3x40 SHCS Screws:
+    qty: 2
+  M3 Heat Insert:
+    qty: 8
+  M3 Nut:
+    qty: 1
+  5x2mm N52 Magnets:
+    qty: 2
+  6x3mm N52 Magnets:
+    qty: 2
+  Bambulab Hotend:
+    qty: 1
+  Sherpa Mini Extruder:
+    qty: 1
+  EBB36 Toolhead Board:
+    qty: 1
+  25x10mm or 30x10mm Radial Fan:
+    qty: 1
+  40x10mm Centrifugal/Blower Fan:
+    qty: 2
+  4x2mm PTFE ~29.5mm Long:
+    qty: 1
+
+resources:
+  DragonBurner Github: https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner
+  Sherpa Mini Github: https://github.com/Annex-Engineering/Sherpa_Mini-Extruder
+  N3MI's CAD and STL collection: https://github.com/N3MI-DG/sc-guides/tree/main/DragonBurner
+
+steps:
+  - description: "This guide will walk you through the assembly of a DragonBurner toolhead for StealthChanger."
+    camera:
+      azimuth: 111
+      polar: 81
+      distance: 82
+      pan_x: -2.66
+      pan_y: -1.33
+    visible: 
+      - "2510 Axial Fan"
+      - "2510 Spacer"
+      - "4010 Blower Fans"
+      - "5x2mm N52 Magnets"
+      - "Backplate Hardware"
+      - "Bambu Mount"
+      - "Bambulab Hotend"
+      - "Cowl"
+      - "Diffuser"
+      - "DragonBurner Backplate"
+      - "DragonBurner Spacer"
+      - "EBB Mount"
+      - "EBB36 PCB"
+      - "EBB36 Standoffs"
+      - "Heat Inserts (Bambu Mount)"
+      - "Heat Inserts (Cowl)"
+      - "M3 Nut"
+      - "M3x10 SHCS (Spacer)"
+      - "M3x12 BHCS Screws (EBB36)"
+      - "M3x16 BHCS Screws (Sherpa)"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "NeoPixel Mount"
+      - "Neopixel Carrier"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Mount"
+      - "Sherpa Mini Printed"
+      - "Supports (Bambu Mount)"
+      - "WS2812B LED (Logo)"
+      - "WS2812B LEDs (Nozzle)"
+
+  - description: 'Solder the 3 LEDs using the [Solder Jig](https://github.com/N3MI-DG/sc-guides/blob/main/DragonBurner/STL/Solder%20Jig.stl){target="_blank"}'
+    camera:
+      azimuth: 94
+      polar: 18
+      distance: 40
+      pan_x: 0.80
+      pan_y: -1.24
+    visible: 
+      - "Solder Jig"
+      - "WS2812B LEDs (Jig)"
+    focus:
+      - "WS2812B LEDs (Jig)"
+
+  - description: "Insert the LEDs into the NeoPixel Mount. Secure with glue if required."
+    camera:
+      azimuth: 95
+      polar: 84
+      distance: 23
+      pan_x: 0.78
+      pan_y: -0.50
+    visible: 
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+    focus:
+      - "WS2812B LEDs (Nozzle)"
+
+  - description: "Install the 4 heat inserts in to the Cowl."
+    camera:
+      azimuth: 276
+      polar: 87
+      distance: 35
+      pan_x: -0.78
+      pan_y: -0.49
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+    focus:
+      - "Heat Inserts (Cowl)"
+
+  - description: "Remove the built-in supports from the Bambu Mount."
+    camera:
+      azimuth: 54
+      polar: 141
+      distance: 25
+      pan_x: -0.36
+      pan_y: 1.12
+    visible: 
+      - "Bambu Mount"
+      - "Supports (Bambu Mount)"
+    focus:
+      - "Supports (Bambu Mount)"
+
+  - description: "Install the 4 heat inserts in to the Bambu Mount."
+    camera:
+      azimuth: 54
+      polar: 141
+      distance: 25
+      pan_x: -0.36
+      pan_y: 1.12
+    visible: 
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+    focus:
+      - "Heat Inserts (Bambu Mount)"
+
+  - description: "Install the Hotend in to the Bambu Mount using 2 M3x20 SHCS screws."
+    camera:
+      azimuth: 149
+      polar: 84
+      distance: 36
+      pan_x: -0.10
+      pan_y: 1.19
+    visible: 
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+    focus:
+      - "M3x20 SHCS Screws (Hotend)"
+
+  - description: "If using a 2510 axial fan, install the fan in to the 2510 Spacer."
+    camera:
+      azimuth: 98
+      polar: 125
+      distance: 31
+      pan_x: -0.16
+      pan_y: 0.97
+    visible: 
+        - "2510 Spacer"
+        - "2510 Axial Fan"
+    focus:
+      - "2510 Axial Fan"
+
+  - description: "Install The axial fan into the Cowl and route the wire thru the opening on either side. It needs to be inserted from the bottom"
+    camera:
+      azimuth: 275
+      polar: 110
+      distance: 31
+      pan_x: -0.78
+      pan_y: -0.48
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+    focus:
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+
+  - description: "Install The NeoPixel Mount in to the Cowl. Secure with glue if required."
+    camera:
+      azimuth: 269
+      polar: 129
+      distance: 30
+      pan_x: -0.64
+      pan_y: -2.64
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+    focus:
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+
+  - description: "Place the Diffuser in the Cowl."
+    camera:
+      azimuth: 270
+      polar: 82
+      distance: 30
+      pan_x: -0.44
+      pan_y: 0.40
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "Diffuser"
+    focus:
+      - "Diffuser"
+
+  - description: "Slide the remaining Neopixel in to the Neopixel Carrier and slot it in to position."
+    camera:
+      azimuth: 269
+      polar: 129
+      distance: 30
+      pan_x: -0.64
+      pan_y: -2.64
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+    focus:
+      - "Neopixel Carrier"
+      - "WS2812B LED (Logo)"
+
+  - description: "Slide the Bambu Mount assembly in to place."
+    camera:
+      azimuth: 287
+      polar: 66
+      distance: 50
+      pan_x: -0.09
+      pan_y: -1.17
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+    focus:
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+
+  - description: "Install the 2 4010 blower fans."
+    camera:
+      azimuth: 287
+      polar: 66
+      distance: 50
+      pan_x: -0.09
+      pan_y: -1.17
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+    focus:
+      - "4010 Blower Fans"
+
+  - description: "Attach the Sherpa Mini Mount using 2 M3x20 SHCS screws, ensuring the cable is in the provided channel."
+    camera:
+      azimuth: 287
+      polar: 66
+      distance: 50
+      pan_x: -0.09
+      pan_y: -1.17
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+    focus:
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+
+  - description: "Attach the DragonBurner spacer using a M3x10 SHCS screw and M3 nut. the LED cables should exit toiwards the 4010 blower fan."
+    camera:
+      azimuth: 287
+      polar: 66
+      distance: 50
+      pan_x: -0.09
+      pan_y: -1.17
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+    focus:
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+
+  - description: "Attach the DragonBurner Backplate using 2 M3x40 SHCS screws. These screws should be ferrous."
+    camera:
+      azimuth: 116
+      polar: 64
+      distance: 50
+      pan_x: -1.91
+      pan_y: -1.52
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+    focus:
+      - "M3x40 SHCS Screws (Cowl)"
+
+
+  - description: "Secure the ducts by using 2 M3x8 BHCS screws."
+    camera:
+      azimuth: 284
+      polar: 109
+      distance: 50
+      pan_x: 0.00
+      pan_y: 0.98
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+    focus:
+      - "M3x8 BHCS Screws (Backplate)"
+
+  - description: "Insert a piece of 29.5mm long piece of 4x2mm PTFE. Making sure to taper the top edge."
+    camera:
+      azimuth: 117
+      polar: 39
+      distance: 39
+      pan_x: 0.07
+      pan_y: 0.82
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+    focus:
+      - "PTFE Tube"
+
+  - description: "Attach the Sherpa Mini extruder using 2 M3x20 BHCS screws."
+    camera:
+      azimuth: 117
+      polar: 39
+      distance: 39
+      pan_x: 0.07
+      pan_y: 0.82
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+    focus:
+      - "M3x20 BHCS Screws (Sherpa)"
+
+  - description: "Ensure your screws for the extruder motor are long enough for standoffs. They should be M3x16 BHCS."
+    camera:
+      azimuth: 180
+      polar: 5
+      distance: 56
+      pan_x: -0.04
+      pan_y: 2.79
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+    focus:
+      - "M3x16 BHCS Screws (Sherpa)"
+
+  - description: "Attach the standoffs included with the EBB36 to the 2 motor mount screws."
+    camera:
+      azimuth: 225
+      polar: 26
+      distance: 56
+      pan_x: 1.09
+      pan_y: 2.59
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+      - "EBB36 Standoffs"
+    focus:
+      - "EBB36 Standoffs"
+
+  - description: "Attach the EBB36 and EBB Mount using 2 M3x12 BHCS screws."
+    camera:
+      azimuth: 289
+      polar: 78
+      distance: 62
+      pan_x: -2.06
+      pan_y: 8.36
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+      - "EBB36 Standoffs"
+      - "EBB36 PCB"
+      - "EBB Mount"
+      - "M3x12 BHCS Screws (EBB36)"
+    focus:
+      - "M3x12 BHCS Screws (EBB36)"
+
+  - description: "Cut crimp and connect all of your wires. Try to keep the wiring tidy so that it doesnt get caught on the other tools."
+    camera:
+      azimuth: 281
+      polar: 91
+      distance: 46
+      pan_x: -2.92
+      pan_y: 7.77
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+      - "EBB36 Standoffs"
+      - "EBB36 PCB"
+      - "EBB Mount"
+      - "M3x12 BHCS Screws (EBB36)"
+
+  - description: "Attach 2 5x2mm N52 magnets to the front M3x40 SHCS screw heads."
+    camera:
+      azimuth: 89
+      polar: 83
+      distance: 50
+      pan_x: 1.51
+      pan_y: -5.13
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+      - "EBB36 Standoffs"
+      - "EBB36 PCB"
+      - "EBB Mount"
+      - "M3x12 BHCS Screws (EBB36)"
+      - "5x2mm N52 Magnets"
+    focus:
+      - "5x2mm N52 Magnets"
+
+  - description: "Assembly complete."
+    camera:
+      azimuth: 104
+      polar: 80
+      distance: 76
+      pan_x: -3.22
+      pan_y: -3.06
+    visible: 
+      - "Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Spacer"
+      - "2510 Axial Fan"
+      - "NeoPixel Mount"
+      - "WS2812B LEDs (Nozzle)"
+      - "WS2812B LED (Logo)"
+      - "Neopixel Carrier"
+      - "Diffuser"
+      - "Bambu Mount"
+      - "Heat Inserts (Bambu Mount)"
+      - "M3x20 SHCS Screws (Hotend)"
+      - "Bambulab Hotend"
+      - "4010 Blower Fans"
+      - "Sherpa Mini Mount"
+      - "M3x20 SHCS Screws (Sherpa Mount)"
+      - "DragonBurner Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Nut"
+      - "DragonBurner Backplate"
+      - "Backplate Hardware"
+      - "M3x40 SHCS Screws (Cowl)"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "Sherpa Mini Hardware"
+      - "Sherpa Mini Printed"
+      - "M3x20 BHCS Screws (Sherpa)"
+      - "M3x16 BHCS Screws (Sherpa)"
+      - "EBB36 Standoffs"
+      - "EBB36 PCB"
+      - "EBB Mount"
+      - "M3x12 BHCS Screws (EBB36)"
+      - "5x2mm N52 Magnets"
+

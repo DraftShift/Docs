@@ -1,0 +1,97 @@
+title: Blocker - Cup
+author: "DraftShift Design"
+summary: >
+    This guide will prepare the Cup Blocker for the [Modular Dock](../../../modular_dock.md).
+
+printed_bom:
+  Blocker - Cup Body:
+    qty: 1
+    urls:
+      Standard: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Cup_Body.stl?raw=true
+      Stubby: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Cup_Stubby_Body.stl?raw=true
+  Cup:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Blockers/Cup.stl?raw=true
+
+hardware_bom:
+    M3 Heat Inserts:
+      qty: 6
+    RTV Silicone:
+      qty: 1
+    M3x16 SHCS:
+      qty: 1
+    Pen Spring:
+      qty: 1
+
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
+primary_parts:
+  - "Block"
+  - "Silicone Cup"
+
+steps:
+  - description: "Install a heat insert in to the cup."
+    camera:
+      azimuth: 267
+      polar: 158
+      distance: 36
+      pan_x: 0.47
+      pan_y: 0.99
+    visible: 
+    - "Silicone Cup"
+    - "Heat Insert Cup"
+    focus:
+    - "Heat Insert Cup"
+
+  - description: "Install a screw in to the heat insert and then place a small amount of RTV silicone into the cup and smooth it out. Leave to dry for a minimum of 24 hours."
+    camera:
+      azimuth: 293
+      polar: 73
+      distance: 60
+      pan_x: 0.34
+      pan_y: -4.21
+    visible: 
+    - "Silicone Cup"
+    - "Heat Insert Cup"
+    - "Silicone"
+    - "M3x16 SHCS"
+    focus:
+    - "Silicone"
+    - "M3x16 SHCS"
+
+  - description: "Install the heat inserts in to the Spring Steel Body."
+    camera:
+      azimuth: 39
+      polar: 64
+      distance: 71
+      pan_x: 1.70
+      pan_y: -1.65
+    visible: 
+    - "Block"
+    - "Heat Inserts Body"
+    focus:
+    - "Heat Inserts Body"
+
+  - description: "Install the cup using a M3x16 SHCS screw and section of a pen spring. The cup should move up and down freely. Do not over tighten the screw."
+    camera:
+      azimuth: 329
+      polar: 68
+      distance: 71
+      pan_x: -1.31
+      pan_y: -1.15
+    visible: []
+
+    focus:
+    - "Spring"
+    - "M3x16 SHCS"
+
+  - description: "Put the Blocker aside for now. It will be used in the Final assembly."
+    camera:
+      azimuth: 330
+      polar: 55
+      distance: 83
+      pan_x: -1.31
+      pan_y: -1.11
+    visible: []

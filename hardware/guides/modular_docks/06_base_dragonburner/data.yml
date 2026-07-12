@@ -1,0 +1,75 @@
+title: Base - DragonBurner
+author: "DraftShift Design"
+summary: >
+    This guide will prepare the DragonBurner Base and Back for the [Modular Dock](../../../modular_dock.md).
+
+printed_bom:
+  DragonBurner Base:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Dragonburner/Base.stl?raw=true
+  DragonBurner Back:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/ModularDock/blob/main/STLs/Dragonburner/Back.stl?raw=true
+
+hardware_bom:
+    M3 Heat Inserts:
+      qty: 4-7
+
+resources:
+  DraftShift ModularDock Github: https://github.com/DraftShift/ModularDock
+
+primary_parts:
+  - "Back"
+  - "Base"
+
+steps:
+  - description: "Optional: If you wish to use a Wiper, install a heat insert in to the Back plate."
+    camera:
+      azimuth: 270
+      polar: 154
+      distance: 71
+      pan_x: -0.16
+      pan_y: 0.62
+    visible: 
+    - "Back"
+    - "Back Heat Insert"
+    focus:
+    - "Back Heat Insert"
+
+  - description: "Optional: If you are not using a [crossbar](../../door_buffer.md#crossbar), install 2 heat inserts in to the Base."
+    camera:
+      azimuth: 270
+      polar: 154
+      distance: 71
+      pan_x: -0.50
+      pan_y: 1.43
+    visible: 
+    - "Base"
+    - "Link Heat Inserts"
+    focus:
+    - "Link Heat Inserts"
+
+  - description: "Install 2 heat inserts in to the front of the Base and 2 in the back."
+    camera:
+      azimuth: 271
+      polar: 108
+      distance: 71
+      pan_x: -0.51
+      pan_y: 1.00
+    visible: 
+    - "Base"
+    - "Link Heat Inserts"
+    - "Base Heat Inserts"
+    focus:
+    - "Base Heat Inserts"
+
+  - description: "Put the Base and Back plate aside for now. They will be used in the Final assembly."
+    camera:
+      azimuth: 59
+      polar: 54
+      distance: 87
+      pan_x: 1.23
+      pan_y: -3.50
+    visible: []

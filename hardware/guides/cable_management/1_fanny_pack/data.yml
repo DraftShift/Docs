@@ -1,0 +1,348 @@
+title: Fanny Pack
+author: "DraftShift Design"
+summary: >
+    This guide will walk you through the assembly of the Fanny Pack. 
+    
+    !!! note "Distribution Board" 
+        The guide shows LDO's Nitehawk Hexa board, all supported boards mount in a similar way.
+
+printed_bom:
+  Base:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/base.stl?raw=true
+
+  Cover:
+    qty: 1
+    urls:
+      Voron: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/%5Ba%5D_sc_voron_cover.stl?raw=true
+      Micron: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/%5Ba%5D_sc_micron_cover.stl?raw=true
+
+  Main Bracket:
+    qty: 1
+    urls:
+      Birds Nest: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_birds_nest_bracket_v1.0.stl?raw=true
+      CEB: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_ceb_bracket_v1.0.stl?raw=true
+      Dual Mellow Expand: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_dual_mellow_expand.stl?raw=true
+      FYSETC CAN Bus Distribution Board: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_fysetc_canbus_distribution_board_bracket_v1.0.stl?raw=true
+      Hexa v1.3: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_hexa_bracket_v1.3.stl?raw=true
+      MOAR CAN v2: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_moar_can_bracket_v2.stl?raw=true
+      WAGO 6x5: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_wago_6x5.stl?raw=true
+      WAGO 8x5: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/main/%5Ba%5D_wago_8x5.stl?raw=true
+
+  Sub Bracket:
+    qty: 1
+    urls:
+      Wago 2x5: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/sub/%5Ba%5D_sub_wago_2x5.stl?raw=true
+
+  Mini DC-DC Buck Converter (Optional):
+    qty: 2
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/FannyPack/STLs/brackets/extra/%5Ba%5D_mini_dc_dc_buck_converter.stl?raw=true
+
+hardware_bom:
+  M3x6 BHCS Screws:
+    qty: 6-10
+  
+  M3 Heat Inserts:
+    qty: 6-10
+  
+  6x3mm Magnets:
+    qty: 8
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+
+primary_parts:
+  - "Base"
+
+accent_parts:
+  - "Cover"
+  - "Left Buck Holder"
+  - "Right Buck Holder"
+  - "Wago 2x5"
+  - "Hexa Bracket"
+
+steps:
+  - description: "Install 4 heat inserts into the rear of the base."
+    camera:
+      azimuth: 89
+      polar: 81
+      distance: 67
+      pan_x: 1.44
+      pan_y: 1.03
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+    focus: 
+      - "Base Heat Inserts"
+
+  - description: "Optional: Install 2 heat inserts into the lower rear of the base for the WAGO bracket."
+    camera:
+      azimuth: 89
+      polar: 81
+      distance: 67
+      pan_x: 1.44
+      pan_y: 1.03
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+    focus: 
+      - "Wago Heat Inserts"
+
+  - description: "Install 2 heat insert inside the base, these are used to mount the [Wire Duct](../../../cable_management/#wire-duct)."
+    camera:
+      azimuth: 300
+      polar: 43
+      distance: 22
+      pan_x: 1.21
+      pan_y: -10.03
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Wago Heat Inserts"
+    focus: 
+      - "Base Heat Inserts Inner"
+
+  - description: "Optional: Install 2 heat inserts for addon modules."
+    camera:
+      azimuth: 272
+      polar: 90
+      distance: 47
+      pan_x: 0.18
+      pan_y: -5.74
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+    focus: 
+      - "Base Optional Heat Inserts"
+
+  - description: "Install 4 6x3mm magnets into the base."
+    camera:
+      azimuth: 270
+      polar: 103
+      distance: 47
+      pan_x: 0.31
+      pan_y: -3.71
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+    focus: 
+      - "Base Magnets"
+
+  - description: "Attach the distribution board bracket to the Base using 2 M3x6 BHCS screws."
+    camera:
+      azimuth: 270
+      polar: 103
+      distance: 47
+      pan_x: 0.31
+      pan_y: -3.71
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+    focus: 
+      - "Hexa Bracket Screws"
+
+  - description: "Install the distribution board using M3x6 BHCS screws."
+    camera:
+      azimuth: 270
+      polar: 103
+      distance: 47
+      pan_x: 0.31
+      pan_y: -3.71
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+      - "Nitehawk Hexa USB Adapter"
+      - "Hexa PCB Screws"
+    focus: 
+      - "Hexa PCB Screws"
+
+  - description: "Optional: Addon modules can be installed with M3x6 BHCS screws."
+    camera:
+      azimuth: 313
+      polar: 90
+      distance: 34
+      pan_x: 0.43
+      pan_y: -8.08
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+      - "Nitehawk Hexa USB Adapter"
+      - "Hexa PCB Screws"
+      - "Left Buck Holder"
+      - "Right Buck Holder"
+      - "Left M3x6 BHCS"
+      - "Right M3x6 BHCS"
+    focus: 
+      - "Left M3x6 BHCS"
+      - "Right M3x6 BHCS"
+
+  - description: "Optional: Clip the Buck converter PCB in to the modules."
+    camera:
+      azimuth: 283
+      polar: 91
+      distance: 49
+      pan_x: 0.41
+      pan_y: -8.08
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+      - "Nitehawk Hexa USB Adapter"
+      - "Hexa PCB Screws"
+      - "Left Buck Holder"
+      - "Right Buck Holder"
+      - "Left M3x6 BHCS"
+      - "Right M3x6 BHCS"
+      - "Left 05KJ Mini Regulator"
+      - "Right 05KJ Mini Regulator"
+    focus: 
+      - "Left 05KJ Mini Regulator"
+      - "Right 05KJ Mini Regulator"
+
+  - description: "Optional: Install the 221-415 WAGO bracket on to the base using M3x6 BHCS screws."
+    camera:
+      azimuth: 301
+      polar: 110
+      distance: 42
+      pan_x: 0.23
+      pan_y: -10.28
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+      - "Nitehawk Hexa USB Adapter"
+      - "Hexa PCB Screws"
+      - "Left Buck Holder"
+      - "Right Buck Holder"
+      - "Left M3x6 BHCS"
+      - "Right M3x6 BHCS"
+      - "Left 05KJ Mini Regulator"
+      - "Right 05KJ Mini Regulator"
+      - "Wago 2x5"
+      - "Wago Hardware"
+    focus: 
+      - "Wago Hardware"
+
+  - description: "Optional: Install 221-415 WAGO blocks in to the WAGO bracket."
+    camera:
+      azimuth: 301
+      polar: 110
+      distance: 42
+      pan_x: 0.23
+      pan_y: -10.28
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+      - "Nitehawk Hexa USB Adapter"
+      - "Hexa PCB Screws"
+      - "Left Buck Holder"
+      - "Right Buck Holder"
+      - "Left M3x6 BHCS"
+      - "Right M3x6 BHCS"
+      - "Left 05KJ Mini Regulator"
+      - "Right 05KJ Mini Regulator"
+      - "Wago 2x5"
+      - "Wago Hardware"
+      - "WAGO Left"
+      - "WAGO Right"
+    focus: 
+      - "WAGO Left"
+      - "WAGO Right"
+
+  - description: "Place 4 magnets over the base's magnets."
+    camera:
+      azimuth: 286
+      polar: 119
+      distance: 52
+      pan_x: 2.81
+      pan_y: -4.01
+    visible: 
+      - "Base"
+      - "Base Heat Inserts"
+      - "Wago Heat Inserts"
+      - "Base Heat Inserts Inner"
+      - "Base Optional Heat Inserts"
+      - "Base Magnets"
+      - "Hexa Bracket"
+      - "Hexa Bracket Screws"
+      - "Nitehawk Hexa USB Adapter"
+      - "Hexa PCB Screws"
+      - "Left Buck Holder"
+      - "Right Buck Holder"
+      - "Left M3x6 BHCS"
+      - "Right M3x6 BHCS"
+      - "Left 05KJ Mini Regulator"
+      - "Right 05KJ Mini Regulator"
+      - "Wago 2x5"
+      - "Wago Hardware"
+      - "WAGO Left"
+      - "WAGO Right"
+      - "Cover Magnets"
+    focus: 
+      - "Cover Magnets"
+
+  - description: "Press the cover over the base at the magnet positions. If the magnets dont go in all the way, finish them with some parallel pliers."
+    camera:
+    camera:
+      azimuth: 270
+      polar: 161
+      distance: 67
+      pan_x: 0.61
+      pan_y: 0.58
+    visible: []
+    focus: 
+      - "Cover"
+
+  - description: "The Fanny Pack assembly is complete and ready to install on the printer."
+    camera:
+      azimuth: 281
+      polar: 69
+      distance: 75
+      pan_x: 0.70
+      pan_y: 0.96
+    visible: []

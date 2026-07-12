@@ -1,0 +1,324 @@
+title: Door Buffer (Voron Standard Door)
+author: "DraftShift Design"
+summary: >
+    A door buffer for Voron 2.4 Standard Doors.
+
+    !!! info "Short/Standard?"
+        There are different printed files depending on whether you are using Short version of Modular Docks or Standard. If you are unsure, consult the [Tools Section](../../../toolheads.md) for compatibility.
+
+printed_bom:
+  Voron 250 Short:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Bottom%20left%20corner.stl?raw=true"
+      Bottom Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Bottom%20right%20corner.stl?raw=true"
+      Top Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Top%20left%20corner.stl?raw=true"
+      Top Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Top%20right%20corner.stl?raw=true"
+      Top Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Top.stl?raw=true"
+      Bottom Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Bottom.stl?raw=true"
+      Left Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Left.stl?raw=true"
+      Right Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/250/Right.stl?raw=true"
+  Voron 250 Standard:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Bottom%20left%20corner.stl?raw=true"
+      Bottom Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Bottom%20right%20corner.stl?raw=true"
+      Top Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Top%20left%20corner.stl?raw=true"
+      Top Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Top%20right%20corner.stl?raw=true"
+      Top Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Top.stl?raw=true"
+      Bottom Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Bottom.stl?raw=true"
+      Left Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Left.stl?raw=true"
+      Right Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/250/Right.stl?raw=true"
+  Voron 300 Short:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Bottom%20left%20corner.stl?raw=true"
+      Bottom Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Bottom%20right%20corner.stl?raw=true"
+      Top Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Top%20left%20corner.stl?raw=true"
+      Top Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Top%20right%20corner.stl?raw=true"
+      Top Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Top.stl?raw=true"
+      Bottom Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Bottom.stl?raw=true"
+      Left Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Left.stl?raw=true"
+      Right Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/300/Right.stl?raw=true"
+  Voron 300 Standard:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Bottom%20left%20corner.stl?raw=true"
+      Bottom Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Bottom%20right%20corner.stl?raw=true"
+      Top Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Top%20left%20corner.stl?raw=true"
+      Top Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Top%20right%20corner.stl?raw=true"
+      Top Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Top.stl?raw=true"
+      Bottom Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Bottom.stl?raw=true"
+      Left Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Left.stl?raw=true"
+      Right Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/300/Right.stl?raw=true"
+  Voron 350 Short:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Bottom%20left%20corner.stl?raw=true"
+      Bottom Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Bottom%20right%20corner.stl?raw=true"
+      Top Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Top%20left%20corner.stl?raw=true"
+      Top Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Top%20right%20corner.stl?raw=true"
+      Top Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Top.stl?raw=true"
+      Bottom Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Bottom.stl?raw=true"
+      Left Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Left.stl?raw=true"
+      Right Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Short%20docks/350/Right.stl?raw=true"
+  Voron 350 Standard:
+    qty: 1 of each
+    urls: 
+      Bottom Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Bottom%20left%20corner.stl?raw=true"
+      Bottom Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Bottom%20right%20corner.stl?raw=true"
+      Top Left: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Top%20left%20corner.stl?raw=true"
+      Top Right: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Top%20right%20corner.stl?raw=true"
+      Top Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Top.stl?raw=true"
+      Bottom Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Bottom.stl?raw=true"
+      Left Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Left.stl?raw=true"
+      Right Mid: "https://github.com/DraftShift/DoorBuffer/blob/main/STL/Stock%20Voron/Standard%20docks/350/Right.stl?raw=true"
+
+hardware_bom:
+  M3 T-Nut:
+    qty: 22
+  M3x8 SHCS Screws:
+    qty: 20
+  M3x20 SHCS Screws:
+    qty: 2
+  M3 Heat Inserts:
+    qty: 8
+  Existing Voron Doors With Latches:
+    qty: 1
+
+resources:
+  DraftShift DoorBuffer Github: https://github.com/DraftShift/DoorBuffer
+
+primary_parts:
+- "Top Mid"
+- "Bottom Mid"
+- "Left Mid"
+- "Right Mid"
+- "Primary Parts"
+- "Door Latches"
+- "Door Handles"
+- "Door Hinges"
+
+accent_parts:
+- "Bottom Left"
+- "Bottom right"
+- "Top Left"
+- "Top Right"
+- "Accent Parts"
+
+frame_parts:
+  - "Frame"
+  - "Dock Bar"
+
+transparent_parts:
+  "Door Panel Left": 0.3
+  "Door Panel Right": 0.3
+
+steps:
+  - description: "Insert a heat insert into each of the primary pieces."
+    camera:
+      azimuth: 89
+      polar: 95
+      distance: 21
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "Primary Parts"
+      - "Primary Heat Inserts"
+    focus: 
+      - "Primary Heat Inserts"
+
+  - description: "Insert a heat insert into each of the accent pieces."
+    camera:
+      azimuth: 90
+      polar: 119
+      distance: 25
+      pan_x: 2.95
+      pan_y: -4.27
+    visible: 
+      - "Accent Parts"
+      - "Accent Heat Inserts"
+    focus: 
+      - "Accent Heat Inserts"
+
+  - description: "Insert the M3x8 SHCS screws and nuts into the designated holes in the printed parts. Attach the nuts on the opposite side to secure the screws in place."
+    camera:
+      azimuth: 271
+      polar: 130
+      distance: 73
+      pan_x: -0.08
+      pan_y: -1.30
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+    focus: 
+      - "M3x8 SHCS & Nuts"
+
+  - description: "Attach all 8 pieces to the door frame using the inserted M3x8 SHCS screws and nuts. Ensure all parts are securely fastened and aligned properly."
+    camera:
+      azimuth: 119
+      polar: 57
+      distance: 85
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+    focus: 
+      - "Frame"
+
+  - description: "Insert the M3 T-nuts into the designated slots on both sides in the middle side pieces. Ensure the threads align in the middle for the crossbar."
+    camera:
+      azimuth: 93
+      polar: 90
+      distance: 26
+      pan_x: 20.95
+      pan_y: 3.76
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "M3 T Nuts"
+    focus: 
+      - "M3 T Nuts"
+
+  - description: "Insert the crossbar with 3mm hole 5mm from the edge of the extrusion, make sure the T-nuts align with the holes in the crossbar."
+    camera:
+      azimuth: 88
+      polar: 85
+      distance: 85
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+    focus: 
+      - "Dock Bar"
+
+  - description: "Secure the crossbar to the frame using the M3x20 SHCS screws and M3 shim washers. Tighten the screws on both sides to ensure a firm attachment."
+    camera:
+      azimuth: 98
+      polar: 86
+      distance: 29
+      pan_x: 22.84
+      pan_y: 3.21
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+      - "M3 Shim Washer"
+      - "M3x20 SHCS"
+    focus: 
+      - "M3x20 SHCS"
+      - "M3 Shim Washer"
+
+  - description: "Attach the top and bottom Voron door latches with a M3x8 SHCS screw."
+    camera:
+      azimuth: 106
+      polar: 82
+      distance: 33
+      pan_x: 1.55
+      pan_y: 21.35
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+      - "M3 Shim Washer"
+      - "M3x20 SHCS"
+      - "Door Latches"
+      - "Door Latch Screws"
+      - "Door Latch Magnets"
+    focus:
+      - "Door Latch Screws"
+
+  - description: "Attach the stock Voron doors using M3x8 SHCS screws. If you are using old doors they may not line up perfectly and may require you to take them off and apply fresh VHB tape."
+    camera:
+      azimuth: 117
+      polar: 114
+      distance: 73
+      pan_x: 1.94
+      pan_y: 0.10
+    visible: 
+      - "Bottom Left"
+      - "Bottom right"
+      - "Top Left"
+      - "Top Right"
+      - "Top Mid"
+      - "Bottom Mid"
+      - "Left Mid"
+      - "Right Mid"
+      - "Heat inserts"
+      - "M3x8 SHCS & Nuts"
+      - "Frame"
+      - "Dock Bar"
+      - "M3 T Nuts"
+      - "M3 Shim Washer"
+      - "M3x20 SHCS"
+      - "Door Latches"
+      - "Door Latch Screws"
+      - "Door Latch Magnets"
+      - "Door Handles"
+      - "Door Hinges"
+      - "Door Magnets"
+      - "Door Panel Left"
+      - "Door Panel Right"
+      - "Door Screws"
+      - "Door VHB"
+    focus:
+      - "Door Screws"
