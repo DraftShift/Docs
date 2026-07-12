@@ -15,6 +15,10 @@ printed_bom:
     qty: 1
     urls:
       Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/%5Ba%5D_wire_duct_cover.stl?raw=true
+  Wire Duct EMS:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/WireDuct/wire_duct_ft-ems.stl?raw=true
   Wire Duct Connector:
     qty: 1 (Scale to fit)
     urls:
