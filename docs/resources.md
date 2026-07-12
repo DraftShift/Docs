@@ -32,7 +32,7 @@
 ## Video Resources
 <div class="grid cards" style="text-align: center;" markdown>
 - ### Steve Builds StealthChanger Build Series
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=FyZNV7dDQqHEj4pQ&amp;list=PL0fUJbigELQMP94-8d4qY6wpwOMyw2NDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hluM8OIXCKtHNZP-&amp;list=PLpYIsHoix7djfhrXXeKrl2C3VOI4iOlbe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 - ### Teching Tech SV08 StealthChanger Build Series
     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=tCD1ykJiy8aeARBA&amp;list=PLGqRUdq5ULsNIN_40Bv1iTbElj6O7BRrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
