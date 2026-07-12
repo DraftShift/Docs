@@ -245,7 +245,7 @@ steps:
       - "Right M25x4 BHCS"
       - "Belt Clamp Right"
 
-  - description: "Secure the shuttle to the MGN rail using the 4 M3x5 SHCS screws."
+  - description: "Secure the shuttle to the MGN rail using the 4 M3x5 screws."
     camera:
       azimuth: 106
       polar: 83
