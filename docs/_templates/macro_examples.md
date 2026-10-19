@@ -31,10 +31,10 @@
           ; Switch to the initial printing tool and preheat it.
           {% if TOOL > 0 %}
             M104 T0 S0 ; Shutdown T0.
-              T{params.TOOL} ; Switch to the initial printing tool
+            T{TOOL} ; Switch to the initial printing tool
           {% endif %}
 
-          M117 Waiting on T{params.TOOL} S{TOOL_TEMP}C
+          M117 Waiting on T{TOOL} S{TOOL_TEMP}C
           M109 S{TOOL_TEMP} ; Wait for the tool to reach the target temperature
 
           {% if printer.tool_probe_endstop is defined %}
