@@ -43,7 +43,7 @@ manufacturers:
       image: nitehawk_hexa.jpg
       description: "USB Hub Distribution Board"
       external_link: false
-      url: https://ldo.com
+      url: https://docs.ldomotors.com/en/Toolboard/Nitehawk-Hexa
       product_url: ../resellers.md
       features:
         protocol: USB
