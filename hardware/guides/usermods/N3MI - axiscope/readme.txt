@@ -1,0 +1,1 @@
+This is an example of how you can create usermod guides. See CONTRIBUTING_GUIDES.md for more information.

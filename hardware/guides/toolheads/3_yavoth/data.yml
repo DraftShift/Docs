@@ -1,0 +1,571 @@
+title: Yavoth
+author: "DraftShift Design"
+primary_parts:
+  - Spacer
+
+accent_parts:
+  - EBB Mount
+  - Yavoth Backplate
+  - Yavoth Cowl
+  - LED Holder
+
+summary: >
+  This guide will walk you through the assembly of a Yavoth (High Flow) for StealthChanger.
+
+  !!! tip "It's your choice"
+      This guide uses the HGX CNC extruder, CHCB-V Hotend and EBB36 toolhead PCB. You can sway from this configuration if you like, but the hardware BOM may change.
+
+printed_bom:
+  Complete Yavoth:
+    qty: 1
+    urls:
+      Link: "https://download-directory.github.io/?url=https://github.com/N3MI-DG/sc-guides/tree/main/Yavoth/STL"
+
+hardware_bom:
+
+  M3x6 BHCS Screws:
+    qty: 2
+  M3x8 BHCS Screws:
+    qty: 4
+  M3x10 BHCS Screws:
+    qty: 2
+  M3x16 BHCS Screws:
+    qty: 2
+  M2.5x8 SHCS Screws:
+    qty: 4
+  M3x10 SHCS Screws:
+    qty: 1
+  M3x40 SHCS Screws:
+    qty: 2
+  M3 Heat Insert:
+    qty: 4
+  M3 Square Nuts:
+    qty: 3
+  5x2mm N52 Magnets:
+    qty: 2
+  6x3mm N52 Magnets:
+    qty: 2
+  CHCB-V Hotend:
+    qty: 1
+  HGX CNC Extruder:
+    qty: 1
+  EBB36 Toolhead Board:
+    qty: 1
+  25x10mm Radial Fan:
+    qty: 1
+  40x10mm Centrifugal/Blower Fan:
+    qty: 2
+  4x2mm PTFE ~41mm Long:
+    qty: 1
+  Neopixel LED:
+    qty: 1
+
+resources:
+  Yavoth Github: https://github.com/N3MI-DG/sc-guides/tree/main/Yavoth
+  N3MI's CAD and STL collection: https://github.com/N3MI-DG/sc-guides/tree/main/Yavoth
+
+steps:
+  - description: "In this guide we will be assembling a Yavoth (HF version) toolhead."
+    camera:
+      azimuth: 122
+      polar: 82
+      distance: 78
+      pan_x: -1.68
+      pan_y: -4.48
+    visible: []
+
+  - description: "After soldering wires to the LED, slide it through the side opening of the LED Holder, fold the wires so they go into the notch."
+    camera:
+      azimuth: 269
+      polar: 133
+      distance: 20
+      pan_x: 0.37
+      pan_y: 0.50
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+    focus:
+      - "WS2812B LED"
+
+  - description: "Install 2 heatsets into the EBB Mount."
+    camera:
+      azimuth: 88
+      polar: 117
+      distance: 35
+      pan_x: -0.36
+      pan_y: -0.14
+    visible: 
+      - "EBB Mount"
+      - "Heat Inserts (PCB Mount)"
+    focus:
+      - "Heat Inserts (PCB Mount)"
+
+  - description: "Install 2 heatsets into the Cowl."
+    camera:
+      azimuth: 269
+      polar: 133
+      distance: 50
+      pan_x: 0.37
+      pan_y: -0.41
+    visible: 
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+    focus:
+      - "Heat Inserts (Cowl)"
+
+  - description: "Glue 2 6x3mm magnets in the bottom of the cowl ducts."
+    camera:
+      azimuth: 270
+      polar: 175
+      distance: 41
+      pan_x: 0.09
+      pan_y: 0.94
+    visible: 
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "6x3mm Magnets"
+    focus:
+      - "6x3mm Magnets"
+
+  - description: "Install 3 M3 square nuts in to the Cowl."
+    camera:
+      azimuth: 199
+      polar: 60
+      distance: 50
+      pan_x: -0.14
+      pan_y: -0.04
+    visible: 
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "M3 Square Nuts"
+      - "6x3mm Magnets"
+    focus:
+      - "M3 Square Nuts"
+
+  - description: "Insert the LED Holder in to the Cowl."
+    camera:
+      azimuth: 269
+      polar: 106
+      distance: 45
+      pan_x: 0.37
+      pan_y: 0.53
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "M3 Square Nuts"
+      - "6x3mm Magnets"
+    focus:
+      - "LED Holder"
+      - "WS2812B LED"
+
+  - description: "Install the 25x10mm axial fan and route the cables for the fan and LED through the hole in the side of the Cowl."
+    camera:
+      azimuth: 269
+      polar: 106
+      distance: 45
+      pan_x: 0.37
+      pan_y: 0.53
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M3 Square Nuts"
+      - "6x3mm Magnets"
+    focus:
+      - "2510 Axial Fan"
+
+  - description: "Install the CHCB-V Hotend using 4 M2.5x8 screws."
+    camera:
+      azimuth: 89
+      polar: 2
+      distance: 45
+      pan_x: 0.04
+      pan_y: -0.33
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "M3 Square Nuts"
+      - "6x3mm Magnets"
+    focus:
+      - "M25x8 SHCS Screws (Hotend)"
+
+  - description: "Install the 2 4010 blower fans."
+    camera:
+      azimuth: 309
+      polar: 80
+      distance: 47
+      pan_x: 0.25
+      pan_y: -0.81
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "M3 Square Nuts"
+      - "6x3mm Magnets"
+    focus:
+      - "4010 Blower Fans"
+
+  - description: "Attach the Spacer using a M3x10mm SHCS screw"
+    camera:
+      azimuth: 316
+      polar: 39
+      distance: 49
+      pan_x: -2.24
+      pan_y: -0.29
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x10 SHCS (Spacer)"
+
+  - description: "Attach the Backplate using 2 M3x40mm SHCS screws. These screws should be ferrous."
+    camera:
+      azimuth: 113
+      polar: 70
+      distance: 49
+      pan_x: -3.12
+      pan_y: -0.50
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x40 SHCS Screws (Backplate)"
+
+  - description: "Secure the ducts by using 2 M3x8 BHCS screws."
+    camera:
+      azimuth: 270
+      polar: 101
+      distance: 49
+      pan_x: -1.40
+      pan_y: 0.14
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x8 BHCS Screws (Backplate)"
+
+  - description: "Insert a 41mm long piece of 4x2mm PTFE. Making sure to taper the top edge."
+    camera:
+      azimuth: 119
+      polar: 46
+      distance: 49
+      pan_x: -1.96
+      pan_y: 5.80
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "6x3mm Magnets"
+    focus:
+      - "PTFE Tube"
+
+  - description: "Attach the HGX extruder using 2 M3x16 BHCS screws."
+    camera:
+      azimuth: 111
+      polar: 58
+      distance: 78
+      pan_x: 0.06
+      pan_y: 3.03
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x16 BHCS Screws (Extruder)"
+
+  - description: "Ensure your screws for the extruder motor are long enough for standoffs. They should be M3x10 BHCS."
+    camera:
+      azimuth: 230
+      polar: 26
+      distance: 49
+      pan_x: 1.37
+      pan_y: 0.38
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x10 BHCS Screws (Standoffs)"
+
+  - description: "Attach the standoffs included with the EBB36 to the 2 motor mount screws."
+    camera:
+      azimuth: 230
+      polar: 26
+      distance: 49
+      pan_x: 1.37
+      pan_y: 0.38
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "EBB36 Standoffs"
+      - "6x3mm Magnets"
+    focus:
+      - "EBB36 Standoffs"
+
+  - description: "Attach the EBB Mount using 2 M3x6 BHCS screws."
+    camera:
+      azimuth: 290
+      polar: 72
+      distance: 74
+      pan_x: -3.26
+      pan_y: 4.41
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "EBB36 Standoffs"
+      - "M3x6 BHCS Screws (Standoffs)"
+      - "Heat Inserts (PCB Mount)"
+      - "EBB Mount"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x6 BHCS Screws (Standoffs)"
+
+  - description: "Attach the EBB36 using 2 M3x8 BHCS screws."
+    camera:
+      azimuth: 290
+      polar: 72
+      distance: 74
+      pan_x: -3.26
+      pan_y: 4.41
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "EBB36 Standoffs"
+      - "M3x6 BHCS Screws (Standoffs)"
+      - "Heat Inserts (PCB Mount)"
+      - "EBB Mount"
+      - "EBB36 PCB"
+      - "M3x8 BHCS Screws (EBB36)"
+      - "6x3mm Magnets"
+    focus:
+      - "M3x8 BHCS Screws (EBB36)"
+
+  - description: "Cut crimp and connect all of your wires. Try to keep the wiring tidy so that it doesnt get caught on the other tools."
+    camera:
+      azimuth: 290
+      polar: 72
+      distance: 74
+      pan_x: -3.26
+      pan_y: 4.41
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "EBB36 Standoffs"
+      - "M3x6 BHCS Screws (Standoffs)"
+      - "Heat Inserts (PCB Mount)"
+      - "EBB Mount"
+      - "EBB36 PCB"
+      - "M3x8 BHCS Screws (EBB36)"
+      - "6x3mm Magnets"
+
+  - description: "Attach 2 5x2mm N52 magnets to the front M3x40 SHCS screw heads."
+    camera:
+      azimuth: 109
+      polar: 100
+      distance: 42
+      pan_x: -1.93
+      pan_y: -4.18
+    visible: 
+      - "LED Holder"
+      - "WS2812B LED"
+      - "Yavoth Cowl"
+      - "Heat Inserts (Cowl)"
+      - "2510 Axial Fan"
+      - "M25x8 SHCS Screws (Hotend)"
+      - "CHCB-V Hotend"
+      - "4010 Blower Fans"
+      - "Spacer"
+      - "M3x10 SHCS (Spacer)"
+      - "M3 Square Nuts"
+      - "M3x40 SHCS Screws (Backplate)"
+      - "Yavoth Backplate"
+      - "Backplate Hardware"
+      - "M3x8 BHCS Screws (Backplate)"
+      - "PTFE Tube"
+      - "M3x16 BHCS Screws (Extruder)"
+      - "HGX Geared Extruder"
+      - "M3x10 BHCS Screws (Standoffs)"
+      - "EBB36 Standoffs"
+      - "M3x6 BHCS Screws (Standoffs)"
+      - "Heat Inserts (PCB Mount)"
+      - "EBB Mount"
+      - "EBB36 PCB"
+      - "M3x8 BHCS Screws (EBB36)"
+      - "5x2mm N52 Magnets"
+    focus:
+      - "5x2mm N52 Magnets"
+
+  - description: "Assembly complete."
+    camera:
+      azimuth: 122
+      polar: 82
+      distance: 78
+      pan_x: -1.68
+      pan_y: -4.48
+    visible: []

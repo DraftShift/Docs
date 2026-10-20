@@ -1,0 +1,229 @@
+title: "Shuttle Installation - Printed"
+author: "DraftShift Design"
+summary: >
+    This guide covers the installation of the Printed Shuttle for StealthChanger. 
+
+    !!! tip "Belt Helper"
+        The Belt Helper tool will aid in holding the belts in place while installing the shuttle.
+
+printed_bom:
+  Belt Helper:
+    qty: 1
+    urls:
+      Link: https://download-directory.github.io/?url=https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper&filename=SC-Belt-Helper
+
+hardware_bom:
+  M3x10 SHCS Screws:
+    qty: 4
+  M3x25-50 Screws:
+    qty: 2
+  M3 Heat Inserts:
+    qty: 6
+  M3x8 BHCS Screws:
+    qty: 4
+
+resources:
+  DraftShift StealthChanger Github: https://github.com/DraftShift/StealthChanger
+
+primary_parts:
+  - "Block Left"
+  - "Block Right"
+  - "Block Right Open"
+  - "Shuttle MGN12"
+
+accent_parts:
+  - "Clip Left"
+  - "Clip Right"
+  - "Clip Right Open"
+
+frame_parts:
+  - "Extrusion"
+
+steps:
+  - description: "Install 2 heat inserts in to each block."
+    camera:
+      azimuth: 273
+      polar: 81
+      distance: 34
+      pan_x: 0.02
+      pan_y: 0.74
+    visible: 
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Block Right"
+      - "Block Left"
+    focus:
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+  
+  - description: "Install another 2 heat inserts in to the right block."
+    camera:
+      azimuth: 33
+      polar: 94
+      distance: 32
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      - "Heat Inserts Right"
+      - "Heat Inserts Right2"
+      - "Block Right"
+    focus:
+      - "Heat Inserts Right2"
+
+  
+  - description: "Loosely attach the left and right clips to their respective blocks using 2 M3x10 SHCS in each. Do not tighten the screws yet."
+    camera:
+      azimuth: 89
+      polar: 138
+      distance: 30
+      pan_x: -0.37
+      pan_y: -1.07
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Heat Inserts Right2"
+      - "Block Right"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right"
+    focus:
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS"
+
+  - description: "Make sure your idlers are fully extended and clamp the left upper and lower belts between the left clip and block. You want 15 teeth exposed past the clip and even spacing between the belts which is indicated on the block with the raised centerline and embossed text. Tighten the 2 M3x10 SHCS screws."
+    camera:
+      azimuth: 104
+      polar: 74
+      distance: 39
+      pan_x: 2.06
+      pan_y: 0.36
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Block Left"
+      - "Heat Inserts Left"
+      - "Clip Left"
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Left"
+    focus:
+      - "Belts Left"
+      - "Left M3x10 SHCS"
+
+  - description: "Loosely screw the 2 M3x25-50 SHCS screws through the left block and in to the heat inserts of the right block."
+    camera:
+      azimuth: 127
+      polar: 82
+      distance: 36
+      pan_x: 0.00
+      pan_y: -0.00
+    visible:
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS Open"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right Open"
+      - "Block Right Open"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right Open"
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Left"
+      - "M3x40 SHCS"
+      - "Belts Right Open"
+    focus:
+      - "M3x40 SHCS"
+
+  - description: "Snug fit the right upper and lower belts between the right clip and block. Pull as much of the upper and lower belts as you can through the right block keeping an even amount between the two and tighten the clip screws."
+    camera:
+      azimuth: 91
+      polar: 83
+      distance: 36
+      pan_x: -0.96
+      pan_y: -0.05
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS Open"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right Open"
+      - "Block Right Open"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right Open"
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Left"
+      - "Belts Right Open"
+      - "M3x40 SHCS"
+    focus:
+      - "Belts Right Open"
+      - "Right M3x10 SHCS Open"
+  
+  - description: "Adjust the upper and lower M3x25 screws until you are happy with the pre-tension of the belts. Cut the belts so they are butted up against each other."
+    camera:
+      azimuth: 101
+      polar: 81
+      distance: 40
+      pan_x: -2.01
+      pan_y: 0.20
+    visible: 
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Block Right"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right"
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Belts Left"
+      - "Belts Right"
+      - "M3x40 SHCS"
+    focus:
+      - "M3x40 SHCS"
+
+  - description: "Secure the shuttle to the MGN rail using the 4 M3x8 BHCS screws."
+    camera:
+      azimuth: 106
+      polar: 83
+      distance: 37
+      pan_x: -0.62
+      pan_y: 0.02
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Shuttle Hardware"
+      - "Left M3x10 SHCS"
+      - "Right M3x10 SHCS"
+      - "M3x40 SHCS"
+      - "Shuttle M3x8 BHCS"
+      - "Heat Inserts Left"
+      - "Heat Inserts Right"
+      - "Heat Inserts Right2"
+      - "Block Right"
+      - "Block Left"
+      - "Clip Left"
+      - "Clip Right"
+      - "Belts Right"
+      - "Belts Left"
+      - "Shuttle MGN12"
+    focus:
+      - "Shuttle M3x8 BHCS"
+
+  - description: "Remove the Belt Helper by removing the 4 M3x10 SHCS screws and the 2 M3x25-50 SHCS screws. The blocks should now be free and can be slid behind the belts to remove them. The Shuttle is now installed. Tension your belts with the idlers as you normally would."
+    camera:
+      azimuth: 108
+      polar: 71
+      distance: 32
+      pan_x: -1.65
+      pan_y: -0.62
+    visible: 
+      - "Extrusion"
+      - "MGN12 Rail"
+      - "Shuttle Hardware"
+      - "Shuttle M3x8 BHCS"
+      - "Belts Right"
+      - "Belts Left"
+      - "Shuttle MGN12"

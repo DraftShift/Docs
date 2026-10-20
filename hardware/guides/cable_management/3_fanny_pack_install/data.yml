@@ -1,0 +1,292 @@
+title: Fanny Pack Install
+author: "DraftShift Design"
+summary: >
+    This guide will walk you through the Installation of the Fanny Pack, Ramp and Umbilical Cover. 
+
+    
+printed_bom:
+  Ramp:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/%5Ba%5D_ptfe_ramp.stl?raw=true
+
+  Umbilical Cover:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/%5Ba%5D_umbilical_cover.stl?raw=true
+
+  ECAS Holder:
+    qty: N
+    urls:
+      ECAS: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/%5Ba%5D_ecas_ecas_bridge.stl?raw=true
+      Funnel: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/%5Ba%5D_ecas_funnel.stl?raw=true
+
+  ECAS Panel Top:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/ecas_panel_top.stl?raw=true
+
+  ECAS Panel Bottom:
+    qty: 1
+    urls:
+      Link: https://github.com/DraftShift/CableManagement/blob/main/STLs/Umbilical/Voron/ECAS_Panel/ecas_panel_7_bottom.stl?raw=true
+
+hardware_bom:
+  M3 Heat Inserts:
+    qty: 2
+  6x3mm Magnets:
+    qty: 2
+  M3x16 SHCS:
+    qty: 2
+  VHB tape: 
+    qty: 100mm
+
+resources:
+  DraftShift Cable Management Github: https://github.com/DraftShift/CableManagement
+
+primary_parts:
+  - "Fanny Pack Base"
+  - "ECAS Panel Top"
+  - "ECAS Panel Bottom"
+  - "Umbilical Outer Plate"
+
+accent_parts:
+  - "ECAS Bridge Single"
+  - "ECAS Bridge Other"
+  - "Fanny Pack Cover"
+  - "Hexa Bracket"
+  - "Ramp"
+  - "Umbilical Cover"
+  - "Hexes"
+  - "Umbilical Face Plate"
+
+frame_parts:
+  - "Frame"
+
+steps:
+  - description: "Install 2 heat inserts into the top of the ramp."
+    camera:
+      azimuth: 277
+      polar: 50
+      distance: 40
+      pan_x: -0.11
+      pan_y: -0.08
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts" 
+
+    focus: 
+      - "Ramp Heat Inserts"
+
+
+  - description: "Install 2 magnets into the top of the ramp."
+    camera:
+      azimuth: 323
+      polar: 69
+      distance: 40
+      pan_x: 3.17
+      pan_y: -1.25
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts"
+      - "Ramp Magnets" 
+
+    focus: 
+      - "Ramp Magnets"
+
+  - description: "Install 2 M3x16 SHCS that attach the ramp to the base."
+    camera:
+      azimuth: 283
+      polar: 87
+      distance: 58
+      pan_x: 1.87
+      pan_y: 1.24
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts"
+      - "Ramp Magnets" 
+      - "Fanny Pack Base"
+      - "Fanny Pack M3x16 SHCS Screws"
+      - "FannyPack Hardware"
+      - "Fanny Pack Cover Magnets"
+      - "Hexa Bracket"
+    focus: 
+      - "Fanny Pack M3x16 SHCS Screws"
+
+  - description: "Apply 2 pieces of VHB Tape to the rear of the base."
+    camera:
+      azimuth: 90
+      polar: 94
+      distance: 58
+      pan_x: -0.27
+      pan_y: 4.22
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts"
+      - "Ramp Magnets" 
+      - "Fanny Pack Base"
+      - "Fanny Pack M3x16 SHCS Screws"
+      - "FannyPack Hardware"
+      - "Fanny Pack Cover Magnets"
+      - "Hexa Bracket"
+      - "VHB Tape"
+    focus: 
+      - "VHB Tape"
+
+     
+
+  - description: "VHB tape the back of Fanny Pack and align with umbilical plate. VHB tape holds fanny pack to back panel."
+    camera:
+      azimuth: 283
+      polar: 87
+      distance: 58
+      pan_x: 0.33
+      pan_y: 4.22
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts"
+      - "Ramp Magnets" 
+      - "Fanny Pack Base"
+      - "Fanny Pack M3x16 SHCS Screws"
+      - "Frame"
+      - "Umbilical Outer Plate"
+      - "Hexes"
+      - "Umbilical Face Plate"
+      - "Rear Panel"
+      - "FannyPack Hardware"
+      - "Umbilical Hexes"
+      # - "Fanny Pack Cover Magnets"
+      - "Hexa Bracket"
+    focus: 
+    focus: 
+      
+  - description: "Press ECAS Fittings Into ECAS BrIdge one for each tool head."
+    camera:
+      azimuth: 239
+      polar: 67
+      distance: 32
+      pan_x: -0.35
+      pan_y: -0.29
+    visible: 
+      - ECAS Bridge Single
+      - ECAS Single
+    focus: 
+      - ECAS Single
+ 
+  - description: "Set the ECAS Bridge into ECAS panel Bottom aligned with you umbilical."
+    camera:
+      azimuth: 278
+      polar: 77
+      distance: 58
+      pan_x: 0.31
+      pan_y: 4.16
+    visible: 
+      -"ECAS Bridge Bottom"
+      -"ECAS Bridge Single"
+      -"ECAS Panel Bottom"
+      -"ECAS Bridges Other"
+      -"ECAS Other"
+      -"ECAS Single"
+    focus:       
+      - ECAS Panel Bottom
+     
+  - description: "Set the ECAS Panel top on top ."
+    camera:
+      azimuth: 273
+      polar: 70
+      distance: 59
+      pan_x: 0.00
+      pan_y: 0.00
+    visible: 
+      -"ECAS Bridge Bottom"
+      -"ECAS Bridge Single"
+      -"ECAS Panel Bottom"
+      -"ECAS Bridges Other"
+      -"ECAS Other"
+      -"ECAS Single"
+      -"ECAS Panel Top"
+    focus:       
+      - ECAS Panel Top
+
+  - description: "Install ECAS Bridge on to the Ramp with M3x16 SHCS x2"
+    camera:
+      azimuth: 272
+      polar: 57
+      distance: 58
+      pan_x: 0.28
+      pan_y: 3.68
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts"
+      - "Ramp Magnets" 
+      - "Fanny Pack Base"
+      - "FannyPack Hardware"
+      - "Fanny Pack M3x16 SHCS Screws"
+      - "Frame"
+      - "Umbilical Outer Plate"
+      - "Hexes"
+      - "Umbilical Face Plate"
+      - "Rear Panel"
+      - "ECAS Bridge Bottom"
+      - "ECAS Bridge Single"
+      - "ECAS Panel Bottom"
+      - "ECAS Bridges Other"
+      - "ECAS Other"
+      - "ECAS Single"
+      - "ECAS Panel Top"
+      - "ECAS M3x16 SHCS Screws"
+      - "Logo Insert (1)"
+      -  "Umbilical Hexes"
+    focus: 
+      - ECAS M3x16 SHCS Screws
+
+  - description: "Install magnets into umbilical cover making sure the attract to magnets in ramp and umbilical plate"
+    camera:
+      azimuth: 94
+      polar: 128
+      distance: 58
+      pan_x: -0.36
+      pan_y: 3.66
+    visible: 
+     - "Umbilical Cover"
+     - "Umbilical Cover Magnets"
+    focus: 
+       - Umbilical Cover Magnets
+
+  - description: "Install Cover"
+    camera:
+      azimuth: 277
+      polar: 82
+      distance: 75
+      pan_x: 0.47
+      pan_y: 3.34
+    visible: 
+      - Ramp
+      - "Ramp Heat Inserts"
+      - "Ramp Magnets" 
+      - "Fanny Pack Base"
+      - "Fanny Pack M3x16 SHCS Screws"
+      - "Frame"
+      - "Umbilical Outer Plate"
+      - "Hexes"
+      - "Umbilical Face Plate"
+      - "Umbilical Plate Hardware"
+      - "Logo Insert (1)"
+      - "Rear Panel"
+      - "ECAS Bridge Bottom"
+      - "ECAS Bridge Single"
+      - "ECAS Panel Bottom"
+      - "ECAS Bridges Other"
+      - "ECAS Other"
+      - "ECAS Single"
+      - "ECAS Panel Top"
+      - "ECAS M3x16 SHCS Screws"
+      - "Umbilical Cover"
+      - "Umbilical Cover Magnets"
+      - "Fanny Pack Cover"
+      - "FannyPack Hardware"
+      - "Umbilical Hexes"
+      - "Fanny Pack Cover Magnets"
+      - "Hexa Bracket"
+    focus: 
+     

@@ -1,0 +1,720 @@
+/* Usermods Page Styles */
+
+.usermod-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.usermod-results-count {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
+select[name="tag-filter"],
+select[name="usermod-order"],
+select[name="username-filter"] {
+  display: inline-block;
+  margin: 0.15rem 0.35rem 0.15rem 0;
+  padding: 0.25rem 1.5rem 0.25rem 0.45rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  font-size: 0.85rem;
+  font: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: calc(100% - 0.5rem) center;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
+
+/* Hide legacy native arrow in some browsers (optional) */
+select[name="tag-filter"]::-ms-expand,
+select[name="usermod-order"]::-ms-expand,
+select[name="username-filter"]::-ms-expand {
+  display: none;
+}
+
+/* Hover / focus states */
+select[name="tag-filter"]:hover,
+select[name="usermod-order"]:hover,
+select[name="username-filter"]:hover {
+  border-color: var(--md-accent-fg-color);
+}
+
+select[name="tag-filter"]:focus,
+select[name="usermod-order"]:focus,
+select[name="username-filter"]:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 1px var(--md-accent-fg-color);
+}
+
+
+/* Input-group wrapper for order select + icon */
+.usermod-order-group {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background-color: var(--md-default-bg-color);
+}
+
+/* Icon "addon" on the left */
+.usermod-order-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.45rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color);
+  border-right: 1px solid var(--md-default-fg-color--lighter);  /* divider */
+}
+
+.usermod-order-icon:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Remove border from select inside the group (group provides it) */
+.usermod-order-group select[name="usermod-order"] {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+.usermod-order-group:hover {
+  border-color: var(--md-accent-fg-color);
+}
+
+.usermod-order-group:focus-within {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 1px var(--md-accent-fg-color);
+}
+
+
+.usermod-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0.25rem 0 1rem;
+}
+
+.usermod-page-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.55rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.usermod-page-btn:hover {
+  border-color: var(--md-accent-fg-color);
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+.usermod-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.usermod-page-btn.is-active {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 1px var(--md-accent-fg-color);
+}
+
+.usermod-page-ellipsis {
+  opacity: 0.75;
+  padding: 0 0.15rem;
+}
+
+
+.usermod-tags {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  left: auto;
+  margin: 0;
+  padding: 0;
+  display: flex !important;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+  max-width: 75%;
+}
+
+.usermod-tags .usermod-tag.md-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 4px;
+  margin: 0;
+  font-size: 0.6rem;
+  font-weight: 550;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.usermod-tags .usermod-tag.tag-repo.md-tag {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.usermod-tags .usermod-tag.tag-tool.md-tag {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color, #fff);
+}
+
+.usermod-tags .usermod-tag.md-tag:not(.tag-repo):not(.tag-tool) {
+  background: var(--md-default-fg-color--light);
+  color: var(--md-default-bg-color);
+}
+
+.usermod-tags li::marker {
+  content: '';
+}
+
+#usermod-modal-header {
+  grid-area: header;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  margin: -1.5rem -2rem 1.5rem;
+  padding: 0.75rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+/* Ensure title/author inherit the nav colors */
+#usermod-modal-header .custom-card-title,
+#usermod-modal-header .custom-card-author {
+  color: inherit;
+}
+
+.usermod-modal {
+  position: fixed;
+  inset: 0;
+  display: none;           /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: inherit;
+}
+
+.usermod-modal.is-open {
+  display: flex;
+}
+
+.usermod-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.usermod-modal-content {
+  position: relative;
+  width: 95vw;
+  max-width: none;
+  height: 90vh;
+  max-height: 90vh;
+  margin: 0;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+}
+
+.usermod-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.usermod-modal-body h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.usermod-modal-body p {
+  margin: 0.25rem 0;
+}
+
+.usermod-modal-body .md-icon svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.usermod-modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none;
+  flex-basis: 100%;         /* span full width (first row) */
+}
+
+.usermod-modal-author {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  opacity: 0.8;
+  text-decoration: none;
+  display: block;
+}
+
+.usermod-modal-meta-row {
+  margin-left: auto; 
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.usermod-modal-meta-row span {
+  color: var(--md-default-fg-color--light);
+}
+
+/* 2-column layout: header on top, body+files below */
+.usermod-modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "body   files";
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+}
+
+/* Left column: body (carousel is inside this, scrolls with content) */
+#usermod-modal-body {
+  grid-area: body;
+  padding-right: 1rem;
+  border-right: 1px solid var(--md-default-fg-color--lighter);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Right column: files */
+#usermod-modal-files {
+  grid-area: files;
+  padding-left: 1rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Button container */
+.usermod-modal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* GitHub button */
+.usermod-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #24292e;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.usermod-github-btn:hover {
+  background-color: #3a3f44;
+  text-decoration: none;
+}
+
+.usermod-github-btn svg {
+  fill: currentColor;
+}
+
+/* Download button */
+.usermod-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color) !important;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.usermod-download-btn:hover {
+  background-color: var(--md-accent-fg-color);
+  text-decoration: none;
+}
+
+.usermod-download-btn svg {
+  fill: currentColor;
+}
+
+/* Files section */
+.usermod-files-section {
+  margin-bottom: 1.25rem;
+}
+
+.usermod-files-heading {
+  margin: 0 0 0.5rem 0;
+  padding-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  border-bottom: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.usermod-files-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.usermod-files-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.usermod-files-list li::marker {
+  content: '';
+}
+
+.usermod-file-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  margin: 0.15rem 0;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  word-break: break-word;
+  transition: background-color 0.15s ease;
+}
+
+.usermod-file-link:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+  text-decoration: none;
+}
+
+.usermod-file-link svg {
+  flex-shrink: 0;
+  fill: var(--md-default-fg-color--light);
+}
+
+/* Image Carousel */
+.usermod-carousel {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lighter);
+}
+
+.usermod-carousel-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.usermod-carousel-images {
+  position: relative;
+  height: 150px;
+  width: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* border-radius: 0.375rem; */
+}
+
+.usermod-carousel-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.usermod-carousel-img.active {
+  opacity: 1;
+}
+
+.usermod-carousel-btn {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+.usermod-carousel-btn:hover {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+.usermod-carousel-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Thumbnail strip */
+.usermod-carousel-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.usermod-carousel-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+  border: 2px solid transparent;
+}
+
+.usermod-carousel-thumb:hover {
+  opacity: 0.8;
+}
+
+.usermod-carousel-thumb.active {
+  opacity: 1;
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Lightbox */
+.usermod-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001; /* above modal (9999) and modal content */
+}
+
+.usermod-lightbox.is-open {
+  display: flex;
+}
+
+.usermod-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1;
+}
+
+.usermod-lightbox-img {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.25rem;
+  z-index: 2;
+}
+
+.usermod-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.usermod-lightbox-prev,
+.usermod-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  z-index: 3;
+}
+
+.usermod-lightbox-prev {
+  left: 1rem;
+}
+
+.usermod-lightbox-next {
+  right: 1rem;
+}
+
+.usermod-lightbox-prev:hover,
+.usermod-lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.usermod-lightbox-prev svg,
+.usermod-lightbox-next svg {
+  fill: #fff;
+}
+
+/* Responsive: block layout with single scrollbar on smaller viewports */
+@media (max-width: 768px) {
+  .usermod-modal-content {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #usermod-modal-header {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    padding-right: 2.5rem; /* space for close button */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    flex-shrink: 0; /* don't shrink the header */
+  }
+
+  .usermod-modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .usermod-modal-meta-row {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .usermod-modal-body {
+    display: block;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 1rem;
+    flex: 1 1 auto; /* fill remaining space */
+    min-height: 0; /* allow shrinking for scroll */
+  }
+
+  #usermod-modal-body {
+    border-right: none;
+    padding-right: 0;
+    overflow-y: visible;
+  }
+
+  #usermod-modal-files {
+    padding-left: 0;
+    border-top: 1px solid var(--md-default-fg-color--lighter);
+    padding-top: 1rem;
+    overflow-y: visible;
+  }
+
+  .usermod-files-section {
+    margin-bottom: 0.75rem;
+  }
+
+  .usermod-files-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .usermod-files-list li {
+    flex: 0 0 auto;
+  }
+
+  .usermod-file-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    background-color: var(--md-default-fg-color--lightest);
+    border-radius: 0.25rem;
+  }
+
+  .usermod-carousel-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* Lightbox responsive adjustments */
+  .usermod-lightbox-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    z-index: 10001;
+  }
+
+  .usermod-lightbox-prev,
+  .usermod-lightbox-next {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .usermod-lightbox-prev {
+    left: 0.5rem;
+  }
+
+  .usermod-lightbox-next {
+    right: 0.5rem;
+  }
+}
